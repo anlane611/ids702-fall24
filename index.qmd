@@ -1,0 +1,60 @@
+---
+title: "IDS 702: Data Modeling and Representation"
+subtitle: "Duke University <br> Fall 2024"
+---
+
+Welcome to the IDS 702 course site!
+
+## Course Overview
+
+**Meeting times**: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 107
+
+```{=html}
+<a>Instructor</a> <br/>
+Andrea Lane, PhD <br/>
+andrea.lane@duke.edu <br/>
+Gross Hall 223 <br/>
+Office hours: Tues/Thurs 4:20-5:20 PM
+<br/> <br/>
+```
+```{=html}
+<a>Teaching Assistants</a> <br/>
+Xiaoquan Liu <br/>
+x.liu@duke.edu <br/>
+Office hours: 
+<br/> <br/>
+Dingkun Yang <br/>
+dingkun.yang@duke.edu <br/>
+Office hours:
+<br/> <br/>
+```
+## Textbook
+
+[An Introduction to Statistical Learning with Applications in R, 2nd edition](https://www.statlearning.com/) by James, G., Witten, D., Hastie, T., and Tibshirani, R.
+
+*Use the link above to download a PDF of the book*
+
+## Important Dates
+
+```{=html}
+<table class="table table-hover">
+  <thead>
+    <tr class="table-primary">
+      <th scope="row">Tuesday, Aug. 29</th>
+      <td>First day of class</td>
+    </tr>
+    <tr class="table-primary">
+      <th scope="row">Tuesday, Oct. 17</th>
+      <td>Fall break - no class meeting</td>
+    </tr>
+    <tr class="table-primary">
+      <th scope="row">Thursday, Nov. 23 </th>
+      <td>Thanksgiving holiday - no class meeting </td>
+    </tr>
+        <tr class="table-primary">
+      <th scope="row">Friday, Dec 1 </th>
+      <td>Classes end, final reports due </td>
+    </tr>
+  </tbody>
+</table>
+```
