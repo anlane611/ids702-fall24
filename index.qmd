@@ -7,24 +7,28 @@ Welcome to the IDS 702 course site!
 
 ## Course Overview
 
-**Meeting times**: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 107
+**Meeting times**: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330
 
 ```{=html}
 <a>Instructor</a> <br/>
 Andrea Lane, PhD <br/>
 andrea.lane@duke.edu <br/>
 Gross Hall 223 <br/>
-Office hours: Tues/Thurs 4:20-5:20 PM
+Office hours: Thurs 4:20-5:20 PM
 <br/> <br/>
 ```
 ```{=html}
 <a>Teaching Assistants</a> <br/>
-Xiaoquan Liu <br/>
-x.liu@duke.edu <br/>
+Revanth Ganga <br/>
+revanthchowdary.ganga@duke.edu <br/>
 Office hours: 
 <br/> <br/>
-Dingkun Yang <br/>
-dingkun.yang@duke.edu <br/>
+Rakeen Rouf <br/>
+rakeen.rouf@duke.edu <br/>
+Office hours:
+<br/> <br/>
+Jiayi Zhou <br/>
+jiayi.zhou@duke.edu <br/>
 Office hours:
 <br/> <br/>
 ```
@@ -40,20 +44,20 @@ Office hours:
 <table class="table table-hover">
   <thead>
     <tr class="table-primary">
-      <th scope="row">Tuesday, Aug. 29</th>
+      <th scope="row">Tuesday, Aug. 27</th>
       <td>First day of class</td>
     </tr>
     <tr class="table-primary">
-      <th scope="row">Tuesday, Oct. 17</th>
+      <th scope="row">Tuesday, Oct. 15</th>
       <td>Fall break - no class meeting</td>
     </tr>
     <tr class="table-primary">
-      <th scope="row">Thursday, Nov. 23 </th>
-      <td>Thanksgiving holiday - no class meeting </td>
+      <th scope="row">Tuesday, Nov. 26 </th>
+      <td>Last day of class </td>
     </tr>
         <tr class="table-primary">
-      <th scope="row">Friday, Dec 1 </th>
-      <td>Classes end, final reports due </td>
+      <th scope="row">Sunday, Dec. 15 5PM </th>
+      <td>Final reports due </td>
     </tr>
   </tbody>
 </table>

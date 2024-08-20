@@ -8,6 +8,15 @@ website:
     style: "docked"
     search: true
     background: "#1297e8"
+    contents:
+       - section:
+         #href: syllabus.qmd
+         text: Syllabus
+       - section: Course Materials
+         contents:
+          - section: "Unit 0: Bootcamp"
+            contents:
+            - href: materials/unit0/unit0b.qmd
 
 format:
   html:

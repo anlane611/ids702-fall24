@@ -1,0 +1,159 @@
+---
+title: Key Principles of Statistics
+execute:
+  eval: false
+  freeze: auto
+---
+
+### Learning objectives
+
+By the end of this session, students should be able to:
+
+-   distinguish between a population and a sample
+
+-   describe sampling variability
+
+-   fit a simple linear regression model in R
+
+### Warm-up discussion question
+
+In a group of 3-4 students, discuss what you think it means to conduct statistical inference.
+
+## Load the data
+
+Today we will use the `births14` dataset in the openintro R package. You can read more about the dataset and see a data dictionary [at this link](http://openintrostat.github.io/openintro/reference/births14.html).
+
+```{r}
+#load the packages we need
+library(openintro)
+library(tidyverse)
+library(tidymodels)
+
+#load the dataset from the openintro package
+data(births14)
+
+#get an overview of the data
+glimpse(births14)
+```
+
+## Exercise
+
+Explore the births14 data:
+
+-   Using the data dictionary at the link above, classify the variables as numeric or categorical. Do the variables seem to be correctly structured in R?
+
+-   Use the `summary()` function to determine if there are missing values in the dataset
+
+## Hypothetically...
+
+Imagine that this dataset contains information about the entire population of interest (e.g., all babies born in Bull City). Then, say we have the following research question:
+
+What is the relationship between length of pregnancy in weeks and weight of the baby in pounds in Bull City?
+
+We can explore this relationship graphically:
+
+```{r}
+ggplot(births14, aes(x=weeks, y=weight))+
+  geom_point()+
+  labs(x="length of pregnancy (weeks)", y="baby weight (lbs)") 
+  #always use labels!
+```
+
+## Linear Regression
+
+To further characterize the relationship between length of pregnancy and baby weight, we can fit a line to the plot:
+
+```{r}
+mod_bullcity <- linear_reg() |> 
+  set_engine("lm") |>
+  fit(weight ~ weeks, data=births14)
+
+tidy(mod_bullcity, conf.int=TRUE)
+```
+
+### Exercise
+
+```{r}
+ggplot(births14, aes(x=weeks, y=weight))+
+  geom_point()+
+  labs(x="length of pregnancy (weeks)",y="baby weight (lbs)")+
+  geom_smooth(method="lm",se=F)
+```
+
+-   Looking at the `estimate` column of the `tidy` output, how would you interpret the intercept here? how would you interpret the weeks estimate?
+
+### Standard error
+
+To better conceptualize the standard error, consider the premise above that these data represent the entire city. Now imagine that we could not actually obtain all of these data. Instead, we were only able to obtain a sample of 200 babies. Using only a sample of 200, if we fit a line in the same way as above, we have many different lines that we could have obtained:
+
+```{r}
+set.seed(823)
+births_sample1 <- births14 |> slice_sample(n=200)
+
+ggplot(births_sample1, aes(x=weeks, y=weight))+
+  geom_point()+
+  labs(x="length of pregnancy (weeks)",y="baby weight (lbs)")+
+  geom_smooth(method="lm",se=F)
+
+mod_sample1 <- linear_reg() |> 
+  set_engine("lm") |>
+  fit(weight ~ weeks, data=births_sample1)
+
+tidy(mod_sample1, conf.int=TRUE)
+```
+
+### Exercise
+
+Fill in the code below to simulate the process of taking 250 different samples and store the weeks coefficient estimate in a vector
+
+```{r, eval=FALSE}
+weeks.coefs <- c() #create empty vector to store coefficient estimates
+
+for(i in 1:250){ #create loop for 250 different samples
+  print(i)
+  set.seed(823+i) #set a unique seed each iteration
+  
+  #sample data
+  births_sample <-
+  
+  #fit model
+  mod_sample <- 
+    
+  #store output
+  weeks.coefs[i] <- tidy(mod_sample)$estimate[2]
+}
+```
+
+ 
+
+ 
+
+ 
+
+Now let's plot the coefficient estimates we have for the 250 samples:
+
+```{r, eval=FALSE}
+weeks.coefs.dat <- data.frame(weeks.coefs)
+
+ggplot(weeks.coefs.dat, aes(x=weeks.coefs))+
+  geom_histogram()+
+  labs(x="weeks coefficient estimate")
+```
+
+We see that there is variability in the coefficient estimates for weeks. The standard deviation of this collection of possible estimates is the standard error of the estimate.
+
+### Confidence interval and p-value
+
+We can also use this collection of estimates to provide a plausible range for the "true" coefficient value:
+
+```{r, eval=FALSE}
+quantile(weeks.coefs, probs=c(.025,.975))
+```
+
+Or, we can look at the collection of estimates and see that none of them are 0. So, because we collected 250 different samples and none of them had a coefficient estimate of 0, we are quite confident that the "true" coefficient is not zero.
+
+ 
+
+ 
+
+In reality, we typically cannot many samples from the same population. So, we often rely on assumptions related to probability distributions to derive confidence intervals and p-values.

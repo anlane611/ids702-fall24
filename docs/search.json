@@ -11,7 +11,7 @@
     "href": "index.html#course-overview",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Course Overview",
-    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 107\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Tues/Thurs 4:20-5:20 PM\n \nTeaching Assistants \nXiaoquan Liu \nx.liu@duke.edu \nOffice hours: \n \nDingkun Yang \ndingkun.yang@duke.edu \nOffice hours:"
+    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Thurs 4:20-5:20 PM\n \nTeaching Assistants \nRevanth Ganga \nrevanthchowdary.ganga@duke.edu \nOffice hours: \n \nRakeen Rouf \nrakeen.rouf@duke.edu \nOffice hours:\n \nJiayi Zhou \njiayi.zhou@duke.edu \nOffice hours:"
   },
   {
     "objectID": "index.html#textbook",
@@ -25,7 +25,7 @@
     "href": "index.html#important-dates",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Important Dates",
-    "text": "Important Dates\n\n\n  \n    \n      Tuesday, Aug. 29\n      First day of class\n    \n    \n      Tuesday, Oct. 17\n      Fall break - no class meeting\n    \n    \n      Thursday, Nov. 23 \n      Thanksgiving holiday - no class meeting \n    \n        \n      Friday, Dec 1 \n      Classes end, final reports due"
+    "text": "Important Dates\n\n  \n    \n      Tuesday, Aug. 27\n      First day of class\n    \n    \n      Tuesday, Oct. 15\n      Fall break - no class meeting\n    \n    \n      Tuesday, Nov. 26 \n      Last day of class \n    \n        \n      Sunday, Dec. 15 5PM \n      Final reports due"
   },
   {
     "objectID": "about.html",
@@ -33,5 +33,136 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "materials/unit0/unit0a.html",
+    "href": "materials/unit0/unit0a.html",
+    "title": "Key Principles of Statistics",
+    "section": "",
+    "text": "By the end of this session, students should be able to:\n\ndistinguish between a population and a sample\ndescribe sampling variability\nfit a simple linear regression model in R"
+  },
+  {
+    "objectID": "materials/unit0/unit0a.html#load-the-data",
+    "href": "materials/unit0/unit0a.html#load-the-data",
+    "title": "Key Principles of Statistics",
+    "section": "Load the data",
+    "text": "Load the data\nToday we will use the births14 dataset in the openintro R package. You can read more about the dataset and see a data dictionary at this link.\n\n#load the packages we need\nlibrary(openintro)\nlibrary(tidyverse)\nlibrary(tidymodels)\n\n#load the dataset from the openintro package\ndata(births14)\n\n#get an overview of the data\nglimpse(births14)"
+  },
+  {
+    "objectID": "materials/unit0/unit0a.html#exercise",
+    "href": "materials/unit0/unit0a.html#exercise",
+    "title": "Key Principles of Statistics",
+    "section": "Exercise",
+    "text": "Exercise\nExplore the births14 data:\n\nUsing the data dictionary at the link above, classify the variables as numeric or categorical. Do the variables seem to be correctly structured in R?\nUse the summary() function to determine if there are missing values in the dataset"
+  },
+  {
+    "objectID": "materials/unit0/unit0a.html#hypothetically",
+    "href": "materials/unit0/unit0a.html#hypothetically",
+    "title": "Key Principles of Statistics",
+    "section": "Hypothetically…",
+    "text": "Hypothetically…\nImagine that this dataset contains information about the entire population of interest (e.g., all babies born in Bull City). Then, say we have the following research question:\nWhat is the relationship between length of pregnancy in weeks and weight of the baby in pounds in Bull City?\nWe can explore this relationship graphically:\n\nggplot(births14, aes(x=weeks, y=weight))+\n  geom_point()+\n  labs(x=\"length of pregnancy (weeks)\", y=\"baby weight (lbs)\") \n  #always use labels!"
+  },
+  {
+    "objectID": "materials/unit0/unit0a.html#linear-regression",
+    "href": "materials/unit0/unit0a.html#linear-regression",
+    "title": "Key Principles of Statistics",
+    "section": "Linear Regression",
+    "text": "Linear Regression\nTo further characterize the relationship between length of pregnancy and baby weight, we can fit a line to the plot:\n\nmod_bullcity &lt;- linear_reg() |&gt; \n  set_engine(\"lm\") |&gt;\n  fit(weight ~ weeks, data=births14)\n\ntidy(mod_bullcity, conf.int=TRUE)\n\n\nExercise\n\nggplot(births14, aes(x=weeks, y=weight))+\n  geom_point()+\n  labs(x=\"length of pregnancy (weeks)\",y=\"baby weight (lbs)\")+\n  geom_smooth(method=\"lm\",se=F)\n\n\nLooking at the estimate column of the tidy output, how would you interpret the intercept here? how would you interpret the weeks estimate?\n\n\n\nStandard error\nTo better conceptualize the standard error, consider the premise above that these data represent the entire city. Now imagine that we could not actually obtain all of these data. Instead, we were only able to obtain a sample of 200 babies. Using only a sample of 200, if we fit a line in the same way as above, we have many different lines that we could have obtained:\n\nset.seed(823)\nbirths_sample1 &lt;- births14 |&gt; slice_sample(n=200)\n\nggplot(births_sample1, aes(x=weeks, y=weight))+\n  geom_point()+\n  labs(x=\"length of pregnancy (weeks)\",y=\"baby weight (lbs)\")+\n  geom_smooth(method=\"lm\",se=F)\n\nmod_sample1 &lt;- linear_reg() |&gt; \n  set_engine(\"lm\") |&gt;\n  fit(weight ~ weeks, data=births_sample1)\n\ntidy(mod_sample1, conf.int=TRUE)\n\n\n\nExercise\nFill in the code below to simulate the process of taking 250 different samples and store the weeks coefficient estimate in a vector\n\nweeks.coefs &lt;- c() #create empty vector to store coefficient estimates\n\nfor(i in 1:250){ #create loop for 250 different samples\n  print(i)\n  set.seed(823+i) #set a unique seed each iteration\n  \n  #sample data\n  births_sample &lt;-\n  \n  #fit model\n  mod_sample &lt;- \n    \n  #store output\n  weeks.coefs[i] &lt;- tidy(mod_sample)$estimate[2]\n}\n\n \n \n \nNow let’s plot the coefficient estimates we have for the 250 samples:\n\nweeks.coefs.dat &lt;- data.frame(weeks.coefs)\n\nggplot(weeks.coefs.dat, aes(x=weeks.coefs))+\n  geom_histogram()+\n  labs(x=\"weeks coefficient estimate\")\n\nWe see that there is variability in the coefficient estimates for weeks. The standard deviation of this collection of possible estimates is the standard error of the estimate.\n\n\nConfidence interval and p-value\nWe can also use this collection of estimates to provide a plausible range for the “true” coefficient value:\n\nquantile(weeks.coefs, probs=c(.025,.975))\n\nOr, we can look at the collection of estimates and see that none of them are 0. So, because we collected 250 different samples and none of them had a coefficient estimate of 0, we are quite confident that the “true” coefficient is not zero.\n \n \nIn reality, we typically cannot many samples from the same population. So, we often rely on assumptions related to probability distributions to derive confidence intervals and p-values."
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html",
+    "href": "materials/unit0/unit0b.html",
+    "title": "Cleaning and exploring data in R",
+    "section": "",
+    "text": "A crucial first step of data analysis is exploring the dataset (and then cleaning, as needed). Today, we will practice exploring and cleaning data in R.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#types-of-variables",
+    "href": "materials/unit0/unit0b.html#types-of-variables",
+    "title": "Cleaning and exploring data in R",
+    "section": "Types of variables",
+    "text": "Types of variables\nNumeric variables take numerical values and it makes sense to perform calculations on the values (e.g., addition, mean)\n\nDiscrete variables can not take decimal values (e.g., Number of required statistics courses in a major)\nContinuous variables can take decimal values (e.g., height in cm)\n\nCategorical variables are variables that have categories, where each category is called a level\n\nNominal variables do not have an order (e.g., eye color)\nOrdinal variables do have an order (e.g., education categories)\n\n\nExercise\nIn your group, discuss the following:\n\nClassify each of the survey questions as discrete, continuous, nominal, or ordinal.\nWhat does it mean to explore data?\nWhat does it mean to clean data? Identify how the survey data may need to be cleaned just by looking at the questions.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#first-steps-in-r",
+    "href": "materials/unit0/unit0b.html#first-steps-in-r",
+    "title": "Cleaning and exploring data in R",
+    "section": "First steps in R",
+    "text": "First steps in R\nHopefully you have already installed R/RStudio on your computer. If so, you can copy and paste the code below into your own script. If you haven’t yet installed R/RStudio, you can run code directly from this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s remove the timestamp variable\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s make our variable names more concise (but still descriptive!)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#cleaning-and-exploring-variables",
+    "href": "materials/unit0/unit0b.html#cleaning-and-exploring-variables",
+    "title": "Cleaning and exploring data in R",
+    "section": "Cleaning and exploring variables",
+    "text": "Cleaning and exploring variables\n\nSiblings (changing a particular value)\nLet’s start with the Siblings variable. What information do we need to know to clean the variable?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAlways always always:\n\ncreate a new variable instead of overwriting the original\nperform a quality control check\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLanguages (Creating categories)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nOften, we need to combine categories if we have too few observations in multiple categories. Let’s say we want to create a new numeric variable that collapses the Languages variable into 3 categories using the following values:\n0: 0 siblings\n1: 1-3 siblings\n2: 4 or more siblings\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#exercises",
+    "href": "materials/unit0/unit0b.html#exercises",
+    "title": "Cleaning and exploring data in R",
+    "section": "Exercises",
+    "text": "Exercises\nIn your group, complete the following:\n\nFor the application area of interest variable, how many students responded with “other”? What does this say about the survey design?\nWhat proportion of the class plays an instrument?\nConvert the Age variable to a continuous variable so that we have more information about specific ages.\nCreate a stacked histogram of the Sushi variable for those who would like to live on the beach vs those who would like to live in a cabin in the woods. Change the color of the bars to a new color of your choice. Add a descriptive title and axis labels.\nHow can we visualize the relationship between application area of interest and course excitement?\nCreate a new variable called “Excitement_num” that stores only the numeric value of the Excitement variable (e.g., 1 instead of “1 (I am dreading this)”). Instead of typing out each answer choice, use the “substr” and “as.numeric” functions. You can learn how the substr function works by typing ?substr in the console.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#types-of-variables-in-our-data",
+    "href": "materials/unit0/unit0b.html#types-of-variables-in-our-data",
+    "title": "Cleaning and exploring data in R",
+    "section": "Types of variables in our data",
+    "text": "Types of variables in our data\nNumeric variables take numerical values and it makes sense to perform calculations on the values (e.g., addition, mean)\n\nDiscrete variables can not take decimal values (e.g., Number of required statistics courses in a major)\nContinuous variables can take decimal values (e.g., height in cm)\n\nCategorical variables are variables that have categories, where each category is called a level\n\nNominal variables do not have an order (e.g., eye color)\nOrdinal variables do have an order (e.g., education categories)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#types-of-variables-in-r",
+    "href": "materials/unit0/unit0b.html#types-of-variables-in-r",
+    "title": "Cleaning and exploring data in R",
+    "section": "Types of variables in R",
+    "text": "Types of variables in R\n\nNumeric/double: a number that can take decimal values\nInteger: a number that takes integer values\nCharacter: a string (denoted by quotes)\nLogical: TRUE/FALSE\n\n\nSurvey\nFirst, complete this survey. We’ll use this as our dataset for some practice exercises.\n\n\nExercise\nIn your group, discuss the following:\n\nClassify each of the survey questions as discrete, continuous, nominal, or ordinal.\nCan you identify how each variable will be stored in R before you read in the data?\nWhat does it mean to explore data?\nWhat does it mean to clean data? Identify how the survey data may need to be cleaned just by looking at the questions.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#section",
+    "href": "materials/unit0/unit0b.html#section",
+    "title": "Cleaning and exploring data in R",
+    "section": "",
+    "text": "Sushi (outliers/implausible values)\nNow consider the sushi variable.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIt’s important to pay attention to implausible values. What would be an implausible value in this case? How should we handle it?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
   }
 ]
