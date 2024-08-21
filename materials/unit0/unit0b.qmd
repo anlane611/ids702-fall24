@@ -74,7 +74,7 @@ library(tidyverse)
 ```
 
 ```{webr-r}
-survey <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/main/BootcampSurvey.csv", header=TRUE)
+survey <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/main/IDS702Bootcampsurvey2024.csv", header=TRUE)
 glimpse(survey)
 ```
 
