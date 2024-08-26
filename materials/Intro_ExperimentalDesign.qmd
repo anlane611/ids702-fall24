@@ -1,0 +1,16 @@
+---
+title: Introduction and Experimental Design
+format: html
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+[link to slides](syllabusslides-speaker.html)

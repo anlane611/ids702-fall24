@@ -10,13 +10,16 @@ website:
     background: "#1297e8"
     contents:
        - section:
-         #href: syllabus.qmd
+         href: syllabus.qmd
          text: Syllabus
        - section: Course Materials
          contents:
           - section: "Unit 0: Bootcamp"
             contents:
             - href: materials/unit0/unit0b.qmd
+          - section: "Unit 1: Statistics Fundamentals"
+            contents:
+            - href: materials/Intro_ExperimentalDesign.qmd
 
 format:
   html:

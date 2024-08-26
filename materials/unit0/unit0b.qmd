@@ -250,3 +250,5 @@ survey_sub <- survey_sub |>
 ## Quality control check!
 survey_sub |> count(Excitement, Excitement_num)
 ```
+
+## Link to Lauren's slides on ggplot2:

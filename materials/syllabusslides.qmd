@@ -1,0 +1,80 @@
+---
+title: "Syllabus"
+format: 
+  revealjs:
+    incremental: true
+    multiplex: true
+---
+
+## Course Topics
+
+1.  Statistics Fundamentals
+2.  Linear Regression
+3.  Generalized Linear Models
+
+## Learning Objectives
+
+1.  Fit and interpret statistical models, including linear and generalized linear models.
+2.  Connect statistical modeling concepts to underlying statistics fundamentals including probability distributions and estimation.
+3.  Map a research question and dataset to the appropriate statistical model.
+4.  Make careful and critical decisions about model building and consider real-world implications.
+5.  Communicate (through written and oral communication) model results to a broad audience.
+
+## Course Materials
+
+### Textbooks:
+
+Statistics for Data Scientists: An Introduction to Probability, Statistics, and Data Analysis by Kaptein, M. and van den Heuvel, E. (Available through the Duke Library)
+
+[An Introduction to Statistical Learning with Applications in R, 2nd edition](https://www.statlearning.com/) by James, G., Witten, D., Hastie, T., and Tibshirani, R. (Available online)
+
+Statistical Foundations, Reasoning and Inference For Statistics and Data Science by Kauermann, G., Küchenhoff, H., and Heumann, C. (Available through the Duke Library)
+
+## Course Materials
+
+Assignments will be submitted on **Gradescope** (access code in the syllabus on the course website)
+
+Announcements will be posted on the #ids702-fall24 Slack channel in the MIDS Workspace. You're also welcome to post questions or resources here!
+
+## Office Hours & Communication
+
+Andrea: Thursday after class (4:30-5:30) in the classroom if available or my office (Gross 223 - by the lockers)
+
+Jiayi: Tuesday 12-1
+
+Rakeen and Revanth: TBD, will post on the syllabus
+
+Communication: Slack **or** email; follow up after 24 hours on weekdays
+
+## Course components
+
+1.  Class preparation/quizzes
+2.  Application exercises
+3.  Homework assignments
+4.  Statistics Reflections
+5.  Midterm exam
+6.  Final project
+
+## Course Policies
+
+-   Late submissions:
+
+    -   50% credit within 24 hours
+
+    -   One no-questions-asked 24-hour extension for homework or statistics reflection
+
+    -   No make-up assignments
+
+-   Academic integrity:
+
+    -   As a Duke student, you agree to uphold the Duke Community Standard
+
+    -   Read Nick Eubank's advice on using ChatGPT
+
+## Resources
+
+-   Duke Counseling and Psychological Services (CAPS)
+
+-   Student Disability Access Office (SDAO)
+
+-   Academic Resource Center (ARC)

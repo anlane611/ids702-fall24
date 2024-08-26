@@ -11,7 +11,7 @@
     "href": "index.html#course-overview",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Course Overview",
-    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Thurs 4:20-5:20 PM\n \nTeaching Assistants \nRevanth Ganga \nrevanthchowdary.ganga@duke.edu \nOffice hours: \n \nRakeen Rouf \nrakeen.rouf@duke.edu \nOffice hours:\n \nJiayi Zhou \njiayi.zhou@duke.edu \nOffice hours:"
+    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Thurs 4:30-5:30 PM\n \nTeaching Assistants \nRevanth Ganga \nrevanthchowdary.ganga@duke.edu \nOffice hours: \n \nRakeen Rouf \nrakeen.rouf@duke.edu \nOffice hours:\n \nJiayi Zhou \njiayi.zhou@duke.edu \nOffice hours:"
   },
   {
     "objectID": "index.html#textbook",
@@ -25,7 +25,7 @@
     "href": "index.html#important-dates",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Important Dates",
-    "text": "Important Dates\n\n  \n    \n      Tuesday, Aug. 27\n      First day of class\n    \n    \n      Tuesday, Oct. 15\n      Fall break - no class meeting\n    \n    \n      Tuesday, Nov. 26 \n      Last day of class \n    \n        \n      Sunday, Dec. 15 5PM \n      Final reports due"
+    "text": "Important Dates\n\n  \n    \n      Tuesday, Aug. 27\n      First day of class\n    \n    \n      Tuesday, Oct. 15\n      Fall break - no class meeting\n    \n    \n      Tuesday, Oct. 22\n      Midterm exam\n    \n    \n      Tuesday, Nov. 26 \n      Last day of class \n    \n        \n      Sunday, Dec. 15 5PM \n      Final projects due"
   },
   {
     "objectID": "about.html",
@@ -164,5 +164,171 @@
       "Unit 0: Bootcamp",
       "Cleaning and exploring data in R"
     ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "",
+    "text": "Developing an understanding of statistical modeling is a key component of becoming a data scientist. Statistical models are used to answer research questions and obtain meaningful insights from many kinds of data.\nBroadly, this course will cover the following topics:\n\nStatistics Fundamentals\nLinear Regression\nGeneralized Linear Models\n\nBut here in the MIDS program, understanding the content is only the beginning. Successful data scientists are critical thinkers, problem solvers, effective communicators, and enthusiastic collaborators. With that in mind, this course aims to meet five key learning objectives:\nBy the end of the course, students should be able to\n\nFit and interpret statistical models, including linear and generalized linear models.\nConnect statistical modeling concepts to underlying statistics fundamentals including probability distributions and estimation.\nMap a research question and dataset to the appropriate statistical model.\nMake careful and critical decisions about model building and consider real-world implications.\nCommunicate (through written and oral communication) model results to a broad audience."
+  },
+  {
+    "objectID": "syllabus.html#course-objectives",
+    "href": "syllabus.html#course-objectives",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "",
+    "text": "Developing an understanding of statistical modeling is a key component of becoming a data scientist. Statistical models are used to answer research questions and obtain meaningful insights from many kinds of data.\nBroadly, this course will cover the following topics:\n\nStatistics Fundamentals\nLinear Regression\nGeneralized Linear Models\n\nBut here in the MIDS program, understanding the content is only the beginning. Successful data scientists are critical thinkers, problem solvers, effective communicators, and enthusiastic collaborators. With that in mind, this course aims to meet five key learning objectives:\nBy the end of the course, students should be able to\n\nFit and interpret statistical models, including linear and generalized linear models.\nConnect statistical modeling concepts to underlying statistics fundamentals including probability distributions and estimation.\nMap a research question and dataset to the appropriate statistical model.\nMake careful and critical decisions about model building and consider real-world implications.\nCommunicate (through written and oral communication) model results to a broad audience."
+  },
+  {
+    "objectID": "syllabus.html#course-components",
+    "href": "syllabus.html#course-components",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "Course Components",
+    "text": "Course Components\n\nClass preparation\nBefore each class meeting, you will be required to engage with prep materials (reading or video). The prep materials will primarily cover theoretical modeling concepts. Class meetings will then focus on implementation in R and application exercises. Preparation assignments will be posted on the course website.\nTo ensure that you engage with the class preparation, we will have random comprehension quizzes throughout the semester. These quizzes will take place at the beginning of class and will count as part of your participation grade (cumulative score &gt;80% will earn full credit).\nThe preparation course component connects to the first two learning objectives.\n\n\nApplication exercises\nDuring class meetings, you will complete application exercises. These exercises will focus on deepening your understanding of the theoretical concepts and help you to apply the concepts in R. You will work on these exercises in groups and submit it at the end of the class session. They will be graded on the following scale:\n0: Exercise was not submitted\n1: Exercise was submitted but does not present a good faith effort\n2: Exercise was submitted and presents a good faith effort\nA “good faith effort” means that the exercise may not be completely correct, or may be missing a couple of components, but it is clear that students worked diligently and engaged in the learning process.\nThe preparation course component connects to the first, second, and fourth learning objectives.\n\n\nHomework assignments\nYou will have five homework assignments to complete during the semester; they will each cover roughly two weeks of material. The structure of the assignments will evolve with the course material, starting with a problem set structure and moving toward written analysis assignments.\nYou are encouraged to talk to each other about general concepts, and to the instructor/TAs. However, the write-ups, solutions, and code MUST be entirely your own work. The assignments must be typed up using Quarto and submitted on Gradescope. Note that you will not be able to make online submissions after the due date, so be sure to submit before the Gradescope-specified deadline.\nHomework assignments connect to all five learning objectives.\n\n\nStatistics reflections\nYou will be responsible for four statistics reflections throughout the semester. I have assigned six pieces that cover various topics related to the interaction between data science and society. You are to write a written reflection about the material that you select. Questions are provided as prompts, but you are not required to answer them in your reflection. Grades will be based on completion and thoughtful engagement.\nThe chosen articles/videos address topics that may be sensitive and/or uncomfortable, including racism, eugenics, and gender identity. It is crucial that you engage in the reflections thoughtfully and respectfully. I seek to create a classroom environment that not only acknowledges diversity in all forms, but celebrates it. In that endeavor, I would be remiss not to acknowledge the discriminatory ways statistical science has been used both historically and currently. In having these important discussions, I want you to critically examine and appreciate the power (good and bad) of statistics as you begin your career as a data scientist. More information can be found on the statistics reflections page on the course website.\nStatistics reflections connect to the fourth course learning objective.\n\n\nMidterm exam\nA midterm exam will be held on Tuesday, October 22, in class, and cover the first two units: statistics fundamentals and linear regression. The exam will assess conceptual understanding, not R programming.\nIf you benefit from the use of testing accommodations, such as an isolated testing area or extra time, please connect with the Student Disability Access Office as soon as possible.\nThe exam connects to the first and second learning objectives.\n\n\nProject\nYou will work with a team to apply the knowledge and skills learned throughout this course and analyze a dataset that interests you. The project should be an in-depth statistical analysis of a particular research question. Your team will select the dataset. Teams will be assigned. More detailed information will be available on the course website later in the semester. The project will have the following components:\n\nProposal (team)\nWritten report (team)\nRecorded elevator pitch (individual)\nTeam member evaluation\n\nThe project connects to all four course learning objectives."
+  },
+  {
+    "objectID": "syllabus.html#grade-calculation",
+    "href": "syllabus.html#grade-calculation",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "Grade Calculation",
+    "text": "Grade Calculation\n\n\n\nComponent\nPercentage\n\n\n\n\nParticipation (prep quizzes and application exercises)\n10%\n\n\nStatistics reflections\n10%\n\n\nHomework assignments\n40%\n\n\nMidterm exam\n15%\n\n\nProject\n25%\n\n\n\nLetter grade scales may be adjusted at the end of the semester. Cumulative averages \\(\\geq 90\\%\\) are guaranteed at least an A-, cumulative averages \\(\\geq 80\\%\\) are guaranteed at least a B-, and cumulative averages \\(\\geq 70\\%\\) are guaranteed at least a C-\nRegrade requests can be made on Gradescope within 24 hours of the assignment’s grade release. Regrade requests for final project reports/presentations must be made within 12 hours of grade release.\nThere are no make-ups for any graded work except for cases of medical/personal/familial emergencies. If you are facing extenuating circumstances during the semester, please don’t hesitate to reach out to the instructor."
+  },
+  {
+    "objectID": "syllabus.html#course-policies",
+    "href": "syllabus.html#course-policies",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "Course policies",
+    "text": "Course policies\n\nLate submissions\nYou (or your team when applicable) will lose 50% of the total points on each assignment if you submit within the first 24 hours after it is due. You will lose 100% of the total points if you submit later than that without explicit approval from the instructor.\nYou can request a single-use, no-questions-asked 24-hour extension for one assignment (either homework assignment or statistics reflection) during the semester. To use your extension, email the instructor and cc all TAs with the subject line “IDS 702 Single-use Extension.” No explanation is needed as to why you are requesting the extension. The extension cannot be applied to the exam, project deliverables, or prep material quizzes.\n\n\nAcademic integrity\nAs a student in this course, you have agreed to uphold the Duke Community Standard as well as the practices specific to this course. This means that the work you submit is your own, even if you discuss assignments with your classmates. Additionally, when consulting resources (books, internet articles including stackexchange, chatgpt), you must cite them. If you have any questions about what should be cited in your work, please reach out to the instructor.\nPlease read Nick Eubank’s ChatGPT advice linked here and consider the downside of overreliance on LLMs during the learning process.\n\n\nInclusive community\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with Duke’s commitment to diversity and inclusion. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:\n\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the course, I encourage you to speak with MIDS administrators.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me or a member of the teaching team know."
+  },
+  {
+    "objectID": "syllabus.html#resources",
+    "href": "syllabus.html#resources",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "Resources",
+    "text": "Resources\n\nDuke Counseling & Psychological Services (CAPS) helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS offers many services to Duke students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000.\nIf there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations. The Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nThe Academic resource center provides learning resources to help you maximize your academic capabilities."
+  },
+  {
+    "objectID": "reflections.html",
+    "href": "reflections.html",
+    "title": "Statistics Reflections",
+    "section": "",
+    "text": "In the MIDS program, we emphasize thinking critically about data analysis and upholding principles of diversity, equity, and inclusion. Quantitative fields like data science are often viewed as “amoral,” but human judgment always plays a role in data collection and analysis. As data scientists, we must carefully consider the societal factors that play a role in our work. The materials presented with this assignment explore how statistics/data science interact with society at large.\nThis assignment connects to the third course learning objective: Make careful and critical decisions about model building and consider real-world implications."
+  },
+  {
+    "objectID": "reflections.html#motivation",
+    "href": "reflections.html#motivation",
+    "title": "Statistics Reflections",
+    "section": "",
+    "text": "In the MIDS program, we emphasize thinking critically about data analysis and upholding principles of diversity, equity, and inclusion. Quantitative fields like data science are often viewed as “amoral,” but human judgment always plays a role in data collection and analysis. As data scientists, we must carefully consider the societal factors that play a role in our work. The materials presented with this assignment explore how statistics/data science interact with society at large.\nThis assignment connects to the third course learning objective: Make careful and critical decisions about model building and consider real-world implications."
+  },
+  {
+    "objectID": "reflections.html#instructions",
+    "href": "reflections.html#instructions",
+    "title": "Statistics Reflections",
+    "section": "Instructions",
+    "text": "Instructions\nYou are required to complete four statistics reflections throughout the semester. You can select any four from the list of materials below.\n\nBegin your assignment with a header that includes your name and the title and source of your selected material\nReflect on the material selected. What did it make you think about? How does it affect your work as a data scientist? Note that you are required to engage with the material and provide your thoughts/reactions; you should NOT be summarizing the piece.\nWhile there is no minimum word count for the reflections, you are expected to meaningfully engage with the material (2-3 paragraphs). You can use the suggested questions to get started, but you are not required to answer them in your response.\nIn Gradescope, select the appropriate reflection assignment based on the due date. All of the assignments are already available, so you can complete them at any time!\n\nI am always available if you have any questions or comments about the content presented in these materials. Additionally, if you come across a piece that is not on this list and you would like to use it for a statistics reflection, you are welcome to send me an email. Please include a link to the piece and a brief description of how it connects data science and society."
+  },
+  {
+    "objectID": "reflections.html#deadlines",
+    "href": "reflections.html#deadlines",
+    "title": "Statistics Reflections",
+    "section": "Deadlines",
+    "text": "Deadlines\n\nSeptember 15, 11:59 PM\nOctober 6, 11:59 PM\nOctober 27, 11:59 PM\nNovember 17, 11:59 PM\n\nSubmit your reflection to the appropriate assignment on Gradescope"
+  },
+  {
+    "objectID": "reflections.html#materials",
+    "href": "reflections.html#materials",
+    "title": "Statistics Reflections",
+    "section": "Materials",
+    "text": "Materials\n\n  \n    \n      \n        A Primer on Non-Binary Gender and Big Data (article)\n      \n    \n    \n      \n        A Primer on Non-Binary Gender and Big Data \n        The author offers several questions you may want to consider in your response: \n        \n          What potential insights might we derive from working with non-binary gender and data?\n          What are the risks to gener minorities in relation to data?\n          What kinds of variation do we see across culture, context, and history?\n          How might non-binary gender and data deal with intersectionality (Click this link to learn more about intersectionality)\n        \n        Additionally, you may want to consider: \n        \n          Is it always useful/important to collect data on gender? In which domains might it be more important than others?\n        \n      \n    \n  \n  \n    \n      \n        How Eugenics Shaped Statistics (article - highly recommended!)\n      \n    \n    \n      \n        How eugenics shaped statistics \n        \n          Consider this quote: \"The separation was everything—not how much, what else might explain it, or why it mattered, just that it was there.\" Reflect on what this means for you as a data scientist\n          The article argues that you cannot separate the science from the scientist. Do you agree?\n          Reflect on the argument that Galton, Pearson, and Fisher's views are \"a product of their time.\"\n        \n        \n      \n    \n  \n  \n    \n      \n        Abolish Big Data (video)\n      \n    \n    \n      \n        Abolish Big Data \n        \n          What does Milner mean when she says \"abolish big data?\"\n          What role does data literacy play in the use of big data tools? What role do data scientists have in the implementation of these tools?\n        \n      \n    \n  \n    \n    \n      \n        Data sonification (videos)\n      \n    \n    \n      \n        Data sonification - from deep space research to improving lives through cancer research AND \n        Making data sing | Margaret Anne Schedel \n        \n          What are the advantages and disadvantages of data sonification?\n          How might data sonification make data more accessible to people with disabilities? Can you think of any other ways data could be made more accessible?\n        \n      \n    \n  \n    \n    \n      \n        Fairness in Machine Learning with Sherri Rose (podcast)\n      \n    \n    \n      \n        Fairness in Machine Learning with Sherri Rose  (interview starts at 8:15 and ends at 46:00)\n        \n          Reflect on Dr. Rose's recommendations for ensuring fairness in machine learning\n          Consider Dr. Rose's comments about the \"single metric leaderboard\" and what it means for you as a data scientist.\n        \n      \n    \n  \n    \n    \n      \n        Peter Donnelly: How stats fool juries (video)\n      \n    \n    \n      \n        Peter Donnelly: How stats fool juries (you can skip past the stats jokes and start at 3:30) \n        \n          This talk is from 2007. Can you think of more recent examples of misleading statistics/misuse of statistical principles?\n          How do you think situations like the trial Donnelly describes can be avoided?"
+  },
+  {
+    "objectID": "materials/unit0/unit0b.html#link-to-laurens-slides-on-ggplot2",
+    "href": "materials/unit0/unit0b.html#link-to-laurens-slides-on-ggplot2",
+    "title": "Cleaning and exploring data in R",
+    "section": "Link to Lauren’s slides on ggplot2:",
+    "text": "Link to Lauren’s slides on ggplot2:",
+    "crumbs": [
+      "Course Materials",
+      "Unit 0: Bootcamp",
+      "Cleaning and exploring data in R"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-materials",
+    "href": "syllabus.html#course-materials",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "Course Materials",
+    "text": "Course Materials\n\nTextbooks\nI will assign readings from a few different textbooks throughout the semester. All of these books are available for free in electronic format either online or through the Duke Library.\nStatistics for Data Scientists: An Introduction to Probability, Statistics, and Data Analysis by Kaptein, M. and van den Heuvel, E. (Available through the Duke Library)\nAn Introduction to Statistical Learning with Applications in R, 2nd edition by James, G., Witten, D., Hastie, T., and Tibshirani, R. (Available online)\nStatistical Foundations, Reasoning and Inference For Statistics and Data Science by Kauermann, G., Küchenhoff, H., and Heumann, C. (Available through the Duke Library)\n\n\nGradescope\nYou will submit assignments through Gradescope. You can use this code to access the course: J74D7E\n\n\nSlack\nBe sure to join the ids702-fall24 channel in the MIDS Slack workspace. I will post announcements on this channel.\nA note on communication: If you would like to contact me for any reason, you can reach out on either Slack or via email. If I do not respond within 24 hours during weekdays, you are welcome to follow up."
+  },
+  {
+    "objectID": "materials/syllabusslides.html#course-topics",
+    "href": "materials/syllabusslides.html#course-topics",
+    "title": "Syllabus",
+    "section": "Course Topics",
+    "text": "Course Topics\n\nStatistics Fundamentals\nLinear Regression\nGeneralized Linear Models"
+  },
+  {
+    "objectID": "materials/syllabusslides.html#learning-objectives",
+    "href": "materials/syllabusslides.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nFit and interpret statistical models, including linear and generalized linear models.\nConnect statistical modeling concepts to underlying statistics fundamentals including probability distributions and estimation.\nMap a research question and dataset to the appropriate statistical model.\nMake careful and critical decisions about model building and consider real-world implications.\nCommunicate (through written and oral communication) model results to a broad audience."
+  },
+  {
+    "objectID": "materials/syllabusslides.html#course-materials",
+    "href": "materials/syllabusslides.html#course-materials",
+    "title": "Syllabus",
+    "section": "Course Materials",
+    "text": "Course Materials\nTextbooks:\nStatistics for Data Scientists: An Introduction to Probability, Statistics, and Data Analysis by Kaptein, M. and van den Heuvel, E. (Available through the Duke Library)\nAn Introduction to Statistical Learning with Applications in R, 2nd edition by James, G., Witten, D., Hastie, T., and Tibshirani, R. (Available online)\nStatistical Foundations, Reasoning and Inference For Statistics and Data Science by Kauermann, G., Küchenhoff, H., and Heumann, C. (Available through the Duke Library)"
+  },
+  {
+    "objectID": "materials/syllabusslides.html#course-materials-1",
+    "href": "materials/syllabusslides.html#course-materials-1",
+    "title": "Syllabus",
+    "section": "Course Materials",
+    "text": "Course Materials\nAssignments will be submitted on Gradescope (access code in the syllabus on the course website)\nAnnouncements will be posted on the #ids702-fall24 Slack channel in the MIDS Workspace. You’re also welcome to post questions or resources here!"
+  },
+  {
+    "objectID": "materials/syllabusslides.html#office-hours-communication",
+    "href": "materials/syllabusslides.html#office-hours-communication",
+    "title": "Syllabus",
+    "section": "Office Hours & Communication",
+    "text": "Office Hours & Communication\nAndrea: Thursday after class (4:30-5:30) in the classroom if available or my office (Gross 223 - by the lockers)\nJiayi: Tuesday 12-1\nRakeen and Revanth: TBD, will post on the syllabus\nCommunication: Slack or email; follow up after 24 hours on weekdays"
+  },
+  {
+    "objectID": "materials/syllabusslides.html#course-components",
+    "href": "materials/syllabusslides.html#course-components",
+    "title": "Syllabus",
+    "section": "Course components",
+    "text": "Course components\n\nClass preparation/quizzes\nApplication exercises\nHomework assignments\nStatistics Reflections\nMidterm exam\nFinal project"
+  },
+  {
+    "objectID": "materials/syllabusslides.html#course-policies",
+    "href": "materials/syllabusslides.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course Policies",
+    "text": "Course Policies\n\nLate submissions:\n\n50% credit within 24 hours\nOne no-questions-asked 24-hour extension for homework or statistics reflection\nNo make-up assignments\n\nAcademic integrity:\n\nAs a Duke student, you agree to uphold the Duke Community Standard\nRead Nick Eubank’s advice on using ChatGPT"
+  },
+  {
+    "objectID": "materials/syllabusslides.html#resources",
+    "href": "materials/syllabusslides.html#resources",
+    "title": "Syllabus",
+    "section": "Resources",
+    "text": "Resources\n\nDuke Counseling and Psychological Services (CAPS)\nStudent Disability Access Office (SDAO)\nAcademic Resource Center (ARC)"
+  },
+  {
+    "objectID": "materials/Intro_ExperimentalDesign.html",
+    "href": "materials/Intro_ExperimentalDesign.html",
+    "title": "Introduction and Experimental Design",
+    "section": "",
+    "text": "link to slides"
+  },
+  {
+    "objectID": "materials/syllabusslides.html",
+    "href": "materials/syllabusslides.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Statistics Fundamentals\nLinear Regression\nGeneralized Linear Models"
   }
 ]

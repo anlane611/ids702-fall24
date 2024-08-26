@@ -1,0 +1,15 @@
+{
+  "hash": "0774dae2d5917dc1f4ed4e17f69a1c29",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Introduction and Experimental Design\nformat: html\nengine: knitr\nwebr: \n  show-startup-message: false\n  show-header-message: false\n  home-dir: '/home/r-user/'\n  packages: ['ggplot2', 'dplyr']\nfilters:\n  - webr\nexecute:\n  freeze: auto\n---\n\n\n\n[link to slides](syllabusslides-speaker.html)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
