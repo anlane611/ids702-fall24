@@ -11,7 +11,7 @@
     "href": "index.html#course-overview",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Course Overview",
-    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Thurs 4:30-5:30 PM\n \nTeaching Assistants \nRevanth Ganga \nrevanthchowdary.ganga@duke.edu \nOffice hours: \n \nRakeen Rouf \nrakeen.rouf@duke.edu \nOffice hours:\n \nJiayi Zhou \njiayi.zhou@duke.edu \nOffice hours: Tues 12-1pm"
+    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Thurs 4:30-5:30 PM\n \nTeaching Assistants \nRevanth Ganga \nrevanthchowdary.ganga@duke.edu \nOffice hours: \n \nRakeen Rouf \nrakeen.rouf@duke.edu \nOffice hours: Mon 3:30-4:30\n \nJiayi Zhou \njiayi.zhou@duke.edu \nOffice hours: Tues 12-1pm"
   },
   {
     "objectID": "index.html#textbook",
@@ -320,9 +320,9 @@
   {
     "objectID": "materials/Intro_ExperimentalDesign.html",
     "href": "materials/Intro_ExperimentalDesign.html",
-    "title": "Introduction and Experimental Design",
+    "title": "8.27: Introduction and Study Design",
     "section": "",
-    "text": "link to slides"
+    "text": "Pre-course Assessment\nStudy Design\nApplication Exercise (time permitting)\nSyllabus"
   },
   {
     "objectID": "materials/syllabusslides.html",
@@ -330,5 +330,159 @@
     "title": "Syllabus",
     "section": "",
     "text": "Statistics Fundamentals\nLinear Regression\nGeneralized Linear Models"
+  },
+  {
+    "objectID": "materials/Intro_ExperimentalDesign.html#agenda",
+    "href": "materials/Intro_ExperimentalDesign.html#agenda",
+    "title": "8.27: Introduction and Study Design",
+    "section": "",
+    "text": "Pre-course Assessment\nStudy Design\nApplication Exercise (time permitting)\nSyllabus"
+  },
+  {
+    "objectID": "materials/Intro_ExperimentalDesign.html#learning-objectives",
+    "href": "materials/Intro_ExperimentalDesign.html#learning-objectives",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this class session, students should be able to:\n\nDescribe the difference between, and pros and cons of, simple random sampling, stratified sampling, and cluster sampling\nApply the different sampling schemes in R\nIdentify course components, policies, and resources"
+  },
+  {
+    "objectID": "materials/Intro_ExperimentalDesign.html#pre-course-assessment",
+    "href": "materials/Intro_ExperimentalDesign.html#pre-course-assessment",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Pre-course Assessment",
+    "text": "Pre-course Assessment\nSelect the option that corresponds to both your answer and your confidence in that answer.\nLink to assessment"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#where-do-data-come-from",
+    "href": "materials/studydesign_slides.html#where-do-data-come-from",
+    "title": "Study Design",
+    "section": "Where do data come from?",
+    "text": "Where do data come from?\nStart with a research question\n\nWhat is the average mercury content in swordfish in the Atlantic Ocean?\nDoes a new vaccine reduce incidence rates for a particular disease?\nAre average hours of sleep per night related to GPA for graduate students?"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#where-do-data-come-from-1",
+    "href": "materials/studydesign_slides.html#where-do-data-come-from-1",
+    "title": "Study Design",
+    "section": "Where do data come from?",
+    "text": "Where do data come from?\nBased on the research question, we can identify the population of interest.\nOften, it is unrealistic to collect data on the entire population, so we collect a sample.\nBut how?"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#sampling",
+    "href": "materials/studydesign_slides.html#sampling",
+    "title": "Study Design",
+    "section": "Sampling",
+    "text": "Sampling\nSay I want five of you to come to the front of the class. How could I choose five people?"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#random-sampling-strategies",
+    "href": "materials/studydesign_slides.html#random-sampling-strategies",
+    "title": "Study Design",
+    "section": "Random sampling strategies",
+    "text": "Random sampling strategies\n\nSimple random sampling\nStratified sampling\nCluster sampling\nMultistage sampling"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#simple-random-sampling",
+    "href": "materials/studydesign_slides.html#simple-random-sampling",
+    "title": "Study Design",
+    "section": "Simple random sampling",
+    "text": "Simple random sampling\n\n\n\n\n\n\nGold standard, but not always practical\nMany statistical methods assume simple random sampling\n\n\n\nImage source: https://openintro-ims.netlify.app/data-design"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#stratified-sampling",
+    "href": "materials/studydesign_slides.html#stratified-sampling",
+    "title": "Study Design",
+    "section": "Stratified sampling",
+    "text": "Stratified sampling\n\n\nUseful when the sizes of the strata differ from each other\nUseful when the cases in each stratum are very similar with respect to the outcome"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#cluster-sampling",
+    "href": "materials/studydesign_slides.html#cluster-sampling",
+    "title": "Study Design",
+    "section": "Cluster sampling",
+    "text": "Cluster sampling\n\n\nCan be more economical than SRS or stratified sampling\nMost helpful when there is case-to-case variability within a cluster, but there is not much variability among the clusters themselves"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#multistage-sampling",
+    "href": "materials/studydesign_slides.html#multistage-sampling",
+    "title": "Study Design",
+    "section": "Multistage sampling",
+    "text": "Multistage sampling\n\n\nSame pros as cluster sampling"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#example",
+    "href": "materials/studydesign_slides.html#example",
+    "title": "Study Design",
+    "section": "Example",
+    "text": "Example\nRQ: What is the mean salary for all MLB players?\n\nWhat is the population of interest?\nHow could we collect a simple random sample?\nHow could we collect a stratified sample?\nHow could we collect a cluster sample?"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#study-design",
+    "href": "materials/studydesign_slides.html#study-design",
+    "title": "Study Design",
+    "section": "Study Design",
+    "text": "Study Design\nBroadly speaking, there are two kinds of studies:\n\nExperiments: studies where the researchers assign treatments\nObservational: studies where no treatment has been explicitly applied\n\n\nUnder which design would you be more comfortable drawing causal conclusions?"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#confounding-variables",
+    "href": "materials/studydesign_slides.html#confounding-variables",
+    "title": "Study Design",
+    "section": "Confounding variables",
+    "text": "Confounding variables\nA confounding variable is one that is associated with both the explanatory and response variables\n\n\n\n\n\n\n\nImage source: https://tellingthestory.typepad.com/telling_the_story/2010/06/"
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#sampling-in-r",
+    "href": "materials/studydesign_slides.html#sampling-in-r",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\nLet’s try the sample function:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#sampling-in-r-1",
+    "href": "materials/studydesign_slides.html#sampling-in-r-1",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\nLet’s try it with our survey data from last week:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#sampling-in-r-2",
+    "href": "materials/studydesign_slides.html#sampling-in-r-2",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#sampling-in-r-3",
+    "href": "materials/studydesign_slides.html#sampling-in-r-3",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/studydesign_slides.html#sampling-in-r-4",
+    "href": "materials/studydesign_slides.html#sampling-in-r-4",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\nIn your group, discuss how you can fill in the blanks to create a cluster sample in which you randomly select 2 values of the Interest variable\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Intro_ExperimentalDesign.html#study-design",
+    "href": "materials/Intro_ExperimentalDesign.html#study-design",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Study Design",
+    "text": "Study Design\nLink to slides"
+  },
+  {
+    "objectID": "materials/Intro_ExperimentalDesign.html#application-exercise",
+    "href": "materials/Intro_ExperimentalDesign.html#application-exercise",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Application Exercise",
+    "text": "Application Exercise\nGo to the exercises at the bottom of this page\nIn your groups, discuss exercises 3, 9, and 11"
+  },
+  {
+    "objectID": "materials/Intro_ExperimentalDesign.html#syllabus",
+    "href": "materials/Intro_ExperimentalDesign.html#syllabus",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Syllabus",
+    "text": "Syllabus\nLink to slides"
   }
 ]

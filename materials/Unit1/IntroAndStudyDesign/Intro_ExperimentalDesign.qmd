@@ -1,0 +1,54 @@
+---
+title: "8.27: Introduction and Study Design"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Agenda
+
+1.  Pre-course Assessment
+2.  Study Design
+3.  Application Exercise (time permitting)
+4.  Syllabus
+
+## Learning Objectives
+
+By the end of this class session, students should be able to:
+
+-   Describe the difference between, and pros and cons of, simple random sampling, stratified sampling, and cluster sampling
+
+-   Apply the different sampling schemes in R
+
+-   Identify course components, policies, and resources
+
+## Pre-course Assessment
+
+Select the option that corresponds to both your answer and your confidence in that answer.
+
+[Link to assessment](https://docs.google.com/forms/d/e/1FAIpQLScaE46wY6oCVlfqrib0qH6saFx_J1yKjNc6KUBFxAGbxfU3GA/viewform?usp=sf_link)
+
+## Study Design
+
+[Link to slides](studydesign_slides-speaker.html)
+
+## Application Exercise
+
+[Go to the exercises at the bottom of this page](https://openintro-ims.netlify.app/data-design)
+
+In your groups, discuss exercises 3, 9, and 11
+
+## Syllabus
+
+[Link to slides](syllabusslides-speaker.html)

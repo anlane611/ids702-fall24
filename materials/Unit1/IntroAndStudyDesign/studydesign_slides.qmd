@@ -1,0 +1,164 @@
+---
+title: "Study Design"
+format: 
+  revealjs:
+    incremental: true
+    multiplex: true
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Where do data come from?
+
+Start with a **research question**
+
+1.  What is the average mercury content in swordfish in the Atlantic Ocean?
+2.  Does a new vaccine reduce incidence rates for a particular disease?
+3.  Are average hours of sleep per night related to GPA for graduate students?
+
+## Where do data come from?
+
+Based on the research question, we can identify the **population of interest**.
+
+Often, it is unrealistic to collect data on the entire population, so we collect a **sample**.
+
+But how?
+
+## Sampling
+
+Say I want five of you to come to the front of the class. How could I choose five people?
+
+## Random sampling strategies
+
+1.  Simple random sampling
+2.  Stratified sampling
+3.  Cluster sampling
+4.  Multistage sampling
+
+## Simple random sampling
+
+![](simplerandom.png){fig-align="center" width="583"}
+
+-   Gold standard, but not always practical
+
+-   Many statistical methods assume simple random sampling
+
+::: aside
+Image source: <https://openintro-ims.netlify.app/data-design>
+:::
+
+## Stratified sampling
+
+![](stratified.png){fig-align="center"}
+
+-   Useful when the sizes of the strata differ from each other
+
+-   Useful when the cases in each stratum are very similar with respect to the outcome
+
+## Cluster sampling
+
+![](cluster.png){fig-align="center"}
+
+-   Can be more economical than SRS or stratified sampling
+
+-   Most helpful when there is case-to-case variability within a cluster, but there is not much variability among the clusters themselves
+
+## Multistage sampling
+
+![](multistage.png){fig-align="center"}
+
+-   Same pros as cluster sampling
+
+## Example
+
+**RQ**: What is the mean salary for all MLB players?
+
+1.  What is the population of interest?
+2.  How could we collect a simple random sample?
+3.  How could we collect a stratified sample?
+4.  How could we collect a cluster sample?
+
+## Study Design
+
+Broadly speaking, there are two kinds of studies:
+
+1.  Experiments: studies where the researchers assign treatments
+2.  Observational: studies where no treatment has been explicitly applied
+
+. . .
+
+Under which design would you be more comfortable drawing causal conclusions?
+
+## Confounding variables
+
+A **confounding variable** is one that is associated with both the explanatory and response variables
+
+![](icecreammurder.jpg){fig-align="center"}
+
+::: aside
+Image source: <https://tellingthestory.typepad.com/telling_the_story/2010/06/>
+:::
+
+## Sampling in R
+
+Let's try the `sample` function:
+
+```{webr-r}
+myvec <- 1:20
+sample(myvec, size=3)
+```
+
+## Sampling in R
+
+Let's try it with our survey data from last week:
+
+```{webr-r}
+survey <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/main/IDS702Bootcampsurvey2024.csv", header=TRUE)
+names(survey) <- c("Timestamp","Interest","Excitement","Languages",
+                       "Instrument","Siblings","AgeRange",
+                       "BeachOrCabin","Sushi")
+glimpse(survey)
+```
+
+## Sampling in R
+
+```{webr-r}
+#Simple random sample
+survey.srs <- survey |>
+  slice(sample(1:nrow(survey),size=3))
+survey.srs
+```
+
+## Sampling in R
+
+```{webr-r}
+#Stratified random sample
+survey.strat <- survey |>
+  group_by(BeachOrCabin) |>
+  slice(sample(1:n(),size=3)) |>
+  ungroup()
+
+survey.strat |> select(c("Interest","Instrument",
+                         "AgeRange","BeachOrCabin"))
+```
+
+## Sampling in R
+
+In your group, discuss how you can fill in the blanks to create a cluster sample in which you randomly select 2 values of the `Interest` variable
+
+```{webr-r}
+#first select the clusters
+clusters <- ________(unique(_____$_______), size= __)
+clusters
+
+#now select the data for those clusters
+survey.cluster <- survey |> filter(_______ %in% _______)
+head(survey.cluster)
+```

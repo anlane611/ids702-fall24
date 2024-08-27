@@ -1,6 +1,9 @@
 ---
-title: "8.27: Introduction and Experimental Design"
-format: html
+title: "8.29: Introduction to Probability"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
 engine: knitr
 webr: 
   show-startup-message: false
@@ -13,4 +16,6 @@ execute:
   freeze: auto
 ---
 
-[link to slides](syllabusslides-speaker.html)
+## Class prep
+
+Statistics for Data Scientists: 3.1-3.4

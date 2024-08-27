@@ -17,7 +17,10 @@ website:
           - section: "Unit 0: Bootcamp"
             contents:
             - href: materials/unit0/unit0b.qmd
-          #- section: "Unit 1: Statistics Fundamentals"
+          - section: "Unit 1: Statistics Fundamentals"
+            contents:
+            - href: materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.qmd
+            - href: materials/Unit1/IntrotoProbability/IntrotoProbability.qmd
 
 
 format:
