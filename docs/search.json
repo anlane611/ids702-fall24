@@ -484,5 +484,295 @@
     "title": "8.27: Introduction and Study Design",
     "section": "Syllabus",
     "text": "Syllabus\nLink to slides"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html",
+    "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html",
+    "title": "8.27: Introduction and Study Design",
+    "section": "",
+    "text": "Pre-course Assessment\nStudy Design\nApplication Exercise (time permitting)\nSyllabus",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.27: Introduction and Study Design"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#agenda",
+    "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#agenda",
+    "title": "8.27: Introduction and Study Design",
+    "section": "",
+    "text": "Pre-course Assessment\nStudy Design\nApplication Exercise (time permitting)\nSyllabus",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.27: Introduction and Study Design"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#learning-objectives",
+    "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#learning-objectives",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this class session, students should be able to:\n\nDescribe the difference between, and pros and cons of, simple random sampling, stratified sampling, and cluster sampling\nApply the different sampling schemes in R\nIdentify course components, policies, and resources",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.27: Introduction and Study Design"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#pre-course-assessment",
+    "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#pre-course-assessment",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Pre-course Assessment",
+    "text": "Pre-course Assessment\nSelect the option that corresponds to both your answer and your confidence in that answer.\nLink to assessment",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.27: Introduction and Study Design"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#study-design",
+    "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#study-design",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Study Design",
+    "text": "Study Design\nLink to slides",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.27: Introduction and Study Design"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#application-exercise",
+    "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#application-exercise",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Application Exercise",
+    "text": "Application Exercise\nGo to the exercises at the bottom of this page\nIn your groups, discuss exercises 3, 9, and 11",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.27: Introduction and Study Design"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#syllabus",
+    "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#syllabus",
+    "title": "8.27: Introduction and Study Design",
+    "section": "Syllabus",
+    "text": "Syllabus\nLink to slides",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.27: Introduction and Study Design"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Statistics Fundamentals\nLinear Regression\nGeneralized Linear Models"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-topics",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-topics",
+    "title": "Syllabus",
+    "section": "Course Topics",
+    "text": "Course Topics\n\nStatistics Fundamentals\nLinear Regression\nGeneralized Linear Models"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#learning-objectives",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nFit and interpret statistical models, including linear and generalized linear models.\nConnect statistical modeling concepts to underlying statistics fundamentals including probability distributions and estimation.\nMap a research question and dataset to the appropriate statistical model.\nMake careful and critical decisions about model building and consider real-world implications.\nCommunicate (through written and oral communication) model results to a broad audience."
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-materials",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-materials",
+    "title": "Syllabus",
+    "section": "Course Materials",
+    "text": "Course Materials\nTextbooks:\nStatistics for Data Scientists: An Introduction to Probability, Statistics, and Data Analysis by Kaptein, M. and van den Heuvel, E. (Available through the Duke Library)\nAn Introduction to Statistical Learning with Applications in R, 2nd edition by James, G., Witten, D., Hastie, T., and Tibshirani, R. (Available online)\nStatistical Foundations, Reasoning and Inference For Statistics and Data Science by Kauermann, G., Küchenhoff, H., and Heumann, C. (Available through the Duke Library)"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-materials-1",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-materials-1",
+    "title": "Syllabus",
+    "section": "Course Materials",
+    "text": "Course Materials\nAssignments will be submitted on Gradescope (access code in the syllabus on the course website)\nAnnouncements will be posted on the #ids702-fall24 Slack channel in the MIDS Workspace. You’re also welcome to post questions or resources here!"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#office-hours-communication",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#office-hours-communication",
+    "title": "Syllabus",
+    "section": "Office Hours & Communication",
+    "text": "Office Hours & Communication\nAndrea: Thursday after class (4:30-5:30) in the classroom if available or my office (Gross 223 - by the lockers)\nJiayi: Tuesday 12-1\nRakeen: Monday 3:30-4:30\nRevanth: TBD, will post on the syllabus\nCommunication: Slack or email; follow up after 24 hours on weekdays"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-components",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-components",
+    "title": "Syllabus",
+    "section": "Course components",
+    "text": "Course components\n\nClass preparation/quizzes\nApplication exercises\nHomework assignments\nStatistics Reflections\nMidterm exam\nFinal project"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-policies",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course Policies",
+    "text": "Course Policies\n\nLate submissions:\n\n50% credit within 24 hours\nOne no-questions-asked 24-hour extension for homework or statistics reflection\nNo make-up assignments\n\nAcademic integrity:\n\nAs a Duke student, you agree to uphold the Duke Community Standard\nRead Nick Eubank’s advice on using ChatGPT"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#resources",
+    "href": "materials/Unit1/IntroAndStudyDesign/syllabusslides.html#resources",
+    "title": "Syllabus",
+    "section": "Resources",
+    "text": "Resources\n\nDuke Counseling and Psychological Services (CAPS)\nStudent Disability Access Office (SDAO)\nAcademic Resource Center (ARC)"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/IntrotoProbability.html",
+    "href": "materials/Unit1/IntrotoProbability/IntrotoProbability.html",
+    "title": "8.29: Introduction to Probability",
+    "section": "",
+    "text": "Statistics for Data Scientists: 3.1-3.4",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.29: Introduction to Probability"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/IntrotoProbability.html#class-prep",
+    "href": "materials/Unit1/IntrotoProbability/IntrotoProbability.html#class-prep",
+    "title": "8.29: Introduction to Probability",
+    "section": "",
+    "text": "Statistics for Data Scientists: 3.1-3.4",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.29: Introduction to Probability"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html",
+    "title": "Study Design",
+    "section": "",
+    "text": "Start with a research question\n\nWhat is the average mercury content in swordfish in the Atlantic Ocean?\nDoes a new vaccine reduce incidence rates for a particular disease?\nAre average hours of sleep per night related to GPA for graduate students?"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#where-do-data-come-from",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#where-do-data-come-from",
+    "title": "Study Design",
+    "section": "Where do data come from?",
+    "text": "Where do data come from?\nStart with a research question\n\nWhat is the average mercury content in swordfish in the Atlantic Ocean?\nDoes a new vaccine reduce incidence rates for a particular disease?\nAre average hours of sleep per night related to GPA for graduate students?"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#where-do-data-come-from-1",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#where-do-data-come-from-1",
+    "title": "Study Design",
+    "section": "Where do data come from?",
+    "text": "Where do data come from?\nBased on the research question, we can identify the population of interest.\nOften, it is unrealistic to collect data on the entire population, so we collect a sample.\nBut how?"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling",
+    "title": "Study Design",
+    "section": "Sampling",
+    "text": "Sampling\nSay I want five of you to come to the front of the class. How could I choose five people?"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#random-sampling-strategies",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#random-sampling-strategies",
+    "title": "Study Design",
+    "section": "Random sampling strategies",
+    "text": "Random sampling strategies\n\nSimple random sampling\nStratified sampling\nCluster sampling\nMultistage sampling"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#simple-random-sampling",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#simple-random-sampling",
+    "title": "Study Design",
+    "section": "Simple random sampling",
+    "text": "Simple random sampling\n\n\n\n\n\n\nGold standard, but not always practical\nMany statistical methods assume simple random sampling\n\n\n\nImage source: https://openintro-ims.netlify.app/data-design"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#stratified-sampling",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#stratified-sampling",
+    "title": "Study Design",
+    "section": "Stratified sampling",
+    "text": "Stratified sampling\n\n\nUseful when the sizes of the strata differ from each other\nUseful when the cases in each stratum are very similar with respect to the outcome"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#cluster-sampling",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#cluster-sampling",
+    "title": "Study Design",
+    "section": "Cluster sampling",
+    "text": "Cluster sampling\n\n\nCan be more economical than SRS or stratified sampling\nMost helpful when there is case-to-case variability within a cluster, but there is not much variability among the clusters themselves"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#multistage-sampling",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#multistage-sampling",
+    "title": "Study Design",
+    "section": "Multistage sampling",
+    "text": "Multistage sampling\n\n\nSame pros as cluster sampling"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#example",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#example",
+    "title": "Study Design",
+    "section": "Example",
+    "text": "Example\nRQ: What is the mean salary for all MLB players?\n\nWhat is the population of interest?\nHow could we collect a simple random sample?\nHow could we collect a stratified sample?\nHow could we collect a cluster sample?"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#study-design",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#study-design",
+    "title": "Study Design",
+    "section": "Study Design",
+    "text": "Study Design\nBroadly speaking, there are two kinds of studies:\n\nExperiments: studies where the researchers assign treatments\nObservational: studies where no treatment has been explicitly applied\n\n\nUnder which design would you be more comfortable drawing causal conclusions?"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#confounding-variables",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#confounding-variables",
+    "title": "Study Design",
+    "section": "Confounding variables",
+    "text": "Confounding variables\nA confounding variable is one that is associated with both the explanatory and response variables\n\n\n\n\n\n\n\nImage source: https://tellingthestory.typepad.com/telling_the_story/2010/06/"
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\nLet’s try the sample function:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-1",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-1",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\nLet’s try it with our survey data from last week:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-2",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-2",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-3",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-3",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-4",
+    "href": "materials/Unit1/IntroAndStudyDesign/studydesign_slides.html#sampling-in-r-4",
+    "title": "Study Design",
+    "section": "Sampling in R",
+    "text": "Sampling in R\nIn your group, discuss how you can fill in the blanks to create a cluster sample in which you randomly select 2 values of the Interest variable\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]
