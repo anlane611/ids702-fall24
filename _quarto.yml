@@ -21,6 +21,9 @@ website:
             contents:
             - href: materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.qmd
             - href: materials/Unit1/IntrotoProbability/IntrotoProbability.qmd
+       - section:
+         href: reflections.qmd
+         text: Statistics Reflections
 
 
 format:

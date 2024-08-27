@@ -8,7 +8,7 @@ execute:
 
 In the MIDS program, we emphasize thinking critically about data analysis and upholding principles of diversity, equity, and inclusion. Quantitative fields like data science are often viewed as "amoral," but human judgment always plays a role in data collection and analysis. As data scientists, we must carefully consider the societal factors that play a role in our work. The materials presented with this assignment explore how statistics/data science interact with society at large.
 
-This assignment connects to the third course learning objective: *Make careful and critical decisions about model building and consider real-world implications.*
+This assignment connects to the fourth course learning objective: *Make careful and critical decisions about model building and consider real-world implications.*
 
 ## Instructions
 
@@ -26,15 +26,15 @@ I am always available if you have any questions or comments about the content pr
 
 ## Deadlines
 
-1.  September 15, 11:59 PM
+1.  September 8, 11:59 PM
 
-2.  October 6, 11:59 PM
+2.  September 22, 11:59 PM
 
-3.  October 27, 11:59 PM
+3.  October 6, 11:59 PM
 
-4.  November 17, 11:59 PM
+4.  November 3, 11:59 PM
 
-Submit your reflection to the appropriate assignment on [Gradescope](https://www.gradescope.com/courses/589228)
+Submit your reflection to the appropriate assignment on [Gradescope](https://www.gradescope.com/courses/838880)
 
 ## Materials
 
@@ -84,15 +84,17 @@ Submit your reflection to the appropriate assignment on [Gradescope](https://www
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Abolish Big Data (<em>video</em>)
+        To predict and serve? (<em>article</em>)
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <a href="https://d4bl.org/videos/42-data-intersections-2020-the-university-of-miami-institute-for-data-science-computing" target="_blank" rel="noopener noreferrer">Abolish Big Data</a> </br>
+        <a href="https://rss.onlinelibrary.wiley.com/doi/epdf/10.1111/j.1740-9713.2016.00960.x" target="_blank" rel="noopener noreferrer">To predict and serve?</a> </br>This article may be of particular interest to those interested in social justice. The authors work with the <a href="https://hrdag.org/" target="blank" rel="noopener noreferrer">Human Rights Data Analysis Group</a> (and Kristian Lum is a Duke alum!) </br>
         <ul>
-          <li>What does Milner mean when she says "abolish big data?"</li>
-          <li>What role does data literacy play in the use of big data tools? What role do data scientists have in the implementation of these tools?</li>
+          <li>In data analysis, we often use the phrase "garbage in, garbage out" to refer to models based on bad data. How does this relate to the problem of using biased data for predictive policing?</li>
+          <li>The last sentence states that data-driven approaches should be inclusive. How do you think this can be done? Is it possible to use biased data without reaching biased predictions?</li>
+          <li>Can you think of other examples in which using data to predict future behavior could do more harm than good?
+</li>
         </ul>
       </div>
     </div>
@@ -100,16 +102,17 @@ Submit your reflection to the appropriate assignment on [Gradescope](https://www
     <div class="accordion-item">
     <h2 class="accordion-header" id="headingFour">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        Data sonification (<em>videos</em>)
+        Data sonification (<em>podcast</em>)
       </button>
     </h2>
     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <a href="https://www.youtube.com/watch?v=ndLkP-bNL1s" target="_blank" rel="noopener noreferrer">Data sonification - from deep space research to improving lives through cancer research</a> AND </br>
-        <a href="https://www.youtube.com/watch?v=PTfmDNUapq0" target="_blank" rel="noopener noreferrer">Making data sing | Margaret Anne Schedel</a> </br>
+        <a href="https://www.loudnumbers.net/podcast" target="_blank" rel="noopener noreferrer">Loud Numbers:</a> Listen to whichever one of the podcast episodes looks most interesting to you. Also, read the FAQs under the What We Do tab. You might also be interested in the Talks and Articles listed under the Community tab. </br>
         <ul>
-          <li>What are the advantages and disadvantages of data sonification?</li>
-          <li>How might data sonification make data more accessible to people with disabilities? Can you think of any other ways data could be made more accessible?</li>
+          <li>One of the FAQs mentions accessibility. Consider the limitations of only representing data visually and how data sonification may make data more accessible.
+</li>
+          <li>How might we use the other senses (touch, smell, taste) to represent data? Have you seen data represented in any of these ways before?
+</li>
         </ul>
       </div>
     </div>
