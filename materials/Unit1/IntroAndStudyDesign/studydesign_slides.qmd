@@ -155,10 +155,10 @@ In your group, discuss how you can fill in the blanks to create a cluster sample
 
 ```{webr-r}
 #first select the clusters
-clusters <- ________(unique(_____$_______), size= __)
+clusters <- sample(unique(survey$Interest), size= 2)
 clusters
 
 #now select the data for those clusters
-survey.cluster <- survey |> filter(_______ %in% _______)
+survey.cluster <- survey |> filter(Interest %in% clusters)
 head(survey.cluster)
 ```

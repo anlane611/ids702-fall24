@@ -24,6 +24,8 @@ You are required to complete four statistics reflections throughout the semester
 
 I am always available if you have any questions or comments about the content presented in these materials. Additionally, if you come across a piece that is not on this list and you would like to use it for a statistics reflection, you are welcome to send me an email. Please include a link to the piece and a brief description of how it connects data science and society.
 
+Note: It is not appropriate to use ChatGPT for this assignment. The task is to offer your personal reflections/thoughts; there are no right or wrong answers here.
+
 ## Deadlines
 
 1.  September 8, 11:59 PM

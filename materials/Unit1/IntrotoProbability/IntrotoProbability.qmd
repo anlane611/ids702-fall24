@@ -19,3 +19,25 @@ execute:
 ## Class prep
 
 Statistics for Data Scientists: 3.1-3.4
+
+## Reading Quiz
+
+[Wooclap](https://app.wooclap.com/KPNJGA?from=event-page)
+
+## Class recap & Exercise
+
+[Slides](probability_slides-speaker.html)
+
+[Groups for the exercise](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
+
+SDS problems 3.1, 3.4, 3.7
+
+Use the table shown in 3.9 to answer the following:
+
+-   What is the joint probability of a successful removal and open surgery?
+
+-   What is the marginal probability of open surgery?
+
+-   What is the conditional probability of successful removal given open surgery?
+
+-   Describe how you could use probability to determine which treatment is more effective.

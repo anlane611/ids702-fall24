@@ -10,7 +10,7 @@
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.56">
 
-  <title>IDS 702 – Syllabus</title>
+  <title>IDS 702 – Intro to Probability</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -325,83 +325,62 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Syllabus</h1>
+  <h1 class="title">Intro to Probability</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="course-topics" class="slide level2">
-<h2>Course Topics</h2>
-<ol type="1">
-<li class="fragment">Statistics Fundamentals</li>
-<li class="fragment">Linear Regression</li>
-<li class="fragment">Generalized Linear Models</li>
-</ol>
-</section>
-<section id="learning-objectives" class="slide level2">
-<h2>Learning Objectives</h2>
-<ol type="1">
-<li class="fragment">Fit and interpret statistical models, including linear and generalized linear models.</li>
-<li class="fragment">Connect statistical modeling concepts to underlying statistics fundamentals including probability distributions and estimation.</li>
-<li class="fragment">Map a research question and dataset to the appropriate statistical model.</li>
-<li class="fragment">Make careful and critical decisions about model building and consider real-world implications.</li>
-<li class="fragment">Communicate (through written and oral communication) model results to a broad audience.</li>
-</ol>
-</section>
-<section id="course-materials" class="slide level2">
-<h2>Course Materials</h2>
-<h3 id="textbooks">Textbooks:</h3>
-<p>Statistics for Data Scientists: An Introduction to Probability, Statistics, and Data Analysis by Kaptein, M. and van den Heuvel, E. (Available through the Duke Library)</p>
-<p><a href="https://www.statlearning.com/">An Introduction to Statistical Learning with Applications in R, 2nd edition</a> by James, G., Witten, D., Hastie, T., and Tibshirani, R. (Available online)</p>
-<p>Statistical Foundations, Reasoning and Inference For Statistics and Data Science by Kauermann, G., Küchenhoff, H., and Heumann, C. (Available through the Duke Library)</p>
-</section>
-<section id="course-materials-1" class="slide level2">
-<h2>Course Materials</h2>
-<p>Assignments will be submitted on <strong>Gradescope</strong> (access code in the syllabus on the course website)</p>
-<p>Announcements will be posted on the #ids702-fall24 Slack channel in the MIDS Workspace. You’re also welcome to post questions or resources here!</p>
-</section>
-<section id="office-hours-communication" class="slide level2">
-<h2>Office Hours &amp; Communication</h2>
-<p>Andrea: Thursday after class (4:30-5:30) in the classroom if available or my office (Gross 223 - by the lockers)</p>
-<p>Jiayi: Tuesday 12-1, Gross Hall 230N</p>
-<p>Rakeen: Monday 3:30-4:30, Gross Hall 230N</p>
-<p>Revanth: Wednesday 12-1, Gross Hall 230N</p>
-<p>Communication: Slack <strong>or</strong> email; follow up after 24 hours on weekdays</p>
-</section>
-<section id="course-components" class="slide level2">
-<h2>Course components</h2>
-<ol type="1">
-<li class="fragment">Class preparation/quizzes</li>
-<li class="fragment">Application exercises</li>
-<li class="fragment">Homework assignments</li>
-<li class="fragment">Statistics Reflections</li>
-<li class="fragment">Midterm exam</li>
-<li class="fragment">Final project</li>
-</ol>
-</section>
-<section id="course-policies" class="slide level2">
-<h2>Course Policies</h2>
+<section id="motivation" class="slide level2">
+<h2>Motivation</h2>
+<p>We rely on probability to draw conclusions about our population of interest</p>
+
+<img data-src="simplerandom.png" class="quarto-figure quarto-figure-center r-stretch" width="601"></section>
+<section id="probability-terminology" class="slide level2">
+<h2>Probability terminology</h2>
 <ul>
-<li class="fragment"><p>Late submissions:</p>
-<ul>
-<li class="fragment"><p>50% credit within 24 hours</p></li>
-<li class="fragment"><p>One no-questions-asked 24-hour extension for homework or statistics reflection</p></li>
-<li class="fragment"><p>No make-up assignments</p></li>
-</ul></li>
-<li class="fragment"><p>Academic integrity:</p>
-<ul>
-<li class="fragment"><p>As a Duke student, you agree to uphold the Duke Community Standard</p></li>
-<li class="fragment"><p>Read Nick Eubank’s advice on using ChatGPT</p></li>
-</ul></li>
+<li class="fragment"><p><strong>Event</strong>: a potential outcome</p></li>
+<li class="fragment"><p><strong>Probability</strong> is a measure of how likely it is that an event occurs</p></li>
+<li class="fragment"><p>The sum of the probabilities of all events in a <strong>sample space</strong> is 1</p></li>
+<li class="fragment"><p><span class="math inline">\(0 \leq Pr(A) \leq 1\)</span></p></li>
 </ul>
 </section>
-<section id="resources" class="slide level2">
-<h2>Resources</h2>
+<section id="probability-definitions" class="slide level2">
+<h2>Probability definitions</h2>
 <ul>
-<li class="fragment"><p>Duke Counseling and Psychological Services (CAPS)</p></li>
-<li class="fragment"><p>Student Disability Access Office (SDAO)</p></li>
-<li class="fragment"><p>Academic Resource Center (ARC)</p></li>
+<li class="fragment"><p>The <strong>complement</strong> of event <span class="math inline">\(A\)</span> is denoted <span class="math inline">\(A^c\)</span> and it indicates that event <span class="math inline">\(A\)</span> does not occur. <span class="math inline">\(Pr(A) = 1-Pr(A^c)\)</span></p></li>
+<li class="fragment"><p>The occurrence of two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> at the same time is denoted by <span class="math inline">\(A \cap B\)</span> and <span class="math inline">\(Pr(A\cap B)\)</span> is known as the joint probability of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span></p></li>
+<li class="fragment"><p>The event that either <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> or both occur is denoted by <span class="math inline">\(A \cup B\)</span>. <span class="math inline">\(Pr(A\cup B) = Pr(A) + Pr(B) - Pr(A \cap B)\)</span></p></li>
+<li class="fragment"><p>Mutually exclusive events: <span class="math inline">\(Pr(A\cap B)=0\)</span></p></li>
+<li class="fragment"><p>Conditional probability: <span class="math inline">\(Pr(A|B)=\frac{Pr(A\cap B)}{Pr(B)}\)</span></p></li>
+</ul>
+</section>
+<section id="independent-events" class="slide level2">
+<h2>Independent Events</h2>
+<p>If knowing about the occurrence of event <span class="math inline">\(A\)</span> does not give information about the probability of event <span class="math inline">\(B\)</span>, then events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <strong>independent</strong>.</p>
+<p>&nbsp;</p>
+<p>Mathematically: <span class="math inline">\(Pr(A\cap B) = Pr(A)Pr(B)\)</span></p>
+<p>&nbsp;</p>
+<p>and <span class="math inline">\(Pr(A|B)=Pr(A)\)</span></p>
+</section>
+<section id="bayes-theorem" class="slide level2">
+<h2>Bayes Theorem</h2>
+<p>&nbsp;</p>
+<p>Bayes Theorem allows us to invert conditional probabilities. We can use it to update a belief based on prior knowledge.</p>
+<p>&nbsp;</p>
+<p><span class="math inline">\(Pr(B|A) = \frac{Pr(A|B)Pr(B)}{Pr(A)}\)</span></p>
+<p>&nbsp;</p>
+</section>
+<section id="bayes-theorem-example" class="slide level2">
+<h2>Bayes Theorem Example</h2>
+<p>You have 3 coins. 2 of them are fair and one is rigged so that it always lands on heads. You choose a coin at random and flip it; it lands on heads. Is the coin you chose likely to be fair or rigged?</p>
+<ul>
+<li class="fragment"><p><span class="math inline">\(Pr(F)=2/3\)</span>, <span class="math inline">\(Pr(F^c)=1/3\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(Pr(H|F)=1/2\)</span>, <span class="math inline">\(Pr(H|F^c)=1\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(Pr(F|H)=\frac{Pr(H|F)Pr(F)}{Pr(H)}\)</span></p></li>
+<li class="fragment"><p>We can break down the denominator: <span class="math inline">\(Pr(H)=Pr(H|F)Pr(F)+Pr(H|F^c)Pr(F^c)\)</span></p></li>
+<li class="fragment"><p>So then we have: <span class="math inline">\(Pr(F|H)=\frac{(1/2)(2/3)}{(1/2)(2/3)+1(1/3)}\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(Pr(F|H)=1/2\)</span></p></li>
 </ul>
 
 <div class="quarto-auto-generated-content">
@@ -443,7 +422,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":"17246993238482064491","id":"3a5bb5e8eefc6021","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":null,"id":"6837fa8584827ff4","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -617,7 +596,7 @@
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
-          RevealNotes,
+          
           RevealSearch,
           RevealZoom
         ]

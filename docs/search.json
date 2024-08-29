@@ -250,7 +250,7 @@
     "href": "reflections.html#instructions",
     "title": "Statistics Reflections",
     "section": "Instructions",
-    "text": "Instructions\nYou are required to complete four statistics reflections throughout the semester. You can select any four from the list of materials below.\n\nBegin your assignment with a header that includes your name and the title and source of your selected material\nReflect on the material selected. What did it make you think about? How does it affect your work as a data scientist? Note that you are required to engage with the material and provide your thoughts/reactions; you should NOT be summarizing the piece.\nWhile there is no minimum word count for the reflections, you are expected to meaningfully engage with the material (2-3 paragraphs). You can use the suggested questions to get started, but you are not required to answer them in your response.\nIn Gradescope, select the appropriate reflection assignment based on the due date. All of the assignments are already available, so you can complete them at any time!\n\nI am always available if you have any questions or comments about the content presented in these materials. Additionally, if you come across a piece that is not on this list and you would like to use it for a statistics reflection, you are welcome to send me an email. Please include a link to the piece and a brief description of how it connects data science and society.",
+    "text": "Instructions\nYou are required to complete four statistics reflections throughout the semester. You can select any four from the list of materials below.\n\nBegin your assignment with a header that includes your name and the title and source of your selected material\nReflect on the material selected. What did it make you think about? How does it affect your work as a data scientist? Note that you are required to engage with the material and provide your thoughts/reactions; you should NOT be summarizing the piece.\nWhile there is no minimum word count for the reflections, you are expected to meaningfully engage with the material (2-3 paragraphs). You can use the suggested questions to get started, but you are not required to answer them in your response.\nIn Gradescope, select the appropriate reflection assignment based on the due date. All of the assignments are already available, so you can complete them at any time!\n\nI am always available if you have any questions or comments about the content presented in these materials. Additionally, if you come across a piece that is not on this list and you would like to use it for a statistics reflection, you are welcome to send me an email. Please include a link to the piece and a brief description of how it connects data science and society.\nNote: It is not appropriate to use ChatGPT for this assignment. The task is to offer your personal reflections/thoughts; there are no right or wrong answers here.",
     "crumbs": [
       "Statistics Reflections"
     ]
@@ -817,5 +817,71 @@
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Schedule",
     "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables & Distributions\nSampling Distributions &  Central Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nEvaluating Estimators\nHomework 1\n\n\nSept 16\nNonparametric Inference/Bootstrap\nParametric Inference\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nInterpreting estimates,  Interaction\nHomework 2\n\n\nSept 30\nEstimating Coefficients\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &  Multicollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nMultinomial regression\nOrdinal regression\nHomework 4\n\n\nNov 11\nPoisson regression\nSurvival Analysis\nProject proposals\n\n\nNov 18\nMissing Data\nMissing Data\nHomework 5\n\n\nNov 25\nProject work day\n\n\n\n\n\n\n\nDec 15 5PM  Final projects due"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#motivation",
+    "href": "materials/Unit1/IntrotoProbability/probability_slides.html#motivation",
+    "title": "Intro to Probability",
+    "section": "Motivation",
+    "text": "Motivation\nWe rely on probability to draw conclusions about our population of interest"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#probability-terminology",
+    "href": "materials/Unit1/IntrotoProbability/probability_slides.html#probability-terminology",
+    "title": "Intro to Probability",
+    "section": "Probability terminology",
+    "text": "Probability terminology\n\nEvent: a potential outcome\nProbability is a measure of how likely it is that an event occurs\nThe sum of the probabilities of all events in a sample space is 1\n\\(0 \\leq Pr(A) \\leq 1\\)"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#probability-definitions",
+    "href": "materials/Unit1/IntrotoProbability/probability_slides.html#probability-definitions",
+    "title": "Intro to Probability",
+    "section": "Probability definitions",
+    "text": "Probability definitions\n\nThe complement of event \\(A\\) is denoted \\(A^c\\) and it indicates that event \\(A\\) does not occur. \\(Pr(A) = 1-Pr(A^c)\\)\nThe occurrence of two events \\(A\\) and \\(B\\) at the same time is denoted by \\(A \\cap B\\) and \\(Pr(A\\cap B)\\) is known as the joint probability of \\(A\\) and \\(B\\)\nThe event that either \\(A\\) or \\(B\\) or both occur is denoted by \\(A \\cup B\\). \\(Pr(A\\cup B) = Pr(A) + Pr(B) - Pr(A \\cap B)\\)\nMutually exclusive events: \\(Pr(A\\cap B)=0\\)\nConditional probability: \\(Pr(A|B)=\\frac{Pr(A\\cap B)}{Pr(B)}\\)"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#independent-events",
+    "href": "materials/Unit1/IntrotoProbability/probability_slides.html#independent-events",
+    "title": "Intro to Probability",
+    "section": "Independent Events",
+    "text": "Independent Events\nIf knowing about the occurrence of event \\(A\\) does not give information about the probability of event \\(B\\), then events \\(A\\) and \\(B\\) are independent.\n \nMathematically: \\(Pr(A\\cap B) = Pr(A)Pr(B)\\)\n \nand \\(Pr(A|B)=Pr(A)\\)"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#bayes-theorem",
+    "href": "materials/Unit1/IntrotoProbability/probability_slides.html#bayes-theorem",
+    "title": "Intro to Probability",
+    "section": "Bayes Theorem",
+    "text": "Bayes Theorem\n \nBayes Theorem allows us to invert conditional probabilities. We can use it to update a belief based on prior knowledge.\n \n\\(Pr(B|A) = \\frac{Pr(A|B)Pr(B)}{Pr(A)}\\)"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#bayes-theorem-example",
+    "href": "materials/Unit1/IntrotoProbability/probability_slides.html#bayes-theorem-example",
+    "title": "Intro to Probability",
+    "section": "Bayes Theorem Example",
+    "text": "Bayes Theorem Example\nYou have 3 coins. 2 of them are fair and one is rigged so that it always lands on heads. You choose a coin at random and flip it; it lands on heads. Is the coin you chose likely to be fair or rigged?\n\n\\(Pr(F)=2/3\\), \\(Pr(F^c)=1/3\\)\n\\(Pr(H|F)=1/2\\), \\(Pr(H|F^c)=1\\)\n\\(Pr(F|H)=\\frac{Pr(H|F)Pr(F)}{Pr(H)}\\)\nWe can break down the denominator: \\(Pr(H)=Pr(H|F)Pr(F)+Pr(H|F^c)Pr(F^c)\\)\nSo then we have: \\(Pr(F|H)=\\frac{(1/2)(2/3)}{(1/2)(2/3)+1(1/3)}\\)\n\\(Pr(F|H)=1/2\\)"
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/IntrotoProbability.html#class-recap-exercise",
+    "href": "materials/Unit1/IntrotoProbability/IntrotoProbability.html#class-recap-exercise",
+    "title": "8.29: Introduction to Probability",
+    "section": "Class recap & Exercise",
+    "text": "Class recap & Exercise\nSlides\nGroups for the exercise\nSDS problems 3.1, 3.4, 3.7\nUse the table shown in 3.9 to answer the following:\n\nWhat is the joint probability of a successful removal and open surgery?\nWhat is the marginal probability of open surgery?\nWhat is the conditional probability of successful removal given open surgery?\nDescribe how you could use probability to determine which treatment is more effective.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.29: Introduction to Probability"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/IntrotoProbability/IntrotoProbability.html#reading-quiz",
+    "href": "materials/Unit1/IntrotoProbability/IntrotoProbability.html#reading-quiz",
+    "title": "8.29: Introduction to Probability",
+    "section": "Reading Quiz",
+    "text": "Reading Quiz\nWooclap",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "8.29: Introduction to Probability"
+    ]
   }
 ]
