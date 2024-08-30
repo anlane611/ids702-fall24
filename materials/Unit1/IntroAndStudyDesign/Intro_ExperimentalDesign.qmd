@@ -43,6 +43,8 @@ Select the option that corresponds to both your answer and your confidence in th
 
 [Link to slides](studydesign_slides-speaker.html)
 
+Reference for lecture material that may be helpful for additional reading: <https://openintro-ims.netlify.app/data-design>
+
 ## Application Exercise
 
 [Go to the exercises at the bottom of this page](https://openintro-ims.netlify.app/data-design)

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IDS 702: Data Modeling and Representation – IDS 702</title>
+<title>9.5: Sampling Distributions &amp; Central Limit Theorem – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,37 +67,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -109,7 +80,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./syllabus.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Distributions/SamplingDistributions_CLT.html">9.5: Sampling Distributions &amp; Central Limit Theorem</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +95,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">IDS 702</a> 
+      <a href="../../../">IDS 702</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -136,7 +107,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -160,7 +131,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cleaning and exploring data in R</span></a>
   </div>
 </li>
@@ -168,34 +139,34 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Unit 1: Statistics Fundamentals</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.27: Introduction and Study Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.29: Introduction to Probability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.3: Probability Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">9.5: Sampling Distributions &amp; Central Limit Theorem</span></a>
   </div>
 </li>
@@ -205,7 +176,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reflections.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../reflections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics Reflections</span></a>
   </div>
 </li>
@@ -219,40 +190,17 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-objectives" id="toc-course-objectives" class="nav-link active" data-scroll-target="#course-objectives">Course Objectives</a></li>
-  <li><a href="#course-materials" id="toc-course-materials" class="nav-link" data-scroll-target="#course-materials">Course Materials</a>
-  <ul class="collapse">
-  <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">Textbooks</a></li>
-  <li><a href="#gradescope" id="toc-gradescope" class="nav-link" data-scroll-target="#gradescope">Gradescope</a></li>
-  <li><a href="#slack" id="toc-slack" class="nav-link" data-scroll-target="#slack">Slack</a></li>
-  </ul></li>
-  <li><a href="#course-components" id="toc-course-components" class="nav-link" data-scroll-target="#course-components">Course Components</a>
-  <ul class="collapse">
-  <li><a href="#class-preparation" id="toc-class-preparation" class="nav-link" data-scroll-target="#class-preparation">Class preparation</a></li>
-  <li><a href="#application-exercises" id="toc-application-exercises" class="nav-link" data-scroll-target="#application-exercises">Application exercises</a></li>
-  <li><a href="#homework-assignments" id="toc-homework-assignments" class="nav-link" data-scroll-target="#homework-assignments">Homework assignments</a></li>
-  <li><a href="#statistics-reflections" id="toc-statistics-reflections" class="nav-link" data-scroll-target="#statistics-reflections">Statistics reflections</a></li>
-  <li><a href="#midterm-exam" id="toc-midterm-exam" class="nav-link" data-scroll-target="#midterm-exam">Midterm exam</a></li>
-  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project">Project</a></li>
-  </ul></li>
-  <li><a href="#grade-calculation" id="toc-grade-calculation" class="nav-link" data-scroll-target="#grade-calculation">Grade Calculation</a></li>
-  <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course policies</a>
-  <ul class="collapse">
-  <li><a href="#late-submissions" id="toc-late-submissions" class="nav-link" data-scroll-target="#late-submissions">Late submissions</a></li>
-  <li><a href="#academic-integrity" id="toc-academic-integrity" class="nav-link" data-scroll-target="#academic-integrity">Academic integrity</a></li>
-  <li><a href="#inclusive-community" id="toc-inclusive-community" class="nav-link" data-scroll-target="#inclusive-community">Inclusive community</a></li>
-  </ul></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Distributions/SamplingDistributions_CLT.html">9.5: Sampling Distributions &amp; Central Limit Theorem</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">IDS 702: Data Modeling and Representation</h1>
-<p class="subtitle lead">Fall 2024 <br> Duke University</p>
+<h1 class="title">9.5: Sampling Distributions &amp; Central Limit Theorem</h1>
 </div>
 
 
@@ -269,156 +217,18 @@ window.Quarto = {
 </header>
 
 
-<section id="course-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="course-objectives">Course Objectives</h2>
-<p>Developing an understanding of statistical modeling is a key component of becoming a data scientist. Statistical models are used to answer research questions and obtain meaningful insights from many kinds of data.</p>
-<p>Broadly, this course will cover the following topics:</p>
-<ol type="1">
-<li>Statistics Fundamentals</li>
-<li>Linear Regression</li>
-<li>Generalized Linear Models</li>
-</ol>
-<p>But here in the MIDS program, understanding the content is only the beginning. Successful data scientists are <strong>critical thinkers</strong>, <strong>problem solvers</strong>, <strong>effective communicators</strong>, and <strong>enthusiastic collaborators</strong>. With that in mind, this course aims to meet five key learning objectives:</p>
-<p>By the end of the course, students should be able to</p>
-<ol type="1">
-<li>Fit and interpret statistical models, including linear and generalized linear models.</li>
-<li>Connect statistical modeling concepts to underlying statistics fundamentals including probability distributions and estimation.</li>
-<li>Map a research question and dataset to the appropriate statistical model.</li>
-<li>Make careful and critical decisions about model building and consider real-world implications.</li>
-<li>Communicate (through written and oral communication) model results to a broad audience.</li>
-</ol>
-</section>
-<section id="course-materials" class="level2">
-<h2 class="anchored" data-anchor-id="course-materials">Course Materials</h2>
-<section id="textbooks" class="level3">
-<h3 class="anchored" data-anchor-id="textbooks">Textbooks</h3>
-<p>I will assign readings from a few different textbooks throughout the semester. All of these books are available for free in electronic format either online or through the Duke Library.</p>
-<p>Statistics for Data Scientists: An Introduction to Probability, Statistics, and Data Analysis by Kaptein, M. and van den Heuvel, E. (Available through the Duke Library)</p>
-<p><a href="https://www.statlearning.com/">An Introduction to Statistical Learning with Applications in R, 2nd edition</a> by James, G., Witten, D., Hastie, T., and Tibshirani, R. (Available online)</p>
-<p>Statistical Foundations, Reasoning and Inference For Statistics and Data Science by Kauermann, G., Küchenhoff, H., and Heumann, C. (Available through the Duke Library)</p>
-</section>
-<section id="gradescope" class="level3">
-<h3 class="anchored" data-anchor-id="gradescope">Gradescope</h3>
-<p>You will submit assignments through Gradescope. You can use this code to access the course: <strong>J74D7E</strong></p>
-</section>
-<section id="slack" class="level3">
-<h3 class="anchored" data-anchor-id="slack">Slack</h3>
-<p>Be sure to join the ids702-fall24 channel in the MIDS Slack workspace. I will post announcements on this channel.</p>
-<p>A note on communication: If you would like to contact me for any reason, you can reach out on either Slack <strong>or</strong> via email. If I do not respond within 24 hours during weekdays, you are welcome to follow up.</p>
-</section>
-</section>
-<section id="course-components" class="level2">
-<h2 class="anchored" data-anchor-id="course-components">Course Components</h2>
-<section id="class-preparation" class="level3">
-<h3 class="anchored" data-anchor-id="class-preparation">Class preparation</h3>
-<p>Before each class meeting, you will be required to engage with prep materials (reading or video). The prep materials will primarily cover theoretical modeling concepts. Class meetings will then focus on implementation in R and application exercises. Preparation assignments will be posted on the course website.</p>
-<p>To ensure that you engage with the class preparation, we will have random comprehension quizzes throughout the semester. These quizzes will take place at the beginning of class and will count as part of your participation grade (cumulative score &gt;80% will earn full credit).</p>
-<p>The preparation course component connects to the first two learning objectives.</p>
-</section>
-<section id="application-exercises" class="level3">
-<h3 class="anchored" data-anchor-id="application-exercises">Application exercises</h3>
-<p>During class meetings, you will complete application exercises. These exercises will focus on deepening your understanding of the theoretical concepts and help you to apply the concepts in R. You will work on these exercises in groups and submit it at the end of the class session. They will be graded on the following scale:</p>
-<p>0: Exercise was not submitted</p>
-<p>1: Exercise was submitted but does not present a good faith effort</p>
-<p>2: Exercise was submitted and presents a good faith effort</p>
-<p>A “good faith effort” means that the exercise may not be completely correct, or may be missing a couple of components, but it is clear that students worked diligently and engaged in the learning process.</p>
-<p>The preparation course component connects to the first, second, and fourth learning objectives.</p>
-</section>
-<section id="homework-assignments" class="level3">
-<h3 class="anchored" data-anchor-id="homework-assignments">Homework assignments</h3>
-<p>You will have five homework assignments to complete during the semester; they will each cover roughly two weeks of material. The structure of the assignments will evolve with the course material, starting with a problem set structure and moving toward written analysis assignments.</p>
-<p>You are encouraged to talk to each other about general concepts, and to the instructor/TAs. However, the write-ups, solutions, and code MUST be entirely your own work. The assignments must be typed up using Quarto and submitted on Gradescope. Note that you will not be able to make online submissions after the due date, so be sure to submit before the Gradescope-specified deadline.</p>
-<p>Homework assignments connect to all five learning objectives.</p>
-</section>
-<section id="statistics-reflections" class="level3">
-<h3 class="anchored" data-anchor-id="statistics-reflections">Statistics reflections</h3>
-<p>You will be responsible for four statistics reflections throughout the semester. I have assigned six pieces that cover various topics related to the interaction between data science and society. You are to write a written reflection about the material that you select. Questions are provided as prompts, but you are not required to answer them in your reflection. Grades will be based on completion and thoughtful engagement.</p>
-<p>The chosen articles/videos address topics that may be sensitive and/or uncomfortable, including racism, eugenics, and gender identity. It is crucial that you engage in the reflections thoughtfully and respectfully. I seek to create a classroom environment that not only acknowledges diversity in all forms, but celebrates it. In that endeavor, I would be remiss not to acknowledge the discriminatory ways statistical science has been used both historically and currently. In having these important discussions, I want you to critically examine and appreciate the power (good and bad) of statistics as you begin your career as a data scientist. More information can be found on the statistics reflections page on the course website.</p>
-<p>Statistics reflections connect to the fourth course learning objective.</p>
-</section>
-<section id="midterm-exam" class="level3">
-<h3 class="anchored" data-anchor-id="midterm-exam">Midterm exam</h3>
-<p>A midterm exam will be held on Tuesday, October 22, in class, and cover the first two units: statistics fundamentals and linear regression. The exam will assess conceptual understanding, not R programming.</p>
-<p>If you benefit from the use of testing accommodations, such as an isolated testing area or extra time, please connect with the <a href="https://access.duke.edu/students">Student Disability Access Office</a> as soon as possible.</p>
-<p>The exam connects to the first and second learning objectives.</p>
-</section>
-<section id="project" class="level3">
-<h3 class="anchored" data-anchor-id="project">Project</h3>
-<p>You will work with a team to apply the knowledge and skills learned throughout this course and analyze a dataset that interests you. The project should be an in-depth statistical analysis of a particular research question. Your team will select the dataset. Teams will be assigned. More detailed information will be available on the course website later in the semester. The project will have the following components:</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of the class, students should be able to:</p>
 <ul>
-<li><p>Proposal (team)</p></li>
-<li><p>Written report (team)</p></li>
-<li><p>Recorded elevator pitch (individual)</p></li>
-<li><p>Team member evaluation</p></li>
-</ul>
-<p>The project connects to all four course learning objectives.</p>
-</section>
-</section>
-<section id="grade-calculation" class="level2">
-<h2 class="anchored" data-anchor-id="grade-calculation">Grade Calculation</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Component</th>
-<th>Percentage</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Participation (prep quizzes and application exercises)</td>
-<td>10%</td>
-</tr>
-<tr class="even">
-<td>Statistics reflections</td>
-<td>10%</td>
-</tr>
-<tr class="odd">
-<td>Homework assignments</td>
-<td>40%</td>
-</tr>
-<tr class="even">
-<td>Midterm exam</td>
-<td>15%</td>
-</tr>
-<tr class="odd">
-<td>Project</td>
-<td>25%</td>
-</tr>
-</tbody>
-</table>
-<p>Letter grade scales may be adjusted at the end of the semester. Cumulative averages <span class="math inline">\(\geq 90\%\)</span> are guaranteed at least an A-, cumulative averages <span class="math inline">\(\geq 80\%\)</span> are guaranteed at least a B-, and cumulative averages <span class="math inline">\(\geq 70\%\)</span> are guaranteed at least a C-</p>
-<p>Regrade requests can be made on Gradescope within 24 hours of the assignment’s grade release. Regrade requests for final project reports/presentations must be made within 12 hours of grade release.</p>
-<p>There are no make-ups for any graded work except for cases of medical/personal/familial emergencies. If you are facing extenuating circumstances during the semester, please don’t hesitate to reach out to the instructor.</p>
-</section>
-<section id="course-policies" class="level2">
-<h2 class="anchored" data-anchor-id="course-policies">Course policies</h2>
-<section id="late-submissions" class="level3">
-<h3 class="anchored" data-anchor-id="late-submissions">Late submissions</h3>
-<p>You (or your team when applicable) will lose 50% of the total points on each assignment if you submit within the first 24 hours after it is due. You will lose 100% of the total points if you submit later than that without explicit approval from the instructor.</p>
-<p>You can request a single-use, no-questions-asked 24-hour extension for one assignment (either homework assignment or statistics reflection) during the semester. To use your extension, email the instructor and cc all TAs with the subject line “IDS 702 Single-use Extension.” No explanation is needed as to why you are requesting the extension. The extension cannot be applied to the exam, project deliverables, or prep material quizzes.</p>
-</section>
-<section id="academic-integrity" class="level3">
-<h3 class="anchored" data-anchor-id="academic-integrity">Academic integrity</h3>
-<p>As a student in this course, you have agreed to uphold the <a href="https://studentaffairs.duke.edu/conduct/about-us/duke-community-standard">Duke Community Standard</a> as well as the practices specific to this course. This means that the work you submit is your own, even if you discuss assignments with your classmates. Additionally, when consulting resources (books, internet articles including stackexchange, chatgpt), you must cite them. If you have any questions about what should be cited in your work, please reach out to the instructor.</p>
-<p>Please read Nick Eubank’s <a href="https://nickeubank.github.io/practicaldatascience_book/notebooks/PDS_not_yet_in_coursera/99_advice/llms.html">ChatGPT advice linked here</a> and consider the downside of overreliance on LLMs during the learning process.</p>
-</section>
-<section id="inclusive-community" class="level3">
-<h3 class="anchored" data-anchor-id="inclusive-community">Inclusive community</h3>
-<p>It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with <a href="https://provost.duke.edu/initiatives/commitment-to-diversity-and-inclusion">Duke’s commitment to diversity and inclusion</a>. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.</p>
-<p>Furthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:</p>
-<ul>
-<li><p>If you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the course, I encourage you to speak with MIDS administrators.</p></li>
-<li><p>I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me or a member of the teaching team know.</p></li>
+<li><p>Define <em>sampling distribution</em></p></li>
+<li><p>Describe the central limit theorem</p></li>
+<li><p>Write a simulation in R</p></li>
 </ul>
 </section>
-</section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><p><a href="https://studentaffairs.duke.edu/caps">Duke Counseling &amp; Psychological Services (CAPS)</a> helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS offers many services to Duke students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000.</p></li>
-<li><p>If there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations. The <a href="https://access.duke.edu/students">Student Disability Access Office (SDAO)</a> is available to ensure that students are able to engage with their courses and related assignments.</p></li>
-<li><p>The <a href="https://arc.duke.edu/learning-consultations/learning-resources">Academic resource center</a> provides learning resources to help you maximize your academic capabilities.</p></li>
-</ul>
+<section id="class-prep" class="level2">
+<h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
+<p>SDS: Chapter 5 up to 5.3.4.1</p>
 
 
 </section>
@@ -530,6 +340,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

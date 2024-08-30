@@ -1,0 +1,15 @@
+{
+  "hash": "1bdbe46b37470118ec69a1c95cbc38a7",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"9.5: Sampling Distributions & Central Limit Theorem\"\nformat: \n  html:\n    link-external-newwindow: true\n    link-external-icon: true\nengine: knitr\nwebr: \n  show-startup-message: false\n  show-header-message: false\n  home-dir: '/home/r-user/'\n  packages: ['ggplot2', 'dplyr']\nfilters:\n  - webr\nexecute:\n  freeze: auto\n---\n\n\n\n## Learning Objectives\n\nBy the end of the class, students should be able to:\n\n-   Define *sampling distribution*\n\n-   Describe the central limit theorem\n\n-   Write a simulation in R\n\n## Class prep\n\nSDS: Chapter 5 up to 5.3.4.1\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

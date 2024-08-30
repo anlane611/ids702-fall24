@@ -1,0 +1,49 @@
+---
+title: "9.3: Probability Distributions"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   Define the terms *random variable*, *probability distribution function*, and *expected value*
+
+-   Identify the appropriate distribution when given an example of a random variable
+
+## Class prep
+
+SDS:
+
+4.2 up to 4.2.1
+
+4.3
+
+4.4 up to the paragraph that begins with "In the following table we provide the mean..."
+
+4.5
+
+4.6
+
+Some of this may seem quite technical depending on your background. If that's the case, focus on the high-level ideas. By the end of the reading, you should be able to answer the following questions:
+
+-   What is the input of a probability distribution function? What is the output?
+
+-   What is the difference between a cumulative density function and a probability density function?
+
+-   What am I describing if I refer to the expected value of a distribution?
+
+-   How are discrete and continuous random variables similar and how are they different?

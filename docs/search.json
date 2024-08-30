@@ -574,7 +574,7 @@
     "href": "materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html#study-design",
     "title": "8.27: Introduction and Study Design",
     "section": "Study Design",
-    "text": "Study Design\nLink to slides",
+    "text": "Study Design\nLink to slides\nReference for lecture material that may be helpful for additional reading: https://openintro-ims.netlify.app/data-design",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -882,6 +882,78 @@
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
       "8.29: Introduction to Probability"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/Distributions.html",
+    "href": "materials/Unit1/Distributions/Distributions.html",
+    "title": "9.3: Probability Distributions",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDefine the terms random variable, probability distribution function, and expected value\nIdentify the appropriate distribution when given an example of a random variable",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.3: Probability Distributions"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/Distributions.html#learning-objectives",
+    "href": "materials/Unit1/Distributions/Distributions.html#learning-objectives",
+    "title": "9.3: Probability Distributions",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDefine the terms random variable, probability distribution function, and expected value\nIdentify the appropriate distribution when given an example of a random variable",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.3: Probability Distributions"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/Distributions.html#class-prep",
+    "href": "materials/Unit1/Distributions/Distributions.html#class-prep",
+    "title": "9.3: Probability Distributions",
+    "section": "Class prep",
+    "text": "Class prep\nSDS:\n4.2 up to 4.2.1\n4.3\n4.4 up to the paragraph that begins with “In the following table we provide the mean…”\n4.5\n4.6\nSome of this may seem quite technical depending on your background. If that’s the case, focus on the high-level ideas. By the end of the reading, you should be able to answer the following questions:\n\nWhat is the input of a probability distribution function? What is the output?\nWhat is the difference between a cumulative density function and a probability density function?\nWhat am I describing if I refer to the expected value of a distribution?\nHow are discrete and continuous random variables similar and how are they different?",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.3: Probability Distributions"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_CLT.html",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html",
+    "title": "9.5: Sampling Distributions & Central Limit Theorem",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDefine sampling distribution\nDescribe the central limit theorem\nWrite a simulation in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.5: Sampling Distributions & Central Limit Theorem"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#learning-objectives",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#learning-objectives",
+    "title": "9.5: Sampling Distributions & Central Limit Theorem",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDefine sampling distribution\nDescribe the central limit theorem\nWrite a simulation in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.5: Sampling Distributions & Central Limit Theorem"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#class-prep",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#class-prep",
+    "title": "9.5: Sampling Distributions & Central Limit Theorem",
+    "section": "Class prep",
+    "text": "Class prep\nSDS: Chapter 5 up to 5.3.4.1",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.5: Sampling Distributions & Central Limit Theorem"
     ]
   }
 ]
