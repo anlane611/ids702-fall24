@@ -1,15 +1,17 @@
 ---
 title: "Homework 1"
-format: pdf
-#   html:
-#     link-external-newwindow: true
-#     link-external-icon: true
-# engine: knitr
-# execute:
-#   freeze: auto
+format:
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+execute:
+  freeze: auto
 ---
 
 **Instructions**: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.
+
+[*Click here to download the template*](_IDS702HW1Template.qmd) *(right click and choose "save link as")*
 
  
 
@@ -45,7 +47,7 @@ format: pdf
 
 We will use the dataset provided below to conduct the simulation. The dataset contains 100000 observations, so we will treat this as our population of interest. The dataset has 3 variables: 1 continuous variable (Y) and 2 categorical variables (X1 and X2).
 
-```{r, eval=FALSE}
+```{r}
 population <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/main/population.csv", header=TRUE)
 ```
 

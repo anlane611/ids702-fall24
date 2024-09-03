@@ -1,0 +1,121 @@
+---
+title: "IDS 702 HW 1"
+author: "Your Name Here"
+format: pdf
+---
+
+**Instructions**: Use this template to complete your assignment. When you click "Render," you should get a PDF document that contains both your answers and code. You must show your work/justify your answers to receive credit. Submit your rendered PDF file on Gradescope. Remember to render frequently, as this will help you to catch errors in your code before the last minute.
+
+**Add your name in the Author section in the header**
+
+## Exercise 1
+
+For this question, you should type out the formulas that you use to do the calculations (click Insert \> Equation \> Inline math). [You can read more about technical writing in Quarto here.](https://quarto.org/docs/visual-editor/technical.html) You can use the provided code chunks to use R as a calculator.
+
+a\. $P(A |B) =$
+
+```{r}
+
+```
+
+b\. $P(A \cup B) =$
+
+```{r}
+
+```
+
+c\.
+
+d\.
+
+## Exercise 2
+
+a\.
+
+b\.
+
+```{r}
+
+```
+
+c\.
+
+```{r}
+
+```
+
+d\.
+
+```{r}
+
+```
+
+## Exercise 3
+
+You are required to show the code you use to complete each part of this exercise. You must also write your narrative answers below the code.
+
+```{r}
+population <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/main/population.csv", header=TRUE)
+```
+
+a\.
+
+```{r}
+
+```
+
+b\.
+
+```{r}
+
+```
+
+c\.
+
+```{r}
+
+```
+
+d\.
+
+```{r, eval=FALSE}
+
+SRSmeans <- data.frame(means=NA) #create an empty dataframe to store the sample means
+for(i in 1:1000){
+  set.seed(i) #ensure that we have a different sample each time
+  SRS.sample <- __________ |> slice(sample(1:________,size=__))
+  SRSmeans[i,1] <- SRS.sample |> summarise(______(Y))
+}
+
+ggplot(SRSmeans, aes(x=means)) +
+  geom_histogram()+
+  labs(title="_____________")
+```
+
+e\.
+
+```{r}
+
+```
+
+f\.
+
+```{r}
+
+```
+
+g\.
+
+```{r}
+
+```
+
+h\.
+
+```{r}
+
+```
+
+i\.
+
+## Bonus (optional)

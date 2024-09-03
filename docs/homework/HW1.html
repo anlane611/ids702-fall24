@@ -143,9 +143,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      IDS 702
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -245,6 +243,23 @@ window.Quarto = {
  <span class="menu-text">Statistics Reflections</span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/HW1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Homework 1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -256,7 +271,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework 1</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Homework 1</h1>
 </div>
@@ -276,9 +291,10 @@ window.Quarto = {
 
 
 <p><strong>Instructions</strong>: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.</p>
+<p><a href="_IDS702HW1Template.qmd"><em>Click here to download the template</em></a> <em>(right click and choose “save link as”)</em></p>
 <p>&nbsp;</p>
 <ol type="1">
-<li><p>Use the following information to answer each question below: <span class="math inline">\(P(A) = 0.2\)</span>, <span class="math inline">\(P(B)=0.4\)</span>, <span class="math inline">\(P(A \cap B)=0.08\)</span></p>
+<li><p>(8 points) Use the following information to answer each question below: <span class="math inline">\(P(A) = 0.2\)</span>, <span class="math inline">\(P(B)=0.4\)</span>, <span class="math inline">\(P(A \cap B)=0.08\)</span></p>
 <p>a. What is <span class="math inline">\(P(A|B)\)</span>?</p>
 <p>b. What is <span class="math inline">\(P(A \cup B)\)</span>?</p>
 <p>c. Are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> mutually exclusive?</p>
@@ -287,7 +303,7 @@ window.Quarto = {
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <ol start="2" type="1">
-<li><p>In 2023, 20% of a local bank’s credit card holders experienced fraud that forced them to cancel their cards. The bank expects to bring in 200 new customers in 2024. They want to know how many new cards they will have to cancel, assuming the probability of fraud is consistent for both years.</p>
+<li><p>(8 points) In 2023, 20% of a local bank’s credit card holders experienced fraud that forced them to cancel their cards. The bank expects to bring in 200 new customers in 2024. They want to know how many new cards they will have to cancel, assuming the probability of fraud is consistent for both years.</p>
 <p>a. Which probability distribution best fits this situation?</p>
 <p>b. How many customers should they expect to experience fraud?</p>
 <p>c. What is the probability that 50 customers will experience fraud?</p>
@@ -296,7 +312,7 @@ window.Quarto = {
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <ol start="3" type="1">
-<li><em>All about the samples</em>: In this exercise, you will conduct a simulation in R to evaluate the effect of sample size and sampling schemes on the sampling distribution of the mean.</li>
+<li>(36 points) <em>All about the samples</em>: In this exercise, you will conduct a simulation in R to evaluate the effect of sample size and sampling schemes on the sampling distribution of the mean.</li>
 </ol>
 <p>We will use the dataset provided below to conduct the simulation. The dataset contains 100000 observations, so we will treat this as our population of interest. The dataset has 3 variables: 1 continuous variable (Y) and 2 categorical variables (X1 and X2).</p>
 <div class="cell">

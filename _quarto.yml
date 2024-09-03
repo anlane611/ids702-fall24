@@ -26,6 +26,10 @@ website:
        - section:
          href: reflections.qmd
          text: Statistics Reflections
+       - section: Homework
+         contents:
+         - href: homework/HW1.qmd
+         
 
 
 format:
