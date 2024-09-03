@@ -47,3 +47,15 @@ Some of this may seem quite technical depending on your background. If that's th
 -   What am I describing if I refer to the expected value of a distribution?
 
 -   How are discrete and continuous random variables similar and how are they different?
+
+## Class Recap & Exercise
+
+[Slides](Distributions_slides-speaker.html)
+
+[Groups for the exercise](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
+
+[Google slides](https://docs.google.com/presentation/d/13C32G2ci6cicOZlKZCKrUhF1UZKv8OWWvbCDm0Zkb10/edit?usp=sharing)
+
+## Extra Practice
+
+[Distributome Game](http://distributome.org/V3/DistributomeGame.html)

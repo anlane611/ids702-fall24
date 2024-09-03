@@ -56,7 +56,7 @@ Submit your reflection to the appropriate assignment on [Gradescope](https://www
           <li>What potential insights might we derive from working with non-binary gender and data?</li>
           <li>What are the risks to gener minorities in relation to data?</li>
           <li>What kinds of variation do we see across culture, context, and history?</li>
-          <li>How might non-binary gender and data deal with intersectionality (<em><a href=https://www.intersectionaljustice.org/what-is-intersectionality target="_blank" rel="noopener noreferrer">Click this link to learn more about intersectionality</a></em>)</li>
+          <li>How might non-binary gender and data deal with intersectionality (<em><a href=https://www.ywcaworks.org/blogs/ywca/what-is-intersectionality target="_blank" rel="noopener noreferrer">Click this link to learn more about intersectionality</a></em>)</li>
         </ul>
         Additionally, you may want to consider: 
         <ul>
