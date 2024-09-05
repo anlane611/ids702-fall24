@@ -9,6 +9,8 @@ execute:
   freeze: auto
 ---
 
+**Deadline**: Sunday, September 15, 11:59 PM
+
 **Instructions**: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.
 
 [*Click here to download the template*](_IDS702HW1Template.qmd) *(right click and choose "save link as")*

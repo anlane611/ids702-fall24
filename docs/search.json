@@ -925,7 +925,7 @@
     "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html",
     "title": "9.5: Sampling Distributions & Central Limit Theorem",
     "section": "",
-    "text": "By the end of the class, students should be able to:\n\nDefine sampling distribution\nDescribe the central limit theorem\nWrite a simulation in R",
+    "text": "Reflection 1: Sunday Sept 8 11:59 PM\nHW 1: Sunday Sept 15 11:59 PM",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -936,8 +936,8 @@
     "objectID": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#learning-objectives",
     "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#learning-objectives",
     "title": "9.5: Sampling Distributions & Central Limit Theorem",
-    "section": "",
-    "text": "By the end of the class, students should be able to:\n\nDefine sampling distribution\nDescribe the central limit theorem\nWrite a simulation in R",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\nDefine sampling distribution\nDescribe the central limit theorem\nWrite a simulation in R",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1109,5 +1109,104 @@
     "title": "IDS 702 HW 1",
     "section": "Bonus (optional)",
     "text": "Bonus (optional)"
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#sampling-distribution-illustration",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#sampling-distribution-illustration",
+    "title": "Sampling Distributions",
+    "section": "Sampling Distribution Illustration",
+    "text": "Sampling Distribution Illustration"
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#central-limit-theorem",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#central-limit-theorem",
+    "title": "Sampling Distributions",
+    "section": "Central Limit Theorem",
+    "text": "Central Limit Theorem\n \nLet \\(X_1,X_2,...,X_n\\) have population mean \\(\\mu\\) and variance \\(\\sigma^2\\)\n\\[\n\\bar{X} \\sim N(\\mu,\\frac{\\sigma^2}{n})\n\\]\n \nAs the sample size gets large, the sample mean becomes normally distributed, with mean \\(\\mu\\) and standard error \\(\\sigma/\\sqrt{n}\\) , regardless of the distribution of \\(X_1,...,X_n\\)"
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulating-the-clt-in-r",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulating-the-clt-in-r",
+    "title": "Sampling Distributions",
+    "section": "Simulating the CLT in R",
+    "text": "Simulating the CLT in R\nRecall that the rnorm function can generate values from a normal distribution\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n \nLet’s simulate taking a sample of size 10 from a population that is normally distributed with mean 10 and SD 2\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nLet’s generate a histogram.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-1",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-1",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nNow, let’s simulate the process of taking 1000 different samples, each of size 10, and compute the mean of each sample.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-2",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-2",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nNow, let’s simulate the process of taking 1000 different samples, each of size 100\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-3",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-3",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nFinally, let’s sample from a bimodal distribution.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-4",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-4",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nStart with n=10\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-5",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_slides.html#simulate-the-clt-in-r-5",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nNow let’s do n=100\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#class-recap",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#class-recap",
+    "title": "9.5: Sampling Distributions & Central Limit Theorem",
+    "section": "Class Recap",
+    "text": "Class Recap\nSlides",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.5: Sampling Distributions & Central Limit Theorem"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#exercise",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#exercise",
+    "title": "9.5: Sampling Distributions & Central Limit Theorem",
+    "section": "Exercise",
+    "text": "Exercise\nGroups for the exercise\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this exercise, you will use the Wage dataset to calculate normal distribution probabilities with the pnorm function. Access the help file for the dataset using ?Wage to see the codebook.\n\nGenerate a histogram of the workers’ raw wages in 2008. Based on the histogram of this sample of wages, do you think the true distribution of 2008 wages is approximately normal? (Note that this can be justified either way, but you need to explain your reasoning for your choice)\nCalculate the sample mean of raw wages in 2008. Assume that the true distribution of wages in 2008 is normal with mean 100 and standard deviation 38. What is the probability that a worker selected at random has a wage greater than or equal to this sample mean?\nContinue to assume that the true distribution of wages in 2008 is normal with mean 100 and standard deviation 38. Calculate the following quantities:\n\n\n95% of the workers in the population have a wage above what value?\nThe middle 50% of workers in the population have wages between which two values?\nWhat is the probability that a worker selected at random from this population has a wage above 250 OR below 50?\n\n\nLet’s assume that the conditions hold for the central limit theorem to apply, and assume the population distribution above (normal with \\(\\mu\\) = 100 and \\(\\sigma\\) = 38). Write the distribution of \\(\\bar{X}\\), the sample mean of raw wages in 2008, in mathematical notation by replacing each “*” below:\n\n$$\n\\bar{X} \\sim *(*,*)\n$$\n\nCalculate the following quantities:\n\nthe probability that the sample mean of a random sample of size 388 is less than 90\nthe probability that the sample mean of a random sample of size 388 is greater than 200\nthe values that designate the middle 95% of the distribution of the sample mean for a sample of size 388\n\nNow say that we are able to collect another sample that has information on twice as many workers as the 2008 sample size in this dataset. How would the values calculated in the third bullet above (in exercise 7) change? You don’t need to calculate the values; simply state if the probabilities would be larger or smaller and if the values for the middle 95% of the distribution would be closer to the mean or further from the mean.\nIf you know that the true distribution of 2008 wages is right skewed instead of normally distributed, does the central limit theorem still apply? Why or why not?",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.5: Sampling Distributions & Central Limit Theorem"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#upcoming-deadlines",
+    "href": "materials/Unit1/Distributions/SamplingDistributions_CLT.html#upcoming-deadlines",
+    "title": "9.5: Sampling Distributions & Central Limit Theorem",
+    "section": "",
+    "text": "Reflection 1: Sunday Sept 8 11:59 PM\nHW 1: Sunday Sept 15 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.5: Sampling Distributions & Central Limit Theorem"
+    ]
   }
 ]

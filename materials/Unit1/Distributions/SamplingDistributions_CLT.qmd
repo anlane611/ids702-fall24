@@ -16,6 +16,12 @@ execute:
   freeze: auto
 ---
 
+## Upcoming deadlines
+
+-   Reflection 1: Sunday Sept 8 11:59 PM
+
+-   HW 1: Sunday Sept 15 11:59 PM
+
 ## Learning Objectives
 
 By the end of the class, students should be able to:
@@ -29,3 +35,49 @@ By the end of the class, students should be able to:
 ## Class prep
 
 SDS: Chapter 5 up to 5.3.4.1
+
+## Class Recap
+
+[Slides](SamplingDistributions_slides-speaker.html)
+
+## Exercise
+
+[Groups for the exercise](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
+
+```{webr-r}
+library(tidyverse)
+library(ISLR2)
+data(Wage)
+```
+
+In this exercise, you will use the Wage dataset to calculate normal distribution probabilities with the `pnorm` function. Access the help file for the dataset using `?Wage` to see the codebook.
+
+1.  Generate a histogram of the workers' raw wages in 2008. Based on the histogram of this sample of wages, do you think the true distribution of 2008 wages is approximately normal? (Note that this can be justified either way, but you need to explain your reasoning for your choice)
+
+2.  Calculate the sample mean of raw wages in 2008. Assume that the **true** distribution of wages in 2008 is normal with mean 100 and standard deviation 38. What is the probability that a worker selected at random has a wage greater than or equal to this sample mean?
+
+3.  Continue to assume that the true distribution of wages in 2008 is normal with mean 100 and standard deviation 38. Calculate the following quantities:
+
+-   95% of the workers **in the population** have a wage above what value?
+
+-   The middle 50% of workers in the population have wages between which two values?
+
+-   What is the probability that a worker selected at random from this population has a wage above 250 OR below 50?
+
+4.   Let's assume that the conditions hold for the central limit theorem to apply, and assume the population distribution above (normal with $\mu$ = 100 and $\sigma$ = 38). Write the distribution of $\bar{X}$, the sample mean of raw wages in 2008, in mathematical notation by replacing each "\*" below:
+
+    $$
+    \bar{X} \sim *(*,*)
+    $$
+
+5.  Calculate the following quantities:
+
+    -   the probability that the sample mean of a random sample of size 388 is less than 90
+
+    -   the probability that the sample mean of a random sample of size 388 is greater than 200
+
+    -   the values that designate the middle 95% of the distribution of the sample mean for a sample of size 388
+
+6.  Now say that we are able to collect another sample that has information on twice as many workers as the 2008 sample size in this dataset. How would the values calculated in the third bullet above (in exercise 7) change? You don't need to calculate the values; simply state if the probabilities would be larger or smaller and if the values for the middle 95% of the distribution would be closer to the mean or further from the mean.
+
+7.  If you know that the true distribution of 2008 wages is right skewed instead of normally distributed, does the central limit theorem still apply? Why or why not?

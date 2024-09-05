@@ -1,0 +1,21 @@
+{
+  "hash": "178fc0e8c1ecf9be1b88300e75cdc1be",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Sampling Distributions\"\nformat: \n  revealjs:\n    incremental: true\n    multiplex: true\nwebr: \n  show-startup-message: false\n  show-header-message: false\n  home-dir: '/home/r-user/'\n  packages: ['ggplot2', 'dplyr']\nfilters:\n  - webr\nexecute:\n  freeze: auto\n---\n\n\n\n## Sampling Distribution Illustration\n\n## Central Limit Theorem\n\n \n\nLet $X_1,X_2,...,X_n$ have population mean $\\mu$ and variance $\\sigma^2$\n\n$$\n\\bar{X} \\sim N(\\mu,\\frac{\\sigma^2}{n})\n$$\n\n \n\nAs the sample size gets large, the sample mean becomes normally distributed, with mean $\\mu$ and standard error $\\sigma/\\sqrt{n}$ , regardless of the distribution of $X_1,...,X_n$\n\n## Simulating the CLT in R\n\nRecall that the `rnorm` function can generate values from a normal distribution\n\n```{webr-r}\nrnorm(1, mean=10, sd=2)\n```\n\n \n\nLet's **simulate** taking a sample of size 10 from a population that is normally distributed with mean 10 and SD 2\n\n```{webr-r}\nrnorm(10, mean=10, sd=2)\n```\n\n## Simulate the CLT in R\n\nLet's store our sample and generate a histogram. We should set a seed because there is an element of randomness in the sampling code.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](SamplingDistributions_slides_files/figure-revealjs/unnamed-chunk-1-1.png){width=960}\n:::\n:::\n",
+    "supporting": [
+      "SamplingDistributions_slides_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
