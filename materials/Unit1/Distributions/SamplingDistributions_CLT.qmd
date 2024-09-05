@@ -44,7 +44,7 @@ SDS: Chapter 5 up to 5.3.4.1
 
 [Groups for the exercise](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
 
-```{webr-r}
+```{r, echo=TRUE, eval=FALSE}
 library(tidyverse)
 library(ISLR2)
 data(Wage)
