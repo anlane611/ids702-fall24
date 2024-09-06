@@ -328,37 +328,119 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
 <p><a href="https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing">Groups for the exercise</a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ISLR2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Wage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ ggplot2 3.4.0     ✔ purrr   0.3.4
+✔ tibble  3.1.8     ✔ dplyr   1.1.0
+✔ tidyr   1.2.0     ✔ stringr 1.4.0
+✔ readr   2.1.2     ✔ forcats 0.5.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ISLR2)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Wage)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this exercise, you will use the Wage dataset to calculate normal distribution probabilities with the <code>pnorm</code> function. Access the help file for the dataset using <code>?Wage</code> to see the codebook.</p>
 <ol type="1">
-<li><p>Generate a histogram of the workers’ raw wages in 2008. Based on the histogram of this sample of wages, do you think the true distribution of 2008 wages is approximately normal? (Note that this can be justified either way, but you need to explain your reasoning for your choice)</p></li>
+<li><p>Generate a histogram of the workers’ raw wages in 2008. Based on the histogram of this sample of wages, do you think the true distribution of 2008 wages is approximately normal? (Note that this can be justified either way, but you need to explain your reasoning for your choice)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Wage<span class="fl">.2008</span> <span class="ot">&lt;-</span> Wage <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2008</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Wage<span class="fl">.2008</span>, <span class="fu">aes</span>(<span class="at">x=</span>wage))<span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="SamplingDistributions_CLT_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Justification for: Yes, the distribution appears to be approximately normal. The histogram is unimodal and approximately symmetric, though there are outliers.</p>
+<p>Justification against: No, the distribution does not appear to be normal because there are outliers on the right tail.</p></li>
 <li><p>Calculate the sample mean of raw wages in 2008. Assume that the <strong>true</strong> distribution of wages in 2008 is normal with mean 100 and standard deviation 38. What is the probability that a worker selected at random has a wage greater than or equal to this sample mean?</p></li>
-<li><p>Continue to assume that the true distribution of wages in 2008 is normal with mean 100 and standard deviation 38. Calculate the following quantities:</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Wage<span class="fl">.2008</span> <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(wage))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  mean(wage)
+1    113.552</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pnorm</span>(<span class="fl">113.552</span>,<span class="dv">100</span>,<span class="dv">38</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.3606838</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Continue to assume that the true distribution of wages in 2008 is normal with mean 100 and standard deviation 38. Calculate the following quantities:</li>
 </ol>
 <ul>
 <li><p>95% of the workers <strong>in the population</strong> have a wage above what value?</p></li>
 <li><p>The middle 50% of workers in the population have wages between which two values?</p></li>
 <li><p>What is the probability that a worker selected at random from this population has a wage above 250 OR below 50?</p></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.05</span>,<span class="dv">100</span>,<span class="dv">38</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 37.49556</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.25</span>,<span class="dv">100</span>,<span class="dv">38</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 74.36939</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.75</span>,<span class="dv">100</span>,<span class="dv">38</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 125.6306</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">50</span>,<span class="dv">100</span>,<span class="dv">38</span>)<span class="sc">+</span>(<span class="dv">1</span><span class="sc">-</span><span class="fu">pnorm</span>(<span class="dv">250</span>,<span class="dv">100</span>,<span class="dv">38</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.09416186</code></pre>
+</div>
+</div>
 <ol start="4" type="1">
-<li>Let’s assume that the conditions hold for the central limit theorem to apply, and assume the population distribution above (normal with <span class="math inline">\(\mu\)</span> = 100 and <span class="math inline">\(\sigma\)</span> = 38). Write the distribution of <span class="math inline">\(\bar{X}\)</span>, the sample mean of raw wages in 2008, in mathematical notation by replacing each “*” below:</li>
+<li><p>Let’s assume that the conditions hold for the central limit theorem to apply, and assume the population distribution above (normal with <span class="math inline">\(\mu\)</span> = 100 and <span class="math inline">\(\sigma\)</span> = 38). Write the distribution of <span class="math inline">\(\bar{X}\)</span>, the sample mean of raw wages in 2008, in mathematical notation by replacing each “*”: <span class="math inline">\(\bar{X} \sim N(100,38/\sqrt{388})\)</span></p></li>
+<li><p>Calculate the following quantities:</p></li>
 </ol>
-<pre><code>$$
-\bar{X} \sim *(*,*)
-$$</code></pre>
-<ol start="5" type="1">
-<li><p>Calculate the following quantities:</p>
 <ul>
 <li><p>the probability that the sample mean of a random sample of size 388 is less than 90</p></li>
 <li><p>the probability that the sample mean of a random sample of size 388 is greater than 200</p></li>
 <li><p>the values that designate the middle 95% of the distribution of the sample mean for a sample of size 388</p></li>
-</ul></li>
-<li><p>Now say that we are able to collect another sample that has information on twice as many workers as the 2008 sample size in this dataset. How would the values calculated in the third bullet above (in exercise 7) change? You don’t need to calculate the values; simply state if the probabilities would be larger or smaller and if the values for the middle 95% of the distribution would be closer to the mean or further from the mean.</p></li>
-<li><p>If you know that the true distribution of 2008 wages is right skewed instead of normally distributed, does the central limit theorem still apply? Why or why not?</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>stdev <span class="ot">&lt;-</span> <span class="dv">38</span><span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">388</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">90</span>,<span class="dv">100</span>,stdev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.088163e-07</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pnorm</span>(<span class="dv">200</span>,<span class="dv">100</span>,stdev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.025</span>,<span class="dv">100</span>,stdev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 96.21892</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>,<span class="dv">100</span>,stdev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 103.7811</code></pre>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Now say that we are able to collect another sample that has information on twice as many workers as the 2008 sample size in this dataset. How would the values calculated in the third bullet above (in exercise 5) change? You don’t need to calculate the values; simply state if the probabilities would be larger or smaller and if the values for the middle 95% of the distribution would be closer to the mean or further from the mean.</li>
 </ol>
+<p>Doubling the sample size would make the standard deviation of the distribution of the sample mean smaller. This would concentrate the density closer to the mean, so the first probability will be smaller, the second probability will be smaller, and the values for the middle 95% of the distribution will move closer to the mean.</p>
+<ol start="7" type="1">
+<li>If you know that the true distribution of 2008 wages is right skewed instead of normally distributed, does the central limit theorem still apply? Why or why not?</li>
+</ol>
+<p>Yes because the population distribution doesn’t matter if the sample is large enough.</p>
 
 
 </section>
