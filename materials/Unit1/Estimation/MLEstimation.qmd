@@ -1,0 +1,43 @@
+---
+title: "9.10: Maximum Likelihood Estimation"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   Identify the goal of maximum likelihood estimation
+
+-   Define the statistical likelihood function
+
+-   Derive a maximum likelihood estimate of a given probability distribution
+
+## Class prep
+
+SDS: 5.5 intro (up to 5.5.1) and 5.5.2 up to 5.5.2.1
+
+[Supplemental YouTube video](https://www.youtube.com/watch?v=XepXtl9YKwc) to provide some intuition for maximum likelihood estimation
+
+By the end of the reading, you should be able to answer the following questions:
+
+-   What are we trying to estimate?
+
+-   What is the likelihood function?
+
+-   How do you maximize the likelihood function? (hint: you may have to review some calculus)
+
+## 

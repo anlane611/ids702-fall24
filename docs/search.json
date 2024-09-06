@@ -1208,5 +1208,97 @@
       "Unit 1: Statistics Fundamentals",
       "9.5: Sampling Distributions & Central Limit Theorem"
     ]
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation.html",
+    "href": "materials/Unit1/Estimation/MLEstimation.html",
+    "title": "9.10: Maximum Likelihood Estimation",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nIdentify the goal of maximum likelihood estimation\nDefine the statistical likelihood function\nDerive a maximum likelihood estimate of a given probability distribution",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.10: Maximum Likelihood Estimation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation.html#learning-objectives",
+    "href": "materials/Unit1/Estimation/MLEstimation.html#learning-objectives",
+    "title": "9.10: Maximum Likelihood Estimation",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nIdentify the goal of maximum likelihood estimation\nDefine the statistical likelihood function\nDerive a maximum likelihood estimate of a given probability distribution",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.10: Maximum Likelihood Estimation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation.html#class-prep",
+    "href": "materials/Unit1/Estimation/MLEstimation.html#class-prep",
+    "title": "9.10: Maximum Likelihood Estimation",
+    "section": "Class prep",
+    "text": "Class prep\nSDS: 5.5 intro (up to 5.5.1) and 5.5.2 up to 5.5.2.1\nSupplemental YouTube video to provide some intuition for maximum likelihood estimation\nBy the end of the reading, you should be able to answer the following questions:\n\nWhat are we trying to estimate?\nWhat is the likelihood function?\nHow do you maximize the likelihood function? (hint: you may have to review some calculus)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.10: Maximum Likelihood Estimation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#central-limit-theorem",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#central-limit-theorem",
+    "title": "Sampling Distributions",
+    "section": "Central Limit Theorem",
+    "text": "Central Limit Theorem\n \nLet \\(X_1,X_2,...,X_n\\) have population mean \\(\\mu\\) and variance \\(\\sigma^2\\)\n\\[\n\\bar{X} \\sim N(\\mu,\\frac{\\sigma^2}{n})\n\\]\n \nAs the sample size gets large, the sample mean becomes normally distributed, with mean \\(\\mu\\) and standard error \\(\\sigma/\\sqrt{n}\\) , regardless of the distribution of \\(X_1,...,X_n\\)"
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#simulating-the-clt-in-r",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#simulating-the-clt-in-r",
+    "title": "Sampling Distributions",
+    "section": "Simulating the CLT in R",
+    "text": "Simulating the CLT in R\nRecall that the rnorm function can generate values from a normal distribution\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n \nLet’s simulate taking a sample of size 10 from a population that is normally distributed with mean 10 and SD 2\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nLet’s generate a histogram.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-1",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-1",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nNow, let’s simulate the process of taking 1000 different samples, each of size 10, and compute the mean of each sample.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-2",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-2",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nNow, let’s simulate the process of taking 1000 different samples, each of size 100\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-3",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-3",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nFinally, let’s sample from a bimodal distribution.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-4",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-4",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nStart with n=10\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-5",
+    "href": "materials/Unit1/Estimation/MLEstimation_slides.html#simulate-the-clt-in-r-5",
+    "title": "Sampling Distributions",
+    "section": "Simulate the CLT in R",
+    "text": "Simulate the CLT in R\nNow let’s do n=100\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]

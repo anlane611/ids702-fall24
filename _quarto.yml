@@ -23,6 +23,7 @@ website:
             - href: materials/Unit1/IntrotoProbability/IntrotoProbability.qmd
             - href: materials/Unit1/Distributions/Distributions.qmd
             - href: materials/Unit1/Distributions/SamplingDistributions_CLT.qmd
+            - href: materials/Unit1/Estimation/MLEstimation.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections
