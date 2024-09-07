@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Maximum Likelihood Estimation – IDS 702</title>
+<title>9.12: Evaluating Estimators – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -244,19 +215,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#big-picture" id="toc-big-picture" class="nav-link active" data-scroll-target="#big-picture">Big Picture</a></li>
-  <li><a href="#statistical-likelihood" id="toc-statistical-likelihood" class="nav-link" data-scroll-target="#statistical-likelihood">Statistical Likelihood</a></li>
-  <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">Maximum Likelihood Estimation</a></li>
-  <li><a href="#mechanics" id="toc-mechanics" class="nav-link" data-scroll-target="#mechanics">Mechanics</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MLEstimation_slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Maximum Likelihood Estimation</h1>
+<h1 class="title">9.12: Evaluating Estimators</h1>
 </div>
 
 
@@ -273,28 +243,28 @@ window.Quarto = {
 </header>
 
 
-<section id="big-picture" class="level2">
-<h2 class="anchored" data-anchor-id="big-picture">Big Picture</h2>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of the class, students should be able to:</p>
+<ul>
+<li><p>Identify the goal of maximum likelihood estimation</p></li>
+<li><p>Define the statistical likelihood function</p></li>
+<li><p>Derive a maximum likelihood estimate of a given probability distribution</p></li>
+</ul>
 </section>
-<section id="statistical-likelihood" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-likelihood">Statistical Likelihood</h2>
+<section id="class-prep" class="level2">
+<h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
+<p>SDS: 5.5 intro (up to 5.5.1) and 5.5.2 up to 5.5.2.1</p>
+<p><a href="https://www.youtube.com/watch?v=XepXtl9YKwc">Supplemental YouTube video</a> to provide some intuition for maximum likelihood estimation</p>
+<p>By the end of the reading, you should be able to answer the following questions:</p>
+<ul>
+<li><p>What are we trying to estimate?</p></li>
+<li><p>What is the likelihood function?</p></li>
+<li><p>How do you maximize the likelihood function? (hint: you may have to review some calculus)</p></li>
+</ul>
 </section>
-<section id="maximum-likelihood-estimation" class="level2">
-<h2 class="anchored" data-anchor-id="maximum-likelihood-estimation">Maximum Likelihood Estimation</h2>
-</section>
-<section id="mechanics" class="level2">
-<h2 class="anchored" data-anchor-id="mechanics">Mechanics</h2>
-<ol type="1">
-<li>Assume a distribution for the population</li>
-<li>Define the likelihood: joint probability of the data</li>
-<li>Take the log of the likelihood</li>
-<li>Find the value of <span class="math inline">\(\theta\)</span> that maximizes the likelihood:
-<ol type="1">
-<li>Differentiate the log-likelihood with respect to <span class="math inline">\(\theta\)</span></li>
-<li>Set the derivative to 0</li>
-<li>Solve for <span class="math inline">\(\theta\)</span></li>
-</ol></li>
-</ol>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 
 
 </section>
@@ -406,6 +376,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
