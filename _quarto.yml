@@ -24,6 +24,7 @@ website:
             - href: materials/Unit1/Distributions/Distributions.qmd
             - href: materials/Unit1/Distributions/SamplingDistributions_CLT.qmd
             - href: materials/Unit1/Estimation/MLEstimation.qmd
+            - href: materials/Unit1/Estimation/Bootstrap_CI.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections

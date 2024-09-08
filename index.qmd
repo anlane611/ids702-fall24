@@ -62,13 +62,13 @@ Individual lecture topics are subject to change. The midterm date will not chang
     <tr>
       <th scope="row">Sept 9</th>
       <td>Estimation</td>
-      <td>Evaluating Estimators</td>
+      <td>Confidence Intervals/Bootstrap</td>
       <td>Homework 1</td>
     </tr>
     <tr>
       <th scope="row">Sept 16</th>
-      <td>Nonparametric Inference/Bootstrap</td>
-      <td>Parametric Inference</td>
+      <td>Inference I</td>
+      <td>Inference II</td>
       <td>Statistics Reflection 2</td>
     </tr>
     <tr>

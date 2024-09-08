@@ -1,0 +1,39 @@
+---
+title: "9.12: Bootstrap and Confidence Intervals"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   Describe the purpose of confidence intervals
+
+-   Generate a bootstrap confidence interval
+
+-   Generate a CLT-based confidence interval for the sample mean
+
+## Class prep
+
+[Introduction to Modern Statistics chapter 12](https://openintro-ims.netlify.app/foundations-bootstrapping) (specifically, up to 12.4)
+
+By the end of the reading, you should be able to answer the following questions:
+
+-   What is bootstrapping and why do we use it?
+
+-   What information does a confidence interval provide?
+
+## 
