@@ -1,0 +1,15 @@
+{
+  "hash": "bef741bf97b6f67d3156c6d87a420a52",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"9.12: Bootstrap and Confidence Intervals\"\nformat: \n  html:\n    link-external-newwindow: true\n    link-external-icon: true\nengine: knitr\nwebr: \n  show-startup-message: false\n  show-header-message: false\n  home-dir: '/home/r-user/'\n  packages: ['ggplot2', 'dplyr']\nfilters:\n  - webr\nexecute:\n  freeze: auto\n---\n\n\n\n## Learning Objectives\n\nBy the end of the class, students should be able to:\n\n-   Describe the purpose of confidence intervals\n\n-   Generate a bootstrap confidence interval\n\n-   Generate a CLT-based confidence interval for the sample mean\n\n## Class prep\n\n[Introduction to Modern Statistics chapter 12](https://openintro-ims.netlify.app/foundations-bootstrapping) (specifically, up to 12.4)\n\nBy the end of the reading, you should be able to answer the following questions:\n\n-   What is bootstrapping and why do we use it?\n\n-   What information does a confidence interval provide?\n\n## \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1342,5 +1342,41 @@
     "title": "9.12: Evaluating Estimators",
     "section": "Class prep",
     "text": "Class prep\nSDS: 5.5 intro (up to 5.5.1) and 5.5.2 up to 5.5.2.1\nSupplemental YouTube video to provide some intuition for maximum likelihood estimation\nBy the end of the reading, you should be able to answer the following questions:\n\nWhat are we trying to estimate?\nWhat is the likelihood function?\nHow do you maximize the likelihood function? (hint: you may have to review some calculus)"
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/Bootstrap_CI.html",
+    "href": "materials/Unit1/Estimation/Bootstrap_CI.html",
+    "title": "9.12: Bootstrap and Confidence Intervals",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDescribe the purpose of confidence intervals\nGenerate a bootstrap confidence interval\nGenerate a CLT-based confidence interval for the sample mean",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.12: Bootstrap and Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/Bootstrap_CI.html#learning-objectives",
+    "href": "materials/Unit1/Estimation/Bootstrap_CI.html#learning-objectives",
+    "title": "9.12: Bootstrap and Confidence Intervals",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDescribe the purpose of confidence intervals\nGenerate a bootstrap confidence interval\nGenerate a CLT-based confidence interval for the sample mean",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.12: Bootstrap and Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/Bootstrap_CI.html#class-prep",
+    "href": "materials/Unit1/Estimation/Bootstrap_CI.html#class-prep",
+    "title": "9.12: Bootstrap and Confidence Intervals",
+    "section": "Class prep",
+    "text": "Class prep\nIntroduction to Modern Statistics chapter 12 (specifically, up to 12.4)\nBy the end of the reading, you should be able to answer the following questions:\n\nWhat is bootstrapping and why do we use it?\nWhat information does a confidence interval provide?",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.12: Bootstrap and Confidence Intervals"
+    ]
   }
 ]
