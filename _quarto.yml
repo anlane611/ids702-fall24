@@ -31,6 +31,9 @@ website:
        - section: Homework
          contents:
          - href: homework/HW1.qmd
+       - section:
+         href: resources.qmd
+         text: Resources
          
 
 

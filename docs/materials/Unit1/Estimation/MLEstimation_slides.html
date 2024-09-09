@@ -207,6 +207,12 @@ window.Quarto = {
  <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../materials/Unit1/Estimation/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -234,6 +240,12 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -244,10 +256,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#big-picture" id="toc-big-picture" class="nav-link active" data-scroll-target="#big-picture">Big Picture</a></li>
-  <li><a href="#statistical-likelihood" id="toc-statistical-likelihood" class="nav-link" data-scroll-target="#statistical-likelihood">Statistical Likelihood</a></li>
+  <li><a href="#estimation-big-picture" id="toc-estimation-big-picture" class="nav-link active" data-scroll-target="#estimation-big-picture">Estimation Big Picture</a></li>
   <li><a href="#maximum-likelihood-estimation" id="toc-maximum-likelihood-estimation" class="nav-link" data-scroll-target="#maximum-likelihood-estimation">Maximum Likelihood Estimation</a></li>
   <li><a href="#mechanics" id="toc-mechanics" class="nav-link" data-scroll-target="#mechanics">Mechanics</a></li>
+  <li><a href="#evaluating-estimators" id="toc-evaluating-estimators" class="nav-link" data-scroll-target="#evaluating-estimators">Evaluating Estimators</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MLEstimation_slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
@@ -273,14 +286,17 @@ window.Quarto = {
 </header>
 
 
-<section id="big-picture" class="level2">
-<h2 class="anchored" data-anchor-id="big-picture">Big Picture</h2>
-</section>
-<section id="statistical-likelihood" class="level2">
-<h2 class="anchored" data-anchor-id="statistical-likelihood">Statistical Likelihood</h2>
+<section id="estimation-big-picture" class="level2">
+<h2 class="anchored" data-anchor-id="estimation-big-picture">Estimation Big Picture</h2>
 </section>
 <section id="maximum-likelihood-estimation" class="level2">
 <h2 class="anchored" data-anchor-id="maximum-likelihood-estimation">Maximum Likelihood Estimation</h2>
+<p>Let <span class="math inline">\(X_1, X_2, ..., X_n \stackrel{iid}{\sim} F_{\theta}\)</span></p>
+<p>&nbsp;</p>
+<p>Then the <strong>joint distribution</strong> of (<span class="math inline">\(X_1, ..., X_n\)</span>) is given by <span class="math inline">\(f_{\theta}(x_1,...,x_n)=\prod_{i=1}^{n} f_{\theta}(x_i)\)</span></p>
+<p>&nbsp;</p>
+<p>Now, we define the <strong>likelihood function</strong> as a function of the fix population parameter <span class="math inline">\(\theta\)</span> : <span class="math inline">\(L(\theta)=f_{\theta}(X_1,...,X_n)=\prod_{i=1}^nf_{\theta}(X_i)\)</span></p>
+<p>We want to find the value of <span class="math inline">\(\theta\)</span> that maximizes the likelihood function and call it <span class="math inline">\(\hat{\theta}\)</span></p>
 </section>
 <section id="mechanics" class="level2">
 <h2 class="anchored" data-anchor-id="mechanics">Mechanics</h2>
@@ -295,6 +311,28 @@ window.Quarto = {
 <li>Solve for <span class="math inline">\(\theta\)</span></li>
 </ol></li>
 </ol>
+</section>
+<section id="evaluating-estimators" class="level2">
+<h2 class="anchored" data-anchor-id="evaluating-estimators">Evaluating Estimators</h2>
+<ul>
+<li><p>Bias: Average distance from the population parameter</p>
+<ul>
+<li>Bias(<span class="math inline">\(\hat{\theta}\)</span>) = <span class="math inline">\(\mathbf{E}[\hat{\theta}]-\theta\)</span></li>
+</ul></li>
+<li><p>Standard Error (SE): standard deviation of the estimator (i.e., SD of the sampling distribution)</p>
+<ul>
+<li>STD(<span class="math inline">\(\hat{\theta}\)</span>)= <span class="math inline">\(\sqrt{\mathbf{E}[\hat{\theta}-\mathbf{E}(\hat{\theta})]^2}\)</span></li>
+</ul></li>
+<li><p>Mean Squared Error (MSE): combines standard error and bias</p>
+<ul>
+<li>MSE(<span class="math inline">\(\hat{\theta}\)</span>)= <span class="math inline">\(\mathbf{E}[\hat{\theta}-\theta]^2\)</span> = SE<span class="math inline">\(^2\)</span> + Bias<span class="math inline">\(^2\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
+<p>Let <span class="math inline">\(X_1, X_2, ..., X_n \stackrel{iid}{\sim} Poisson(\lambda)\)</span></p>
+<p>Derive the MLE, <span class="math inline">\(\hat{\lambda}\)</span> and determine if this is an unbiased estimator of <span class="math inline">\(\lambda\)</span></p>
 
 
 </section>

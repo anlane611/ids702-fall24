@@ -1,0 +1,23 @@
+---
+title: "Resources"
+execute:
+  freeze: auto
+---
+
+## R
+
+[Getting started with R and RStudio](http://rafalab.dfci.harvard.edu/dsbook/getting-started.html)
+
+[R for Data Science](https://r4ds.hadley.nz/)
+
+[Cheatsheets](https://posit.co/resources/cheatsheets/#import) (RStudio, Quarto, ggplot2, dplyr)
+
+[Quarto documentation](https://quarto.org/)
+
+## Statistics
+
+[Practical Statistics for Data Scientists](https://learning.oreilly.com/library/view/practical-statistics-for/9781492072935/) (available online)
+
+[Introduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin](https://openintro-ims.netlify.app/)
+
+[Dr. Mine Çetinkaya-Rundel's YouTube channel](https://www.youtube.com/@bleue894/videos) (includes R)
