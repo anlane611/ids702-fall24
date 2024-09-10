@@ -1214,7 +1214,7 @@
     "href": "materials/Unit1/Estimation/MLEstimation.html",
     "title": "9.10: Maximum Likelihood Estimation",
     "section": "",
-    "text": "By the end of the class, students should be able to:\n\nIdentify the goal of maximum likelihood estimation\nDefine the statistical likelihood function\nDerive a maximum likelihood estimate of a given probability distribution",
+    "text": "HW 1: Sunday, Sept 15 11:59 PM",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1225,8 +1225,8 @@
     "objectID": "materials/Unit1/Estimation/MLEstimation.html#learning-objectives",
     "href": "materials/Unit1/Estimation/MLEstimation.html#learning-objectives",
     "title": "9.10: Maximum Likelihood Estimation",
-    "section": "",
-    "text": "By the end of the class, students should be able to:\n\nIdentify the goal of maximum likelihood estimation\nDefine the statistical likelihood function\nDerive a maximum likelihood estimate of a given probability distribution",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\nIdentify the goal of maximum likelihood estimation\nDefine the statistical likelihood function\nDerive a maximum likelihood estimate of a given probability distribution",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1449,7 +1449,7 @@
     "href": "materials/Unit1/Estimation/MLEstimation_slides.html#illustration",
     "title": "Maximum Likelihood Estimation",
     "section": "Illustration",
-    "text": "Illustration\nImagine we have a binary variable (e.g., disease status). n=100, where 30 have the disease.\nWe can use the Bernoulli distribution, so \\(\\prod_{i=1}^{n}=p^{x_i} (1-p)^{1-x_i}\\) and \\(L(p)=p^{30}(1-p)^{70}\\) , which we can plot over a range of values of \\(p\\)"
+    "text": "Illustration\nImagine we have a binary variable (e.g., disease status). n=100, where 30 have the disease.\nWe can use the Bernoulli distribution, so \\(\\prod_{i=1}^{n}p^{x_i} (1-p)^{1-x_i}\\) and \\(L(p)=p^{30}(1-p)^{70}\\) , which we can plot over a range of values of \\(p\\)"
   },
   {
     "objectID": "materials/Unit1/Estimation/MLEstimation_slides.html#general-mechanics",
@@ -1547,5 +1547,17 @@
     "title": "Probability Distributions",
     "section": "",
     "text": "Random variables are variables that can take different values, and the value they take depends on a probabilistic process.\nExamples:\n\n\n\n\n\n\n\nY=Resting heart rate\nY=congestive heart failure status (1=Yes, 0=No)\n\n\n\n\n80\n0\n\n\n82\n1\n\n\n78\n0\n\n\n90\n1\n\n\n65\n0"
+  },
+  {
+    "objectID": "materials/Unit1/Estimation/MLEstimation.html#upcoming-deadlines",
+    "href": "materials/Unit1/Estimation/MLEstimation.html#upcoming-deadlines",
+    "title": "9.10: Maximum Likelihood Estimation",
+    "section": "",
+    "text": "HW 1: Sunday, Sept 15 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.10: Maximum Likelihood Estimation"
+    ]
   }
 ]

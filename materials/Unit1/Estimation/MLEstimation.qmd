@@ -16,6 +16,10 @@ execute:
   freeze: auto
 ---
 
+## Upcoming deadlines
+
+-   HW 1: Sunday, Sept 15 11:59 PM
+
 ## Learning Objectives
 
 By the end of the class, students should be able to:
