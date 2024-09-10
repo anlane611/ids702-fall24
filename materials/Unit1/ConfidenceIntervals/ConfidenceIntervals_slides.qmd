@@ -1,0 +1,49 @@
+---
+title: "Confidence Intervals"
+format: 
+  revealjs:
+    incremental: true
+    multiplex: true
+    chalkboard: true
+    html-math-method: mathjax
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr', 'FamilyRank']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Motivation
+
+Now that we have our estimate and our sampling distribution, we can use the sampling distribution to provide an interval that contains likely values of the population parameter of interest
+
+## Two ways of producing confidence intervals
+
+1.  Analytical method
+2.  Resampling method
+
+## Analytical method
+
+In some cases, we can rely on certain assumptions about the population and characterize the sampling distribution, e.g., when the assumptions for the CLT hold and we are interested in the sample mean.
+
+ 
+
+In this case, we can generate a confidence interval of the form: $$
+\bar{x} \pm z^* \times \sigma/\sqrt{n}
+$$
+
+## Resampling method
+
+In other cases, it is difficult or impossible to characterize the sampling distribution. In these cases, a resampling method called the **bootstrap** is useful.
+
+ 
+
+-   We mimic the process of collecting many different samples from the population by sampling **with replacement** from the data
+
+-   We calculate the statistic of interest in each bootstrap sample to form the estimated sampling distribution
+
+-   We use the estimated sampling distribution to calculate a confidence interval

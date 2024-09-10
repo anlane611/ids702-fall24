@@ -55,10 +55,10 @@ Image source: <https://blog.minitab.com/en/adventures-in-statistics-2/understand
 
 ## Example
 
-|           |     |     |     |     |
-|-----------|-----|-----|-----|-----|
-| $X$       | 1   | 2   | 3   | 4   |
-| $P(X=x)$  | 0.2 | 0.4 | 0.3 | 0.1 |
+|          |     |     |     |     |
+|----------|-----|-----|-----|-----|
+| $X$      | 1   | 2   | 3   | 4   |
+| $P(X=x)$ | 0.2 | 0.4 | 0.3 | 0.1 |
 
 -   Is this a valid probability distribution?
 

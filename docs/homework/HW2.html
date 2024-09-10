@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9.10: Maximum Likelihood Estimation – IDS 702</title>
+<title>Homework 2 – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,8 +101,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -80,7 +143,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Estimation/MLEstimation.html">9.10: Maximum Likelihood Estimation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      IDS 702
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../">IDS 702</a> 
+      <a href="../">IDS 702</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -131,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cleaning and exploring data in R</span></a>
   </div>
 </li>
@@ -139,46 +204,46 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Unit 1: Statistics Fundamentals</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.27: Introduction and Study Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.29: Introduction to Probability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.3: Probability Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.5: Sampling Distributions &amp; Central Limit Theorem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
   </div>
 </li>
@@ -188,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reflections.html" class="sidebar-item-text sidebar-link">
+  <a href="../reflections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics Reflections</span></a>
   </div>
 </li>
@@ -203,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../homework/HW1.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 1</span></a>
   </div>
 </li>
@@ -211,7 +276,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -220,23 +285,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
-  <li><a href="#class-slides" id="toc-class-slides" class="nav-link" data-scroll-target="#class-slides">Class slides</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Estimation/MLEstimation.html">9.10: Maximum Likelihood Estimation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">9.10: Maximum Likelihood Estimation</h1>
+<h1 class="title">Homework 2</h1>
 </div>
 
 
@@ -253,32 +310,67 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of the class, students should be able to:</p>
-<ul>
-<li><p>Identify the goal of maximum likelihood estimation</p></li>
-<li><p>Define the statistical likelihood function</p></li>
-<li><p>Derive a maximum likelihood estimate of a given probability distribution</p></li>
-</ul>
-</section>
-<section id="class-prep" class="level2">
-<h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
-<p>SDS: 5.5 intro (up to 5.5.1) and 5.5.2 up to 5.5.2.1</p>
-<p><a href="https://www.youtube.com/watch?v=XepXtl9YKwc">Supplemental YouTube video</a> to provide some intuition for maximum likelihood estimation</p>
-<p>By the end of the reading, you should be able to answer the following questions:</p>
-<ul>
-<li><p>What are we trying to estimate?</p></li>
-<li><p>What is the likelihood function?</p></li>
-<li><p>How do you maximize the likelihood function? (hint: you may have to review some calculus)</p></li>
-</ul>
-</section>
-<section id="class-slides" class="level2">
-<h2 class="anchored" data-anchor-id="class-slides">Class slides</h2>
-<p><a href="MLEstimation_slides-speaker.html">Slides</a></p>
+<p><strong>Deadline</strong>: Sunday, September 29, 11:59 PM</p>
+<p><strong>Instructions</strong>: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.</p>
+<p><a href="_IDS702HW2Template.qmd"><em>Click here to download the template</em></a> <em>(right click and choose “save link as”)</em></p>
+<p>&nbsp;</p>
+<ol type="1">
+<li><p>( points) Let <span class="math inline">\(X_1,X_2,...,X_n \stackrel {iid}{\sim} N(\mu,1)\)</span>, and recall the Normal PDF: <span class="math inline">\(f(x)=\frac{1}{\sqrt{2\pi\sigma^2 }} e^{\frac{-(x-\mu)^2 }{2\sigma^2} }\)</span></p>
+<p>a. Write the likelihood function <span class="math inline">\(L(\mu)\)</span></p>
+<p>b. Write the log-likelihood function <span class="math inline">\(l(\mu)\)</span></p>
+<p>c. Find the maximum likelihood estimator of <span class="math inline">\(\mu\)</span></p>
+<p>d. Determine if the MLE <span class="math inline">\(\hat{\mu}\)</span> is an unbiased estimator of <span class="math inline">\(\mu\)</span></p></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start="2" type="1">
+<li><p>(8 points) In 2023, 20% of a local bank’s credit card holders experienced fraud that forced them to cancel their cards. The bank expects to bring in 200 new customers in 2024. They want to know how many new cards they will have to cancel, assuming the probability of fraud is consistent for both years.</p>
+<p>a. Which probability distribution best fits this situation?</p>
+<p>b. How many customers should they expect to experience fraud?</p>
+<p>c. What is the probability that 50 customers will experience fraud?</p>
+<p>d. What is the probability that no more than 50 customers will experience fraud?</p></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ol start="3" type="1">
+<li>(36 points) <em>All about the samples</em>: In this exercise, you will conduct a simulation in R to evaluate the effect of sample size and sampling schemes on the sampling distribution of the mean.</li>
+</ol>
+<p>We will use the dataset provided below to conduct the simulation. The dataset contains 100000 observations, so we will treat this as our population of interest. The dataset has 3 variables: 1 continuous variable (Y) and 2 categorical variables (X1 and X2).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>population <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://raw.githubusercontent.com/anlane611/datasets/main/population.csv"</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>First, let’s understand our population. Our main variable of interest will be Y.</p>
+<p>a. What is the mean of Y?</p>
+<p>b. What is the mean of Y for each level of X1? How many observations are in each level of X1?</p>
+<p>c. What is the mean of Y for each level of X2? How many observations are in each level of X2?</p>
+<p>&nbsp;</p>
+<p>Now, explore the sampling distribution of the sample mean of Y under simple random sampling.</p>
+<p>d. Use the skeleton code below to simulate the process of collecting 1000 simple random samples, each of size 10, from the population. Generate a histogram of the 1000 sample means and describe what you observe. Does the histogram show an approximately normal distribution? What is its mean and how does it compare to the population mean?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>SRSmeans <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">means=</span><span class="cn">NA</span>) <span class="co">#create an empty dataframe to store the sample means</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>){</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(i) <span class="co">#ensure that we have a different sample each time</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  SRS.sample <span class="ot">&lt;-</span> __________ <span class="sc">|&gt;</span> <span class="fu">slice</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>________,<span class="at">size=</span>__))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  SRSmeans[i,<span class="dv">1</span>] <span class="ot">&lt;-</span> SRS.sample <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="fu">______</span>(Y))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SRSmeans, <span class="fu">aes</span>(<span class="at">x=</span>means)) <span class="sc">+</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()<span class="sc">+</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"_____________"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>e. Simulate the process of collecting 1000 simple random samples, but this time each should be of size 100. Generate a histogram of the sample means. What is the difference between this histogram and the histogram you generated in part d?</p>
+<p>&nbsp;</p>
+<p>Next, explore the sampling distribution of the sample mean of Y under cluster sampling.</p>
+<p>f. Simulate the process of collecting 1000 cluster samples, where each sample is comprised of 2 randomly-selected clusters from X1. Generate a histogram of the samples means and describe what you observe. What is the mean of the sampling distribution? Is the sampling distribution approximately normal?</p>
+<p>&nbsp;</p>
+<p>Finally, explore the sampling distribution of the sample mean of Y under stratified sampling.</p>
+<p>g. Simulate the process of collecting 1000 stratified samples, where each sample is comprised of a random sample of size 100 drawn from each stratum, and X1 is the strata variable. Generate a histogram of the sample means and describe what you observe. What is the mean of the sampling distribution? Is the sampling distribution approximately normal?</p>
+<p>h. Simulate the process of collecting 1000 stratified samples, where each sample is comprised of a random sample of size 100 drawn from each stratum, and X2 is the strata variable. Generate a histogram of the sample means and describe what you observe. What is the mean of the sampling distribution? Is the sampling distribution approximately normal?</p>
+<p>i. Compare and contrast the results from g and h. Consider the results from parts b and c.&nbsp;What can you conclude about the sampling distribution of the sample mean under stratified sampling?</p>
+<p>&nbsp;</p>
+<p><strong>Bonus (5pts)</strong>: Considering your results from parts f-i, what can you say about the sampling distribution under multistage sampling? You do not need to run the simulation, but your answer should be well-substantiated.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

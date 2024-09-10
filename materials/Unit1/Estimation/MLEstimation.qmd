@@ -40,4 +40,6 @@ By the end of the reading, you should be able to answer the following questions:
 
 -   How do you maximize the likelihood function? (hint: you may have to review some calculus)
 
-## 
+## Class slides
+
+[Slides](MLEstimation_slides-speaker.html)

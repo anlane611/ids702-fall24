@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9.10: Maximum Likelihood Estimation – IDS 702</title>
+<title>9.12: Bootstrap and Confidence Intervals – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Estimation/MLEstimation.html">9.10: Maximum Likelihood Estimation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html">9.12: Bootstrap and Confidence Intervals</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -172,13 +172,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
   </div>
 </li>
@@ -227,16 +227,16 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
-  <li><a href="#class-slides" id="toc-class-slides" class="nav-link" data-scroll-target="#class-slides">Class slides</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Estimation/MLEstimation.html">9.10: Maximum Likelihood Estimation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html">9.12: Bootstrap and Confidence Intervals</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">9.10: Maximum Likelihood Estimation</h1>
+<h1 class="title">9.12: Bootstrap and Confidence Intervals</h1>
 </div>
 
 
@@ -257,25 +257,22 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <p>By the end of the class, students should be able to:</p>
 <ul>
-<li><p>Identify the goal of maximum likelihood estimation</p></li>
-<li><p>Define the statistical likelihood function</p></li>
-<li><p>Derive a maximum likelihood estimate of a given probability distribution</p></li>
+<li><p>Describe the purpose of confidence intervals</p></li>
+<li><p>Generate a bootstrap confidence interval</p></li>
+<li><p>Generate a CLT-based confidence interval for the sample mean</p></li>
 </ul>
 </section>
 <section id="class-prep" class="level2">
 <h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
-<p>SDS: 5.5 intro (up to 5.5.1) and 5.5.2 up to 5.5.2.1</p>
-<p><a href="https://www.youtube.com/watch?v=XepXtl9YKwc">Supplemental YouTube video</a> to provide some intuition for maximum likelihood estimation</p>
+<p><a href="https://openintro-ims.netlify.app/foundations-bootstrapping">Introduction to Modern Statistics chapter 12</a> (specifically, up to 12.4)</p>
 <p>By the end of the reading, you should be able to answer the following questions:</p>
 <ul>
-<li><p>What are we trying to estimate?</p></li>
-<li><p>What is the likelihood function?</p></li>
-<li><p>How do you maximize the likelihood function? (hint: you may have to review some calculus)</p></li>
+<li><p>What is bootstrapping and why do we use it?</p></li>
+<li><p>What information does a confidence interval provide?</p></li>
 </ul>
 </section>
-<section id="class-slides" class="level2">
-<h2 class="anchored" data-anchor-id="class-slides">Class slides</h2>
-<p><a href="MLEstimation_slides-speaker.html">Slides</a></p>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 
 
 </section>
