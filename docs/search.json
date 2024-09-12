@@ -1517,8 +1517,8 @@
     "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#motivation",
     "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#motivation",
     "title": "Confidence Intervals",
-    "section": "",
-    "text": "Now that we have our estimate and our sampling distribution, we can use the sampling distribution to provide an interval that contains likely values of the population parameter of interest"
+    "section": "Motivation",
+    "text": "Motivation\nOnce we have our estimate and our sampling distribution, we can use the sampling distribution to provide an interval that contains likely values of the population parameter of interest"
   },
   {
     "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#two-ways-of-producing-confidence-intervals",
@@ -1532,14 +1532,14 @@
     "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#analytical-method",
     "title": "Confidence Intervals",
     "section": "Analytical method",
-    "text": "Analytical method\nIn some cases, we can rely on certain assumptions about the population and characterize the sampling distribution, e.g., when the assumptions for the CLT hold and we are interested in the sample mean.\n \nIn this case, we can generate a confidence interval of the form: \\[\n\\bar{x} \\pm z^* \\times \\sigma/\\sqrt{n}\n\\]"
+    "text": "Analytical method\nIn some cases, we can rely on certain assumptions about the population and characterize the sampling distribution, e.g., when the assumptions for the CLT hold and we are interested in the sample mean.\n \nIn this case, we can generate a confidence interval of the form: \\[\n\\bar{x} \\pm z^* \\times \\sigma/\\sqrt{n}\n\\]\nOr, more generally: \\(\\hat{\\theta} \\pm t^* \\times \\sigma_{\\hat{\\theta}}\\)"
   },
   {
     "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#resampling-method",
     "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#resampling-method",
     "title": "Confidence Intervals",
     "section": "Resampling method",
-    "text": "Resampling method\nIn other cases, it is difficult or impossible to characterize the sampling distribution. In these cases, a resampling method called the bootstrap is useful.\n \n\nWe mimic the process of collecting many different samples from the population by sampling with replacement from the data\nWe calculate the statistic of interest in each bootstrap sample to form the estimated sampling distribution\nWe use the estimated sampling distribution to calculate a confidence interval"
+    "text": "Resampling method\nIn other cases, it is difficult or impossible to characterize the sampling distribution. In these cases, a resampling method called the bootstrap is useful.\n\nWe mimic the process of collecting many different samples from the population by sampling with replacement from the data\nWe calculate the statistic of interest in each bootstrap sample to form the estimated sampling distribution\nWe use the estimated sampling distribution to calculate a confidence interval"
   },
   {
     "objectID": "materials/Unit1/Distributions/Distributions_slides.html",
@@ -1558,6 +1558,67 @@
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
       "9.10: Maximum Likelihood Estimation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#interpretation",
+    "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#interpretation",
+    "title": "Confidence Intervals",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nTrue or False: Once I produce a 95% confidence interval, there is a 95% probability that the true parameter value lies in that interval.\nTrue or False: Once I produce a 95% confidence interval, there is a 95% probability that the sample estimate lies in that interval."
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#factors-that-affect-confidence-intervals",
+    "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_slides.html#factors-that-affect-confidence-intervals",
+    "title": "Confidence Intervals",
+    "section": "Factors that affect confidence intervals",
+    "text": "Factors that affect confidence intervals\n\nSample size\nStandard error\nConfidence level"
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html",
+    "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html",
+    "title": "Confidence Intervals",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#load-packages",
+    "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#load-packages",
+    "title": "Confidence Intervals",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#load-data",
+    "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#load-data",
+    "title": "Confidence Intervals",
+    "section": "Load Data",
+    "text": "Load Data\n\nmanhattan &lt;- read_csv(\n  \"https://sta101-fa22.netlify.app/static/appex/data/manhattan.csv\"\n  )"
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#calculating-confidence-intervals-with-bootstrap",
+    "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#calculating-confidence-intervals-with-bootstrap",
+    "title": "Confidence Intervals",
+    "section": "Calculating confidence intervals with bootstrap",
+    "text": "Calculating confidence intervals with bootstrap\nFill in the following code to generate 1000 bootstrap means for rent price\n\nsample_mean &lt;- manhattan |&gt;\n  summarise(mean(rent)) |&gt;\n  pull()\n\nset.seed(2)\nboot_dist_rent &lt;-     |&gt;\n  specify(response = ) |&gt;\n  generate(reps = , type = ) |&gt;\n  calculate(stat= )\n\nGenerate the histogram of bootstrap means:\n\nggplot(boot_dist_rent, aes(x=stat))+\n  geom_histogram()\n\n \n \nWe will use this histogram/distribution of the bootstrap means to construct a confidence interval for the population mean.\nLet’s set our confidence level to 95% (90, 95, and 99 are standard). We want to identify the values on the x-axis of this distribution that capture 95% of the bootstrap means (i.e., 950 out of the 1000 bootstrap means).\nThe quantile function will give us these values based on a probability. For 95% confidence, we want probabilities of 0.025 and 0.975. Why?\n\nboot_dist_rent |&gt;\n  get_confidence_interval(level = 0.95, type = \"percentile\")\n\n\nVisualize the interval\n\n\n\n\n\n\n\n\n\n\n\nInterpret the interval\nIf we calculated a confidence interval for each bootstrap sample, we would expect 95% of the intervals to contain the true population mean. Therefore, we can be confident that the true mean rent is between"
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#confidence-intervals-with-the-central-limit-theorem",
+    "href": "materials/Unit1/ConfidenceIntervals/ConfidenceIntervals_code.html#confidence-intervals-with-the-central-limit-theorem",
+    "title": "Confidence Intervals",
+    "section": "Confidence intervals with the central limit theorem",
+    "text": "Confidence intervals with the central limit theorem\n\nxbar &lt;- manhattan |&gt; \n  summarise(mean(rent)) |&gt;\n  pull()\n\nIn general, the confidence interval can be written as\n\\[\n\\bar{x} \\pm z^* \\times \\sigma/\\sqrt{n}\n\\] where \\(z^*\\) is the quantile of a standard normal distribution associated with our level of confidence.\nWhat about when we don’t know \\(\\sigma\\) (which is nearly always the case)?\nWe approximate \\(\\mu\\) by \\(\\bar{x}\\) and \\(\\sigma\\) by the standard deviation \\(s\\). However, \\(s\\) may be smaller than \\(\\sigma\\) and our confidence interval could be too narrow. What is the problem with a confidence interval being too narrow?\nTo account for this uncertainty, we will use a distribution with thicker tails. This sampling distribution is called a t-distribution.\nThe t-distribution has a bell shape but the extra thick tails help us correct for the variability introduced by using s instead of σ.\nThe t-distribution, like the standard normal, is always centered at zero. Therefore, the t-distribution has only a single parameter: degrees of freedom. The degrees of freedom describes the precise form of the bell-shaped t-distribution. In general, we’ll use a t-distribution with \\(df=n−1\\) to model the sample mean when the sample size is \\(n\\).\nWe can use qt and pt to find quantiles and probabilities respectively under the t-distribution.\nTo construct our practical confidence interval (where we don’t know \\(\\sigma\\)) we use the t-distribution:\n\\[\n\\bar{x} \\pm t^*_{n-1} \\times \\frac{s}{\\sqrt{n}}\n\\]\n\n\nCalculate the 95% confidence interval for rent price using the t-distribution.\n\nt.star &lt;- abs(qt(.025,20-1))\nstd.error &lt;- manhattan |&gt;\n  summarise(sd(rent)/sqrt(20)) |&gt;\n  pull()\n\nxbar - t.star*std.error\n\n[1] 2252.772\n\nxbar + t.star*std.error\n\n[1] 2998.828\n\n\n\n\nInterpret the interval\nIf we collected many samples from the population and calculated a confidence interval for each sample, we would expect 95% of the intervals to contain the true mean rent. Therefore, we can be confident that the true mean rent is between .\nHow does this compare to the 95% bootstrap confidence interval?"
+  },
+  {
+    "objectID": "materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html#slides-and-code",
+    "href": "materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html#slides-and-code",
+    "title": "9.12: Bootstrap and Confidence Intervals",
+    "section": "Slides and Code",
+    "text": "Slides and Code\nSlides\nQmd file to download",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.12: Bootstrap and Confidence Intervals"
     ]
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9.12: Bootstrap and Confidence Intervals – IDS 702</title>
+<title>Confidence Intervals – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -67,6 +101,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../../styles.css">
 </head>
@@ -80,7 +143,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html">9.12: Bootstrap and Confidence Intervals</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      IDS 702
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,13 +204,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Unit 1: Statistics Fundamentals</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
@@ -178,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
   </div>
 </li>
@@ -225,18 +290,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
-  <li><a href="#slides-and-code" id="toc-slides-and-code" class="nav-link" data-scroll-target="#slides-and-code">Slides and Code</a></li>
+  <li><a href="#load-packages" id="toc-load-packages" class="nav-link active" data-scroll-target="#load-packages">Load packages</a></li>
+  <li><a href="#load-data" id="toc-load-data" class="nav-link" data-scroll-target="#load-data">Load Data</a></li>
+  <li><a href="#calculating-confidence-intervals-with-bootstrap" id="toc-calculating-confidence-intervals-with-bootstrap" class="nav-link" data-scroll-target="#calculating-confidence-intervals-with-bootstrap">Calculating confidence intervals with bootstrap</a></li>
+  <li><a href="#confidence-intervals-with-the-central-limit-theorem" id="toc-confidence-intervals-with-the-central-limit-theorem" class="nav-link" data-scroll-target="#confidence-intervals-with-the-central-limit-theorem">Confidence intervals with the central limit theorem</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html">9.12: Bootstrap and Confidence Intervals</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">9.12: Bootstrap and Confidence Intervals</h1>
+<h1 class="title">Confidence Intervals</h1>
+<p class="subtitle lead">IDS 702</p>
 </div>
 
 
@@ -253,30 +320,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of the class, students should be able to:</p>
-<ul>
-<li><p>Describe the purpose of confidence intervals</p></li>
-<li><p>Generate a bootstrap confidence interval</p></li>
-<li><p>Generate a CLT-based confidence interval for the sample mean</p></li>
-</ul>
+<section id="load-packages" class="level2">
+<h2 class="anchored" data-anchor-id="load-packages">Load packages</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="class-prep" class="level2">
-<h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
-<p><a href="https://openintro-ims.netlify.app/foundations-bootstrapping">Introduction to Modern Statistics chapter 12</a> (specifically, up to 12.4)</p>
-<p>By the end of the reading, you should be able to answer the following questions:</p>
-<ul>
-<li><p>What is bootstrapping and why do we use it?</p></li>
-<li><p>What information does a confidence interval provide?</p></li>
-</ul>
+<section id="load-data" class="level2">
+<h2 class="anchored" data-anchor-id="load-data">Load Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>manhattan <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://sta101-fa22.netlify.app/static/appex/data/manhattan.csv"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="slides-and-code" class="level2">
-<h2 class="anchored" data-anchor-id="slides-and-code">Slides and Code</h2>
-<p><a href="ConfidenceIntervals_slides-speaker.html">Slides</a></p>
-<p><a href="_ConfidenceIntervals_code.qmd">Qmd file to download</a></p>
+<section id="calculating-confidence-intervals-with-bootstrap" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-confidence-intervals-with-bootstrap">Calculating confidence intervals with bootstrap</h2>
+<p>Fill in the following code to generate 1000 bootstrap means for rent price</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sample_mean <span class="ot">&lt;-</span> manhattan <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(rent)) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>boot_dist_rent <span class="ot">&lt;-</span>     <span class="er">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">specify</span>(<span class="at">response =</span> ) <span class="sc">|&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> , <span class="at">type =</span> ) <span class="sc">|&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">calculate</span>(<span class="at">stat=</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Generate the histogram of bootstrap means:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(boot_dist_rent, <span class="fu">aes</span>(<span class="at">x=</span>stat))<span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>We will use this histogram/distribution of the bootstrap means to construct a confidence interval for the population mean.</p>
+<p>Let’s set our confidence level to 95% (90, 95, and 99 are standard). We want to identify the values on the x-axis of this distribution that capture 95% of the bootstrap means (i.e., 950 out of the 1000 bootstrap means).</p>
+<p>The <strong>quantile</strong> function will give us these values based on a probability. For 95% confidence, we want probabilities of 0.025 and 0.975. <strong>Why?</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>boot_dist_rent <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_confidence_interval</span>(<span class="at">level =</span> <span class="fl">0.95</span>, <span class="at">type =</span> <span class="st">"percentile"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="visualize-the-interval" class="level4">
+<h4 class="anchored" data-anchor-id="visualize-the-interval">Visualize the interval</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ConfidenceIntervals_code_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="interpret-the-interval" class="level4">
+<h4 class="anchored" data-anchor-id="interpret-the-interval">Interpret the interval</h4>
+<p>If we calculated a confidence interval for each bootstrap sample, we would expect 95% of the intervals to contain the true population mean. Therefore, we can be confident that the true mean rent is between</p>
+</section>
+</section>
+<section id="confidence-intervals-with-the-central-limit-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-intervals-with-the-central-limit-theorem">Confidence intervals with the central limit theorem</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>xbar <span class="ot">&lt;-</span> manhattan <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(rent)) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In general, the confidence interval can be written as</p>
+<p><span class="math display">\[
+\bar{x} \pm z^* \times \sigma/\sqrt{n}
+\]</span> where <span class="math inline">\(z^*\)</span> is the quantile of a standard normal distribution associated with our level of confidence.</p>
+<p>What about when we don’t know <span class="math inline">\(\sigma\)</span> (which is nearly always the case)?</p>
+<p>We approximate <span class="math inline">\(\mu\)</span> by <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\sigma\)</span> by the standard deviation <span class="math inline">\(s\)</span>. However, <span class="math inline">\(s\)</span> may be smaller than <span class="math inline">\(\sigma\)</span> and our confidence interval could be too narrow. <strong>What is the problem with a confidence interval being too narrow?</strong></p>
+<p>To account for this uncertainty, we will use a distribution with thicker tails. This sampling distribution is called a <strong>t-distribution</strong>.</p>
+<p>The t-distribution has a bell shape but the extra thick tails help us correct for the variability introduced by using <em>s</em> instead of <em>σ</em>.</p>
+<p>The t-distribution, like the standard normal, is always centered at zero. Therefore, the t-distribution has only a single parameter: degrees of freedom. The degrees of freedom describes the precise form of the bell-shaped t-distribution. In general, we’ll use a t-distribution with <span class="math inline">\(df=n−1\)</span> to model the sample mean when the sample size is <span class="math inline">\(n\)</span>.</p>
+<p>We can use <code>qt</code> and <code>pt</code> to find quantiles and probabilities respectively under the t-distribution.</p>
+<p>To construct our practical confidence interval (where we don’t know <span class="math inline">\(\sigma\)</span>) we use the t-distribution:</p>
+<p><span class="math display">\[
+\bar{x} \pm t^*_{n-1} \times \frac{s}{\sqrt{n}}
+\]</span></p>
+<section id="section" class="level4">
+<h4 class="anchored" data-anchor-id="section"></h4>
+<p>Calculate the 95% confidence interval for rent price using the t-distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>t.star <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="fu">qt</span>(.<span class="dv">025</span>,<span class="dv">20-1</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>std.error <span class="ot">&lt;-</span> manhattan <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">sd</span>(rent)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">20</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>()</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>xbar <span class="sc">-</span> t.star<span class="sc">*</span>std.error</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2252.772</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>xbar <span class="sc">+</span> t.star<span class="sc">*</span>std.error</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2998.828</code></pre>
+</div>
+</div>
+</section>
+<section id="interpret-the-interval-1" class="level4">
+<h4 class="anchored" data-anchor-id="interpret-the-interval-1">Interpret the interval</h4>
+<p>If we collected many samples from the population and calculated a confidence interval for each sample, we would expect 95% of the intervals to contain the true mean rent. Therefore, we can be confident that the true mean rent is between .</p>
+<p>How does this compare to the 95% bootstrap confidence interval?</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -386,13 +536,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-          // default icon
-          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

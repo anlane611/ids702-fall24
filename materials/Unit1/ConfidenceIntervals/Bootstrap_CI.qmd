@@ -36,4 +36,8 @@ By the end of the reading, you should be able to answer the following questions:
 
 -   What information does a confidence interval provide?
 
-## 
+## Slides and Code
+
+[Slides](ConfidenceIntervals_slides-speaker.html)
+
+[Qmd file to download](_ConfidenceIntervals_code.qmd)
