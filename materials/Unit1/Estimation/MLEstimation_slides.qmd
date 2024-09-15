@@ -75,4 +75,4 @@ Let $X_1, X_2, ..., X_n \stackrel{iid}{\sim} Poisson(\lambda)$
 
 Derive the MLE, $\hat{\lambda}$, and determine if this is an unbiased estimator of $\lambda$
 
-$P(X=x)=\frac{\lambda^x  e^{-\lambda}}{x !}$
+$P(X=x)=\frac{\lambda^x e^{-\lambda}}{x !}$

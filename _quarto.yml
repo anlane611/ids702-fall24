@@ -25,6 +25,7 @@ website:
             - href: materials/Unit1/Distributions/SamplingDistributions_CLT.qmd
             - href: materials/Unit1/Estimation/MLEstimation.qmd
             - href: materials/Unit1/ConfidenceIntervals/Bootstrap_CI.qmd
+            - href: materials/Unit1/Inference/InferenceI.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections

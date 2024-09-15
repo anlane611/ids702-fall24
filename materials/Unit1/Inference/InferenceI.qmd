@@ -1,0 +1,39 @@
+---
+title: "9.17: Inference I"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   Describe the key terms related to hypothesis testing: null and alternative hypotheses, p-values
+
+-   Describe the process of conducting a hypothesis test with randomization
+
+-   Conduct a randomization hypothesis test in R
+
+## Class prep
+
+[Introduction to Modern Statistics chapter 11](https://openintro-ims.netlify.app/foundations-randomization)
+
+Note: Chapter 13 is also useful for review
+
+By the end of the reading, you should be able to answer the following questions:
+
+-   What is a hypothesis test, and what are null and alternative hypotheses?
+
+-   What does it mean to conduct a hypothesis test with randomization?

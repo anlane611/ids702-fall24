@@ -1435,7 +1435,7 @@
     "href": "materials/Unit1/Estimation/MLEstimation_slides.html#example",
     "title": "Maximum Likelihood Estimation",
     "section": "Example",
-    "text": "Example\nLet \\(X_1, X_2, ..., X_n \\stackrel{iid}{\\sim} Poisson(\\lambda)\\)\nDerive the MLE, \\(\\hat{\\lambda}\\), and determine if this is an unbiased estimator of \\(\\lambda\\)\n\\(P(X=x)=\\frac{\\lambda^x  e^{-\\lambda}}{x !}\\)"
+    "text": "Example\nLet \\(X_1, X_2, ..., X_n \\stackrel{iid}{\\sim} Poisson(\\lambda)\\)\nDerive the MLE, \\(\\hat{\\lambda}\\), and determine if this is an unbiased estimator of \\(\\lambda\\)\n\\(P(X=x)=\\frac{\\lambda^x e^{-\\lambda}}{x !}\\)"
   },
   {
     "objectID": "homework/HW2.html",
@@ -1619,6 +1619,42 @@
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
       "9.12: Bootstrap and Confidence Intervals"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceI.html",
+    "href": "materials/Unit1/Inference/InferenceI.html",
+    "title": "9.17: Inference I",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDescribe the key terms related to hypothesis testing: null and alternative hypotheses, p-values\nDescribe the process of conducting a hypothesis test with randomization\nConduct a randomization hypothesis test in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.17: Inference I"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceI.html#learning-objectives",
+    "href": "materials/Unit1/Inference/InferenceI.html#learning-objectives",
+    "title": "9.17: Inference I",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\nDescribe the key terms related to hypothesis testing: null and alternative hypotheses, p-values\nDescribe the process of conducting a hypothesis test with randomization\nConduct a randomization hypothesis test in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.17: Inference I"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceI.html#class-prep",
+    "href": "materials/Unit1/Inference/InferenceI.html#class-prep",
+    "title": "9.17: Inference I",
+    "section": "Class prep",
+    "text": "Class prep\nIntroduction to Modern Statistics chapter 11\nNote: Chapter 13 is also useful for review\nBy the end of the reading, you should be able to answer the following questions:\n\nWhat is a hypothesis test, and what are null and alternative hypotheses?\nWhat does it mean to conduct a hypothesis test with randomization?",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.17: Inference I"
     ]
   }
 ]
