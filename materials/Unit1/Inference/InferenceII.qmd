@@ -1,0 +1,37 @@
+---
+title: "9.19: Inference II: Traditional Statistical Tests"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   Describe the difference between parametric and nonparametric statistical tests
+
+-   Identify when to use a two-sample t-test, a paired t-test, a chi-squared test, and ANOVA
+
+## Class prep
+
+[Introduction to Modern Statistics chapter 20](https://openintro-ims.netlify.app/inference-two-means) sections 20.3 and 20.4
+
+By the end of the reading, you should be able to answer the following questions:
+
+-   What is the difference between the test statistic and the observed statistic?
+
+-   When can we conduct a t-test?
+
+-   What are the steps to conduct a t-test?

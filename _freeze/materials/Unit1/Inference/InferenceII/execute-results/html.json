@@ -1,0 +1,15 @@
+{
+  "hash": "45706f45aba04077ab97cb19b3a28976",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"9.19: Inference II: Traditional Statistical Tests\"\nformat: \n  html:\n    link-external-newwindow: true\n    link-external-icon: true\nengine: knitr\nwebr: \n  show-startup-message: false\n  show-header-message: false\n  home-dir: '/home/r-user/'\n  packages: ['ggplot2', 'dplyr']\nfilters:\n  - webr\nexecute:\n  freeze: auto\n---\n\n\n\n\n\n\n\n## Learning Objectives\n\nBy the end of the class, students should be able to:\n\n-   Describe the difference between parametric and nonparametric statistical tests\n\n-   Identify when to use a two-sample t-test, a paired t-test, a chi-squared test, and ANOVA\n\n## Class prep\n\n[Introduction to Modern Statistics chapter 20](https://openintro-ims.netlify.app/inference-two-means) sections 20.3 and 20.4\n\nBy the end of the reading, you should be able to answer the following questions:\n\n-   What is the difference between the test statistic and the observed statistic?\n\n-   When can we conduct a t-test?\n\n-   What are the steps to conduct a t-test?\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,9 +1,11 @@
 {
-  "hash": "445eb031ad00ae750a46bd577f081028",
+  "hash": "8aab0613e1e780f2f9fb370591cbcbf5",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"9.17: Inference I\"\nformat: \n  html:\n    link-external-newwindow: true\n    link-external-icon: true\nengine: knitr\nwebr: \n  show-startup-message: false\n  show-header-message: false\n  home-dir: '/home/r-user/'\n  packages: ['ggplot2', 'dplyr']\nfilters:\n  - webr\nexecute:\n  freeze: auto\n---\n\n\n\n\n## Learning Objectives\n\nBy the end of the class, students should be able to:\n\n-   Describe the key terms related to hypothesis testing: null and alternative hypotheses, p-values\n\n-   Describe the process of conducting a hypothesis test with randomization\n\n-   Conduct a randomization hypothesis test in R\n\n## Class prep\n\n[Introduction to Modern Statistics chapter 11](https://openintro-ims.netlify.app/foundations-randomization)\n\nNote: Chapter 13 is also useful for review\n\nBy the end of the reading, you should be able to answer the following questions:\n\n-   What is a hypothesis test, and what are null and alternative hypotheses?\n\n-   What does it mean to conduct a hypothesis test with randomization?\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"9.17: Inference I\"\nformat: \n  html:\n    link-external-newwindow: true\n    link-external-icon: true\nengine: knitr\nwebr: \n  show-startup-message: false\n  show-header-message: false\n  home-dir: '/home/r-user/'\n  packages: ['ggplot2', 'dplyr']\nfilters:\n  - webr\nexecute:\n  freeze: auto\n---\n\n\n\n\n\n## Upcoming deadlines\n\n-   Statistics Reflection 9/22 11:59 PM\n\n-   HW 2 9/28 11:59 PM\n\n## Learning Objectives\n\nBy the end of the class, students should be able to:\n\n-   Describe the key terms related to hypothesis testing: null and alternative hypotheses, p-values\n\n-   Describe the process of conducting a hypothesis test with randomization\n\n-   Conduct a randomization hypothesis test in R\n\n## Class prep\n\n[Introduction to Modern Statistics chapter 11](https://openintro-ims.netlify.app/foundations-randomization)\n\nNote: Chapter 13 is also useful for review\n\nBy the end of the reading, you should be able to answer the following questions:\n\n-   What is a hypothesis test, and what are null and alternative hypotheses?\n\n-   What does it mean to conduct a hypothesis test with randomization?\n\n## Slides and code\n\n[Slides](InferenceI_slides-speaker.html)\n\n[Code](_InferenceI_Code.qmd)\n",
+    "supporting": [
+      "InferenceI_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

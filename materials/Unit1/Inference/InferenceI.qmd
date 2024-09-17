@@ -16,6 +16,12 @@ execute:
   freeze: auto
 ---
 
+## Upcoming deadlines
+
+-   Statistics Reflection 9/22 11:59 PM
+
+-   HW 2 9/28 11:59 PM
+
 ## Learning Objectives
 
 By the end of the class, students should be able to:
@@ -37,3 +43,9 @@ By the end of the reading, you should be able to answer the following questions:
 -   What is a hypothesis test, and what are null and alternative hypotheses?
 
 -   What does it mean to conduct a hypothesis test with randomization?
+
+## Slides and code
+
+[Slides](InferenceI_slides-speaker.html)
+
+[Code](_InferenceI_Code.qmd)

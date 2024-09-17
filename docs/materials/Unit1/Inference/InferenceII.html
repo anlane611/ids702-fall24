@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9.17: Inference I – IDS 702</title>
+<title>9.19: Inference II: Traditional Statistical Tests – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Inference/InferenceI.html">9.17: Inference I</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Inference/InferenceII.html">9.19: Inference II: Traditional Statistical Tests</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -184,13 +184,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.17: Inference I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">9.19: Inference II: Traditional Statistical Tests</span></a>
   </div>
 </li>
@@ -237,19 +237,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#upcoming-deadlines" id="toc-upcoming-deadlines" class="nav-link active" data-scroll-target="#upcoming-deadlines">Upcoming deadlines</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
-  <li><a href="#slides-and-code" id="toc-slides-and-code" class="nav-link" data-scroll-target="#slides-and-code">Slides and code</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Inference/InferenceI.html">9.17: Inference I</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Inference/InferenceII.html">9.19: Inference II: Traditional Statistical Tests</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">9.17: Inference I</h1>
+<h1 class="title">9.19: Inference II: Traditional Statistical Tests</h1>
 </div>
 
 
@@ -266,36 +264,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="upcoming-deadlines" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-deadlines">Upcoming deadlines</h2>
-<ul>
-<li><p>Statistics Reflection 9/22 11:59 PM</p></li>
-<li><p>HW 2 9/28 11:59 PM</p></li>
-</ul>
-</section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <p>By the end of the class, students should be able to:</p>
 <ul>
-<li><p>Describe the key terms related to hypothesis testing: null and alternative hypotheses, p-values</p></li>
-<li><p>Describe the process of conducting a hypothesis test with randomization</p></li>
-<li><p>Conduct a randomization hypothesis test in R</p></li>
+<li><p>Describe the difference between parametric and nonparametric statistical tests</p></li>
+<li><p>Identify when to use a two-sample t-test, a paired t-test, a chi-squared test, and ANOVA</p></li>
 </ul>
 </section>
 <section id="class-prep" class="level2">
 <h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
-<p><a href="https://openintro-ims.netlify.app/foundations-randomization">Introduction to Modern Statistics chapter 11</a></p>
-<p>Note: Chapter 13 is also useful for review</p>
+<p><a href="https://openintro-ims.netlify.app/inference-two-means">Introduction to Modern Statistics chapter 20</a> sections 20.3 and 20.4</p>
 <p>By the end of the reading, you should be able to answer the following questions:</p>
 <ul>
-<li><p>What is a hypothesis test, and what are null and alternative hypotheses?</p></li>
-<li><p>What does it mean to conduct a hypothesis test with randomization?</p></li>
+<li><p>What is the difference between the test statistic and the observed statistic?</p></li>
+<li><p>When can we conduct a t-test?</p></li>
+<li><p>What are the steps to conduct a t-test?</p></li>
 </ul>
-</section>
-<section id="slides-and-code" class="level2">
-<h2 class="anchored" data-anchor-id="slides-and-code">Slides and code</h2>
-<p><a href="InferenceI_slides-speaker.html">Slides</a></p>
-<p><a href="_InferenceI_Code.qmd">Code</a></p>
 
 
 </section>

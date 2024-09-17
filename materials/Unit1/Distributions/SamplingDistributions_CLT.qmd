@@ -90,7 +90,7 @@ qnorm(0.75,100,38)
 pnorm(50,100,38)+(1-pnorm(250,100,38))
 ```
 
-4.   Let's assume that the conditions hold for the central limit theorem to apply, and assume the population distribution above (normal with $\mu$ = 100 and $\sigma$ = 38). Write the distribution of $\bar{X}$, the sample mean of raw wages in 2008, in mathematical notation by replacing each "\*": $\bar{X} \sim N(100,38/\sqrt{388})$
+4.  Let's assume that the conditions hold for the central limit theorem to apply, and assume the population distribution above (normal with $\mu$ = 100 and $\sigma$ = 38). Write the distribution of $\bar{X}$, the sample mean of raw wages in 2008, in mathematical notation by replacing each "\*": $\bar{X} \sim N(100,38/\sqrt{388})$
 
 5.  Calculate the following quantities:
 

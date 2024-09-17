@@ -26,12 +26,14 @@ website:
             - href: materials/Unit1/Estimation/MLEstimation.qmd
             - href: materials/Unit1/ConfidenceIntervals/Bootstrap_CI.qmd
             - href: materials/Unit1/Inference/InferenceI.qmd
+            - href: materials/Unit1/Inference/InferenceII.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections
        - section: Homework
          contents:
          - href: homework/HW1.qmd
+         - href: homework/HW2.qmd
        - section:
          href: resources.qmd
          text: Resources
