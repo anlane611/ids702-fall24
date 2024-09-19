@@ -47,3 +47,5 @@ By the end of the reading, you should be able to answer the following questions:
 [Slides](InferenceI_slides-speaker.html)
 
 [Code](_InferenceI_Code.qmd)
+
+[Code with completed exercise](_InferenceI_Code_filledin.qmd)

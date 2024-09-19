@@ -1776,7 +1776,7 @@
     "href": "materials/Unit1/Inference/InferenceI.html#slides-and-code",
     "title": "9.17: Inference I",
     "section": "Slides and code",
-    "text": "Slides and code\nSlides\nCode",
+    "text": "Slides and code\nSlides\nCode\nCode with completed exercise",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1877,5 +1877,12 @@
     "title": "Inference II",
     "section": "Comparing the methods of inference",
     "text": "Comparing the methods of inference"
+  },
+  {
+    "objectID": "materials/TTestFactSheet.html",
+    "href": "materials/TTestFactSheet.html",
+    "title": "Two Sample T-test Fact Sheet",
+    "section": "",
+    "text": "When it’s useful: Interested in comparing the mean of two groups (numeric outcome, binary explanatory variable)\nParametric or nonparametric: Parametric\nAssumptions:\n\nSimple random sample\nObservations are independent within and between the groups\nNormally distributed population OR sufficient sample in each group with no extreme outliers (&gt;30)\n\nHypotheses:\n\\(H_0: \\mu_1=\\mu_2\\) (i.e., the mean of the numeric variable is equal for the two groups)\n\\(H_A: \\mu_1 \\neq \\mu_2\\) (i.e., the means are not equal)\n\nTest Statistic: \\(T= \\frac{\\bar{x}_1 - \\bar{x}_2}{SE}\\) , where SE can either be the pooled standard error or the Welch’s standard error\nUnique Information: There are two variations of the two-sample t-test, distinguished by the standard error estimate in the denominator of the test statistic. The pooled version assumes that the two groups have approximately the same variance, while the Welch’s standard error estimate does not make this assumption. The Welch’s estimate is more conservative, while the pooled version is more powerful. \nRelevant R function(s): t.test\n\nExample: Does the mean number of bids differ for new vs used Mariokart games sold on Ebay?\n\nlibrary(tidyverse)\nlibrary(openintro)\ndata(\"mariokart\")\n\n#mariokart |&gt; count(cond) 59 new, 84 used\n\nggplot(mariokart, aes(x=n_bids))+geom_histogram()+facet_wrap(~cond)\n\n\n\n\n\n\n\n\nThe assumptions for the t-test are met.\n\nt.test(mariokart$n_bids~ mariokart$cond)\n\n\n    Welch Two Sample t-test\n\ndata:  mariokart$n_bids by mariokart$cond\nt = 0.87826, df = 112.62, p-value = 0.3817\nalternative hypothesis: true difference in means between group new and group used is not equal to 0\n95 percent confidence interval:\n -1.131715  2.933975\nsample estimates:\n mean in group new mean in group used \n          14.06780           13.16667 \n\n\nP=0.38, so we fail to reject the null hypothesis. We cannot conclude that the mean number of bids differs for new vs used games."
   }
 ]
