@@ -12,15 +12,13 @@ webr:
   packages: ['ggplot2', 'dplyr']
 filters:
   - webr
-execute:
-  freeze: auto
 ---
 
 ## Upcoming deadlines
 
 -   Statistics Reflection 9/22 11:59 PM
 
--   HW 2 9/28 11:59 PM
+-   HW 2 9/29 11:59 PM
 
 ## Learning Objectives
 

@@ -5,8 +5,6 @@ format:
     link-external-newwindow: true
     link-external-icon: true
 engine: knitr
-execute:
-  freeze: auto
 ---
 
 **Deadline**: Sunday, September 15, 11:59 PM
