@@ -46,6 +46,6 @@ By the end of the reading, you should be able to answer the following questions:
 
 [Groups](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
 
-[Box Folder](https://duke.box.com/s/p8ns7x8y61roas48dvmx8rulahj4uic8)
+[Box Folder](https://duke.app.box.com/f/ae1a616f8c67479abe5b6231dd66ac81)
 
 [T-test sheet for Quarto template](_TTtestFactSheet.qmd)
