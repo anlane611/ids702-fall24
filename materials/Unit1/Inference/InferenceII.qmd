@@ -39,3 +39,11 @@ By the end of the reading, you should be able to answer the following questions:
 -   When can we conduct a t-test?
 
 -   What are the steps to conduct a t-test?
+
+## Class materials
+
+[Slides](InferenceII_slides-speaker.html)
+
+[Groups](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
+
+[Box Folder](https://duke.box.com/s/p8ns7x8y61roas48dvmx8rulahj4uic8)

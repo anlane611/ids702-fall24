@@ -1,0 +1,50 @@
+---
+title: "Two Sample T-test Fact Sheet"
+format: pdf
+---
+
+**When it’s useful**: Interested in comparing the mean of two groups (numeric outcome, binary explanatory variable)
+
+**Parametric or nonparametric**: Parametric
+
+**Assumptions**:
+
+1.  Simple random sample
+
+2.  Observations are independent within and between the groups
+
+3.  Normally distributed population OR sufficient sample in each group with no extreme outliers (\>30)
+
+**Hypotheses**:
+
+$H_0: \mu_1=\mu_2$ (i.e., the mean of the numeric variable is equal for the two groups)
+
+$H_A: \mu_1 \neq \mu_2$ (i.e., the means are not equal)\
+
+**Test Statistic:** $T= \frac{\bar{x}_1 - \bar{x}_2}{SE}$ , where SE can either be the pooled standard error or the Welch’s standard error
+
+**Unique Information:** There are two variations of the two-sample t-test, distinguished by the standard error estimate in the denominator of the test statistic. The pooled version assumes that the two groups have approximately the same variance, while the Welch’s standard error estimate does not make this assumption. The Welch’s estimate is more conservative, while the pooled version is more powerful. 
+
+**Relevant R function(s):** [t.test](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test)
+
+\newpage
+
+**Example**: Does the mean number of bids differ for new vs used Mariokart games sold on Ebay?
+
+```{r, message=FALSE, warning=FALSE, fig.height=2}
+library(tidyverse)
+library(openintro)
+data("mariokart")
+
+#mariokart |> count(cond) 59 new, 84 used
+
+ggplot(mariokart, aes(x=n_bids))+geom_histogram()+facet_wrap(~cond)
+```
+
+The assumptions for the t-test are met.
+
+```{r}
+t.test(mariokart$n_bids~ mariokart$cond)
+```
+
+P=0.38, so we fail to reject the null hypothesis. We cannot conclude that the mean number of bids differs for new vs used games.

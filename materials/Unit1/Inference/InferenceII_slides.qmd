@@ -1,0 +1,43 @@
+---
+title: "Inference II"
+format: 
+  revealjs:
+    multiplex: true
+    chalkboard: true
+    html-math-method: mathjax
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr', 'FamilyRank']
+filters:
+  - webr
+---
+
+## Hypothesis Testing Picture
+
+## Parametric vs Nonparametric Inference
+
+**Parametric inference** relies on assumptions about the population distribution, and hypotheses are on the distribution parameters
+
+-   Statistically powerful
+
+-   Appropriate when data are normally distributed or the sample is large enough
+
+## Parametric vs Nonparametric Inference
+
+**Nonparametric inference** does not rely on assumptions about the population distribution, and hypotheses are more general
+
+-   Less powerful, but more flexible
+
+-   Useful when the sample size is small
+
+## Comparing the methods of inference
+
+## General procedure for statistical tests
+
+1.  Decide on appropriate test based on the type of data and assumptions of the potential tests
+2.  Calculate the observed statistic
+3.  Calculate the test statistic
+4.  Compare the test statistic to some threshold to generate a p-value (threshold will depend on parametric vs. non-parametric)
+5.  Draw conclusion based on p-value

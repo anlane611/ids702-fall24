@@ -1830,5 +1830,52 @@
       "Unit 1: Statistics Fundamentals",
       "9.19: Inference II: Traditional Statistical Tests"
     ]
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceII_slides.html#hypothesis-testing-picture",
+    "href": "materials/Unit1/Inference/InferenceII_slides.html#hypothesis-testing-picture",
+    "title": "Inference II",
+    "section": "Hypothesis Testing Picture",
+    "text": "Hypothesis Testing Picture"
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceII_slides.html#parametric-vs-nonparametric-inference",
+    "href": "materials/Unit1/Inference/InferenceII_slides.html#parametric-vs-nonparametric-inference",
+    "title": "Inference II",
+    "section": "Parametric vs Nonparametric Inference",
+    "text": "Parametric vs Nonparametric Inference\nParametric inference relies on assumptions about the population distribution, and hypotheses are on the distribution parameters\n\nStatistically powerful\nAppropriate when data are normally distributed or the sample is large enough"
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceII_slides.html#general-procedure-for-statistical-tests",
+    "href": "materials/Unit1/Inference/InferenceII_slides.html#general-procedure-for-statistical-tests",
+    "title": "Inference II",
+    "section": "General procedure for statistical tests",
+    "text": "General procedure for statistical tests\n\nDecide on appropriate test based on the type of data and assumptions of the potential tests\nCalculate the observed statistic\nCalculate the test statistic\nCompare the test statistic to some threshold to generate a p-value (threshold will depend on parametric vs. non-parametric)\nDraw conclusion based on p-value"
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceII_slides.html#parametric-vs-nonparametric-inference-1",
+    "href": "materials/Unit1/Inference/InferenceII_slides.html#parametric-vs-nonparametric-inference-1",
+    "title": "Inference II",
+    "section": "Parametric vs Nonparametric Inference",
+    "text": "Parametric vs Nonparametric Inference\nNonparametric inference does not rely on assumptions about the population distribution, and hypotheses are more general\n\nLess powerful, but more flexible\nUseful when the sample size is small"
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceII.html#class-materials",
+    "href": "materials/Unit1/Inference/InferenceII.html#class-materials",
+    "title": "9.19: Inference II: Traditional Statistical Tests",
+    "section": "Class materials",
+    "text": "Class materials\nSlides\nGroups\nBox Folder",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.19: Inference II: Traditional Statistical Tests"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceII_slides.html#comparing-the-methods-of-inference",
+    "href": "materials/Unit1/Inference/InferenceII_slides.html#comparing-the-methods-of-inference",
+    "title": "Inference II",
+    "section": "Comparing the methods of inference",
+    "text": "Comparing the methods of inference"
   }
 ]
