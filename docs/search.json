@@ -1630,7 +1630,7 @@
     "href": "materials/Unit1/Inference/InferenceI.html",
     "title": "9.17: Inference I",
     "section": "",
-    "text": "Statistics Reflection 9/22 11:59 PM\nHW 2 9/28 11:59 PM",
+    "text": "Statistics Reflection 9/22 11:59 PM\nHW 2 9/29 11:59 PM",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1764,7 +1764,7 @@
     "href": "materials/Unit1/Inference/InferenceI.html#upcoming-deadlines",
     "title": "9.17: Inference I",
     "section": "",
-    "text": "Statistics Reflection 9/22 11:59 PM\nHW 2 9/28 11:59 PM",
+    "text": "Statistics Reflection 9/22 11:59 PM\nHW 2 9/29 11:59 PM",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1788,7 +1788,7 @@
     "href": "materials/Unit1/Inference/InferenceII.html",
     "title": "9.19: Inference II: Traditional Statistical Tests",
     "section": "",
-    "text": "By the end of the class, students should be able to:\n\nDescribe the difference between parametric and nonparametric statistical tests\nIdentify when to use a two-sample t-test, a paired t-test, a chi-squared test, and ANOVA",
+    "text": "Statistics Reflection 9/22 11:59 PM\nHW 2 9/29 11:59 PM",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1799,8 +1799,8 @@
     "objectID": "materials/Unit1/Inference/InferenceII.html#learning-objectives",
     "href": "materials/Unit1/Inference/InferenceII.html#learning-objectives",
     "title": "9.19: Inference II: Traditional Statistical Tests",
-    "section": "",
-    "text": "By the end of the class, students should be able to:\n\nDescribe the difference between parametric and nonparametric statistical tests\nIdentify when to use a two-sample t-test, a paired t-test, a chi-squared test, and ANOVA",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\nDescribe the difference between parametric and nonparametric statistical tests\nIdentify when to use a two-sample t-test, a paired t-test, a chi-squared test, and ANOVA",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
@@ -1813,6 +1813,18 @@
     "title": "9.19: Inference II: Traditional Statistical Tests",
     "section": "Class prep",
     "text": "Class prep\nIntroduction to Modern Statistics chapter 20 sections 20.3 and 20.4\nBy the end of the reading, you should be able to answer the following questions:\n\nWhat is the difference between the test statistic and the observed statistic?\nWhen can we conduct a t-test?\nWhat are the steps to conduct a t-test?",
+    "crumbs": [
+      "Course Materials",
+      "Unit 1: Statistics Fundamentals",
+      "9.19: Inference II: Traditional Statistical Tests"
+    ]
+  },
+  {
+    "objectID": "materials/Unit1/Inference/InferenceII.html#upcoming-deadlines",
+    "href": "materials/Unit1/Inference/InferenceII.html#upcoming-deadlines",
+    "title": "9.19: Inference II: Traditional Statistical Tests",
+    "section": "",
+    "text": "Statistics Reflection 9/22 11:59 PM\nHW 2 9/29 11:59 PM",
     "crumbs": [
       "Course Materials",
       "Unit 1: Statistics Fundamentals",
