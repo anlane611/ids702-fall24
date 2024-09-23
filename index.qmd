@@ -74,12 +74,12 @@ Individual lecture topics are subject to change. The midterm date will not chang
     <tr>
       <th scope="row">Sept 23</th>
       <td>Intro to Regression</td>
-      <td>Interpreting estimates, </br> Interaction</td>
+      <td>Multiple Linear Regression</td>
       <td>Homework 2</td>
     </tr>
     <tr>
       <th scope="row">Sept 30</th>
-      <td>Estimating Coefficients</td>
+      <td>Categorical Predictors, </br> Interaction terms</td>
       <td>Assessing Assumptions</td>
       <td>Statistics Reflection 3</td>
     </tr>

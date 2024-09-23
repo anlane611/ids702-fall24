@@ -27,6 +27,9 @@ website:
             - href: materials/Unit1/ConfidenceIntervals/Bootstrap_CI.qmd
             - href: materials/Unit1/Inference/InferenceI.qmd
             - href: materials/Unit1/Inference/InferenceII.qmd
+          - section: "Unit 2: Linear Regression"
+            contents:
+            - href: materials/Unit2/SLR.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections

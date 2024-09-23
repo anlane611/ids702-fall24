@@ -1,0 +1,43 @@
+---
+title: "9.24: Simple Linear Regression"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   HW 2 9/29 11:59 PM
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   describe the linear regression model with statistical terminology (population parameter, estimate, random variable, probability distribution)
+
+-   interpret regression output (estimates, standard errors, test statistics, p-values, and confidence intervals)
+
+## Class prep
+
+Introduction to Statistical Learning with Applications in R (ISLR) 2nd edition: Chapter 3 up to 3.1.3 (i.e., introduction through "Assessing the accuracy of the coefficient estimates")
+
+By the end of the reading, you should be able to answer the following questions:
+
+-   What is an example of a type of question that can be answered with linear regression?
+
+-   What is a residual in linear regression? How does the concept of a residual connect to least squares estimation?
+
+-   How do the population regression line and least squares line connect to the concepts of parameters and sample estimates that we've previously covered?
+
+-   What are the null and alternative hypotheses for regression coefficients?
+
+## 

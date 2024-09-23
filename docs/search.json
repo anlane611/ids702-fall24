@@ -816,7 +816,7 @@
     "href": "index.html#schedule",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Schedule",
-    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables & Distributions\nSampling Distributions &  Central Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nConfidence Intervals/Bootstrap\nHomework 1\n\n\nSept 16\nInference I\nInference II\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nInterpreting estimates,  Interaction\nHomework 2\n\n\nSept 30\nEstimating Coefficients\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &  Multicollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nMultinomial regression\nOrdinal regression\nHomework 4\n\n\nNov 11\nPoisson regression\nSurvival Analysis\nProject proposals\n\n\nNov 18\nMissing Data\nMissing Data\nHomework 5\n\n\nNov 25\nProject work day\n\n\n\n\n\n\n\nDec 15 5PM  Final projects due"
+    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables & Distributions\nSampling Distributions &  Central Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nConfidence Intervals/Bootstrap\nHomework 1\n\n\nSept 16\nInference I\nInference II\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nMultiple Linear Regression\nHomework 2\n\n\nSept 30\nCategorical Predictors,  Interaction terms\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &  Multicollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nMultinomial regression\nOrdinal regression\nHomework 4\n\n\nNov 11\nPoisson regression\nSurvival Analysis\nProject proposals\n\n\nNov 18\nMissing Data\nMissing Data\nHomework 5\n\n\nNov 25\nProject work day\n\n\n\n\n\n\n\nDec 15 5PM  Final projects due"
   },
   {
     "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#motivation",
@@ -1884,5 +1884,53 @@
     "title": "Two Sample T-test Fact Sheet",
     "section": "",
     "text": "When it’s useful: Interested in comparing the mean of two groups (numeric outcome, binary explanatory variable)\nParametric or nonparametric: Parametric\nAssumptions:\n\nSimple random sample\nObservations are independent within and between the groups\nNormally distributed population OR sufficient sample in each group with no extreme outliers (&gt;30)\n\nHypotheses:\n\\(H_0: \\mu_1=\\mu_2\\) (i.e., the mean of the numeric variable is equal for the two groups)\n\\(H_A: \\mu_1 \\neq \\mu_2\\) (i.e., the means are not equal)\n\nTest Statistic: \\(T= \\frac{\\bar{x}_1 - \\bar{x}_2}{SE}\\) , where SE can either be the pooled standard error or the Welch’s standard error\nUnique Information: There are two variations of the two-sample t-test, distinguished by the standard error estimate in the denominator of the test statistic. The pooled version assumes that the two groups have approximately the same variance, while the Welch’s standard error estimate does not make this assumption. The Welch’s estimate is more conservative, while the pooled version is more powerful. \nRelevant R function(s): t.test\n\nExample: Does the mean number of bids differ for new vs used Mariokart games sold on Ebay?\n\nlibrary(tidyverse)\nlibrary(openintro)\ndata(\"mariokart\")\n\n#mariokart |&gt; count(cond) 59 new, 84 used\n\nggplot(mariokart, aes(x=n_bids))+geom_histogram()+facet_wrap(~cond)\n\n\n\n\n\n\n\n\nThe assumptions for the t-test are met.\n\nt.test(mariokart$n_bids~ mariokart$cond)\n\n\n    Welch Two Sample t-test\n\ndata:  mariokart$n_bids by mariokart$cond\nt = 0.87826, df = 112.62, p-value = 0.3817\nalternative hypothesis: true difference in means between group new and group used is not equal to 0\n95 percent confidence interval:\n -1.131715  2.933975\nsample estimates:\n mean in group new mean in group used \n          14.06780           13.16667 \n\n\nP=0.38, so we fail to reject the null hypothesis. We cannot conclude that the mean number of bids differs for new vs used games."
+  },
+  {
+    "objectID": "materials/Unit2/SLR.html",
+    "href": "materials/Unit2/SLR.html",
+    "title": "9.24: Simple Linear Regression",
+    "section": "",
+    "text": "HW 2 9/29 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.24: Simple Linear Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/SLR.html#upcoming-deadlines",
+    "href": "materials/Unit2/SLR.html#upcoming-deadlines",
+    "title": "9.24: Simple Linear Regression",
+    "section": "",
+    "text": "HW 2 9/29 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.24: Simple Linear Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/SLR.html#learning-objectives",
+    "href": "materials/Unit2/SLR.html#learning-objectives",
+    "title": "9.24: Simple Linear Regression",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\ndescribe the linear regression model with statistical terminology (population parameter, estimate, random variable, probability distribution)\ninterpret regression output (estimates, standard errors, test statistics, p-values, and confidence intervals)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.24: Simple Linear Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/SLR.html#class-prep",
+    "href": "materials/Unit2/SLR.html#class-prep",
+    "title": "9.24: Simple Linear Regression",
+    "section": "Class prep",
+    "text": "Class prep\nIntroduction to Statistical Learning with Applications in R (ISLR) 2nd edition: Chapter 3 up to 3.1.3 (i.e., introduction through “Assessing the accuracy of the coefficient estimates”)\nBy the end of the reading, you should be able to answer the following questions:\n\nWhat is an example of a type of question that can be answered with linear regression?\nWhat is a residual in linear regression? How does the concept of a residual connect to least squares estimation?\nHow do the population regression line and least squares line connect to the concepts of parameters and sample estimates that we’ve previously covered?\nWhat are the null and alternative hypotheses for regression coefficients?",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.24: Simple Linear Regression"
+    ]
   }
 ]
