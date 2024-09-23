@@ -24,6 +24,8 @@ By the end of the class, students should be able to:
 
 -   describe the linear regression model with statistical terminology (population parameter, estimate, random variable, probability distribution)
 
+-   define "least squares estimation"
+
 -   interpret regression output (estimates, standard errors, test statistics, p-values, and confidence intervals)
 
 ## Class prep

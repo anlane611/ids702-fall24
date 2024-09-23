@@ -1914,7 +1914,7 @@
     "href": "materials/Unit2/SLR.html#learning-objectives",
     "title": "9.24: Simple Linear Regression",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\ndescribe the linear regression model with statistical terminology (population parameter, estimate, random variable, probability distribution)\ninterpret regression output (estimates, standard errors, test statistics, p-values, and confidence intervals)",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\ndescribe the linear regression model with statistical terminology (population parameter, estimate, random variable, probability distribution)\ndefine “least squares estimation”\ninterpret regression output (estimates, standard errors, test statistics, p-values, and confidence intervals)",
     "crumbs": [
       "Course Materials",
       "Unit 2: Linear Regression",
@@ -1931,6 +1931,54 @@
       "Course Materials",
       "Unit 2: Linear Regression",
       "9.24: Simple Linear Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/MLR.html",
+    "href": "materials/Unit2/MLR.html",
+    "title": "9.26: Multiple Linear Regression",
+    "section": "",
+    "text": "HW 2 9/29 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.26: Multiple Linear Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/MLR.html#upcoming-deadlines",
+    "href": "materials/Unit2/MLR.html#upcoming-deadlines",
+    "title": "9.26: Multiple Linear Regression",
+    "section": "",
+    "text": "HW 2 9/29 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.26: Multiple Linear Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/MLR.html#learning-objectives",
+    "href": "materials/Unit2/MLR.html#learning-objectives",
+    "title": "9.26: Multiple Linear Regression",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\nidentify the difference between simple and multiple linear regression and why MLR is useful\nwrite the multiple linear regression model in matrix notation, including design matrix dimensions\ninterpret multiple linear regression output, including inference results",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.26: Multiple Linear Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/MLR.html#class-prep",
+    "href": "materials/Unit2/MLR.html#class-prep",
+    "title": "9.26: Multiple Linear Regression",
+    "section": "Class prep",
+    "text": "Class prep\nWatch these three videos:\nIntroduction to multiple linear regression\nMLR inference\nEstimation & matrix notation\nOptional/supplementary textbook reading: ISLR section 3.2 up to “Two: deciding on important variables”",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.26: Multiple Linear Regression"
     ]
   }
 ]

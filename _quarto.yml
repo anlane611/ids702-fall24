@@ -30,6 +30,7 @@ website:
           - section: "Unit 2: Linear Regression"
             contents:
             - href: materials/Unit2/SLR.qmd
+            - href: materials/Unit2/MLR.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections
