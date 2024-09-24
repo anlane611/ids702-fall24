@@ -2127,5 +2127,17 @@
     "title": "Simple Linear Regression",
     "section": "Exercise",
     "text": "Exercise\nFit a model to assess the relationship between family income and gift aid. Write the fitted model and interpret the results."
+  },
+  {
+    "objectID": "materials/Unit2/SLR.html#class-materials",
+    "href": "materials/Unit2/SLR.html#class-materials",
+    "title": "9.24: Simple Linear Regression",
+    "section": "Class materials",
+    "text": "Class materials\nSlides",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "9.24: Simple Linear Regression"
+    ]
   }
 ]
