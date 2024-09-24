@@ -42,4 +42,6 @@ By the end of the reading, you should be able to answer the following questions:
 
 -   What are the null and alternative hypotheses for regression coefficients?
 
-## 
+## Class materials
+
+[Slides](SLR_slides-spaker.html)
