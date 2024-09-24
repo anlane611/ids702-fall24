@@ -44,4 +44,4 @@ By the end of the reading, you should be able to answer the following questions:
 
 ## Class materials
 
-[Slides](SLR_slides-spaker.html)
+[Slides](SLR_slides-speaker.html)
