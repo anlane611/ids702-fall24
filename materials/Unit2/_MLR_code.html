@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9.26: Multiple Linear Regression – IDS 702</title>
+<title>Multiple Linear Regression</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,265 +20,96 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+<script src="_MLR_code_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_MLR_code_files/libs/quarto-html/quarto.js"></script>
+<script src="_MLR_code_files/libs/quarto-html/popper.min.js"></script>
+<script src="_MLR_code_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_MLR_code_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_MLR_code_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_MLR_code_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_MLR_code_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_MLR_code_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_MLR_code_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
   }
-}</script>
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
-
-<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="fullcontent">
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../materials/Unit2/SLR.html">Unit 2: Linear Regression</a></li><li class="breadcrumb-item"><a href="../../materials/Unit2/MLR.html">9.26: Multiple Linear Regression</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../../">IDS 702</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Course Materials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Unit 0: Bootcamp</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cleaning and exploring data in R</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Unit 1: Statistics Fundamentals</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8.27: Introduction and Study Design</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8.29: Introduction to Probability</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.3: Probability Distributions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.5: Sampling Distributions &amp; Central Limit Theorem</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.17: Inference I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.19: Inference II: Traditional Statistical Tests</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Unit 2: Linear Regression</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit2/SLR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.24: Simple Linear Regression</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../materials/Unit2/MLR.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">9.26: Multiple Linear Regression</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../reflections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Statistics Reflections</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../homework/HW1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../homework/HW2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 2</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resources</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#upcoming-deadlines" id="toc-upcoming-deadlines" class="nav-link active" data-scroll-target="#upcoming-deadlines">Upcoming deadlines</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
-  <li><a href="#class-materials" id="toc-class-materials" class="nav-link" data-scroll-target="#class-materials">Class materials</a></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../materials/Unit2/SLR.html">Unit 2: Linear Regression</a></li><li class="breadcrumb-item"><a href="../../materials/Unit2/MLR.html">9.26: Multiple Linear Regression</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">9.26: Multiple Linear Regression</h1>
+<h1 class="title">Multiple Linear Regression</h1>
+<p class="subtitle lead">IDS 702</p>
 </div>
 
 
@@ -295,37 +126,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="upcoming-deadlines" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-deadlines">Upcoming deadlines</h2>
+<section id="warm-up" class="level2">
+<h2 class="anchored" data-anchor-id="warm-up">Warm-up</h2>
+<p>In your group, discuss and write your answers to the following questions:</p>
+<ol type="1">
+<li><p>What is <span class="math inline">\(\hat{y}\)</span> ? How is it different than <span class="math inline">\(y\)</span> ?</p></li>
+<li><p>What is <span class="math inline">\(\hat{\beta}\)</span> ? How is it different than <span class="math inline">\(\beta\)</span> ?</p></li>
+<li><p>What is a residual?</p></li>
+<li><p>What is a confounding variable? Why are confounding variables relevant to MLR?</p></li>
+<li><p>Use the Auto data given below to answer the following (note that you can use <code>?Auto</code> after loading the data to see the description and codebook):</p>
+<p>a. How many rows and columns are in the data? What does each row represent?</p>
+<p>b. How many distinct years are in the data?</p>
+<p>c. If I regress mpg on horsepower, weight, and year, what are the dimensions of the outcome vector, the design matrix, and the parameter vector? You do not need any code to answer this question.</p></li>
+</ol>
+<p><strong>Load packages and data</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ISLR2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Today’s data is called “Auto” and is contained in the ISLR2 library</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Auto"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
+<section id="multiple-linear-regression-model-and-notation" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-linear-regression-model-and-notation">Multiple linear regression model and notation</h2>
+<p><span class="math inline">\(y=\beta_0+\beta_1x_1+...+\beta_px_p+\epsilon, \epsilon \sim N(0,\sigma^2)\)</span></p>
 <ul>
-<li>HW 2 9/29 11:59 PM</li>
+<li><p><span class="math inline">\(y\)</span> : the <strong>outcome</strong> variable. Also called the “response” or “dependent variable”. In prediction problems, this is what we are interested in predicting. In linear regression, we use continuous variables for the outcome.</p></li>
+<li><p><span class="math inline">\(x_i\)</span>: the <span class="math inline">\(i^{th}\)</span> predictor. Also commonly referred to as “regressor”, “independent variable”, “covariate”, “feature”.</p></li>
+<li><p><span class="math inline">\(\beta\)</span> : “constants” or <strong>coefficients</strong> i.e.&nbsp;fixed numbers. These are <strong>population parameters</strong>.</p></li>
+<li><p><span class="math inline">\(\epsilon\)</span> : the <strong>error</strong>. This quantity represents observational error, i.e.&nbsp;the difference between our observation and the true population-level expected value</p></li>
+</ul>
+<p>Effectively this model says our data <span class="math inline">\(y\)</span> is linearly related to the <span class="math inline">\(x_1\)</span> ,…,<span class="math inline">\(x_p\)</span> but is not perfectly observed due to some error.</p>
+<p><strong>Matrix Notation</strong>:</p>
+<p><span class="math display">\[
+\begin{bmatrix}y_1\\y_2\\\vdots\\y_n\end{bmatrix}=\begin{bmatrix}1 &amp; x_{11} &amp; \dots &amp; x_{1p}\\1 &amp; x_{21} &amp; ... &amp; x_{2p}\\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; x_{n1} &amp; \dots &amp; x_{np}\end{bmatrix}\begin{bmatrix}\beta_0\\ \beta_1\\ \vdots \\\beta_p \end{bmatrix} + \begin{bmatrix} \epsilon_1 \\ \vdots \\ \epsilon_n \end{bmatrix}
+\]</span></p>
+<p>where <span class="math inline">\(\begin{bmatrix}1 &amp; x_{11} &amp; \dots &amp; x_{1p}\\1 &amp; x_{21} &amp; ... &amp; x_{2p}\\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ 1 &amp; x_{n1} &amp; \dots &amp; x_{np}\end{bmatrix}\)</span> is the <strong>design matrix</strong></p>
+<p>Why does the design matrix matter? The columns must be <strong>linearly independent</strong> for the coefficients to be estimated.</p>
+<p>Then, the OLS estimates are given by <span class="math inline">\(\mathbf{(X'X)^{-1}X'Y}\)</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+<section id="fitting-a-multiple-regression-model-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="fitting-a-multiple-regression-model-in-r">Fitting a multiple regression model in R</h2>
+<pre><code>myModelFit &lt;- lm(outcome ~ predictor1 + predictor2 + predictor3 + ..., data = data-set-here)</code></pre>
+<p>we can simply ‘add’ in new predictors! This code template will fit the model according to the ordinary least squares (OLS) objective function, i.e.&nbsp;we are finding the equation that minimizes the sum of squared residuals.</p>
+<p>You can subsequently print the coefficient estimates (<span class="math inline">\(\hat{\beta}\)</span>) to the screen by calling the <code>summary()</code> function on your fitted model, e.g.&nbsp;<code>summary(myModelFit)</code>.</p>
+<p>Let’s fit the model regressing MPG on weight and horsepower:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>AutoModel <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> weight <span class="sc">+</span> horsepower, <span class="at">data =</span> Auto)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(AutoModel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mpg ~ weight + horsepower, data = Auto)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-11.0762  -2.7340  -0.3312   2.1752  16.2601 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 45.6402108  0.7931958  57.540  &lt; 2e-16 ***
+weight      -0.0057942  0.0005023 -11.535  &lt; 2e-16 ***
+horsepower  -0.0473029  0.0110851  -4.267 2.49e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.24 on 389 degrees of freedom
+Multiple R-squared:  0.7064,    Adjusted R-squared:  0.7049 
+F-statistic: 467.9 on 2 and 389 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>The fitted model equation:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</section>
+<section id="interpreting-the-multiple-linear-regression-coefficient-estimates" class="level2">
+<h2 class="anchored" data-anchor-id="interpreting-the-multiple-linear-regression-coefficient-estimates">Interpreting the multiple linear regression coefficient estimates</h2>
+<ul>
+<li><p><span class="math inline">\(\hat{\beta_0}\)</span> : the value of the outcome when all predictors=0</p></li>
+<li><p><span class="math inline">\(\hat{\beta_i}\)</span> : the amount that the outcome increases, on average, per unit increase in the <span class="math inline">\(i^{th}\)</span> predictor, <strong>holding all other predictors constant (or controlling for the other predictors)</strong></p></li>
+<li><p><span class="math inline">\(\hat{y}\)</span> : the predicted value of the outcome given a set of values of the predictors, according to the model</p></li>
+</ul>
+<p>In the context of our problem:</p>
+<ul>
+<li><p>When a car has weight=0 and horsepower=0, its average mpg is 45.6</p></li>
+<li><p>For each 1 lb increase in a vehicle’s weight, the mean mpg decreases by .006, holding horsepower constant.</p></li>
+<li><p>For each increase in horsepower, the mean mpg decreases by .05, holding weight constant</p></li>
+<li><p>For a car that weighs 3500 lbs and has a horsepower of 130, the predicted mpg is 18.1.</p>
+<p>Note that predictions should be made within the range of the observed predictors. Making predictions on values outside of the range of the observed values is called <strong>extrapolation</strong></p>
+<h2 id="exercise" class="anchored">Exercise</h2>
+<ol type="1">
+<li>Fit a model regressing mpg on weight and acceleration. Interpret the estimates. Which predictors are statistically significant?</li>
+<li>Fit a model regressing mpg on displacement, weight, acceleration, and year. Interpret the estimates. Which predictors are statistically significant? Based on the t values, which predictor has the biggest impact on the outcome? Is this surprising?</li>
+<li>Compare your results for 1 and 2. What does the difference in the results say about the possible confounders for this problem?</li>
+</ol></li>
 </ul>
 </section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of the class, students should be able to:</p>
-<ul>
-<li><p>identify the difference between simple and multiple linear regression and why MLR is useful</p></li>
-<li><p>write the multiple linear regression model in matrix notation, including design matrix dimensions</p></li>
-<li><p>interpret multiple linear regression output, including inference results</p></li>
-</ul>
-</section>
-<section id="class-prep" class="level2">
-<h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
-<p>Watch these three videos:</p>
-<p><a href="https://duke.zoom.us/rec/share/Q3H7MNRMzllNn3HSZwt45lChOqYcdxrXNW8Be_217BRlqKwGzfFD0EQyXMP-EowB.4b7N50k9WprSyu6Z?startTime=1693325743000">Introduction to multiple linear regression</a></p>
-<p><a href="https://duke.zoom.us/rec/share/nwRpuXj6Cd7a5bMGJnxhRDWJKuEvxc8itAmdvzXy0oq4udTDsy7RUbfn_KX3AvEq.TwdBsSfeRY0_szjl?startTime=1693327053000">MLR inference</a></p>
-<p><a href="https://duke.zoom.us/rec/share/h_h8LzS12qYLTFDxfwounhgiT90TCAuIveVi-PgtrhphRaQkiiX1NnShYYyp_0v3.czFP-QaC_mW5-tRv?startTime=1693718117000">Estimation &amp; matrix notation</a></p>
-<p><strong>Optional/supplementary textbook reading</strong>: ISLR section 3.2 up to “Two: deciding on important variables”</p>
-</section>
-<section id="class-materials" class="level2">
-<h2 class="anchored" data-anchor-id="class-materials">Class materials</h2>
-<p><a href="_MLR_code.qmd">Notes/code (qmd)</a></p>
-
-
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
 </section>
 
-</main> <!-- /main -->
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -432,13 +344,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-          // default icon
-          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

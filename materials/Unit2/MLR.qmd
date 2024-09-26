@@ -40,4 +40,6 @@ Watch these three videos:
 
 **Optional/supplementary textbook reading**: ISLR section 3.2 up to "Two: deciding on important variables"
 
-## 
+## Class materials
+
+[Notes/code (qmd)](_MLR_code.qmd)
