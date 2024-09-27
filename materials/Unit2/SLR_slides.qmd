@@ -155,3 +155,17 @@ confint(elmhurst_slr)
 ## Exercise
 
 Fit a model to assess the relationship between family income and gift aid. Write the fitted model and interpret the results.
+
+```{r, echo=TRUE}
+elmhurst_slr_gift <- lm(gift_aid ~ family_income, data=elmhurst)
+summary(elmhurst_slr_gift)$coefficients
+confint(elmhurst_slr_gift)
+```
+
+Interpretations on next slide
+
+## Exercise
+
+Fitted model: $\hat{gift aid}= 24.32 -0.04(family income)$
+
+*For each additional* \$1000 of family income, gift aid in \$1000s decreases by 0.043, or \$43*, on average. The association between family income and gift aid is statistically significant (p\<.001, 95% CI: \[-0.06,-0.02\])*
