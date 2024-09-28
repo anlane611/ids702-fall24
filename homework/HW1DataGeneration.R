@@ -1,4 +1,6 @@
+#############################
 ## Generate data for HW1 2024
+#############################
 
 Y <- rnorm(100000, mean=20, sd=5)
 X1 <- sample(1:5,1000,prob=rep(0.2,5), replace=TRUE)
@@ -61,3 +63,11 @@ for(i in 1:1000){
 }
 
 hist(mymeans)
+
+
+#############################
+## Generate data for HW3 2024
+#############################
+
+colleges <- read.csv("cc_institution_details.csv")
+

@@ -2126,7 +2126,7 @@
     "href": "materials/Unit2/SLR_slides.html#exercise-1",
     "title": "Simple Linear Regression",
     "section": "Exercise",
-    "text": "Exercise\nFit a model to assess the relationship between family income and gift aid. Write the fitted model and interpret the results."
+    "text": "Exercise\nFit a model to assess the relationship between family income and gift aid. Write the fitted model and interpret the results.\n\nelmhurst_slr_gift &lt;- lm(gift_aid ~ family_income, data=elmhurst)\nsummary(elmhurst_slr_gift)$coefficients\n\n                 Estimate Std. Error   t value     Pr(&gt;|t|)\n(Intercept)   24.31932901 1.29145027 18.831022 8.281020e-24\nfamily_income -0.04307165 0.01080947 -3.984621 2.288734e-04\n\nconfint(elmhurst_slr_gift)\n\n                    2.5 %      97.5 %\n(Intercept)   21.72269421 26.91596380\nfamily_income -0.06480555 -0.02133775\n\n\nInterpretations on next slide"
   },
   {
     "objectID": "materials/Unit2/SLR.html#class-materials",
@@ -2151,5 +2151,19 @@
       "Unit 2: Linear Regression",
       "9.26: Multiple Linear Regression"
     ]
+  },
+  {
+    "objectID": "materials/Unit2/SLR_slides.html#exercise-2",
+    "href": "materials/Unit2/SLR_slides.html#exercise-2",
+    "title": "Simple Linear Regression",
+    "section": "Exercise",
+    "text": "Exercise\nFitted model: \\(\\hat{gift aid}= 24.32 -0.04(family income)\\)\nFor each additional $1000 of family income, gift aid in $1000s decreases by 0.043, or $43, on average. The association between family income and gift aid is statistically significant (p&lt;.001, 95% CI: [-0.06,-0.02])"
+  },
+  {
+    "objectID": "homework/HW3.html",
+    "href": "homework/HW3.html",
+    "title": "Homework 3",
+    "section": "",
+    "text": "Deadline: Sunday, October 13, 11:59 PM\nInstructions: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.\nClick here to download the template (right click and choose “save link as”)\n \nQuestions 2-5 use the births14 dataset in the openintro package. Read about the dataset and reference the codebook here\n\n(6 points) First, do some initial data exploration:\na. How many observations and how many variables are in the dataset? What does each row represent (i.e., what is the observational unit?)\nb. Which variables, if any, contain missing data?\nc. What is the count and percentage of low birth weight vs not low birth weight babies?\n\n \n\n(10 points) Is the median birth weight different when the mother smokes? Conduct a hypothesis test to investigate:\na. Write the null and alternative hypotheses.\nb. Calculate the observed statistic.\nc. Simulate the null distribution and calculate the p-value. Interpret the p-value in the context of the problem.\nd. Generate a bootstrap confidence interval and interpret the interval.\ne. Generate a plot to illustrate the median birth weight when the mother smokes vs doesn’t smoke.\n \n(8 points) Is there a relationship between premature birth and low birth weight? Conduct a hypothesis test to investigate:\na. Create a 2x2 table to show the counts of the two relevant variables\nb. What are the necessary conditions to conduct a Chi-square test of independence, and are those conditions met?\nc. Conduct the appropriate test. Write the null and alternative hypotheses, calculate and report the p-value, and interpret it in the context of the problem.\nd. Generate a plot to illustrate the relationship between premature birth and low birth weight.\n \n(10 points) Is there a relationship between hospital visits during pregnancy and mean mother’s age? Conduct a hypothesis test to investigate:\na. Create a new variable that categorizes the number of visits as: 10 or fewer, 11-15, more than 15\nb. Calculate the mean of mother’s age for each of the visit categories that you created in part a.\nc. What is the appropriate test to assess the research question? Write the null and alternative hypotheses.\nd. Conduct the appropriate test; calculate and report the p-value and interpret it in the context of the problem.\ne. Generate a plot to illustrate the relationship between mother’s age and the categorized visit variable."
   }
 ]

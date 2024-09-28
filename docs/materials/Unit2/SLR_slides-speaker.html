@@ -518,6 +518,27 @@ family_income  0.02648759  0.07316623</code></pre>
 <section id="exercise-1" class="slide level2">
 <h2>Exercise</h2>
 <p>Fit a model to assess the relationship between family income and gift aid. Write the fitted model and interpret the results.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>elmhurst_slr_gift <span class="ot">&lt;-</span> <span class="fu">lm</span>(gift_aid <span class="sc">~</span> family_income, <span class="at">data=</span>elmhurst)</span>
+<span id="cb7-2"><a></a><span class="fu">summary</span>(elmhurst_slr_gift)<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                 Estimate Std. Error   t value     Pr(&gt;|t|)
+(Intercept)   24.31932901 1.29145027 18.831022 8.281020e-24
+family_income -0.04307165 0.01080947 -3.984621 2.288734e-04</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">confint</span>(elmhurst_slr_gift)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                    2.5 %      97.5 %
+(Intercept)   21.72269421 26.91596380
+family_income -0.06480555 -0.02133775</code></pre>
+</div>
+</div>
+<p>Interpretations on next slide</p>
+</section>
+<section id="exercise-2" class="slide level2">
+<h2>Exercise</h2>
+<p>Fitted model: <span class="math inline">\(\hat{gift aid}= 24.32 -0.04(family income)\)</span></p>
+<p><em>For each additional</em> $1000 of family income, gift aid in $1000s decreases by 0.043, or $43<em>, on average. The association between family income and gift aid is statistically significant (p&lt;.001, 95% CI: [-0.06,-0.02])</em></p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

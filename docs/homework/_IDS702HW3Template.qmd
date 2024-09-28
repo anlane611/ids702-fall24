@@ -1,0 +1,125 @@
+---
+title: "IDS 702 HW 2"
+author: "Your Name Here"
+format: pdf
+---
+
+**Instructions**: Use this template to complete your assignment. When you click "Render," you should get a PDF document that contains both your answers and code. You must show your work/justify your answers to receive credit. Submit your rendered PDF file on Gradescope. Remember to render frequently, as this will help you to catch errors in your code before the last minute.
+
+**Add your name in the Author section in the header**
+
+## Exercise 1
+
+For this question, you are welcome to write out your answers on paper and include a picture below (Insert \> Figure/Image in the toolbar)
+
+## Exercise 2
+
+You are required to show the code you use to complete each part of exercises 2-5. You must also write your narrative answers below the code.
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+data("births14")
+```
+
+a\.
+
+```{r}
+
+```
+
+b\.
+
+```{r}
+
+```
+
+c\.
+
+```{r}
+
+```
+
+## Exercise 3
+
+a\.
+
+b\.
+
+```{r}
+
+```
+
+c\.
+
+```{r}
+
+```
+
+d\.
+
+```{r}
+
+```
+
+e\.
+
+```{r}
+
+```
+
+## Exercise 4
+
+a\.
+
+```{r}
+
+```
+
+|                   | Low birth weight | Not low birth weight |
+|-------------------|------------------|----------------------|
+| **Not premature** |                  |                      |
+| **Premature**     |                  |                      |
+
+b\.
+
+c\.
+
+```{r}
+
+```
+
+d\.
+
+```{r}
+
+```
+
+## Exercise 5
+
+a\.
+
+```{r}
+
+```
+
+b\.
+
+```{r}
+
+```
+
+c\.
+
+d\.
+
+```{r}
+
+```
+
+e\.
+
+```{r}
+
+```
