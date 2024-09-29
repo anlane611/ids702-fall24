@@ -31,6 +31,7 @@ website:
             contents:
             - href: materials/Unit2/SLR.qmd
             - href: materials/Unit2/MLR.qmd
+            - href: materials/Unit2/CategoricalInteraction.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections

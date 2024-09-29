@@ -2165,5 +2165,53 @@
     "title": "Homework 3",
     "section": "",
     "text": "Deadline: Sunday, October 13, 11:59 PM\nInstructions: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.\nClick here to download the template (right click and choose “save link as”)\n \nQuestions 2-5 use the births14 dataset in the openintro package. Read about the dataset and reference the codebook here\n\n(6 points) First, do some initial data exploration:\na. How many observations and how many variables are in the dataset? What does each row represent (i.e., what is the observational unit?)\nb. Which variables, if any, contain missing data?\nc. What is the count and percentage of low birth weight vs not low birth weight babies?\n\n \n\n(10 points) Is the median birth weight different when the mother smokes? Conduct a hypothesis test to investigate:\na. Write the null and alternative hypotheses.\nb. Calculate the observed statistic.\nc. Simulate the null distribution and calculate the p-value. Interpret the p-value in the context of the problem.\nd. Generate a bootstrap confidence interval and interpret the interval.\ne. Generate a plot to illustrate the median birth weight when the mother smokes vs doesn’t smoke.\n \n(8 points) Is there a relationship between premature birth and low birth weight? Conduct a hypothesis test to investigate:\na. Create a 2x2 table to show the counts of the two relevant variables\nb. What are the necessary conditions to conduct a Chi-square test of independence, and are those conditions met?\nc. Conduct the appropriate test. Write the null and alternative hypotheses, calculate and report the p-value, and interpret it in the context of the problem.\nd. Generate a plot to illustrate the relationship between premature birth and low birth weight.\n \n(10 points) Is there a relationship between hospital visits during pregnancy and mean mother’s age? Conduct a hypothesis test to investigate:\na. Create a new variable that categorizes the number of visits as: 10 or fewer, 11-15, more than 15\nb. Calculate the mean of mother’s age for each of the visit categories that you created in part a.\nc. What is the appropriate test to assess the research question? Write the null and alternative hypotheses.\nd. Conduct the appropriate test; calculate and report the p-value and interpret it in the context of the problem.\ne. Generate a plot to illustrate the relationship between mother’s age and the categorized visit variable."
+  },
+  {
+    "objectID": "materials/Unit2/CategoricalInteraction.html",
+    "href": "materials/Unit2/CategoricalInteraction.html",
+    "title": "10.1: Categorical Predictors & Interaction Terms",
+    "section": "",
+    "text": "Statistics Reflection 10/6 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.1: Categorical Predictors & Interaction Terms"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/CategoricalInteraction.html#upcoming-deadlines",
+    "href": "materials/Unit2/CategoricalInteraction.html#upcoming-deadlines",
+    "title": "10.1: Categorical Predictors & Interaction Terms",
+    "section": "",
+    "text": "Statistics Reflection 10/6 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.1: Categorical Predictors & Interaction Terms"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/CategoricalInteraction.html#learning-objectives",
+    "href": "materials/Unit2/CategoricalInteraction.html#learning-objectives",
+    "title": "10.1: Categorical Predictors & Interaction Terms",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\ninterpret categorical terms in an MLR model\ninterpret interaction terms in an MLR model\ndetermine when interaction terms are useful",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.1: Categorical Predictors & Interaction Terms"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/CategoricalInteraction.html#class-prep",
+    "href": "materials/Unit2/CategoricalInteraction.html#class-prep",
+    "title": "10.1: Categorical Predictors & Interaction Terms",
+    "section": "Class prep",
+    "text": "Class prep\nWatch these two videos:\nCategorical Predictors\nInteraction Terms\nOptional/supplementary textbook reading: ISLR section 3.3 up to “Nonlinear Relationships”",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.1: Categorical Predictors & Interaction Terms"
+    ]
   }
 ]

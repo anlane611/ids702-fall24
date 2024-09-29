@@ -1,0 +1,39 @@
+---
+title: "10.1: Categorical Predictors & Interaction Terms"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   Statistics Reflection 10/6 11:59 PM
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   interpret categorical terms in an MLR model
+
+-   interpret interaction terms in an MLR model
+
+-   determine when interaction terms are useful
+
+## Class prep
+
+Watch these two videos:
+
+[Categorical Predictors](https://duke.zoom.us/rec/share/Twy1aOiiRTEFfHDdBeZw3Ob7XsP4VKFNjUykYKHrG5VlaIPeAnnAzjdmxt2liA5e.ILCiyjBFOum64j3F?startTime=1693327422000)
+
+[Interaction Terms](https://duke.zoom.us/rec/share/zCKUC8FA7hW0LUdlt0a1dEnUG_HM-WkubTLLENkV7G1vLamJd5zCXvubVSZwrClo.RSooMYgmIiznvShI?startTime=1693358850000)
+
+**Optional/supplementary textbook reading**: ISLR section 3.3 up to "Nonlinear Relationships"
