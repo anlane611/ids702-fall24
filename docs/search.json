@@ -2213,5 +2213,53 @@
       "Unit 2: Linear Regression",
       "10.1: Categorical Predictors & Interaction Terms"
     ]
+  },
+  {
+    "objectID": "materials/Unit2/AssessingModels.html",
+    "href": "materials/Unit2/AssessingModels.html",
+    "title": "10.3: Assessment & Assumptions",
+    "section": "",
+    "text": "Statistics Reflection 10/6 11:59 PM\nHW 3 10/13 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.3: Assessment & Assumptions"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/AssessingModels.html#upcoming-deadlines",
+    "href": "materials/Unit2/AssessingModels.html#upcoming-deadlines",
+    "title": "10.3: Assessment & Assumptions",
+    "section": "",
+    "text": "Statistics Reflection 10/6 11:59 PM\nHW 3 10/13 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.3: Assessment & Assumptions"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/AssessingModels.html#learning-objectives",
+    "href": "materials/Unit2/AssessingModels.html#learning-objectives",
+    "title": "10.3: Assessment & Assumptions",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\ndescribe (adjusted) \\(R^2\\) and how it relates to model assessment\nlist the four assumptions of MLR\nexplain why we use residual plots to assess the assumptions\ninterpret residual plots",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.3: Assessment & Assumptions"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/AssessingModels.html#class-prep",
+    "href": "materials/Unit2/AssessingModels.html#class-prep",
+    "title": "10.3: Assessment & Assumptions",
+    "section": "Class prep",
+    "text": "Class prep\nWatch these two videos:\nAssessing the Model\nRegression Assumptions\nOptional/supplementary textbook reading: ISLR section 3.2.2 section “Two: Model Fit”; 3.3.3 #1-3 (Non-linearity, correlation of error terms, non-constant variance)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.3: Assessment & Assumptions"
+    ]
   }
 ]
