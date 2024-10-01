@@ -71,3 +71,18 @@ hist(mymeans)
 
 colleges <- read.csv("cc_institution_details.csv")
 
+colleges_sub <- colleges[,!startsWith(colnames(colleges),"vsa")]
+colleges_sub2 <- colleges_sub[,2:40]
+colleges_sub3 <- colleges_sub2 |>
+  filter(basic %in% c("Baccalaureate Colleges--Arts & Sciences",
+                      "Baccalaureate Colleges--Diverse Fields",
+                      "Research Universities--high research activity",
+                      "Research Universities--very high research activity"))
+
+colleges_sub4 <- colleges_sub3[complete.cases(colleges_sub3[,c("grad_100_value",
+                                                               "med_sat_value",
+                                                               "control",
+                                                               "student_count",
+                                                               "endow_value")]),]
+
+colleges_sub4 <- colleges_sub4 |> filter(grad_100_value != 0)

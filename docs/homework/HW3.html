@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -80,9 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      IDS 702
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW3.html">Homework 3</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -219,6 +246,18 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">9.26: Multiple Linear Regression</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/Unit2/CategoricalInteraction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10.1: Categorical Predictors &amp; Interaction Terms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../materials/Unit2/AssessingModels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10.3: Assessment &amp; Assumptions</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -250,6 +289,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Homework 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../homework/HW3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Homework 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -263,13 +308,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#questions" id="toc-questions" class="nav-link active" data-scroll-target="#questions">Questions</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW3.html">Homework 3</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Homework 3</h1>
 </div>
@@ -292,37 +343,57 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Instructions</strong>: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.</p>
 <p><a href="_IDS702HW3Template.qmd"><em>Click here to download the template</em></a> <em>(right click and choose “save link as”)</em></p>
 <p>&nbsp;</p>
-<p>Questions 2-5 use the <code>births14</code> dataset in the openintro package. <a href="https://www.openintro.org/data/index.php?data=births14">Read about the dataset and reference the codebook here</a></p>
-<ol start="2" type="1">
-<li><p>(6 points) First, do some initial data exploration:</p>
-<p>a. How many observations and how many variables are in the dataset? What does each row represent (i.e., what is the observational unit?)</p>
-<p>b. Which variables, if any, contain missing data?</p>
-<p>c. What is the count and percentage of low birth weight vs not low birth weight babies?</p></li>
+<p>This assignment will use a modified version of a College Completion dataset. <a href="https://www.kaggle.com/datasets/thedevastator/boost-student-success-with-college-completion-da">Read about the dataset and reference the codebook here</a>. You should use the codebook under “cc_institution details” with the addition of the variable <code>grad_100_value</code>, which is the graduation rate within 100% of the normal time.</p>
+<p><strong>Important note</strong>: For this assignment, there can be multiple answers to several of the questions. You will be graded based on your ability to logically justify your choice. Statistical modeling often involves subjective decision-making, so it is important to be able to carefully consider what you see in the data and make these decisions. For example, a question like “is it necessary to combine categories? how will the interpretation change by doing so?” could lead you to choose to combine categories of a variable or not, but you should explain why you’ve made your decision.</p>
+<p>You want to understand which factors are related to graduation rate.</p>
+<section id="questions" class="level2">
+<h2 class="anchored" data-anchor-id="questions">Questions</h2>
+<ol type="1">
+<li><p>First, as always, we need to explore the data.</p>
+<p>a. What is the sample size? What does each observation represent?</p>
+<p>b. How many, if any, missing observations are in each of the following variables: <code>grad_100_value</code>, <code>med_sat_value</code>, <code>endow_value</code>, <code>student_count</code>, <code>basic</code>, <code>control</code>. Go ahead and create a subset that excludes observations with missing data in those variables (note: not the whole dataset).</p>
+<p>c. What are the different levels of the categorical variable <code>basic</code>? How many observations are in each level? Fill in the provided table with the count <strong>and</strong> proportion.</p>
+<p>d. What are the different levels of the categorical variable <code>control</code>? How many observations are in each level? Fill in the provided table with the count <strong>and</strong> proportion.</p>
+<p>e. Create a grid of six scatter plots to illustrate the relationship between the variables listed below and the graduation rate (<code>grad_100_value</code>). For each plot, describe what you observe in one sentence. (Note: you should create factor variables for the categorical variables)</p>
+<ul>
+<li><p>median SAT score (<code>med_sat_value</code>), colored by private vs.&nbsp;public institution (<code>control</code>)</p></li>
+<li><p>median SAT score (<code>med_sat_value</code>) colored by institution type (<code>basic</code>)</p></li>
+<li><p>endowment value (<code>endow_value</code>) colored by private vs.&nbsp;public institution (<code>control</code>)</p></li>
+<li><p>endowment value (<code>endow_value</code>) colored by institution type (<code>basic</code>)</p></li>
+<li><p>enrollment total (<code>student_count</code>) colored by private vs.&nbsp;public institution (<code>control</code>)</p></li>
+<li><p>enrollment total (<code>student_count</code>) colored by institution type (<code>basic</code>)</p></li>
+</ul>
+<p>&nbsp;</p></li>
+<li><p>First, consider a model regressing graduation rate on endowment value and institution type.</p>
+<p>a. Considering both the number of observations in each level and the model interpretation, decide whether or not you should combine the levels of institution types into 2 levels: baccalaureate colleges and research universities. Justify your choice.</p>
+<p>b. Write the theoretical model based on your decision in part a.</p>
+<p>c. Fit the model in R and display the summary table. Write the full fitted model <strong>and</strong> the fitted model for each institution type.</p>
+<p>d. Generate the diagnostic plots for your model. Comment on what you observe in the residuals vs fitted plot and the QQ-plot. Based on the plot you generated in #1, are these diagnostic plots surprising? Why or why not?</p>
+<p>e. Fit a model regressing graduation rate on log(endowment value) and institution type (again based on your decision in part a) and show the summary table. Generate the diagnostic plots for this model. Comment on what you observe in the residuals vs fitted plot and QQ-plot here compared to what you saw in part c.</p>
+<p>f. What are the adjusted <span class="math inline">\(R^2\)</span> values for the two models?</p>
+<p>g. Based on the results in parts e and f, which of these two models do you think is better? Write the final fitted model for each institution type based on your choice.</p>
+<p>h. Write an interpretation for the coefficient estimates, p-values, and 95% confidence intervals in the context of the problem.</p></li>
 </ol>
 <p>&nbsp;</p>
 <ol start="3" type="1">
-<li><p>(10 points) Is the median birth weight different when the mother smokes? Conduct a hypothesis test to investigate:</p>
-<p>a. Write the null and alternative hypotheses.</p>
-<p>b. Calculate the observed statistic.</p>
-<p>c. Simulate the null distribution and calculate the p-value. Interpret the p-value in the context of the problem.</p>
-<p>d. Generate a bootstrap confidence interval and interpret the interval.</p>
-<p>e. Generate a plot to illustrate the median birth weight when the mother smokes vs doesn’t smoke.</p>
-<p>&nbsp;</p></li>
-<li><p>(8 points) Is there a relationship between premature birth and low birth weight? Conduct a hypothesis test to investigate:</p>
-<p>a. Create a 2x2 table to show the counts of the two relevant variables</p>
-<p>b. What are the necessary conditions to conduct a Chi-square test of independence, and are those conditions met?</p>
-<p>c. Conduct the appropriate test. Write the null and alternative hypotheses, calculate and report the p-value, and interpret it in the context of the problem.</p>
-<p>d. Generate a plot to illustrate the relationship between premature birth and low birth weight.</p>
-<p>&nbsp;</p></li>
-<li><p>(10 points) Is there a relationship between hospital visits during pregnancy and mean mother’s age? Conduct a hypothesis test to investigate:</p>
-<p>a. Create a new variable that categorizes the number of visits as: 10 or fewer, 11-15, more than 15</p>
-<p>b. Calculate the mean of mother’s age for each of the visit categories that you created in part a.</p>
-<p>c. What is the appropriate test to assess the research question? Write the null and alternative hypotheses.</p>
-<p>d. Conduct the appropriate test; calculate and report the p-value and interpret it in the context of the problem.</p>
-<p>e. Generate a plot to illustrate the relationship between mother’s age and the categorized visit variable.</p></li>
+<li><p>Next, consider building a model to evaluate five factors that relate to graduation rate: median SAT score, endowment value, total enrollment, and private vs public institution.</p>
+<p>a. Decide which interaction term(s) for private vs public institution to include in your model, and justify your decision (you must include at least one interaction term). You should base your decision on the exploratory analysis you conducted in #1.</p>
+<p>b. Write the full theoretical model for a model regressing graduation rate on median SAT score, endowment value, total enrollment, private vs public institution, and the interaction term(s) you selected in part a. Be sure to define the predictor terms (i.e., <span class="math inline">\(x_1=\)</span> median SAT score). Then, write the separate theoretical models for private and public institutions.</p>
+<p>c. Fit your model, show the summary table, and generate the diagnostic plots. Comment on what you observe. Specifically, address the following:</p>
+<ul>
+<li><p>Based on the diagnostic plots, does the linearity assumption appear to be violated? If so, how could the model be improved?</p></li>
+<li><p>Based on the diagnostic plots, does the normality assumption appear to be violated? If so, how could the model be improved?</p></li>
+<li><p>Based on the diagnostic plots, does the homoscedasticity assumption appear to be violated? If so, how could the model be improved?</p></li>
+<li><p>Do you notice any residual values that stand out? If so, investigate the relevant observation(s). Are there data entries that appear to be unusual? Consider what might be the issue here and whether or not the observation(s) should be excluded.</p></li>
+</ul>
+<p>d. Fit your model again, this time incorporating any changes you made based on your answers to part c.&nbsp;Show the summary table. Write the fitted model for private and public institutions. Generate the diagnostic plots for this model and comment on the difference(s) you observe compared to part c.&nbsp;Has the model improved?</p>
+<p>e. Conduct a nested F test to assess whether or not your interaction term(s), as a whole, significantly contribute to the model. What do you conclude based on this test?</p>
+<p>f. Interpret the results of your final model. Which terms are statistically significant? Write interpretations for the coefficient estimates that are statistically significant and include 95% confidence intervals. Write an interpretation of the adjusted <span class="math inline">\(R^2\)</span> value for your model.</p>
+<p>g. Imagine that the president of a large public institution approaches you to inquire about which factors are related to graduation rate. Write 1-2 sentences to explain to them, in non-technical terms, the results of your analysis. Include next steps that could be taken to improve the analysis (i.e., should more data be collected? If so, what kinds of information could be helpful?). No code is needed for this question.</p></li>
 </ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

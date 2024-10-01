@@ -40,6 +40,7 @@ website:
          contents:
          - href: homework/HW1.qmd
          - href: homework/HW2.qmd
+         - href: homework/HW3.qmd
        - section:
          href: resources.qmd
          text: Resources

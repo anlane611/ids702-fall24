@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Two Sample T-test Fact Sheet – IDS 702</title>
+<title>Categorical Predictors &amp; Interaction terms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,49 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<script src="_CategoricalInteraction_code_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_CategoricalInteraction_code_files/libs/quarto-html/quarto.js"></script>
+<script src="_CategoricalInteraction_code_files/libs/quarto-html/popper.min.js"></script>
+<script src="_CategoricalInteraction_code_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_CategoricalInteraction_code_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_CategoricalInteraction_code_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_CategoricalInteraction_code_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_CategoricalInteraction_code_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_CategoricalInteraction_code_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_CategoricalInteraction_code_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -131,228 +98,18 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked">
+<body class="fullcontent">
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      IDS 702
-      </li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">IDS 702</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Course Materials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Unit 0: Bootcamp</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Cleaning and exploring data in R</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Unit 1: Statistics Fundamentals</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8.27: Introduction and Study Design</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8.29: Introduction to Probability</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.3: Probability Distributions</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.5: Sampling Distributions &amp; Central Limit Theorem</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.17: Inference I</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.19: Inference II: Traditional Statistical Tests</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Unit 2: Linear Regression</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit2/SLR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.24: Simple Linear Regression</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit2/MLR.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9.26: Multiple Linear Regression</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit2/CategoricalInteraction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10.1: Categorical Predictors &amp; Interaction Terms</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../materials/Unit2/AssessingModels.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">10.3: Assessment &amp; Assumptions</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../reflections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Statistics Reflections</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Homework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../homework/HW1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../homework/HW2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 2</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../homework/HW3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homework 3</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resources</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="TTestFactSheet.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
-<!-- main -->
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Two Sample T-test Fact Sheet</h1>
+<h1 class="title">Categorical Predictors &amp; Interaction terms</h1>
+<p class="subtitle lead">IDS 702</p>
 </div>
 
 
@@ -369,61 +126,131 @@ window.Quarto = {
 </header>
 
 
-<p><strong>When it’s useful</strong>: Interested in comparing the mean of two groups (numeric outcome, binary explanatory variable)</p>
-<p><strong>Parametric or nonparametric</strong>: Parametric</p>
-<p><strong>Assumptions</strong>:</p>
-<ol type="1">
-<li><p>Simple random sample</p></li>
-<li><p>Observations are independent within and between the groups</p></li>
-<li><p>Normally distributed population OR sufficient sample in each group with no extreme outliers (&gt;30)</p></li>
-</ol>
-<p><strong>Hypotheses</strong>:</p>
-<p><span class="math inline">\(H_0: \mu_1=\mu_2\)</span> (i.e., the mean of the numeric variable is equal for the two groups)</p>
-<p><span class="math inline">\(H_A: \mu_1 \neq \mu_2\)</span> (i.e., the means are not equal)<br>
-</p>
-<p><strong>Test Statistic:</strong> <span class="math inline">\(T= \frac{\bar{x}_1 - \bar{x}_2}{SE}\)</span> , where SE can either be the pooled standard error or the Welch’s standard error</p>
-<p><strong>Unique Information:</strong> There are two variations of the two-sample t-test, distinguished by the standard error estimate in the denominator of the test statistic. The pooled version assumes that the two groups have approximately the same variance, while the Welch’s standard error estimate does not make this assumption. The Welch’s estimate is more conservative, while the pooled version is more powerful.&nbsp;</p>
-<p><strong>Relevant R function(s):</strong> <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test">t.test</a></p>
-<div style="page-break-after: always;"></div>
-<p><strong>Example</strong>:&nbsp;Does the mean number of bids differ for new vs used Mariokart games sold on Ebay?</p>
+<p><strong>Load packages and data</strong></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openintro)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"mariokart"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#mariokart |&gt; count(cond) 59 new, 84 used</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mariokart, <span class="fu">aes</span>(<span class="at">x=</span>n_bids))<span class="sc">+</span><span class="fu">geom_histogram</span>()<span class="sc">+</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>cond)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="TTestFactSheet_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
-<p>The assumptions for the t-test are met.</p>
+<p>Today’s data is called “penguins” from the palmerpenguins library. The data were collected and made available by <a href="https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php">Dr.&nbsp;Kristen Gorman</a> and the <a href="https://pallter.marine.rutgers.edu/">Palmer Station, Antarctica LTER</a>, a member of the <a href="https://lternet.edu/">Long Term Ecological Research Network</a>.</p>
+<section id="in-your-group-address-the-following" class="level2">
+<h2 class="anchored" data-anchor-id="in-your-group-address-the-following">In your group, address the following:</h2>
+<ul>
+<li><p>What are the sample size and number of variables?</p></li>
+<li><p>Which variables are categorical and which are numeric? Are the categorical variables stored appropriately?</p></li>
+<li><p>Is there any missing data? If so, create a new data frame to filter out the missing observations.</p></li>
+</ul>
+<p>Next, create three plots:</p>
+<ul>
+<li><p>a scatter plot to illustrate the relationship between bill length and body mass. Describe what you see in the plot.</p></li>
+<li><p>a scatter plot of bill length and body mass, with the points colored by sex. You can use the code below as a template. Describe what you see.</p></li>
+<li><p>a scatter plot of bill depth and body mass, with the points colored by species. Describe what you see.</p></li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(mariokart<span class="sc">$</span>n_bids<span class="sc">~</span> mariokart<span class="sc">$</span>cond)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>____, <span class="at">y=</span>_____, <span class="at">color=</span>______))<span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>,<span class="at">se=</span>F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="categorical-predictors-and-interaction-terms" class="level2">
+<h2 class="anchored" data-anchor-id="categorical-predictors-and-interaction-terms">Categorical predictors and interaction terms</h2>
+<p><strong>Categorical Predictors</strong></p>
+<p>We will use <strong>dummy variables</strong> to represent categorical factors in the regression model. These variables take a value of 1 for a certain level, and 0 otherwise. We always have # levels -1 dummy variables (<strong>why?</strong>)</p>
+<p>When we have a categorical predictor in the model, we are fitting <strong>parallel lines</strong>. In this case, we are changing the <strong>intercept</strong> based on the levels of the categorical predictor.</p>
+<p>Let’s say we regress body mass on bill length and sex. Mathematically, the model would be:</p>
+<p><span class="math display">\[
+Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon
+\]</span></p>
+<p>where <span class="math inline">\(x_1\)</span> = bill length (mm), and <span class="math inline">\(x_2\)</span> = 1 when sex=male, and 0 otherwise.</p>
+<p>Thus, for male penguins, the model is: <span class="math inline">\(Y=(\beta_0+\beta_2)+\beta_1x_1+\epsilon\)</span>, and for female penguins, the model is: <span class="math inline">\(Y=\beta_0+\beta_1x_1+\epsilon\)</span></p>
+<p>Let’s fit the model:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mod1_sex <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> bill_length_mm <span class="sc">+</span> sex, <span class="at">data=</span>penguins)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1_sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Welch Two Sample t-test
+Call:
+lm(formula = body_mass_g ~ bill_length_mm + sex, data = penguins)
 
-data:  mariokart$n_bids by mariokart$cond
-t = 0.87826, df = 112.62, p-value = 0.3817
-alternative hypothesis: true difference in means between group new and group used is not equal to 0
-95 percent confidence interval:
- -1.131715  2.933975
-sample estimates:
- mean in group new mean in group used 
-          14.06780           13.16667 </code></pre>
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1713.57  -419.63    -0.62   513.75  1506.69 
+
+Coefficients:
+               Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     746.063    284.851   2.619  0.00922 ** 
+bill_length_mm   74.025      6.667  11.102  &lt; 2e-16 ***
+sexmale         405.243     72.818   5.565 5.43e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 623.8 on 330 degrees of freedom
+  (11 observations deleted due to missingness)
+Multiple R-squared:  0.4034,    Adjusted R-squared:  0.3998 
+F-statistic: 111.6 on 2 and 330 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-<p>P=0.38, so we fail to reject the null hypothesis. We cannot conclude that the mean number of bids differs for new vs used games.</p>
+<p>Fitted models:</p>
+<p>Interpretations:</p>
+<p><strong>Interaction terms</strong></p>
+<p>When we have an interaction term in the model, we are fitting lines with <strong>different slopes</strong>. Interaction terms allow us to assess how the <strong>relationship between a predictor and an outcome changes based on the value of another predictor</strong>. We will focus on interaction terms between a continuous predictor and a categorical predictor.</p>
+<p>Let’s regress body mass on bill length with an interaction term with species. Mathematically, the model would be:</p>
+<p><span class="math display">\[
+Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_1x_2 + \beta_5x_1x_3 + \epsilon
+\]</span></p>
+<p>where <span class="math inline">\(x_1\)</span> is bill length, <span class="math inline">\(x_2\)</span>=1 for Chinstrap penguins, 0 otherwise, and <span class="math inline">\(x_3\)</span>=1 for Gentoo penguins, 0 otherwise</p>
+<p>Then, we can write species-specific models.</p>
+<p>Adelie penguins: <span class="math inline">\(Y=\beta_0+\beta_1x_1+\epsilon\)</span></p>
+<p>Chinstrap penguins: <span class="math inline">\(Y=(\beta_0+\beta_2) + (\beta_1+\beta_4)x_1+\epsilon\)</span></p>
+<p>Gentoo penguins: <span class="math inline">\(Y=(\beta_0+\beta_3)+(\beta_1+\beta_5)x_1+\epsilon\)</span></p>
+<p>Let’s fit the model:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mod2_species <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g<span class="sc">~</span>bill_length_mm<span class="sc">*</span>species, <span class="at">data=</span>penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Fitted models:</p>
+<p>Interpretations:</p>
+<p><strong>Nested F test</strong></p>
+<p>We often want to know if a categorical predictor or an interaction term <strong>as a whole</strong> is statistically significant. Because we have multiple coefficients for these terms, we need an alternative approach to assess the factors as a whole. We can do this with nested F tests, which compare a <strong>full model</strong> to a <strong>reduced model</strong>.</p>
+<p>Let’s assess whether or not the species interaction term is statistically significant as a whole:</p>
+<p>The full model is what we fit above: <span class="math inline">\(Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_1x_2 + \beta_5x_1x_3 + \epsilon\)</span></p>
+<p>The reduced model is the model without the interaction term: <span class="math inline">\(Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \epsilon\)</span></p>
+<p>This test will compare the sum of squared errors for the two models. Remember that a lower SSE indicates a better model. If the SSE is significantly lower for the full model than the reduced model, the full model would be considered a better model, and we would say the term being test is statistically significant.</p>
+<p>We can use the <code>anova</code> function to conduct the test:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mod_full <span class="ot">&lt;-</span> mod2_species</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mod_reduced <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g<span class="sc">~</span>bill_length_mm<span class="sc">+</span>species, <span class="at">data=</span>penguins)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mod_reduced, mod_full, <span class="at">test=</span><span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
 
+Model 1: body_mass_g ~ bill_length_mm + species
+Model 2: body_mass_g ~ bill_length_mm * species
+  Res.Df      RSS Df Sum of Sq    F  Pr(&gt;F)  
+1    338 47613707                            
+2    336 46447006  2   1166702 4.22 0.01549 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>We do not need to do this if the categorical variable only has two levels. <strong>Why?</strong></p>
+</section>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise</h2>
+<ol type="1">
+<li><p>Create a scatter plot of bill depth and body mass. Color the plot by sex and then species. For which of these variables, if either, does an interaction term appear to be useful? Describe your reasoning.</p></li>
+<li><p>Fit a model regressing body mass on bill depth and species without an interaction term. Write the fitted models for each species. Write interpretations for the coefficient estimates.</p></li>
+<li><p>Fit a model regressing body mass on bill depth and species with an interaction term. Write the fitted models for each species. Write interpretations for the interaction coefficient estimates.</p></li>
+<li><p>Conduct a nested F test to assess the statistical significance of the species interaction term as a whole.</p></li>
+</ol>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
 
-
-</main> <!-- /main -->
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
