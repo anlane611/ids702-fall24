@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Categorical Predictors &amp; Interaction terms</title>
+<title>Categorical Predictors &amp; Interaction terms; Assessment &amp; Assumptions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Categorical Predictors &amp; Interaction terms</h1>
+<h1 class="title">Categorical Predictors &amp; Interaction terms; Assessment &amp; Assumptions</h1>
 <p class="subtitle lead">IDS 702</p>
 </div>
 
@@ -140,6 +140,9 @@ window.Quarto = {
 <li><p>Which variables are categorical and which are numeric? Are the categorical variables stored appropriately?</p></li>
 <li><p>Is there any missing data? If so, create a new data frame to filter out the missing observations.</p></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>penguins_nomiss <span class="ot">&lt;-</span> penguins[<span class="fu">complete.cases</span>(penguins),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Next, create three plots:</p>
 <ul>
 <li><p>a scatter plot to illustrate the relationship between bill length and body mass. Describe what you see in the plot.</p></li>
@@ -147,9 +150,9 @@ window.Quarto = {
 <li><p>a scatter plot of bill depth and body mass, with the points colored by species. Describe what you see.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>____, <span class="at">y=</span>_____, <span class="at">color=</span>______))<span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>,<span class="at">se=</span>F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>____, <span class="at">y=</span>_____, <span class="at">color=</span>______))<span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>,<span class="at">se=</span>F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="categorical-predictors-and-interaction-terms" class="level2">
@@ -165,13 +168,13 @@ Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \epsilon
 <p>Thus, for male penguins, the model is: <span class="math inline">\(Y=(\beta_0+\beta_2)+\beta_1x_1+\epsilon\)</span>, and for female penguins, the model is: <span class="math inline">\(Y=\beta_0+\beta_1x_1+\epsilon\)</span></p>
 <p>Let’s fit the model:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mod1_sex <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> bill_length_mm <span class="sc">+</span> sex, <span class="at">data=</span>penguins)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1_sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>mod1_sex <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g <span class="sc">~</span> bill_length_mm <span class="sc">+</span> sex, <span class="at">data=</span>penguins_nomiss)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mod1_sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = body_mass_g ~ bill_length_mm + sex, data = penguins)
+lm(formula = body_mass_g ~ bill_length_mm + sex, data = penguins_nomiss)
 
 Residuals:
      Min       1Q   Median       3Q      Max 
@@ -186,9 +189,15 @@ sexmale         405.243     72.818   5.565 5.43e-08 ***
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 623.8 on 330 degrees of freedom
-  (11 observations deleted due to missingness)
 Multiple R-squared:  0.4034,    Adjusted R-squared:  0.3998 
 F-statistic: 111.6 on 2 and 330 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(mod1_sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                   2.5 %     97.5 %
+(Intercept)    185.71003 1306.41679
+bill_length_mm  60.90841   87.14069
+sexmale        261.99702  548.48881</code></pre>
 </div>
 </div>
 <p>Fitted models:</p>
@@ -206,7 +215,7 @@ Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_1x_2 + \beta_5x_1x
 <p>Gentoo penguins: <span class="math inline">\(Y=(\beta_0+\beta_3)+(\beta_1+\beta_5)x_1+\epsilon\)</span></p>
 <p>Let’s fit the model:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mod2_species <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g<span class="sc">~</span>bill_length_mm<span class="sc">*</span>species, <span class="at">data=</span>penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mod2_species <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g<span class="sc">~</span>bill_length_mm<span class="sc">*</span>species, <span class="at">data=</span>penguins_nomiss)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Fitted models:</p>
 <p>Interpretations:</p>
@@ -218,23 +227,52 @@ Y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + \beta_4x_1x_2 + \beta_5x_1x
 <p>This test will compare the sum of squared errors for the two models. Remember that a lower SSE indicates a better model. If the SSE is significantly lower for the full model than the reduced model, the full model would be considered a better model, and we would say the term being test is statistically significant.</p>
 <p>We can use the <code>anova</code> function to conduct the test:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mod_full <span class="ot">&lt;-</span> mod2_species</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mod_reduced <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g<span class="sc">~</span>bill_length_mm<span class="sc">+</span>species, <span class="at">data=</span>penguins)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mod_reduced, mod_full, <span class="at">test=</span><span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mod_full <span class="ot">&lt;-</span> mod2_species</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>mod_reduced <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_g<span class="sc">~</span>bill_length_mm<span class="sc">+</span>species, <span class="at">data=</span>penguins_nomiss)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(mod_reduced, mod_full, <span class="at">test=</span><span class="st">"F"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
 Model 1: body_mass_g ~ bill_length_mm + species
 Model 2: body_mass_g ~ bill_length_mm * species
-  Res.Df      RSS Df Sum of Sq    F  Pr(&gt;F)  
-1    338 47613707                            
-2    336 46447006  2   1166702 4.22 0.01549 *
+  Res.Df      RSS Df Sum of Sq      F  Pr(&gt;F)  
+1    329 46313631                              
+2    327 45232583  2   1081048 3.9076 0.02103 *
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <p>We do not need to do this if the categorical variable only has two levels. <strong>Why?</strong></p>
+</section>
+<section id="assessing-models" class="level2">
+<h2 class="anchored" data-anchor-id="assessing-models">Assessing Models</h2>
+</section>
+<section id="addressing-model-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="addressing-model-assumptions">Addressing Model Assumptions</h2>
+<p><strong>L</strong>inearity: the relationship between the predictors and the outcome is linear</p>
+<p><strong>I</strong>ndependence: the errors are independent</p>
+<p><strong>N</strong>ormality: the errors have a normal distribution (note: not the outcome by itself)</p>
+<p><strong>E</strong>qual variance: the errors have equal variance (also called homoscedasticity)</p>
+<p>We evaluate model assumptions by examining <strong>diagnostic plots</strong>, which typically plot the <strong>residuals</strong> (i.e., estimated errors)</p>
+<p>We can generate these plots in R by using the <code>plot()</code> function on our model object. We will focus on the first two plots</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mod2_species, <span class="at">which=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_CategoricalInteraction_code_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_CategoricalInteraction_code_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">Exercise</h2>

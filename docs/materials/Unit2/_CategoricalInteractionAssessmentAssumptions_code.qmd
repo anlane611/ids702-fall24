@@ -1,5 +1,5 @@
 ---
-title: "Categorical Predictors & Interaction terms; Assessment & Assumptions"
+title: "Categorical Predictors, Interaction terms, Assessment, Assumptions"
 subtitle: "IDS 702"
 format: html
 ---
@@ -23,8 +23,10 @@ Today's data is called "penguins" from the palmerpenguins library. The data were
 -   Is there any missing data? If so, create a new data frame to filter out the missing observations.
 
 ```{r}
-penguins_nomiss <- penguins[complete.cases(penguins),]
+glimpse(penguins)
+summary(penguins)
 
+penguins_nomiss <- penguins[complete.cases(penguins),]
 
 ```
 
@@ -34,10 +36,17 @@ Next, create three plots:
 
 -   a scatter plot of bill length and body mass, with the points colored by sex. You can use the code below as a template. Describe what you see.
 
--   a scatter plot of bill depth and body mass, with the points colored by species. Describe what you see.
+-   a scatter plot of bill length and body mass, with the points colored by species. Describe what you see.
 
-```{r, eval=FALSE}
-ggplot(data, aes(x=____, y=_____, color=______))+
+```{r}
+ggplot(penguins_nomiss, aes(x=bill_length_mm, y=body_mass_g))+
+  geom_point()
+
+ggplot(penguins_nomiss, aes(x=bill_length_mm, y=body_mass_g, color=sex))+
+  geom_point()+
+  geom_smooth(method="lm",se=F)
+
+ggplot(penguins_nomiss, aes(x=bill_length_mm, y=body_mass_g, color=species))+
   geom_point()+
   geom_smooth(method="lm",se=F)
 ```
@@ -63,15 +72,23 @@ Thus, for male penguins, the model is: $Y=(\beta_0+\beta_2)+\beta_1x_1+\epsilon$
 Let's fit the model:
 
 ```{r}
-mod1_sex <- lm(body_mass_g ~ bill_length_mm + sex, data=penguins_nomiss)
+mod1_sex <- lm(body_mass_g ~ bill_length_mm + sex, 
+               data=penguins_nomiss)
 
 summary(mod1_sex)
-confint(mod1_sex)
 ```
 
 Fitted models:
 
+Male penguins: $\hat{body mass} = (746.1+405.2)+74(bill length)$
+
+Female penguins: $\hat{body mass} = 746.1+74(bill length)$
+
 Interpretations:
+
+-   Controlling for sex, per mm increase in bill length, body mass in g increases by 74, on average. This relationship is statistically significant (p\<0.001)
+
+-   Controlling for bill length, male penguins have a body mass that is 405.2g higher than female penguins, on average. This difference is statistically significant (p\<0.001).
 
 **Interaction terms**
 
@@ -96,7 +113,7 @@ Gentoo penguins: $Y=(\beta_0+\beta_3)+(\beta_1+\beta_5)x_1+\epsilon$
 Let's fit the model:
 
 ```{r}
-mod2_species <- lm(body_mass_g~bill_length_mm*species, data=penguins_nomiss)
+mod2_species <- lm(body_mass_g~bill_length_mm*species, data=penguins)
 ```
 
 Fitted models:
@@ -119,7 +136,7 @@ We can use the `anova` function to conduct the test:
 
 ```{r}
 mod_full <- mod2_species
-mod_reduced <- lm(body_mass_g~bill_length_mm+species, data=penguins_nomiss)
+mod_reduced <- lm(body_mass_g~bill_length_mm+species, data=penguins)
 
 anova(mod_reduced, mod_full, test="F")
 ```
@@ -152,9 +169,7 @@ $R^2$ **will always increase when you add more predictors to the model**. Adjust
 
 -   There is no "correct" threshold for these metrics. Your goal is not to keep fitting models until you find a model that reaches a certain threshold. These metrics are often domain-dependent.
 
--   In this class, we will focus on adjusted $R^2$ to get a sense of the amount of variability explained by the model, which can inform whether or not additional analysis and/or data collection is required.
-
--   When focused on statistical inference (which is the focus of this class), we often select predictors a priori, or we select a few models to compare. This differs from the modeling process when your goal is prediction, which you will see more next semester. Here, we are not necessarily seeking to move predictors in and out until we find the "best" model metric value.
+-   When focused on statistical inference (which is the focus of this class), we often select predictors a priori, or we select a few models to compare. This differs from the modeling process when your goal is prediction, which you will see more next semester. Here, we are not necessarily seeking to move predictors in and out until we find the "best" model metric value. We will focus on adjusted $R^2$ to get a sense of the amount of variability explained by the model, which can inform whether or not additional analysis and/or data collection is required.
 
 ## Addressing Model Assumptions
 
@@ -176,6 +191,12 @@ We can generate these plots in R by using the `plot()` function on our model obj
 plot(mod2_species, which=1:2)
 ```
 
+We should examine the first plot to determine if we should transform a **predictor variable**
+
+We should examine the second plot to determine if we should transform the **outcome variable**
+
+Note that linear regression is quite robust to violations of the assumptions (particularly normality), which means we can still get accurate inference even with evidence that the assumptions are violated. Because adding transformations changes our model interpretation, avoid being overzealous with transformations.
+
 ## Exercise
 
 Use the Auto dataset in the ISLR2 library to answer the questions below.
@@ -185,23 +206,21 @@ library(ISLR2)
 data("Auto")
 ```
 
-2.  Create a factor variable for the cylinders variable by running the code below (an argument can be made to treat this as numeric, but let's treat it as categorical for now)
+1.  Create a factor variable for the cylinders variable by running the code below (an argument can be made to treat this as numeric, but let's treat it as categorical for now)
 
-    ```{r}
-    Auto <- Auto |>
-      mutate(cyl_fac = factor(cylinders))
-    ```
+```{r}
+Auto <- Auto |>
+  mutate(cyl_fac = factor(cylinders))
+```
 
-3.  Fit a model regressing `mpg` on `horsepower`, `displacement`, `acceleration`, `cylinders`, and `origin`.
-
+2.  Fit a model regressing `mpg` on `displacement,` `horsepower`, and `cylinders`.
     -   What do you notice about the standard errors of the `cylinders` levels compared to the other predictors?
     -   Use the `count()` function to generate a table showing how many cars are in each `cylinder` level. Only having a few observations for a particular level of a categorical variable causes problems for the model. We can either 1) exclude those observations, or 2) create a new variable combining levels. Decide which option you would like to use here and clean the data accordingly. (Note: if you choose to exclude the observations, you can use the `filter()` function to subset the data).
     -   Look at the residual and qq plots for this model. What do you observe? Do any of the regression assumptions appear to be violated here? If so, which one(s)?
+3.  Generate a plot of `mpg` and `displacement`.
+    -   Do you think a transformation of the `displacement` variable might be appropriate? If so, which one and why?
 
-4.  Generate a plot of `mpg` and `displacement`. Do you think a transformation of the `displacement` variable might be appropriate? If so, which one and why? Then, add color to your plot for `cylinders`. Is an interaction term appropriate? Finally, replace `cylinders` to color by `origin`. Is an interaction term appropriate?
+    -   Add color to your plot for `cylinders`. Is an interaction term appropriate?
+4.  Decide if you want to use a transformation on `displacement` and/or an interaction term. Consider the implications of estimate interpretations. Fit the model based on your decision, and generate the residual and qq plots. What do you notice compared to what you saw in #2?
 
-5.  Repeat #3 for the other predictor variables: `acceleration` and `horsepower`
-
-6.  Decide if you want to use a transformation on `displacement`, `acceleration`, and/or `horsepower`, or interaction term(s). Consider the implications of estimate interpretations. Fit the model with the additional terms that you choose, and generate the residual and qq plots. What do you notice compared to what you saw in #2?
-
-7.  Fit the model using log(mpg) as the outcome. Generate the residual and qq plots and comment on the difference(s) that you observe. Consider the implications for model interpretation. Do you think the transformation of the outcome variable is useful here?
+## 
