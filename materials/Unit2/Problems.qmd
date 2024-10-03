@@ -1,0 +1,38 @@
+---
+title: "10.8: Problems that can arise"
+subtitle: "Influential Points & Multicollinearity"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   HW 3 10/13 11:59 PM
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   interpret plots of leverage and Cook’s distance
+
+-   understand the problem of multicollinearity
+
+## Class prep
+
+Watch these two videos:
+
+[Influential Points](https://duke.zoom.us/rec/share/bpyl-LwD7ji4BVWnO4_RWep5Bj4ZcA4hpTS7iFQ4isNzSg44YNrLVr-idgNNc-ps.EVd2zdsGcnGTJH4g?startTime=1694318380000)
+
+[Multicollinearity](https://duke.zoom.us/rec/share/bpyl-LwD7ji4BVWnO4_RWep5Bj4ZcA4hpTS7iFQ4isNzSg44YNrLVr-idgNNc-ps.EVd2zdsGcnGTJH4g?startTime=1694319819000)
+
+**Optional/supplementary textbook reading**: ISLR section 3.3.3 #4-6

@@ -1,6 +1,7 @@
 ---
 title: "IDS 702: Data Modeling and Representation"
 subtitle: "Fall 2024 </br> Duke University"
+format: html
 ---
 
 ## Course Objectives

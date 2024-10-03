@@ -33,6 +33,8 @@ website:
             - href: materials/Unit2/MLR.qmd
             - href: materials/Unit2/CategoricalInteraction.qmd
             - href: materials/Unit2/AssessingModels.qmd
+            - href: materials/Unit2/Problems.qmd
+            - href: materials/Unit2/ModelSelection.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections

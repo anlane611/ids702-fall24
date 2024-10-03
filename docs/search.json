@@ -2300,5 +2300,121 @@
       "Unit 2: Linear Regression",
       "10.3: Assessment & Assumptions"
     ]
+  },
+  {
+    "objectID": "syllabus.html#course-overview",
+    "href": "syllabus.html#course-overview",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "",
+    "text": "Meeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Thurs 4:30-5:30 PM\n \nTeaching Assistants \nRevanth Ganga \nrevanthchowdary.ganga@duke.edu \nOffice hours: Weds 12-1pm, Gross Hall 230N\n \nRakeen Rouf \nrakeen.rouf@duke.edu \nOffice hours: Mon 3:30-4:30, Gross Hall 230N\n \nJiayi Zhou \njiayi.zhou@duke.edu \nOffice hours: Tues 12-1pm, Gross Hall 230N",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#schedule",
+    "href": "syllabus.html#schedule",
+    "title": "IDS 702: Data Modeling and Representation",
+    "section": "Schedule",
+    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables & Distributions\nSampling Distributions &  Central Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nConfidence Intervals/Bootstrap\nHomework 1\n\n\nSept 16\nInference I\nInference II\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nMultiple Linear Regression\nHomework 2\n\n\nSept 30\nCategorical Predictors,  Interaction terms\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &  Multicollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nMultinomial regression\nOrdinal regression\nHomework 4\n\n\nNov 11\nPoisson regression\nSurvival Analysis\nProject proposals\n\n\nNov 18\nMissing Data\nMissing Data\nHomework 5\n\n\nNov 25\nProject work day\n\n\n\n\n\n\n\nDec 15 5PM  Final projects due",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/Problems.html",
+    "href": "materials/Unit2/Problems.html",
+    "title": "10.8: Problems that can arise",
+    "section": "",
+    "text": "HW 3 10/13 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.8: Problems that can arise"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/Problems.html#upcoming-deadlines",
+    "href": "materials/Unit2/Problems.html#upcoming-deadlines",
+    "title": "10.8: Problems that can arise",
+    "section": "",
+    "text": "HW 3 10/13 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.8: Problems that can arise"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/Problems.html#learning-objectives",
+    "href": "materials/Unit2/Problems.html#learning-objectives",
+    "title": "10.8: Problems that can arise",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\ninterpret plots of leverage and Cook’s distance\nunderstand the problem of multicollinearity",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.8: Problems that can arise"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/Problems.html#class-prep",
+    "href": "materials/Unit2/Problems.html#class-prep",
+    "title": "10.8: Problems that can arise",
+    "section": "Class prep",
+    "text": "Class prep\nWatch these two videos:\nInfluential Points\nMulticollinearity\nOptional/supplementary textbook reading: ISLR section 3.3.3 #4-6",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.8: Problems that can arise"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/ModelSelection.html",
+    "href": "materials/Unit2/ModelSelection.html",
+    "title": "10.10: Model Selection",
+    "section": "",
+    "text": "HW 3 10/13 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.10: Model Selection"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/ModelSelection.html#upcoming-deadlines",
+    "href": "materials/Unit2/ModelSelection.html#upcoming-deadlines",
+    "title": "10.10: Model Selection",
+    "section": "",
+    "text": "HW 3 10/13 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.10: Model Selection"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/ModelSelection.html#learning-objectives",
+    "href": "materials/Unit2/ModelSelection.html#learning-objectives",
+    "title": "10.10: Model Selection",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\nunderstand forward and backward selection\nunderstand the argument against forward and backward selection",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.10: Model Selection"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/ModelSelection.html#class-prep",
+    "href": "materials/Unit2/ModelSelection.html#class-prep",
+    "title": "10.10: Model Selection",
+    "section": "Class prep",
+    "text": "Class prep\nFirst read ISLR 3.2.2 part “Two: Deciding on Important Variables”\nThen, read Step Away from Stepwise by Gary Smith. Focus on the introduction and the conclusion. After reading, you should be able to describe in general terms why Smith argues against using stepwise variable selection, particularly with large datasets.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.10: Model Selection"
+    ]
   }
 ]
