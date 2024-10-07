@@ -39,6 +39,8 @@ Watch these two videos:
 
 [Regression Assumptions](https://duke.zoom.us/rec/share/K4RcJaKR1aTC4t4GVfqtibKXDsNvqsOxEg_GhebtZ14awXndx_X6QD7Uym558wPV.Pi99d6WzQd-l5sP6?startTime=1693886999000)
 
+Slides: [Assessment](IDS702_assessment.pdf), [Assumptions](IDS702_assumptions.pdf)
+
 **Optional/supplementary textbook reading**: ISLR section 3.2.2 section "Two: Model Fit"; 3.3.3 #1-3 (Non-linearity, correlation of error terms, non-constant variance)
 
 ## Class materials

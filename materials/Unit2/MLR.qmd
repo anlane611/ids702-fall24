@@ -38,6 +38,8 @@ Watch these three videos:
 
 [Estimation & matrix notation](https://duke.zoom.us/rec/share/h_h8LzS12qYLTFDxfwounhgiT90TCAuIveVi-PgtrhphRaQkiiX1NnShYYyp_0v3.czFP-QaC_mW5-tRv?startTime=1693718117000)
 
+Slides: [Intro to MLR & Inference](IDS702_introMLR.pdf), [Estimation](IDS702_estimation.pdf)
+
 **Optional/supplementary textbook reading**: ISLR section 3.2 up to "Two: deciding on important variables"
 
 ## Class materials

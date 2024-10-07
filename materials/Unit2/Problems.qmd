@@ -35,4 +35,6 @@ Watch these two videos:
 
 [Multicollinearity](https://duke.zoom.us/rec/share/bpyl-LwD7ji4BVWnO4_RWep5Bj4ZcA4hpTS7iFQ4isNzSg44YNrLVr-idgNNc-ps.EVd2zdsGcnGTJH4g?startTime=1694319819000)
 
+Copies of slides: [Influential points](IDS702_influentialpoints.pdf), [Multicollinearity](IDS702_multicollinearity.pdf)
+
 **Optional/supplementary textbook reading**: ISLR section 3.3.3 #4-6

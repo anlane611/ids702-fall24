@@ -1,5 +1,5 @@
 ---
-title: "Categorical Predictors & Interaction terms"
+title: "Categorical Predictors & Interaction terms; Assessment & Assumptions"
 subtitle: "IDS 702"
 format: html
 ---
@@ -23,6 +23,8 @@ Today's data is called "penguins" from the palmerpenguins library. The data were
 -   Is there any missing data? If so, create a new data frame to filter out the missing observations.
 
 ```{r}
+penguins_nomiss <- penguins[complete.cases(penguins),]
+
 
 ```
 
@@ -61,9 +63,10 @@ Thus, for male penguins, the model is: $Y=(\beta_0+\beta_2)+\beta_1x_1+\epsilon$
 Let's fit the model:
 
 ```{r}
-mod1_sex <- lm(body_mass_g ~ bill_length_mm + sex, data=penguins)
+mod1_sex <- lm(body_mass_g ~ bill_length_mm + sex, data=penguins_nomiss)
 
 summary(mod1_sex)
+confint(mod1_sex)
 ```
 
 Fitted models:
@@ -93,7 +96,7 @@ Gentoo penguins: $Y=(\beta_0+\beta_3)+(\beta_1+\beta_5)x_1+\epsilon$
 Let's fit the model:
 
 ```{r}
-mod2_species <- lm(body_mass_g~bill_length_mm*species, data=penguins)
+mod2_species <- lm(body_mass_g~bill_length_mm*species, data=penguins_nomiss)
 ```
 
 Fitted models:
@@ -116,21 +119,89 @@ We can use the `anova` function to conduct the test:
 
 ```{r}
 mod_full <- mod2_species
-mod_reduced <- lm(body_mass_g~bill_length_mm+species, data=penguins)
+mod_reduced <- lm(body_mass_g~bill_length_mm+species, data=penguins_nomiss)
 
 anova(mod_reduced, mod_full, test="F")
 ```
 
 We do not need to do this if the categorical variable only has two levels. **Why?**
 
+## Assessing Models
+
+*Can we quantify our model's performance?*
+
+We will discuss two model metrics: mean square error and (adjusted) $R^2$
+
+**(Root) Mean square error**
+
+$$
+MSE=\frac{1}{n} \sum_{i=1}^n (y_i-\hat{y}_i)^2
+$$
+
+RMSE is the square root of MSE. Taking the square root puts the metric on the same scale as the outcome. (R)MSE is useful for comparing models, but can be difficult to interpret on its own.
+
+**(Adjusted)** $R^2$
+
+$$
+R^2=1-\frac{SSR}{SST}
+$$
+
+$R^2$ **will always increase when you add more predictors to the model**. Adjusted $R^2$ adds a penalty term for the number of predictors, so it is the better choice for multiple linear regression.
+
+**Important notes**:
+
+-   There is no "correct" threshold for these metrics. Your goal is not to keep fitting models until you find a model that reaches a certain threshold. These metrics are often domain-dependent.
+
+-   In this class, we will focus on adjusted $R^2$ to get a sense of the amount of variability explained by the model, which can inform whether or not additional analysis and/or data collection is required.
+
+-   When focused on statistical inference (which is the focus of this class), we often select predictors a priori, or we select a few models to compare. This differs from the modeling process when your goal is prediction, which you will see more next semester. Here, we are not necessarily seeking to move predictors in and out until we find the "best" model metric value.
+
+## Addressing Model Assumptions
+
+*How well does our model fit the data? Are our inferences valid?*
+
+**L**inearity: the relationship between the predictors and the outcome is linear
+
+**I**ndependence: the errors are independent
+
+**N**ormality: the errors have a normal distribution (note: not the outcome by itself)
+
+**E**qual variance: the errors have equal variance (also called homoscedasticity)
+
+We evaluate model assumptions by examining **diagnostic plots**, which typically plot the **residuals** (i.e., estimated errors)
+
+We can generate these plots in R by using the `plot()` function on our model object. We will focus on the first two plots
+
+```{r}
+plot(mod2_species, which=1:2)
+```
+
 ## Exercise
 
-1.  Create a scatter plot of bill depth and body mass. Color the plot by sex and then species. For which of these variables, if either, does an interaction term appear to be useful? Describe your reasoning.
+Use the Auto dataset in the ISLR2 library to answer the questions below.
 
-2.  Fit a model regressing body mass on bill depth and species without an interaction term. Write the fitted models for each species. Write interpretations for the coefficient estimates.
+```{r}
+library(ISLR2)
+data("Auto")
+```
 
-3.  Fit a model regressing body mass on bill depth and species with an interaction term. Write the fitted models for each species. Write interpretations for the interaction coefficient estimates.
+2.  Create a factor variable for the cylinders variable by running the code below (an argument can be made to treat this as numeric, but let's treat it as categorical for now)
 
-4.  Conduct a nested F test to assess the statistical significance of the species interaction term as a whole.
+    ```{r}
+    Auto <- Auto |>
+      mutate(cyl_fac = factor(cylinders))
+    ```
 
-## 
+3.  Fit a model regressing `mpg` on `horsepower`, `displacement`, `acceleration`, `cylinders`, and `origin`.
+
+    -   What do you notice about the standard errors of the `cylinders` levels compared to the other predictors?
+    -   Use the `count()` function to generate a table showing how many cars are in each `cylinder` level. Only having a few observations for a particular level of a categorical variable causes problems for the model. We can either 1) exclude those observations, or 2) create a new variable combining levels. Decide which option you would like to use here and clean the data accordingly. (Note: if you choose to exclude the observations, you can use the `filter()` function to subset the data).
+    -   Look at the residual and qq plots for this model. What do you observe? Do any of the regression assumptions appear to be violated here? If so, which one(s)?
+
+4.  Generate a plot of `mpg` and `displacement`. Do you think a transformation of the `displacement` variable might be appropriate? If so, which one and why? Then, add color to your plot for `cylinders`. Is an interaction term appropriate? Finally, replace `cylinders` to color by `origin`. Is an interaction term appropriate?
+
+5.  Repeat #3 for the other predictor variables: `acceleration` and `horsepower`
+
+6.  Decide if you want to use a transformation on `displacement`, `acceleration`, and/or `horsepower`, or interaction term(s). Consider the implications of estimate interpretations. Fit the model with the additional terms that you choose, and generate the residual and qq plots. What do you notice compared to what you saw in #2?
+
+7.  Fit the model using log(mpg) as the outcome. Generate the residual and qq plots and comment on the difference(s) that you observe. Consider the implications for model interpretation. Do you think the transformation of the outcome variable is useful here?

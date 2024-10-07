@@ -36,6 +36,8 @@ Watch these two videos:
 
 [Interaction Terms](https://duke.zoom.us/rec/share/zCKUC8FA7hW0LUdlt0a1dEnUG_HM-WkubTLLENkV7G1vLamJd5zCXvubVSZwrClo.RSooMYgmIiznvShI?startTime=1693358850000)
 
+Slides: [Categorical predictors](IDS702_categoricalpredictors.pdf), [Interaction terms](IDS702_interaction.pdf)
+
 **Optional/supplementary textbook reading**: ISLR section 3.3 up to "Nonlinear Relationships"
 
 ## Class materials

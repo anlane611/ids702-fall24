@@ -11,7 +11,7 @@
     "href": "index.html#course-overview",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Course Overview",
-    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor \nAndrea Lane, PhD \nandrea.lane@duke.edu \nGross Hall 223 \nOffice hours: Thurs 4:30-5:30 PM\n \nTeaching Assistants \nRevanth Ganga \nrevanthchowdary.ganga@duke.edu \nOffice hours: Weds 12-1pm, Gross Hall 230N\n \nRakeen Rouf \nrakeen.rouf@duke.edu \nOffice hours: Mon 3:30-4:30, Gross Hall 230N\n \nJiayi Zhou \njiayi.zhou@duke.edu \nOffice hours: Tues 12-1pm, Gross Hall 230N"
+    "text": "Course Overview\nMeeting times: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330\nInstructor  Andrea Lane, PhD  andrea.lane@duke.edu  Gross Hall 223  Office hours: Thurs 4:30-5:30 PM   Teaching Assistants  Revanth Ganga  revanthchowdary.ganga@duke.edu  Office hours: Weds 12-1pm, Gross Hall 230N   Rakeen Rouf  rakeen.rouf@duke.edu  Office hours: Mon 3:30-4:30, Gross Hall 230N   Jiayi Zhou  jiayi.zhou@duke.edu  Office hours: Tues 12-1pm, Gross Hall 230N"
   },
   {
     "objectID": "index.html#textbook",
@@ -816,7 +816,7 @@
     "href": "index.html#schedule",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Schedule",
-    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables & Distributions\nSampling Distributions &  Central Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nConfidence Intervals/Bootstrap\nHomework 1\n\n\nSept 16\nInference I\nInference II\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nMultiple Linear Regression\nHomework 2\n\n\nSept 30\nCategorical Predictors,  Interaction terms\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &  Multicollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nMultinomial regression\nOrdinal regression\nHomework 4\n\n\nNov 11\nPoisson regression\nSurvival Analysis\nProject proposals\n\n\nNov 18\nMissing Data\nMissing Data\nHomework 5\n\n\nNov 25\nProject work day\n\n\n\n\n\n\n\nDec 15 5PM  Final projects due"
+    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\n\nWeek of\n\n\nTuesday content\n\n\nThursday content\n\n\nAssignment due Sunday\n\n\n\n\n\n\nAug 26\n\n\nStudy Design\n\n\nIntro Probability\n\n\n\n\n\n\nSept 2\n\n\nRandom variables & Distributions\n\n\nSampling Distributions &  Central Limit Theorem\n\n\nStatistics Reflection 1\n\n\n\n\nSept 9\n\n\nEstimation\n\n\nConfidence Intervals/Bootstrap\n\n\nHomework 1\n\n\n\n\nSept 16\n\n\nInference I\n\n\nInference II\n\n\nStatistics Reflection 2\n\n\n\n\nSept 23\n\n\nIntro to Regression\n\n\nMultiple Linear Regression\n\n\nHomework 2\n\n\n\n\nSept 30\n\n\nCategorical Predictors,  Interaction terms\n\n\nAssessing Assumptions\n\n\nStatistics Reflection 3\n\n\n\n\nOct 7\n\n\nInfluential points &  Multicollinearity\n\n\nModel Selection\n\n\nHomework 3\n\n\n\n\nOct 14\n\n\nFall break - no class\n\n\nExam review\n\n\n\n\n\n\nOct 21\n\n\nMidterm Exam\n\n\nIntro to GLMs\n\n\n\n\n\n\nOct 28\n\n\nLogistic Regression\n\n\nAssessing Logistic Models\n\n\nStatistics Reflection 4\n\n\n\n\nNov 4\n\n\nMultinomial regression\n\n\nOrdinal regression\n\n\nHomework 4\n\n\n\n\nNov 11\n\n\nPoisson regression\n\n\nSurvival Analysis\n\n\nProject proposals\n\n\n\n\nNov 18\n\n\nMissing Data\n\n\nMissing Data\n\n\nHomework 5\n\n\n\n\nNov 25\n\n\nProject work day\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDec 15 5PM  Final projects due"
   },
   {
     "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#motivation",
@@ -1974,7 +1974,7 @@
     "href": "materials/Unit2/MLR.html#class-prep",
     "title": "9.26: Multiple Linear Regression",
     "section": "Class prep",
-    "text": "Class prep\nWatch these three videos:\nIntroduction to multiple linear regression\nMLR inference\nEstimation & matrix notation\nOptional/supplementary textbook reading: ISLR section 3.2 up to “Two: deciding on important variables”",
+    "text": "Class prep\nWatch these three videos:\nIntroduction to multiple linear regression\nMLR inference\nEstimation & matrix notation\nSlides: Intro to MLR & Inference, Estimation\nOptional/supplementary textbook reading: ISLR section 3.2 up to “Two: deciding on important variables”",
     "crumbs": [
       "Course Materials",
       "Unit 2: Linear Regression",
@@ -2211,7 +2211,7 @@
     "href": "materials/Unit2/CategoricalInteraction.html#class-prep",
     "title": "10.1: Categorical Predictors & Interaction Terms",
     "section": "Class prep",
-    "text": "Class prep\nWatch these two videos:\nCategorical Predictors\nInteraction Terms\nOptional/supplementary textbook reading: ISLR section 3.3 up to “Nonlinear Relationships”",
+    "text": "Class prep\nWatch these two videos:\nCategorical Predictors\nInteraction Terms\nSlides: Categorical predictors, Interaction terms\nOptional/supplementary textbook reading: ISLR section 3.3 up to “Nonlinear Relationships”",
     "crumbs": [
       "Course Materials",
       "Unit 2: Linear Regression",
@@ -2259,7 +2259,7 @@
     "href": "materials/Unit2/AssessingModels.html#class-prep",
     "title": "10.3: Assessment & Assumptions",
     "section": "Class prep",
-    "text": "Class prep\nWatch these two videos:\nAssessing the Model\nRegression Assumptions\nOptional/supplementary textbook reading: ISLR section 3.2.2 section “Two: Model Fit”; 3.3.3 #1-3 (Non-linearity, correlation of error terms, non-constant variance)",
+    "text": "Class prep\nWatch these two videos:\nAssessing the Model\nRegression Assumptions\nSlides: Assessment, Assumptions\nOptional/supplementary textbook reading: ISLR section 3.2.2 section “Two: Model Fit”; 3.3.3 #1-3 (Non-linearity, correlation of error terms, non-constant variance)",
     "crumbs": [
       "Course Materials",
       "Unit 2: Linear Regression",
@@ -2362,7 +2362,7 @@
     "href": "materials/Unit2/Problems.html#class-prep",
     "title": "10.8: Problems that can arise",
     "section": "Class prep",
-    "text": "Class prep\nWatch these two videos:\nInfluential Points\nMulticollinearity\nOptional/supplementary textbook reading: ISLR section 3.3.3 #4-6",
+    "text": "Class prep\nWatch these two videos:\nInfluential Points\nMulticollinearity\nCopies of slides: Influential points, Multicollinearity\nOptional/supplementary textbook reading: ISLR section 3.3.3 #4-6",
     "crumbs": [
       "Course Materials",
       "Unit 2: Linear Regression",
