@@ -12,8 +12,6 @@ webr:
   packages: ['ggplot2', 'dplyr']
 filters:
   - webr
-execute:
-  freeze: auto
 ---
 
 ## Upcoming deadlines

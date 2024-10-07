@@ -9,8 +9,6 @@ webr:
   packages: ['ggplot2', 'dplyr']
 filters:
   - webr
-execute:
-  freeze: auto
 ---
 
 A crucial first step of data analysis is exploring the dataset (and then cleaning, as needed). Today, we will practice exploring and cleaning data in R.

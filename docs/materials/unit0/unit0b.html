@@ -356,7 +356,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-1","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"webr::install(\"tidyverse\") #you don't need this if running R locally\nlibrary(tidyverse)"},{"id":2,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-2","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey <- read.csv(\"https://raw.githubusercontent.com/anlane611/datasets/main/IDS702Bootcampsurvey2024.csv\", header=TRUE)\nglimpse(survey)"},{"id":3,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-3","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub <- survey |> \n              select(-c(\"Timestamp\"))"},{"id":4,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-4","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"names(survey_sub) <- c(\"Interest\",\"Excitement\",\"Languages\",\n                       \"Instrument\",\"Siblings\",\"AgeRange\",\n                       \"BeachOrCabin\",\"Sushi\")"},{"id":5,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-5","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub |> count(Siblings)"},{"id":6,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-6","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub |> count(Siblings)\n\nsurvey_sub <- survey_sub |> #use the assignment <- since we're creating a var\n              mutate(Siblings_clean = case_when(\n                      Siblings== \"-1\" ~ 3,\n                      Siblings==\"none\" ~ 0,\n                      TRUE ~ as.numeric(Siblings)\n                      ))\n\n## How can we do a quality control check?\nsurvey_sub |> count(Siblings, Siblings_clean)"},{"id":7,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-7","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub |> count(Languages)"},{"id":8,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-8","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub <- survey_sub |>\n  mutate(Lang_num = case_when(\n    Languages == \"10 or more\" ~ 0,\n    TRUE ~ as.numeric(Languages)\n  ))\n\nsurvey_sub <- survey_sub |>\n  mutate(Lang_cat = case_when(\n    Lang_num == 0 ~ 0,\n    Lang_num < 4 ~ 1,\n    TRUE ~ 2\n  ))\n\n\n## How can we perform a quality control check in this case? Use the code below as a hint and replace the blanks\n\nsurvey_sub |> \n  group_by(Lang_cat) |> #this will group your output by a (categorical) variable\n  summarise(min(Lang_num), max(Lang_num))"},{"id":9,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-9","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub |> summarise(min(Sushi),max(Sushi))\n\nsurvey_sub |> #this will show us which values are above 30\n  filter(Sushi>30) |>\n  count(Sushi)"},{"id":10,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-10","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub <- survey_sub |>\n  mutate(Sushi_clean = case_when(\n    Sushi == -1 ~ NA, # use NA to set a value to missing\n    Sushi == 999 ~ NA,\n    TRUE ~ Sushi #this says to keep all other values the same\n  ))\n\nsummary(survey_sub$Sushi_clean)"},{"id":11,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-11","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub |> count(Interest)"},{"id":12,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-12","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub |>\n  count(Instrument) |>\n  mutate(prop = n/sum(n))"},{"id":13,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-13","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"ggplot(survey_sub, aes(x=Sushi_clean))+\n  geom_histogram(fill=\"blue\")+\n  facet_grid(factor(BeachOrCabin)~.)+\n  labs(title=\"Distribution of sushi eating by dream living location\",\n       x=\"# times having eaten sushi in last 30 days\")"},{"id":14,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-14","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"ggplot(survey_sub, aes(fill=Interest, x=Excitement)) + \n    geom_bar()"},{"id":15,"options":{"context":"interactive","classes":"","fig-width":7,"label":"unnamed-chunk-15","editor-quick-suggestions":"false","output":"true","editor-font-scale":"1","editor-word-wrap":"true","out-width":"700px","out-height":"","fig-height":5,"results":"markup","dpi":72,"comment":"","editor-max-height":"","warning":"true","read-only":"false","message":"true","fig-cap":"","autorun":"false"},"code":"survey_sub <- survey_sub |>\n  mutate(Excitement_num = as.numeric(substr(Excitement,1,1)))\n\n## Quality control check!\nsurvey_sub |> count(Excitement, Excitement_num)"}];
+globalThis.qwebrCellDetails = [{"code":"webr::install(\"tidyverse\") #you don't need this if running R locally\nlibrary(tidyverse)","id":1,"options":{"context":"interactive","label":"unnamed-chunk-1","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey <- read.csv(\"https://raw.githubusercontent.com/anlane611/datasets/main/IDS702Bootcampsurvey2024.csv\", header=TRUE)\nglimpse(survey)","id":2,"options":{"context":"interactive","label":"unnamed-chunk-2","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub <- survey |> \n              select(-c(\"Timestamp\"))","id":3,"options":{"context":"interactive","label":"unnamed-chunk-3","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"names(survey_sub) <- c(\"Interest\",\"Excitement\",\"Languages\",\n                       \"Instrument\",\"Siblings\",\"AgeRange\",\n                       \"BeachOrCabin\",\"Sushi\")","id":4,"options":{"context":"interactive","label":"unnamed-chunk-4","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub |> count(Siblings)","id":5,"options":{"context":"interactive","label":"unnamed-chunk-5","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub |> count(Siblings)\n\nsurvey_sub <- survey_sub |> #use the assignment <- since we're creating a var\n              mutate(Siblings_clean = case_when(\n                      Siblings== \"-1\" ~ 3,\n                      Siblings==\"none\" ~ 0,\n                      TRUE ~ as.numeric(Siblings)\n                      ))\n\n## How can we do a quality control check?\nsurvey_sub |> count(Siblings, Siblings_clean)","id":6,"options":{"context":"interactive","label":"unnamed-chunk-6","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub |> count(Languages)","id":7,"options":{"context":"interactive","label":"unnamed-chunk-7","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub <- survey_sub |>\n  mutate(Lang_num = case_when(\n    Languages == \"10 or more\" ~ 0,\n    TRUE ~ as.numeric(Languages)\n  ))\n\nsurvey_sub <- survey_sub |>\n  mutate(Lang_cat = case_when(\n    Lang_num == 0 ~ 0,\n    Lang_num < 4 ~ 1,\n    TRUE ~ 2\n  ))\n\n\n## How can we perform a quality control check in this case? Use the code below as a hint and replace the blanks\n\nsurvey_sub |> \n  group_by(Lang_cat) |> #this will group your output by a (categorical) variable\n  summarise(min(Lang_num), max(Lang_num))","id":8,"options":{"context":"interactive","label":"unnamed-chunk-8","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub |> summarise(min(Sushi),max(Sushi))\n\nsurvey_sub |> #this will show us which values are above 30\n  filter(Sushi>30) |>\n  count(Sushi)","id":9,"options":{"context":"interactive","label":"unnamed-chunk-9","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub <- survey_sub |>\n  mutate(Sushi_clean = case_when(\n    Sushi == -1 ~ NA, # use NA to set a value to missing\n    Sushi == 999 ~ NA,\n    TRUE ~ Sushi #this says to keep all other values the same\n  ))\n\nsummary(survey_sub$Sushi_clean)","id":10,"options":{"context":"interactive","label":"unnamed-chunk-10","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub |> count(Interest)","id":11,"options":{"context":"interactive","label":"unnamed-chunk-11","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub |>\n  count(Instrument) |>\n  mutate(prop = n/sum(n))","id":12,"options":{"context":"interactive","label":"unnamed-chunk-12","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"ggplot(survey_sub, aes(x=Sushi_clean))+\n  geom_histogram(fill=\"blue\")+\n  facet_grid(factor(BeachOrCabin)~.)+\n  labs(title=\"Distribution of sushi eating by dream living location\",\n       x=\"# times having eaten sushi in last 30 days\")","id":13,"options":{"context":"interactive","label":"unnamed-chunk-13","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"ggplot(survey_sub, aes(fill=Interest, x=Excitement)) + \n    geom_bar()","id":14,"options":{"context":"interactive","label":"unnamed-chunk-14","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}},{"code":"survey_sub <- survey_sub |>\n  mutate(Excitement_num = as.numeric(substr(Excitement,1,1)))\n\n## Quality control check!\nsurvey_sub |> count(Excitement, Excitement_num)","id":15,"options":{"context":"interactive","label":"unnamed-chunk-15","editor-max-height":"","output":"true","classes":"","fig-cap":"","fig-height":5,"message":"true","editor-quick-suggestions":"false","out-width":"700px","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","autorun":"false","dpi":72,"read-only":"false","comment":"","results":"markup","warning":"true","fig-width":7}}];
 
 </script>
 <script type="module">
@@ -1593,8 +1593,11 @@ globalThis.qwebrExecuteCode = async function (
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
- <span class="menu-text">Syllabus</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -1621,8 +1624,155 @@ globalThis.qwebrExecuteCode = async function (
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 1: Statistics Fundamentals</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8.27: Introduction and Study Design</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8.29: Introduction to Probability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.3: Probability Distributions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.5: Sampling Distributions &amp; Central Limit Theorem</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.17: Inference I</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.19: Inference II: Traditional Statistical Tests</span></a>
+  </div>
+</li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Unit 2: Linear Regression</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit2/SLR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.24: Simple Linear Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit2/MLR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9.26: Multiple Linear Regression</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit2/CategoricalInteraction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10.1: Categorical Predictors &amp; Interaction Terms</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit2/AssessingModels.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10.3: Assessment &amp; Assumptions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit2/Problems.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10.8: Problems that can arise</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../materials/Unit2/ModelSelection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10.10: Model Selection</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reflections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statistics Reflections</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../homework/HW1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../homework/HW2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../homework/HW3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 3</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9.10: Maximum Likelihood Estimation – IDS 702</title>
+<title>IDS 702 Midterm Topics – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,8 +67,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../../styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -80,7 +109,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Estimation/MLEstimation.html">9.10: Maximum Likelihood Estimation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      IDS 702
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../">IDS 702</a> 
+      <a href="../">IDS 702</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -131,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cleaning and exploring data in R</span></a>
   </div>
 </li>
@@ -139,58 +170,58 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Unit 1: Statistics Fundamentals</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.27: Introduction and Study Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.29: Introduction to Probability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.3: Probability Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.5: Sampling Distributions &amp; Central Limit Theorem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link active">
+  <a href="../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.17: Inference I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.19: Inference II: Traditional Statistical Tests</span></a>
   </div>
 </li>
@@ -207,37 +238,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit2/SLR.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/SLR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.24: Simple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit2/MLR.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/MLR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.26: Multiple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit2/CategoricalInteraction.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/CategoricalInteraction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.1: Categorical Predictors &amp; Interaction Terms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit2/AssessingModels.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/AssessingModels.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.3: Assessment &amp; Assumptions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit2/Problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/Problems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.8: Problems that can arise</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../materials/Unit2/ModelSelection.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/ModelSelection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.10: Model Selection</span></a>
   </div>
 </li>
@@ -247,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reflections.html" class="sidebar-item-text sidebar-link">
+  <a href="../reflections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics Reflections</span></a>
   </div>
 </li>
@@ -262,19 +293,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../homework/HW1.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../homework/HW2.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../homework/HW3.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 3</span></a>
   </div>
 </li>
@@ -282,7 +313,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -296,19 +327,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#upcoming-deadlines" id="toc-upcoming-deadlines" class="nav-link active" data-scroll-target="#upcoming-deadlines">Upcoming deadlines</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#class-prep" id="toc-class-prep" class="nav-link" data-scroll-target="#class-prep">Class prep</a></li>
-  <li><a href="#class-slides" id="toc-class-slides" class="nav-link" data-scroll-target="#class-slides">Class slides</a></li>
+  <li><a href="#unit-1-statistics-fundamentals" id="toc-unit-1-statistics-fundamentals" class="nav-link active" data-scroll-target="#unit-1-statistics-fundamentals">Unit 1: Statistics Fundamentals</a></li>
+  <li><a href="#unit-2-linear-regression-924-103" id="toc-unit-2-linear-regression-924-103" class="nav-link" data-scroll-target="#unit-2-linear-regression-924-103">Unit 2: Linear Regression (9/24-10/3)</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MidtermTopics.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Course Materials</li><li class="breadcrumb-item"><a href="../../../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html">Unit 1: Statistics Fundamentals</a></li><li class="breadcrumb-item"><a href="../../../materials/Unit1/Estimation/MLEstimation.html">9.10: Maximum Likelihood Estimation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">9.10: Maximum Likelihood Estimation</h1>
+<h1 class="title">IDS 702 Midterm Topics</h1>
 </div>
 
 
@@ -325,35 +354,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="upcoming-deadlines" class="level2">
-<h2 class="anchored" data-anchor-id="upcoming-deadlines">Upcoming deadlines</h2>
+<section id="unit-1-statistics-fundamentals" class="level2">
+<h2 class="anchored" data-anchor-id="unit-1-statistics-fundamentals">Unit 1: Statistics Fundamentals</h2>
+<p><strong>Study Design</strong>:</p>
 <ul>
-<li>HW 1: Sunday, Sept 15 11:59 PM</li>
+<li><p>population vs sample</p></li>
+<li><p>simple random sampling, cluster sampling, stratified sampling</p></li>
+<li><p>confounding variables</p></li>
+</ul>
+<p><strong>Probability</strong>:</p>
+<ul>
+<li>Know how to apply the definitions, but formulas will be provided</li>
+</ul>
+<p><strong>Probability Distributions</strong>:</p>
+<ul>
+<li><p>Know definitions of random variable, probability distribution, PDF/PMF, support, parameters, expected value</p></li>
+<li><p>You do NOT need to know the formulas for individual probability distributions. Any needed PDFs/PMFs will be provided</p></li>
+</ul>
+<p><strong>Sampling Distributions/CLT</strong>:</p>
+<ul>
+<li><p>Define/describe what a sampling distribution is and the CLT</p></li>
+<li><p>Distinguish between standard deviation and standard error</p></li>
+</ul>
+<p><strong>Maximum likelihood estimation</strong>:</p>
+<ul>
+<li><p>Describe the overall idea (i.e., what is a statistical likelihood? What is the difference between a PDF and a likelihood?)</p></li>
+<li><p>Be able to go through the mathematical mechanics to calculate an MLE given a PDF (take the log, differentiate, solve for the parameter)</p></li>
+<li><p>Know definition of bias and standard error. You will NOT have to calculate bias</p></li>
+</ul>
+<p><strong>Confidence Intervals &amp; Bootstrap</strong>:</p>
+<ul>
+<li><p>Conceptually distinguish between the analytical and resampling methods of generating confidence intervals</p></li>
+<li><p>Interpret a confidence interval</p></li>
+<li><p>Understand the 3 factors that affect confidence intervals</p></li>
+</ul>
+<p><strong>Inference/Hypothesis Testing</strong>:</p>
+<ul>
+<li><p>Definitions: null and alternative hypotheses, p-value, significance level</p></li>
+<li><p>Conceptually distinguish between parametric, non-parametric, and simulation-based inference</p></li>
+<li><p>When to use a two-sample t-test</p></li>
+<li><p>You do NOT need to know the other tests for which you made fact sheets</p></li>
 </ul>
 </section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of the class, students should be able to:</p>
+<section id="unit-2-linear-regression-924-103" class="level2">
+<h2 class="anchored" data-anchor-id="unit-2-linear-regression-924-103">Unit 2: Linear Regression (9/24-10/3)</h2>
+<p><strong>Intro to SLR/MLR</strong>:</p>
 <ul>
-<li><p>Identify the goal of maximum likelihood estimation</p></li>
-<li><p>Define the statistical likelihood function</p></li>
-<li><p>Derive a maximum likelihood estimate of a given probability distribution</p></li>
+<li><p>Distinguish between the theoretical model and the fitted model</p></li>
+<li><p>Least squares estimation (concept, not formula)</p></li>
+<li><p>Hypothesis testing for coefficients</p></li>
+<li><p>Interpret estimates, p-values, and confidence intervals</p></li>
+<li><p>Matrix notation: identify dimensions of the MLR model components</p></li>
 </ul>
-</section>
-<section id="class-prep" class="level2">
-<h2 class="anchored" data-anchor-id="class-prep">Class prep</h2>
-<p>SDS: 5.5 intro (up to 5.5.1) and 5.5.2 up to 5.5.2.1</p>
-<p><a href="https://www.youtube.com/watch?v=XepXtl9YKwc">Supplemental YouTube video</a> to provide some intuition for maximum likelihood estimation</p>
-<p>By the end of the reading, you should be able to answer the following questions:</p>
+<p><strong>Categorical Predictors &amp; Interaction Terms</strong>:</p>
 <ul>
-<li><p>What are we trying to estimate?</p></li>
-<li><p>What is the likelihood function?</p></li>
-<li><p>How do you maximize the likelihood function? (hint: you may have to review some calculus)</p></li>
+<li><p>Interpret coefficient estimates for categorical and interaction terms</p></li>
+<li><p>write level-specific models</p></li>
+<li><p>write full and reduced models for a nested F test</p></li>
+<li><p>when to use an interaction term</p></li>
 </ul>
-</section>
-<section id="class-slides" class="level2">
-<h2 class="anchored" data-anchor-id="class-slides">Class slides</h2>
-<p><a href="MLEstimation_slides-speaker.html">Slides</a></p>
+<p><strong>Assessment &amp; Assumptions</strong>:</p>
+<ul>
+<li><p>interpret <span class="math inline">\(R^2\)</span> value</p></li>
+<li><p>list the four linear regression assumptions</p></li>
+<li><p>connect the linearity, normality, and homoscedasticity assumptions to diagnostic plots</p></li>
+</ul>
 
 
 </section>
@@ -465,13 +530,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-          // default icon
-          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
