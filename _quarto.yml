@@ -46,6 +46,9 @@ website:
        - section:
          href: resources.qmd
          text: Resources
+       - section:
+         href: exam/Midterm.qmd
+         text: Midterm
          
 
 
