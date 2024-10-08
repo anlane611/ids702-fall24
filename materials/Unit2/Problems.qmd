@@ -38,3 +38,11 @@ Watch these two videos:
 Copies of slides: [Influential points](IDS702_influentialpoints.pdf), [Multicollinearity](IDS702_multicollinearity.pdf)
 
 **Optional/supplementary textbook reading**: ISLR section 3.3.3 #4-6
+
+## Class materials
+
+[Groups](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
+
+Instructions: Work through the exercises in the qmd file below with your group. Submit your answers on Gradescope by 4:50 PM. Then, we will discuss the exercises together.
+
+[Exercise QMD](_ProblemsExercise.qmd)

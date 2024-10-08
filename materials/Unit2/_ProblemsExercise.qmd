@@ -1,0 +1,65 @@
+---
+title: "Influential points and multicollinearity"
+format: pdf
+---
+
+For this exercise, we will use the Hitters dataset from the ISLR2 package
+
+```{r}
+library(tidyverse)
+library(ISLR2)
+data("Hitters")
+?Hitters #run this for the data dictionary
+```
+
+1.  We want to understand how hitter statistics are associated with salaries. More specifically, we want to assess the model regressing Salary on the following predictors: Hits, HmRun, Runs, RBI, Years, CHits, CHmRun, CRuns, and CRBI. Let's first create a correlation plot of the 9 predictors. Comment on what you observe in the correlation plot.
+
+    ```{r}
+    library(corrplot) #you may need to install this package
+    corrplot(cor(Hitters[,c("Hits", "HmRun", "Runs", "RBI", "Years", 
+                            "CHits", "CHmRun","CRuns","CRBI")]))
+    ```
+
+2.  Now, fit the model using the code below. Add the code to show the summary output.
+
+```{r}
+hittermod_all <- lm(Salary~Hits+HmRun+Runs+RBI+Years+CHits+CHmRun+CRuns+CRBI,
+                data=Hitters)
+
+```
+
+3.  Use the `vif()` function in the car package to calculate VIF values for each predictors. Do any of the predictors have high VIF values? If so, which one(s)?
+
+```{r}
+library(car) #you may have to install this package
+vif(hittermod_all)
+```
+
+4.  Fit another model but without the career variables (i.e., using Hits, HmRun, Runs, RBI, and Years). Describe the differences in the model output for these predictors between this model and the model you fit in #2 in terms of estimates, standard errors, and p-values.
+
+```{r}
+hittermod_noc <- lm(Salary~Hits+HmRun+Runs+RBI+Years,
+                data=Hitters)
+```
+
+5.  Look at the model diagnostics plots for the second model.
+
+-   Do you notice any potential violations in the linearity, normality, or homoscedasticity model assumptions? If so, what adjustments could be made?
+-   Are there any influential points? If so, fit the model without those observation(s) and note any differences in the summary output and/or the diagnostic plots.
+
+```{r}
+## first, add code for the diagnostic plots below
+
+
+## Fit the model using potential transformation(s) to address violations
+
+
+
+# You can use this code to create a subset of the data. Just replace the
+# ------- with the row names you want to remove. The row names are given
+# in the diagnostic plot output
+hitters_subset <- Hitters[!(rownames(Hitters) %in% c(-------)),]
+
+
+## Now refit the model using the subset
+```

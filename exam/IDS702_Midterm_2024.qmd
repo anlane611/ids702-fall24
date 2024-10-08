@@ -1,0 +1,446 @@
+---
+title: "Midterm"
+subtitle: "IDS 702 - Fall 2024"
+format: 
+  pdf:
+    fig-align: center
+    fig-asp: 0.618
+    margin-bottom: 1.8cm
+    margin-top: 1cm
+    margin-left: 1.75cm
+    margin-right: 1.75cm
+editor_options: 
+  chunk_output_type: console
+---
+
+\vspace{-1cm}
+
+|  |  |  |  |
+|----------------|-------------------|------------------|-------------------|
+| First name: | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ | Last name: | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |
+| Net ID: | \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |  |  |
+
+\vspace{0.1cm}
+
+> I hereby state that I have not communicated with or gained information in any way from my classmates during this exam, and that all work is my own.
+>
+> Signature: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Any potential violation of Duke's policy on academic integrity will be reported to the Office of Student Conduct & Community Standards. All work on this exam must be your own.**
+
+1.  You have 75 minutes to complete the exam.
+2.  You are **not** allowed a cell phone, even if you intend to use it for checking the time, music device or headphones, notes, books, or other resources, or to communicate with anyone other than the professor during the exam.
+3.  Write clearly.
+
+The exam has 18 questions: 15 multiple choice questions and 3 short answer questions. Question 16 has parts a-c, question 17 has parts a-d, and question 18 has parts a-c. **Before you begin, make sure your exam has all questions.**
+
+```{r load-library, warning = F, message = F, echo=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+data("births")
+```
+
+{{< pagebreak >}}
+
+## Multiple Choice (3 points each)
+
+1.  In statistics, we use data that describes a \_\_\_\_\_\_\_\_\_\_ drawn from a \_\_\_\_\_\_\_\_\_\_ to address a \_\_\_\_\_\_\_\_\_\_ of interest.
+
+\qquad a. population; sample; research question
+
+\qquad b. population; sample; linear regression
+
+\qquad c. sample; population; research question
+
+\qquad d. sample; population; linear regression
+
+\vspace{1cm}
+
+2.  You are exploring a dataset that contains information about zoos in the United States. The dataset is called `Zoos`, each row represents a single zoo, and variables include `City`, `Acreage`, and `Number_of_lions`. Which piece of code would correctly calculate the average number of lions by city for zoos that encompass more than 200 acres?
+
+\qquad a.
+
+```{r, eval=FALSE}
+Zoos |>
+  filter(Acreage > 200) |>
+    group_by(City) |>
+      summarise(mean(Number_of_lions))
+```
+
+\qquad b.
+
+```{r, eval=FALSE}
+Zoos |>
+  group_by(Acreage > 200) |>
+    filter(City) |>
+      summarise(mean(Number_of_lions))
+```
+
+\qquad c.
+
+```{r, eval=FALSE}
+Zoos |>
+  filter(Acreage > 200) |>
+    group_by(City) |>
+      mutate(mean(Number_of_lions))
+```
+
+\qquad d.
+
+```{r, eval=FALSE}
+Zoos |>
+  group_by(Acreage > 200) |>
+    filter(City) |>
+      mutate(mean(Number_of_lions))
+```
+
+{{< pagebreak >}}
+
+3.  Using the `Zoos` data described in #2, say you've created a new variable called `Acreage_high` that takes a value of 1 if a zoo's acreage is greater than 200 and 0 otherwise. Which piece of code would appropriately perform a quality control check to make sure this variable was created correctly?
+
+\qquad a.
+
+```{r, eval=FALSE}
+Zoos |>
+  group_by(Acreage) |>
+      summarise(min(Acreage_high),max(Acreage_high))
+```
+
+\qquad b.
+
+```{r, eval=FALSE}
+Zoos |>
+  filter(Acreage_high) |>
+      summarise(mean(Acreage),median(Acreage))
+```
+
+\qquad c.
+
+```{r, eval=FALSE}
+Zoos |>
+  filter(Acreage_high) |>
+      mutate(mean(Acreage),median(Acreage))
+```
+
+\qquad d.
+
+```{r, eval=FALSE}
+Zoos |>
+  group_by(Acreage_high) |>
+      summarise(min(Acreage),max(Acreage))
+```
+
+\vspace{1cm}
+
+4.  Which of the following is true about boxplots and histograms?
+
+\qquad a. Boxplots are useful for visualizing summary statistics (median, range, IQR), while histograms are useful for visualizing the shape of a variable
+
+\qquad b. Boxplots and histograms are useful for visualizing the distribution of categorical variables
+
+\qquad c. Boxplots are useful for visualizing interaction terms, while histograms are useful for visualizing categorical variables
+
+\qquad d. Boxplots and histograms both clearly label the mean of a variable
+
+\vspace{1cm}
+
+5.  Which of the following is NOT a step in the process of cleaning numeric variables?
+
+\qquad a. Checking for missing values
+
+\qquad b. Creating a subset of the data with the select function
+
+\qquad c. Checking for implausible values
+
+\qquad d. Using as.numeric() if the variable is stored as a character variable
+
+\qquad e. Performing a quality control check
+
+{{< pagebreak >}}
+
+6.  What is the difference between implausible values and outliers?
+
+\qquad a. Implausible values should never be removed from a dataset during the cleaning process, while outliers always have to be removed
+
+\qquad b. Implausible values are values that are impossible to observe in real life, while outliers are values that stick out from the rest of the data but are still realistic
+
+\qquad c. Implausible values are values that should be numeric but are stored as character in R, while outliers are character values that are stored as numeric
+
+\qquad d. There is no difference between implausible values and outliers
+
+\vspace{1cm}
+
+7.  A health dataset contains a categorical age variable that takes values "\<18," "18-40," "41-64," and "65+." Which piece of code correctly creates a continuous variable called `age` from this categorical variable `age_category`?
+
+\qquad a.
+
+```{r, eval=FALSE}
+HealthData <- HealthData |>
+  mutate(age=case_when(age_category=="<18" ~ "less than 18",
+                       age_category=="18-40" ~ "18 to 40",
+                       age_category=="41-64" ~ "41 to 64",
+                       age_category=="65+" ~ "greater than 65"))
+```
+
+\qquad b.
+
+```{r, eval=FALSE}
+HealthData <- HealthData |>
+  mutate(age=case_when(age_category < 18 ~ "<18",
+                       age_category <= 40 ~ "18-40",
+                       age_category <= 64 ~ "41-64",
+                       age_category > 65 ~ "65+"))
+```
+
+\qquad c.
+
+```{r, eval=FALSE}
+HealthData <- HealthData |>
+  mutate(age_category=case_when(age < 18 ~ "<18",
+                       age <= 40 ~ "18-40",
+                       age <= 64 ~ "41-64",
+                       age > 65 ~ "65+"))
+```
+
+\qquad d. A continuous age variable cannot be created from the categorical age variable
+
+{{< pagebreak >}}
+
+8.  Which R function is useful for counting the number of missing values in a numeric variable?
+
+\qquad a. summary
+
+\qquad b. glimpse
+
+\qquad c. mutate
+
+\qquad d. as.numeric
+
+\vspace{1cm}
+
+9.  Which type of question can NOT be answered with a linear model?
+
+\qquad a. On average, how much does $Y$ change per increase in the variable $X$?
+
+\qquad b. On average, per increase in $Y$, how much does $X$ change?
+
+\qquad c. What is the predicted value of $Y$ for a given value of $X$?
+
+\qquad d. What is the average value of $Y$ when $X=0$?
+
+\vspace{1cm}
+
+10. What is the difference between $\beta$ and $\hat{\beta}$?
+
+\qquad a. $\beta$ is an estimate that describes the population, while $\hat{\beta}$ is an unknown quantity using the sample
+
+\qquad b. $\beta$ is an unknown quantity that describes the sample, while $\hat{\beta}$ is an estimate using the population
+
+\qquad c. $\beta$ is an estimate that describes the sample, while $\hat{\beta}$ is an unknown quantity using the population
+
+\qquad d. $\beta$ is an unknown quantity that describes the population, while $\hat{\beta}$ is an estimate using the sample
+
+\vspace{1cm}
+
+11. What does it mean to fit a linear model?
+
+\qquad a. Calculate the residuals using the fitted model
+
+\qquad b. Compute the coefficient estimates by minimizing the sum of squared residuals
+
+\qquad c. Calculate the outcome estimates by minimizing the coefficient estimates
+
+\qquad d. Compute the residuals by maximizing the objective function
+
+\vspace{1cm}
+
+12. Which statement is true about $R^2$?
+
+\qquad a. $R^2$ is a proportion because the total variance of $Y$ is always greater than the sum of squared residuals
+
+\qquad b. $R^2$ will always decrease when adding predictors to a regression model
+
+\qquad c. An $R^2$ value of 0 indicates a perfect model and an $R^2$ value of 1 indicates a poor model fit
+
+\qquad d. $R^2$ is interpreted as the proportion of variability in the predictors that is explained by the outcome
+
+{{< pagebreak >}}
+
+13. Why is it often important to use multiple linear regression instead of simple linear regression?
+
+\qquad a. Multiple linear regression extends simple linear regression by assessing the relationship between a numeric predictor and a categorical outcome
+
+\qquad b. Multiple linear regression extends simple linear regression by assessing the relationship between a numeric predictor and a numeric outcome
+
+\qquad c. Multiple linear regression allows for the control of variables that are related to both the independent variable and the outcome
+
+\qquad d. Multiple linear regression allows for the control of correlated predictor variables
+
+\vspace{1cm}
+
+14. Which of the following is NOT true about interaction terms in a linear model?
+
+\qquad a. Interaction terms assess the effect of one predictor on the outcome based on the value of a second predictor
+
+\qquad b. Interaction terms can be included in a model based on the research question or exploratory data analysis
+
+\qquad c. Interaction terms can generate different slopes for a continuous predictor for different levels of a categorical predictor
+
+\qquad d. Interaction terms should be used if two predictors both have an effect on the outcome
+
+\vspace{1cm}
+
+15. In the model below, $x_1$ is a numeric variable, while $x_2$ and $x_3$ are indicator variables. What is the correct interpretation of the $\hat{\beta}_4$ coefficient estimate?\
+    $$Y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_3x_3+\beta_4x_1x_2+\beta_5x_1x_3+\epsilon$$
+
+\qquad a. The difference between the effect of $x_2$ on $Y$ for $x_1$ compared to the reference level
+
+\qquad b. The difference between the effect of $x_1$ on $Y$ for $x_2$ compared to the reference level
+
+\qquad c. The average value of $Y$ for $x_2$ compared to the reference level
+
+\qquad d. The average increase of $Y$ per unit increase of $x_2$ compared to the reference level of $x_1$
+
+{{< pagebreak >}}
+
+## Short Answer
+
+Questions 16-18 use a dataset containing information on 150 births in North Carolina in 2004.
+
+**Codebook:**
+
+**m_age**
+
+:   Mother's age.
+
+**weeks**
+
+:   Weeks at which the mother gave birth.
+
+**premature**
+
+:   Indicates whether the baby was premature or not.
+
+**weight**
+
+:   Birth weight of the baby (lbs).
+
+**Smoke**
+
+:   Whether or not the mother was a smoker.
+
+### Question 16 (12 points)
+
+a\. Using the codebook above and the output below, which two variables need to be cleaned? Justify your answer.
+
+```{r, echo=FALSE}
+births_sub <- births |> 
+  select(c("m_age","weeks","premature","weight","smoke"))
+
+births_sub$weight <- as.character(births_sub$weight)
+births_sub$Smoke <- as.character(births_sub$smoke)
+births_sub$Smoke[2] <- "Nonsmoker"
+births_sub$Smoke[4] <- "smker"
+births_sub <- births_sub |> select(-c("smoke"))
+glimpse(births_sub)
+```
+
+\vspace{5cm}
+
+b\. Imagine that you find a value of "thirty" in the `weeks` variable. You create a cleaned version of the variable called `weeks_clean` to correct this value to 30. Describe how you can use the code below to perform a quality control check of your cleaned variable.
+
+```{r, eval=FALSE}
+births |>
+  count(weeks, weeks_clean)
+```
+
+\vspace{5cm}
+
+c\. Based on the plot below, do premature babies or full term babies have birth weights with a greater interquartile range? Do premature babies or full term babies have a higher median birth weight?
+
+```{r, echo=FALSE}
+ggplot(births, aes(x=premature,y=weight))+
+  geom_boxplot()+
+  labs(x="Premature status",y="Birth weight")
+```
+
+{{< pagebreak >}}
+
+### Question 17 (16 points)
+
+a\. Which two variables in the births dataset can NOT be used as an outcome in a linear regression model? Justify your answer and assume that you have cleaned the dataset.
+
+\vspace{3cm}
+
+b\. Write the theoretical model that regresses `weight` on `m_age`, `weeks`, and `premature`. Be sure to define each term (i.e., "Y= —–").
+
+\vspace{6cm}
+
+c\. Using the output below, write the fitted model.
+
+```{r, echo=FALSE}
+MLRmod <- linear_reg() |>
+  set_engine("lm") |>
+  fit(weight~m_age+weeks+premature, data=births)
+
+tidy(MLRmod)
+```
+
+{{< pagebreak >}}
+
+d\. Write interpretations for the coefficient estimates of the `weeks` and `premature` variables.
+
+`weeks`:
+
+\vspace{3cm}
+
+`premature`:
+
+\vspace{3cm}
+
+{{< pagebreak >}}
+
+### Question 18 (12 points)
+
+a\. Write the theoretical model in mathematical notation that best matches the plot shown below. Be sure to define each term.
+
+```{r, echo=FALSE, message=FALSE}
+ggplot(births, aes(x=weeks,y=weight,color=smoke))+
+  geom_point()+
+  geom_smooth(method="lm",se=F)+
+  labs(x="Weeks of gestation",y="Birth weight",color="Smoking status")
+```
+
+\vspace{5cm}
+
+b\. Write the implied linear models in mathematical notation for each level of smoking status. You do not need to define the terms again.
+
+\vspace{1cm}
+
+-   Smoker:
+
+\vspace{3cm}
+
+-   Nonsmoker:
+
+{{< pagebreak >}}
+
+c\. In 2-3 sentences, describe what is being compared with the code below and the conclusion you can draw using the output.
+
+```{r}
+Mod1 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(weight~weeks+smoke, data=births)
+
+Mod2 <- linear_reg() |>
+  set_engine("lm") |>
+  fit(weight~weeks*smoke, data=births)
+
+glance(Mod1)$adj.r.squared
+glance(Mod2)$adj.r.squared
+```
+
+{{< pagebreak >}}
+
+## Blank Page - End of exam

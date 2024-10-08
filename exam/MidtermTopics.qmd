@@ -19,9 +19,9 @@ format: pdf
 
 **Probability Distributions**:
 
--   Know definitions of random variable, probability distribution, PDF/PMF, support, parameters, expected value
+-   random variable, probability distribution, PDF/PMF, support, parameters, expected value
 
--   You do NOT need to know the formulas for individual probability distributions. Any needed PDFs/PMFs will be provided
+-   You do NOT need to know the formulas for individual probability distributions (the fact sheets that you made in groups). Any needed PDFs/PMFs will be provided
 
 **Sampling Distributions/CLT**:
 
@@ -63,8 +63,6 @@ format: pdf
 
 -   Least squares estimation (concept, not formula)
 
--   Hypothesis testing for coefficients
-
 -   Interpret estimates, p-values, and confidence intervals
 
 -   Matrix notation: identify dimensions of the MLR model components
@@ -81,8 +79,8 @@ format: pdf
 
 **Assessment & Assumptions**:
 
--   interpret $R^2$ value
+-   $R^2$ value
 
--   list the four linear regression assumptions
+-   linear regression assumptions
 
 -   connect the linearity, normality, and homoscedasticity assumptions to diagnostic plots

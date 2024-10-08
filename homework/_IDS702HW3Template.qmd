@@ -57,8 +57,6 @@ d\.
 e\.
 
 ```{r}
-par(mfrow=c(3,2)) #this will create a 3x2 grid for your plots to save space.
-#you can adjust the number of rows and columns if needed/preferred
 
 
 ```

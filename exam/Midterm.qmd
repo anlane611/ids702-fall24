@@ -1,0 +1,28 @@
+---
+title: "Midterm Materials"
+format: html
+---
+
+**Date and time**: October 22, 3:05-4:20 PM
+
+**General Information**:
+
+-   The midterm will cover all of Unit 1 and the first two weeks of Unit 2. Topics covered on 10/8 and 10/10 will not be on the midterm. A more detailed list of topics is provided below.
+
+-   The midterm will have a combination of multiple choice questions and short answer questions
+
+-   You will be provided with a formula sheet for reference. The formula sheet that you will have is given with the practice questions.
+
+-   You will not be able to use any additional materials (e.g., notes, electronic devices)
+
+-   A review session will be held on Oct 17 during class to go over the practice questions
+
+-   You will not have to answer any questions about R syntax (i.e., writing code). You will be expected to interpret R output. Examples of this are given in the practice questions.
+
+-   If you have been approved for testing accommodations, please reach out to me and/or the testing center to make arrangements as soon as possible (if you have not done so already). These arrangements cannot be made at the last minute; the testing center has to approve the reservations and fills up quickly.
+
+ 
+
+[List of Topics](MidtermTopics.pdf)
+
+[Formula sheet and practice questions](FormulasAndPractice.pdf)
