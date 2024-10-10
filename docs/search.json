@@ -816,7 +816,7 @@
     "href": "index.html#schedule",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Schedule",
-    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\n\nWeek of\n\n\nTuesday content\n\n\nThursday content\n\n\nAssignment due Sunday\n\n\n\n\n\n\nAug 26\n\n\nStudy Design\n\n\nIntro Probability\n\n\n\n\n\n\nSept 2\n\n\nRandom variables & Distributions\n\n\nSampling Distributions &  Central Limit Theorem\n\n\nStatistics Reflection 1\n\n\n\n\nSept 9\n\n\nEstimation\n\n\nConfidence Intervals/Bootstrap\n\n\nHomework 1\n\n\n\n\nSept 16\n\n\nInference I\n\n\nInference II\n\n\nStatistics Reflection 2\n\n\n\n\nSept 23\n\n\nIntro to Regression\n\n\nMultiple Linear Regression\n\n\nHomework 2\n\n\n\n\nSept 30\n\n\nCategorical Predictors,  Interaction terms\n\n\nAssessing Assumptions\n\n\nStatistics Reflection 3\n\n\n\n\nOct 7\n\n\nInfluential points &  Multicollinearity\n\n\nModel Selection\n\n\nHomework 3\n\n\n\n\nOct 14\n\n\nFall break - no class\n\n\nExam review\n\n\n\n\n\n\nOct 21\n\n\nMidterm Exam\n\n\nIntro to GLMs\n\n\n\n\n\n\nOct 28\n\n\nLogistic Regression\n\n\nAssessing Logistic Models\n\n\nStatistics Reflection 4\n\n\n\n\nNov 4\n\n\nMultinomial regression\n\n\nOrdinal regression\n\n\nHomework 4\n\n\n\n\nNov 11\n\n\nPoisson regression\n\n\nSurvival Analysis\n\n\nProject proposals\n\n\n\n\nNov 18\n\n\nMissing Data\n\n\nMissing Data\n\n\nHomework 5\n\n\n\n\nNov 25\n\n\nProject work day\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDec 15 5PM  Final projects due"
+    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\n\n\n\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables &\nDistributions\nSampling Distributions &\nCentral Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nConfidence Intervals/Bootstrap\nHomework 1\n\n\nSept 16\nInference I\nInference II\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nMultiple Linear Regression\nHomework 2\n\n\nSept 30\nCategorical Predictors,\nInteraction terms\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &\nMulticollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nMultinomial regression\nOrdinal regression\nHomework 4\n\n\nNov 11\nPoisson regression\nSurvival Analysis\nProject proposals\n\n\nNov 18\nMissing Data\nMissing Data\nHomework 5\n\n\nNov 25\nProject work day\n\n\n\n\n\n\n\nDec 15 5PM\nFinal projects due"
   },
   {
     "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#motivation",
@@ -2486,6 +2486,18 @@
     "text": "Date and time: October 22, 3:05-4:20 PM\nGeneral Information:\n\nThe midterm will cover all of Unit 1 and the first two weeks of Unit 2. Topics covered on 10/8 and 10/10 will not be on the midterm. A more detailed list of topics is provided below.\nThe midterm will have a combination of multiple choice questions and short answer questions\nYou will be provided with a formula sheet for reference. The formula sheet that you will have is given with the practice questions.\nYou will not be able to use any additional materials (e.g., notes, electronic devices)\nA review session will be held on Oct 17 during class to go over the practice questions\nYou will not have to answer any questions about R syntax (i.e., writing code). You will be expected to interpret R output. Examples of this are given in the practice questions.\nIf you have been approved for testing accommodations, please reach out to me and/or the testing center to make arrangements as soon as possible (if you have not done so already). These arrangements cannot be made at the last minute; the testing center has to approve the reservations and fills up quickly.\n\n \nList of Topics\nFormula sheet and practice questions",
     "crumbs": [
       "Midterm"
+    ]
+  },
+  {
+    "objectID": "materials/Unit2/ModelSelection.html#class-materials",
+    "href": "materials/Unit2/ModelSelection.html#class-materials",
+    "title": "10.10: Model Selection",
+    "section": "Class materials",
+    "text": "Class materials\nGroups\nDiscussion Questions qmd",
+    "crumbs": [
+      "Course Materials",
+      "Unit 2: Linear Regression",
+      "10.10: Model Selection"
     ]
   }
 ]

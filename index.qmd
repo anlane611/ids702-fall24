@@ -9,129 +9,46 @@ Welcome to the IDS 702 course site!
 
 **Meeting times**: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330
 
-<a>Instructor</a> <br/>
-Andrea Lane, PhD <br/>
-andrea.lane@duke.edu <br/>
-Gross Hall 223 <br/>
-Office hours: Thurs 4:30-5:30 PM
-<br/> <br/>
-<a>Teaching Assistants</a> <br/>
-Revanth Ganga <br/>
-revanthchowdary.ganga@duke.edu <br/>
-Office hours: Weds 12-1pm, Gross Hall 230N
-<br/> <br/>
-Rakeen Rouf <br/>
-rakeen.rouf@duke.edu <br/>
-Office hours: Mon 3:30-4:30, Gross Hall 230N
-<br/> <br/>
-Jiayi Zhou <br/>
-jiayi.zhou@duke.edu <br/>
-Office hours: Tues 12-1pm, Gross Hall 230N
-<br/> <br/>
+<a>Instructor</a> <br/> Andrea Lane, PhD <br/> andrea.lane\@duke.edu <br/> Gross Hall 223 <br/> Office hours: Thurs 4:30-5:30 PM <br/> <br/> <a>Teaching Assistants</a> <br/> Revanth Ganga <br/> revanthchowdary.ganga\@duke.edu <br/> Office hours: Weds 12-1pm, Gross Hall 230N <br/> <br/> Rakeen Rouf <br/> rakeen.rouf\@duke.edu <br/> Office hours: Mon 3:30-4:30, Gross Hall 230N <br/> <br/> Jiayi Zhou <br/> jiayi.zhou\@duke.edu <br/> Office hours: Tues 12-1pm, Gross Hall 230N <br/> <br/>
 
 ## Schedule
 
 Individual lecture topics are subject to change. The midterm date will not change.
 
-<table class="table table-hover">
-  <thead>
-    <tr class="table-active">
-      <th scope="col">Week of</th>
-      <th scope="col">Tuesday content</th>
-      <th scope="col">Thursday content</th>
-      <th scope="col">Assignment due Sunday</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Aug 26</th>
-      <td>Study Design</td>
-      <td>Intro Probability</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">Sept 2</th>
-      <td>Random variables &</br> Distributions</td>
-      <td>Sampling Distributions & </br> Central Limit Theorem</td>
-      <td>Statistics Reflection 1</td>
-    </tr>
-    <tr>
-      <th scope="row">Sept 9</th>
-      <td>Estimation</td>
-      <td>Confidence Intervals/Bootstrap</td>
-      <td>Homework 1</td>
-    </tr>
-    <tr>
-      <th scope="row">Sept 16</th>
-      <td>Inference I</td>
-      <td>Inference II</td>
-      <td>Statistics Reflection 2</td>
-    </tr>
-    <tr>
-      <th scope="row">Sept 23</th>
-      <td>Intro to Regression</td>
-      <td>Multiple Linear Regression</td>
-      <td>Homework 2</td>
-    </tr>
-    <tr>
-      <th scope="row">Sept 30</th>
-      <td>Categorical Predictors, </br> Interaction terms</td>
-      <td>Assessing Assumptions</td>
-      <td>Statistics Reflection 3</td>
-    </tr>
-    <tr>
-      <th scope="row">Oct 7</th>
-      <td>Influential points & </br> Multicollinearity</td>
-      <td>Model Selection</td>
-      <td>Homework 3</td>
-    </tr>
-    <tr>
-      <th scope="row">Oct 14</th>
-      <td>Fall break - no class</td>
-      <td>Exam review</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">Oct 21</th>
-      <td>Midterm Exam</td>
-      <td>Intro to GLMs</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">Oct 28</th>
-      <td>Logistic Regression</td>
-      <td>Assessing Logistic Models</td>
-      <td>Statistics Reflection 4</td>
-    </tr>
-    <tr>
-      <th scope="row">Nov 4</th>
-      <td>Multinomial regression</td>
-      <td>Ordinal regression</td>
-      <td>Homework 4</td>
-    </tr>
-    <tr>
-      <th scope="row">Nov 11</th>
-      <td>Poisson regression</td>
-      <td>Survival Analysis</td>
-      <td>Project proposals</td>
-    </tr>
-    <tr>
-      <th scope="row">Nov 18</th>
-      <td>Missing Data </td>
-      <td>Missing Data</td>
-      <td>Homework 5</td>
-    </tr>
-    <tr>
-      <th scope="row">Nov 25</th>
-      <td>Project work day</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
-      <td>Dec 15 5PM </br> Final projects due</td>
-    </tr>
-  </tbody>
-</table>
++---------+---------------------------+--------------------------------+-------------------------+
+| Week of | Tuesday content           | Thursday content               | Assignment due Sunday   |
++=========+===========================+================================+=========================+
+| Aug 26  | Study Design              | Intro Probability              |                         |
++---------+---------------------------+--------------------------------+-------------------------+
+| Sept 2  | Random variables &\       | Sampling Distributions & \     | Statistics Reflection 1 |
+|         | Distributions             | Central Limit Theorem          |                         |
++---------+---------------------------+--------------------------------+-------------------------+
+| Sept 9  | Estimation                | Confidence Intervals/Bootstrap | Homework 1              |
++---------+---------------------------+--------------------------------+-------------------------+
+| Sept 16 | Inference I               | Inference II                   | Statistics Reflection 2 |
++---------+---------------------------+--------------------------------+-------------------------+
+| Sept 23 | Intro to Regression       | Multiple Linear Regression     | Homework 2              |
++---------+---------------------------+--------------------------------+-------------------------+
+| Sept 30 | Categorical Predictors, \ | Assessing Assumptions          | Statistics Reflection 3 |
+|         | Interaction terms         |                                |                         |
++---------+---------------------------+--------------------------------+-------------------------+
+| Oct 7   | Influential points & \    | Model Selection                | Homework 3              |
+|         | Multicollinearity         |                                |                         |
++---------+---------------------------+--------------------------------+-------------------------+
+| Oct 14  | Fall break - no class     | Exam review                    |                         |
++---------+---------------------------+--------------------------------+-------------------------+
+| Oct 21  | Midterm Exam              | Intro to GLMs                  |                         |
++---------+---------------------------+--------------------------------+-------------------------+
+| Oct 28  | Logistic Regression       | Assessing Logistic Models      | Statistics Reflection 4 |
++---------+---------------------------+--------------------------------+-------------------------+
+| Nov 4   | Multinomial regression    | Ordinal regression             | Homework 4              |
++---------+---------------------------+--------------------------------+-------------------------+
+| Nov 11  | Poisson regression        | Survival Analysis              | Project proposals       |
++---------+---------------------------+--------------------------------+-------------------------+
+| Nov 18  | Missing Data              | Missing Data                   | Homework 5              |
++---------+---------------------------+--------------------------------+-------------------------+
+| Nov 25  | Project work day          |                                |                         |
++---------+---------------------------+--------------------------------+-------------------------+
+|         |                           |                                | Dec 15 5PM \            |
+|         |                           |                                | Final projects due      |
++---------+---------------------------+--------------------------------+-------------------------+
