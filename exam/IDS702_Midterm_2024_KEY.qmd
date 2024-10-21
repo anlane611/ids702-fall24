@@ -74,7 +74,7 @@ Circle the letter to mark your answer choice.
 
 \qquad a. Simple random sampling
 
-\qquad b. Stratified sampling
+\qquad **b. Stratified sampling**
 
 \qquad c. Cluster sampling
 
@@ -84,7 +84,7 @@ Circle the letter to mark your answer choice.
 
 2.  What is the distinction between standard deviation and standard error?
 
-\qquad a. Standard error is the standard deviation of the sampling distribution
+\qquad **a. Standard error is the standard deviation of the sampling distribution**
 
 \qquad b. Standard deviation is the standard error of the sampling distribution
 
@@ -98,7 +98,7 @@ Circle the letter to mark your answer choice.
 
 \qquad a. $\frac{\sum_{i=1}^{n}x_i}{\lambda}$
 
-\qquad b. $\frac{n}{\sum_{i=1}^{n} x_i}$
+\qquad **b.** $\frac{n}{\sum_{i=1}^{n} x_i}$
 
 \qquad c. $\frac{\sum_{i=1}^{n} x_i}{n}$
 
@@ -122,7 +122,7 @@ a.  No, we would need to know the population distribution of the sample mean to 
 
 b.  Yes, the sample mean would have a right-skewed distribution
 
-c.  Yes, the sample mean would have a normal distribution
+c.  **Yes, the sample mean would have a normal distribution**
 
 d.  No, we would need to know the population distribution of MLB salaries to characterize the distribution of the sample mean
 
@@ -134,7 +134,7 @@ d.  No, we would need to know the population distribution of MLB salaries to cha
 
 \qquad b. $\frac{(0.6)(0.4)}{(0.02)(0.03)+(0.6)(0.4)}$
 
-\qquad c. $\frac{(0.02)(0.6)}{(0.02)(0.6)+(0.03)(0.4)}$
+\qquad **c.** $\frac{(0.02)(0.6)}{(0.02)(0.6)+(0.03)(0.4)}$
 
 \qquad d. $\frac{(0.02)}{(0.4)}$
 
@@ -148,7 +148,7 @@ d.  No, we would need to know the population distribution of MLB salaries to cha
 
 \qquad c. If two events are independent, then $P(A\cap B)=0$
 
-\qquad d. If two events are mutually exclusive, then $P(A \cap B)=0$
+\qquad **d. If two events are mutually exclusive, then** $P(A \cap B)=0$
 
 \vspace{1cm}
 
@@ -156,7 +156,7 @@ d.  No, we would need to know the population distribution of MLB salaries to cha
 
 <!-- -->
 
-a.  You collect data on 250 workers' salaries across two companies and you want to compare median salary for the two companies.
+a.  **You collect data on 250 workers' salaries across two companies and you want to compare median salary for the two companies.**
 
 b.  You collect data on 2500 workers' salaries across two companies and you want to compare mean salary for the two companies.
 
@@ -172,7 +172,7 @@ d.  You collect data on 2500 workers' salaries across five companies and you wan
 
 a.  Yes, because the runners between and within groups are likely independent and the sample size is sufficiently large.
 
-b.  No, because the runners between the groups are not independent.
+b.  **No, because the runners between the groups are not independent.**
 
 c.  No, because the runners within the groups are not independent.
 
@@ -188,7 +188,7 @@ d.  No, because we do not have evidence that the mile times are normally distrib
 
 \qquad c. Observed statistic
 
-\qquad d. Significance level $\alpha$
+\qquad **d. Significance level** $\alpha$
 
 {{< pagebreak >}}
 
@@ -202,13 +202,13 @@ b.   $\beta$ is an unknown quantity that describes the sample, while $\hat{\beta
 
 c.   $\beta$ is an estimate that describes the sample, while $\hat{\beta}$ is an unknown quantity using the population
 
-d.   $\beta$ is an unknown quantity that describes the population, while $\hat{\beta}$ is an estimate using the sample
+d.   $\beta$ **is an unknown quantity that describes the population, while** $\hat{\beta}$ **is an estimate using the sample**
 
 \vspace{1cm}
 
 11. Which of the following is not considered a fixed quantity in the theoretical representation of the simple linear regression model?
 
-\qquad a. $Y$
+\qquad **a.** $Y$
 
 \qquad b. $\beta_1$
 
@@ -222,7 +222,7 @@ d.   $\beta$ is an unknown quantity that describes the population, while $\hat{\
 
 <!-- -->
 
-a.   $R^2$ is a proportion because the total variance of $Y$ is always greater than or equal to the sum of squared residuals
+a.   $R^2$ **is a proportion because the total variance of** $Y$ **is always greater than or equal to the sum of squared residuals**
 
 b.   $R^2$ will always decrease when adding predictors to a regression model
 
@@ -240,7 +240,7 @@ d.   $R^2$ is interpreted as the proportion of variability in the predictor(s) t
 
 \qquad b. Independence of error terms
 
-\qquad c. Errors are normally distributed
+\qquad **c. Errors are normally distributed**
 
 \qquad d. Errors have equal variance
 
@@ -252,7 +252,7 @@ d.   $R^2$ is interpreted as the proportion of variability in the predictor(s) t
 
 a.  Interaction terms assess the effect of one predictor on the outcome based on the value of a second predictor
 
-b.  Interaction terms should be used if two predictors both have an effect on the outcome
+b.  **Interaction terms should be used if two predictors both have an effect on the outcome**
 
 c.  Interaction terms can generate different slopes for a continuous predictor for different levels of a categorical predictor
 
@@ -267,7 +267,7 @@ d.  Interaction terms can be included in a model based on the research question 
 
 a.  The difference between the effect of $x_2$ on $Y$ for $x_1$ and the effect of $x_2$ on $Y$ for the reference level
 
-b.  The difference between the effect of $x_1$ on $Y$ for $x_2$ and the effect of $x_1$ on $Y$ for the reference level
+b.  **The difference between the effect of** $x_1$ **on** $Y$ **for** $x_2$ **and the effect of** $x_1$ **on** $Y$ **for the reference level**
 
 c.  The multiplicative effect of the numeric variable $x_1$ and the categorical variable on $Y$
 
@@ -299,21 +299,29 @@ a\. State whether or not the p-value interpretations given below are correct or 
 
 i.  The probability that the null hypothesis is true is 0.42. Therefore, we can accept the null hypothesis that the mean tax rate is equal for houses that border the river and houses that do not border the river.
 
-\vspace{2cm}
+Incorrect - p-value is not the probability that the null is true, and we do not accept the null hypothesis
+
+\vspace{1cm}
 
 ii. Assuming that there is a difference in the mean tax rate between houses that border the river and houses that do not, the probability of observing data equal to or more extreme than what we observe is 0.42. Therefore, we reject the null hypothesis that the mean tax rate is equal for houses that border the river and houses that do not border the river.
 
-\vspace{2cm}
+Incorrect - we do not assume the alternative, and we would not reject the null here (0.42\>0.05)
+
+\vspace{1cm}
 
 b\. State whether or not the 95% confidence interval interpretations given below are correct or incorrect. If the interpretation is incorrect, identify why that is the case.
 
 i.  There is a 95% probability that the true difference in mean tax rate between houses that do not border the river and houses that do is between -34.9 and 82.2.
 
-\vspace{2cm}
+Incorrect - CI does not capture a probability because the true difference is not random
+
+\vspace{1cm}
 
 ii. There is a 95% probability that the observed difference in mean tax rate between houses that do not border the river and houses that do is between -34.9 and 82.2.
 
-\vspace{2cm}
+Incorrect - CI does not capture a probability and the observed difference is always in the CI
+
+\vspace{1cm}
 
 {{< pagebreak >}}
 

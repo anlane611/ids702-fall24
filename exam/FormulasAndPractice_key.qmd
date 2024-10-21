@@ -1,0 +1,401 @@
+---
+title: "IDS 702 Midterm Practice Questions - KEY"
+format: pdf
+---
+
+## Formula Sheet (this will be provided)
+
+Any specific probability distribution functions that are needed will be given with the question (as seen in HW 2 question 1)
+
+\vspace{1cm}
+
+$Pr(A|B) = \frac{Pr(A \cap B)}{Pr(B)}$
+
+\vspace{1cm}
+
+$Pr(A \cup B)=Pr(A)+Pr(B)-Pr(A \cap B)$
+
+\vspace{1cm}
+
+Independence: $Pr(A|B)=Pr(A)$, $Pr(A \cap B)=Pr(A)Pr(B)$
+
+\vspace{1cm}
+
+Bayes Theorem: $Pr(B|A)=\frac{Pr(A|B)Pr(B)}{Pr(A)}$
+
+\vspace{1cm}
+
+General formula for confidence interval: $\bar{x} \pm z* \times \sigma / \sqrt{n}$
+
+\newpage
+
+## Practice Questions
+
+### Multiple choice
+
+1.  A researcher wants to assess the relationship between hospitalized patients' perceived quality of care and systolic blood pressure. The researcher would like to obtain a representative sample but cannot afford to travel to more than 10 hospitals. Which type of sampling would be most useful in this case?
+
+\qquad a. Simple random sampling
+
+\qquad **b. Cluster sampling**
+
+\qquad c. Stratified sampling
+
+\qquad d. A representative sample cannot be obtained in this case.
+
+\vspace{1cm}
+
+The table below presents counts comparing two treatments to remove kidney stones. Use the table to answer questions 2 and 3.
+
+|                | Successful | Not successful | Total |
+|----------------|------------|----------------|-------|
+| Open surgery   | 273        | 77             | 350   |
+| Small incision | 289        | 61             | 350   |
+| Total          | 552        | 148            | 700   |
+
+2.  What is the conditional probability that a kidney stone is successfully removed for open surgery-treated patients?
+
+\qquad **a. 273/350**
+
+\qquad b. 273/552
+
+\qquad c. 273/700
+
+\qquad d. 552/700
+
+\vspace{1cm}
+
+\newpage
+
+3.  What is the joint probability that a kidney stone is successfully removed for open surgery-treated patients?
+
+\qquad a. 273/350
+
+\qquad b. 273/552
+
+\qquad **c. 273/700**
+
+\qquad d. 552/700
+
+\vspace{1cm}
+
+4.  What is a likelihood function?
+
+\qquad a. A function of the observed data $x_i$ based on the fixed parameter of interest
+
+\qquad b. A function of the unobserved data $x_i$ based on the joint data distribution
+
+\qquad c. A function of the random population parameter based on the fixed joint data distribution
+
+\qquad **d. A function of the fixed population parameter based on the joint data distribution**
+
+\vspace{1cm}
+
+5.  Which of the following is true of bootstrapping?
+
+\qquad **a. We sample with replacement to simulate the sampling distribution of the sample statistic**
+
+\qquad b. We sample without replacement to simulate the population distribution of the population parameter
+
+\qquad c. We sample with replacement to simulate the sampling distribution of the population parameter
+
+\qquad d. We sample without replacement to simulate the population distribution of the sample statistic
+
+\vspace{1cm}
+
+\newpage
+
+6.  Which of the following is NOT a requirement to conduct a two-sample parametric t-test?
+
+\qquad a. Independent observations
+
+\qquad b. Normal distribution of the population/large sample
+
+\qquad **c. The two samples are related**
+
+\qquad d. We want to assess the mean
+
+\vspace{1cm}
+
+7.  Which of the following is an accurate distinction between simulation-based inference and parametric inference?
+
+\qquad a. Simulation-based inference assumes that the null distribution is a normal distribution, while parametric inference assumes that the null distribution is a t-distribution.
+
+\qquad **b. Simulation-based inference uses resampling methods to approximate the null distribution, while parametric inference assumes that the test statistic takes a well-defined probability distribution.**
+
+\qquad c. Simulation-based inference can only be used for the mean, while parametric inference can be used for other sample statistics such as the median.
+
+\qquad d. Simulation-based inference assumes that the parameter of interest is a fixed value, while parametric inference assumes that the parameter of interest is normally distributed.
+
+\vspace{1cm}
+
+8.  The null and alternative hypotheses are always in terms of the \_\_\_\_\_\_\_\_\_\_\_\_.
+
+\qquad a. sample statistic
+
+\qquad **b. population parameter**
+
+\qquad c. probability distribution
+
+\qquad d. population mean
+
+\vspace{1cm}
+
+\newpage
+
+9.  Increasing the confidence level \_\_\_\_\_\_\_\_\_\_\_\_ the width of the confidence interval and increasing the sample size \_\_\_\_\_\_\_\_\_\_\_\_\_ the width of the confidence interval.
+
+\qquad a. increases; increases
+
+\qquad **b. increases; decreases**
+
+\qquad c. decreases; increases
+
+\qquad d. decreases; decreases
+
+\vspace{1cm}
+
+10. Which type of question can NOT be answered with a linear model?
+
+\qquad a. On average, how much does $Y$ change per increase in the variable $X$?
+
+\qquad **b. On average, per increase in** $Y$**, how much does** $X$ **change?**
+
+\qquad c. What is the predicted value of $Y$ for a given value of $X$?
+
+\qquad d. What is the average value of $Y$ when $X=0$?
+
+\vspace{1cm}
+
+11. What does it mean to fit a linear model?
+
+\qquad a. Calculate the residuals using the fitted model
+
+\qquad **b. Compute the coefficient estimates by minimizing the sum of squared residuals**
+
+\qquad c. Calculate the outcome estimates by minimizing the coefficient estimates
+
+\qquad d. Compute the residuals by maximizing the objective function
+
+\vspace{1cm}
+
+12. Why is it often important to use multiple linear regression instead of simple linear regression?
+
+\qquad a. Multiple linear regression extends simple linear regression by assessing the relationship between a numeric predictor and a categorical outcome
+
+\qquad b. Multiple linear regression extends simple linear regression by assessing the relationship between a numeric predictor and a numeric outcome
+
+\qquad **c. Multiple linear regression allows for the control of variables that are related to both the independent variable and the outcome**
+
+\qquad d. Multiple linear regression allows for the control of correlated predictor variables
+
+\vspace{1cm}
+
+13. Which of the following is NOT true about interaction terms in a linear model?
+
+\qquad a. Interaction terms assess the effect of one predictor on the outcome based on the value of a second predictor
+
+\qquad b. Interaction terms can be included in a model based on the research question or exploratory data analysis
+
+\qquad c. Interaction terms can generate different slopes for a continuous predictor for different levels of a categorical predictor
+
+\qquad **d. Interaction terms should be used if two predictors both have an effect on the outcome**
+
+\vspace{1cm}
+
+14. The diagnostic plot below indicates that which assumption of linear regression may be violated?
+
+![](residualplot.png){width="300"}
+
+\qquad a. Linear relationship between the outcome and predictors
+
+\qquad b. Independence of error terms
+
+\qquad c. Errors are normally distributed
+
+\qquad **d. Errors have equal variance**
+
+\newpage
+
+15. A researcher fits a model regressing house listing price on number of bedrooms, number of bathrooms, city per capita crime rate, and distance to nearest grocery store (stored categorically as 0-1 mile, 1-5 miles, or more than 5 miles). The researcher has data on 1500 homes. What is the dimension of the design matrix for this model?
+
+\qquad a. $1500 \times 4$
+
+\qquad b. $1500 \times 5$
+
+\qquad **c.** $1500 \times 6$
+
+\qquad d. $1500 \times 7$
+
+\newpage
+
+### Short answer
+
+16. This question uses a dataset containing information on 150 births in North Carolina in 2004.
+
+**Codebook:**
+
+**m_age**
+
+:   Mother's age.
+
+**weeks**
+
+:   Weeks at which the mother gave birth.
+
+**premature**
+
+:   Indicates whether the baby was premature or not.
+
+**weight**
+
+:   Birth weight of the baby (lbs).
+
+**Smoke**
+
+:   Whether or not the mother was a smoker.
+
+```{r, warning = F, message = F, echo=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+data("births")
+
+births_sub <- births |> 
+  select(c("m_age","weeks","premature","weight","smoke"))
+
+
+glimpse(births_sub)
+```
+
+a\. Which two variables in the births dataset can NOT be used as an outcome in a linear regression model? Justify your answer and assume that you have cleaned the dataset.
+
+\vspace{1cm}
+
+"premature" and "Smoke" variables cannot be used as an outcome in a linear regression since they do not take on numerical values. Instead, they are categorical with 2 levels.
+
+\vspace{2cm}
+
+b\. Write the theoretical model that regresses `weight` on `m_age`, `weeks`, and `premature`. Be sure to define each term (i.e., "Y= —–").
+
+\vspace{1cm}
+
+$Y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \epsilon$
+
+where $Y$ is weight in pounds;
+
+$x_1$ - mothers age in years,
+
+$x_2$ - weeks at which birth was given,
+
+$x_3$ is 1 if the baby was premature and 0 otherwise.
+
+\vspace{2cm}
+
+c\. Using the output below, write the fitted model.
+
+```{r, echo=FALSE}
+MLRmod <- linear_reg() |>
+  set_engine("lm") |>
+  fit(weight~m_age+weeks+premature, data=births)
+
+tidy(MLRmod)
+```
+
+\vspace{1cm}
+
+$\hat{Y} = -4.35 + 0.03 x_1 + 0.28 x_2 -1.01 x_3$.
+
+\vspace{2cm}
+
+d\. Write interpretations for the coefficient estimates of the `weeks` and `premature` variables.
+
+\vspace{1cm}
+
+`weeks`:
+
+Controlling for mother's age and whether the baby was premature, for every week increase at which the mother gave birth, the weight increases by 0.28 lbs on average.
+
+\vspace{2cm}
+
+`premature`:
+
+Controlling for mothers age and weeks at which the mother gave birth, premature babies weigh 1.01 lbs pounds less than full term babies, on average.
+
+\vspace{2cm}
+
+\newpage
+
+e\. Write the theoretical model in mathematical notation that best matches the plot shown below. Be sure to define each term.
+
+```{r, echo=FALSE, message=FALSE}
+ggplot(births, aes(x=weeks,y=weight,color=smoke))+
+  geom_point()+
+  geom_smooth(method="lm",se=F)+
+  labs(x="Weeks of gestation",y="Birth weight",color="Smoking status")
+```
+
+\vspace{1cm}
+
+$Y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_1 x_2 + \epsilon$
+
+where $Y$ is weight in pounds;
+
+$x_1$ - weeks of gestation;
+
+$x_2$ is 1 when Smoke = "smoker", 0 otherwise.
+
+\vspace{4cm}
+
+f\. Write the implied linear models in mathematical notation for each level of smoking status. You do not need to define the terms again.
+
+\vspace{1cm}
+
+-   Smoker: $Y = ( \beta_0 + \beta_2) + (\beta_1 + \beta_3)x_1 + \epsilon$
+
+\vspace{1cm}
+
+-   Nonsmoker: $Y = \beta_0 + \beta_1 x_1 + \epsilon$
+
+\vspace{3cm}
+
+g\. In 2-3 sentences, describe what is being compared with the code below and the conclusion you can draw using the output.
+
+```{r}
+Mod1 <- lm(weight~weeks+smoke, data=births)
+
+Mod2 <- lm(weight~weeks*smoke, data=births)
+
+summary(Mod1)$adj.r.squared
+summary(Mod2)$adj.r.squared
+
+anova(Mod1, Mod2, test="F")
+```
+
+Two models are being compared: one without an interaction term between weeks and smoke, and one with an interaction term. The model with the interaction term has a higher adjusted $R^2$ , so it explains more variability in the outcome, and the nested F test is statistically significant. Therefore, we can conclude that the interaction term is valuable in this case. (This matches what we saw in the plot in part e)
+
+{{< pagebreak >}}
+
+17. **Answer each question in no more than 1-2 sentences.**
+
+a\. What is a sampling distribution?
+
+\vspace{1cm}
+
+The probability distribution that describes the distribution of the sample statistic.
+
+\vspace{3cm}
+
+b\. How are the concepts of bootstrapping and sampling distributions related?
+
+\vspace{1cm}
+
+Bootstrapping is a way to simulate the sampling distribution when the population distribution is not known and we do not have the resources to collect several samples.
+
+\vspace{3cm}
+
+c\. How is the central limit theorem related to the concept of a sampling distribution?
+
+\vspace{1cm}
+
+The CLT states that the sampling distribution of the sample mean is $N(\mu, \sigma/\sqrt n)$ when the two conditions are met: observations in the sample are independent and the sample is large enough.

@@ -7,6 +7,8 @@ format:
 engine: knitr
 ---
 
+[Answer Key](IDS702_FA24_HW1_Key.pdf)
+
 **Deadline**: Sunday, September 15, 11:59 PM
 
 **Instructions**: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.
