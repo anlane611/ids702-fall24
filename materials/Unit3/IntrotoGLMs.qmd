@@ -1,0 +1,41 @@
+---
+title: "10.24: Introduction to Generalized Linear Models"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   describe why linear regression won’t work for a binary variable
+
+-   describe the purpose of a link function
+
+-   compute an odds ratio from a 2x2 table
+
+## Class prep
+
+Watch these two videos:
+
+[Introduction to GLMs](https://duke.zoom.us/rec/share/HZRffLZELLREzp_XZZl37TQKsmbsfdu2gtPSQTbkCq9zWpa7MCqNAmcihl38zbrM.rFJ1Lak2H8Zm8tZL?startTime=1696129340000)
+
+[Bernoulli Distribution supplemental video](https://www.youtube.com/watch?v=bT1p5tJwn_0)
+
+[Odds and Odds Ratios](https://duke.zoom.us/rec/share/HZRffLZELLREzp_XZZl37TQKsmbsfdu2gtPSQTbkCq9zWpa7MCqNAmcihl38zbrM.rFJ1Lak2H8Zm8tZL?startTime=1696131094000)
+
+Slides: [Intro to GLMs](IDS702_IntroToGLMs.pdf), [Odds and Odds Ratios](IDS702_odds.pdf)
+
+**Optional/supplementary textbook reading**: ISLR 4.2, 4.3 intro and 4.3.1
+
+## 

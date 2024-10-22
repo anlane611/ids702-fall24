@@ -2534,5 +2534,41 @@
     "title": "Midterm",
     "section": "Blank Page - End of exam",
     "text": "Blank Page - End of exam"
+  },
+  {
+    "objectID": "materials/Unit3/IntrotoGLMs.html",
+    "href": "materials/Unit3/IntrotoGLMs.html",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\ndescribe why linear regression won’t work for a binary variable\ndescribe the purpose of a link function\ncompute an odds ratio from a 2x2 table",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/IntrotoGLMs.html#learning-objectives",
+    "href": "materials/Unit3/IntrotoGLMs.html#learning-objectives",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "",
+    "text": "By the end of the class, students should be able to:\n\ndescribe why linear regression won’t work for a binary variable\ndescribe the purpose of a link function\ncompute an odds ratio from a 2x2 table",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/IntrotoGLMs.html#class-prep",
+    "href": "materials/Unit3/IntrotoGLMs.html#class-prep",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "Class prep",
+    "text": "Class prep\nWatch these two videos:\nIntroduction to GLMs\nBernoulli Distribution supplemental video\nOdds and Odds Ratios\nSlides: Intro to GLMs, Odds and Odds Ratios\nOptional/supplementary textbook reading: ISLR 4.2, 4.3 intro and 4.3.1",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
   }
 ]
