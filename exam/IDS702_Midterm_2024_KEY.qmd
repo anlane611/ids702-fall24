@@ -1,5 +1,5 @@
 ---
-title: "Midterm"
+title: "Midterm KEY"
 subtitle: "IDS 702 - Fall 2024"
 format: 
   pdf:
@@ -299,13 +299,13 @@ a\. State whether or not the p-value interpretations given below are correct or 
 
 i.  The probability that the null hypothesis is true is 0.42. Therefore, we can accept the null hypothesis that the mean tax rate is equal for houses that border the river and houses that do not border the river.
 
-Incorrect - p-value is not the probability that the null is true, and we do not accept the null hypothesis
+Incorrect - p-value is not the probability that the null is true (1 pt), and we do not accept the null hypothesis (2pt)
 
 \vspace{1cm}
 
 ii. Assuming that there is a difference in the mean tax rate between houses that border the river and houses that do not, the probability of observing data equal to or more extreme than what we observe is 0.42. Therefore, we reject the null hypothesis that the mean tax rate is equal for houses that border the river and houses that do not border the river.
 
-Incorrect - we do not assume the alternative, and we would not reject the null here (0.42\>0.05)
+Incorrect - we do not assume the alternative (1 pt), and we would not reject the null here (0.42\>0.05) (2 pt)
 
 \vspace{1cm}
 
@@ -313,13 +313,13 @@ b\. State whether or not the 95% confidence interval interpretations given below
 
 i.  There is a 95% probability that the true difference in mean tax rate between houses that do not border the river and houses that do is between -34.9 and 82.2.
 
-Incorrect - CI does not capture a probability because the true difference is not random
+Incorrect - CI does not capture a probability because the true difference is not random (3 pts)
 
 \vspace{1cm}
 
 ii. There is a 95% probability that the observed difference in mean tax rate between houses that do not border the river and houses that do is between -34.9 and 82.2.
 
-Incorrect - CI does not capture a probability and the observed difference is always in the CI
+Incorrect - CI does not capture a probability - the observed difference is always in the CI (3 pts)
 
 \vspace{1cm}
 
@@ -362,31 +362,77 @@ summary(lm(Life.expectancy~infant.deaths+Measles+Hepatitis.B+Status,
 
 a\. Write the fitted model.
 
-\vspace{3cm}
+$\hat{Y} = 71.7 - 0.03(infant deaths)+0.0002(measles)+0.09(HepB)-9.7(Status=Developing)$
+
+-0.5 for each of the following errors:
+
+-   includes the error term
+
+-   does not include the hat on Y
+
+-   includes hats on either the estimate values or the predictors
+
+-   Status variable is not defined correctly
+
+-1.5 if none of the predictor variables are defined
+
+\vspace{1cm}
 
 b\. Write an interpretation for the coefficient estimate of the Status variable.
 
-\vspace{3cm}
+Controlling for all other predictors, life expectancy is 9.7 years lower in developing countries, on average.
+
+-1 for each error:
+
+-   controlling for other predictors (or similar accurate language)
+
+-   switched developed/developing
+
+-   "on average" or "average life expectancy"
+
+\vspace{1cm}
 
 Next, you fit a model regressing life expectancy on infant deaths, Measles, Hepatitis B, status, and an interaction term for infant deaths and status. Answer questions c-e based on this model.
 
 c\. Write the full theoretical model. Be sure to define each term (e.g., "Y = —–")
 
-\vspace{3cm}
+$Y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_3x_3+\beta_4x_4+\beta_5x_1x_4+\epsilon$
 
-{{< pagebreak >}}
+$Y$ = life expectancy; $x_1$ = infant deaths; $x_2$ = measles; $x_3$=hepatitis B; $x_4$ = 1 for Status=developing, 0 otherwise
+
+-1 if any "hats" are included
+
+-0.5 if missing error term (does not need to state that error term is normally distributed)
+
+-1 if missing interaction term
+
+-1 if Status variable is incorrectly defined (check question a; avoid double jeopardy)
+
+\vspace{1cm}
 
 d\. Write the implied theoretical models for developed and developing countries. You do not need to define the terms again.
 
-Developed:
+Developed: $Y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_3x_3+\epsilon$
 
-\vspace{3cm}
+\vspace{1cm}
 
-Developing:
+Developing: $Y=(\beta_0+\beta_4)+(\beta_1+\beta_5)x_1+\beta_2x_2+\beta_3x_3+\epsilon$
 
-\vspace{3cm}
+\vspace{1cm}
+
+-1.5 if developed and developing are switched but otherwise correct
+
+-1.5 if $x_4$ is included
+
+-0.5 if missing error term (check part d; avoid double jeopardy)
+
+-1 if "hats" are included (check part d; avoid double jeopardy)
+
+\vspace{1cm}
 
 e\. What is the dimension of the design matrix for this model?
+
+134x6 (3 pts)
 
 {{< pagebreak >}}
 

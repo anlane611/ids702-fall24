@@ -14,6 +14,10 @@ filters:
   - webr
 ---
 
+## Upcoming deadlines
+
+-   Statistics Reflection 4: Sunday, Nov 3 11:59 PM
+
 ## Learning Objectives
 
 By the end of the class, students should be able to:
@@ -38,4 +42,8 @@ Slides: [Intro to GLMs](IDS702_IntroToGLMs.pdf), [Odds and Odds Ratios](IDS702_o
 
 **Optional/supplementary textbook reading**: ISLR 4.2, 4.3 intro and 4.3.1
 
-## 
+## Class Materials
+
+[Groups](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
+
+[Exercise (qmd)](_IntroToGLMs_Exercise.qmd)
