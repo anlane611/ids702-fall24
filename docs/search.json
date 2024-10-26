@@ -2594,5 +2594,113 @@
       "Unit 3: Generalized Linear Models",
       "10.24: Introduction to Generalized Linear Models"
     ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticEstimation.html",
+    "href": "materials/Unit3/Logistic Regression/LogisticEstimation.html",
+    "title": "10.29: Logistic Regression Estimation & Interpretation",
+    "section": "",
+    "text": "Statistics Reflection 4: Sunday, Nov 3 11:59 PM\nHW 4: Sunday, Nov 10 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.29: Logistic Regression Estimation & Interpretation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticEstimation.html#upcoming-deadlines",
+    "href": "materials/Unit3/Logistic Regression/LogisticEstimation.html#upcoming-deadlines",
+    "title": "10.29: Logistic Regression Estimation & Interpretation",
+    "section": "",
+    "text": "Statistics Reflection 4: Sunday, Nov 3 11:59 PM\nHW 4: Sunday, Nov 10 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.29: Logistic Regression Estimation & Interpretation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticEstimation.html#learning-objectives",
+    "href": "materials/Unit3/Logistic Regression/LogisticEstimation.html#learning-objectives",
+    "title": "10.29: Logistic Regression Estimation & Interpretation",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\nDescribe the estimation procedure for a logistic regression model\nInterpret coefficients, confidence intervals, and p-values in logistic regression\nGenerate predictions from a logistic regression model",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.29: Logistic Regression Estimation & Interpretation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticEstimation.html#class-prep",
+    "href": "materials/Unit3/Logistic Regression/LogisticEstimation.html#class-prep",
+    "title": "10.29: Logistic Regression Estimation & Interpretation",
+    "section": "Class prep",
+    "text": "Class prep\nWatch this video:\nLogistic Regression estimation and interpretation\nNote that this video introduces maximum likelihood estimation, but you have seen maximum likelihood estimation earlier this semester. Here, we apply maximum likelihood estimation to the regression context.\nSupplementary videos:\nMaximum likelihood vs least squares estimation\nLogistic regression: the basics\nLogistic regression: maximum likelihood\nSlides: Logistic Regression Estimation\nOptional/supplementary textbook reading: ISLR 4.3.2-4.3.4",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.29: Logistic Regression Estimation & Interpretation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/IntrotoGLMs.html",
+    "href": "materials/Unit3/Logistic Regression/IntrotoGLMs.html",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "",
+    "text": "Statistics Reflection 4: Sunday, Nov 3 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#upcoming-deadlines",
+    "href": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#upcoming-deadlines",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "",
+    "text": "Statistics Reflection 4: Sunday, Nov 3 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#learning-objectives",
+    "href": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#learning-objectives",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of the class, students should be able to:\n\ndescribe why linear regression won’t work for a binary variable\ndescribe the purpose of a link function\ncompute an odds ratio from a 2x2 table",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#class-prep",
+    "href": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#class-prep",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "Class prep",
+    "text": "Class prep\nWatch these two videos:\nIntroduction to GLMs\nBernoulli Distribution supplemental video\nOdds and Odds Ratios\nSlides: Intro to GLMs, Odds and Odds Ratios\nOptional/supplementary textbook reading: ISLR 4.2, 4.3 intro and 4.3.1",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#class-materials",
+    "href": "materials/Unit3/Logistic Regression/IntrotoGLMs.html#class-materials",
+    "title": "10.24: Introduction to Generalized Linear Models",
+    "section": "Class Materials",
+    "text": "Class Materials\nGroups\nExercise (qmd)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.24: Introduction to Generalized Linear Models"
+    ]
   }
 ]

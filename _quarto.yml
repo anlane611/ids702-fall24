@@ -37,7 +37,8 @@ website:
             - href: materials/Unit2/ModelSelection.qmd
           - section: "Unit 3: Generalized Linear Models"
             contents:
-            - href: materials/Unit3/IntrotoGLMs.qmd
+            - href: materials/Unit3/Logistic Regression/IntrotoGLMs.qmd
+            - href: materials/Unit3/Logistic Regression/LogisticEstimation.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections

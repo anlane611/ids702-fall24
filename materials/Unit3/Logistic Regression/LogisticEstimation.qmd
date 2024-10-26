@@ -1,0 +1,52 @@
+---
+title: "10.29: Logistic Regression Estimation & Interpretation"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   Statistics Reflection 4: Sunday, Nov 3 11:59 PM
+-   HW 4: Sunday, Nov 10 11:59 PM
+
+## Learning Objectives
+
+By the end of the class, students should be able to:
+
+-   Describe the estimation procedure for a logistic regression model
+
+-   Interpret coefficients, confidence intervals, and p-values in logistic regression
+
+-   Generate predictions from a logistic regression model
+
+## Class prep
+
+Watch this video:
+
+[Logistic Regression estimation and interpretation](https://duke.zoom.us/rec/share/Z1p0icdQcHBbtEuIUnR7nBlb5HNfrvkxI_B4K9B5nZASaqNblS-z2T8RipLcf5Ma.Hwkhswod9hFUDS44?startTime=1696351090000)
+
+Note that this video introduces maximum likelihood estimation, but you have seen maximum likelihood estimation earlier this semester. Here, we apply maximum likelihood estimation to the regression context.
+
+Supplementary videos:
+
+[Maximum likelihood vs least squares estimation](https://www.youtube.com/watch?v=bhTIpGtWtzQ)
+
+[Logistic regression: the basics](https://www.youtube.com/watch?v=yhogDBEa0uQ)
+
+[Logistic regression: maximum likelihood](https://www.youtube.com/watch?v=J0yuLu3oLuU)
+
+Slides: [Logistic Regression Estimation](IDS702_logisticestimation.pdf)
+
+**Optional/supplementary textbook reading**: ISLR 4.3.2-4.3.4
+
+## 
