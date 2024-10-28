@@ -47,6 +47,7 @@ website:
          - href: homework/HW1.qmd
          - href: homework/HW2.qmd
          - href: homework/HW3.qmd
+         - href: homework/HW4.qmd
        - section:
          href: resources.qmd
          text: Resources

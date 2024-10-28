@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>IDS 702: Data Modeling and Representation – IDS 702</title>
+<title>Homework 4 – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked">
@@ -80,9 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      IDS 702
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW4.html">Homework 4</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">IDS 702</a> 
+      <a href="../">IDS 702</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -109,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -133,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/unit0/unit0b.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cleaning and exploring data in R</span></a>
   </div>
 </li>
@@ -150,49 +182,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/IntroAndStudyDesign/Intro_ExperimentalDesign.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.27: Introduction and Study Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/IntrotoProbability/IntrotoProbability.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">8.29: Introduction to Probability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Distributions/Distributions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.3: Probability Distributions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Distributions/SamplingDistributions_CLT.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.5: Sampling Distributions &amp; Central Limit Theorem</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Estimation/MLEstimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.10: Maximum Likelihood Estimation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/ConfidenceIntervals/Bootstrap_CI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.12: Bootstrap and Confidence Intervals</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Inference/InferenceI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.17: Inference I</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit1/Inference/InferenceII.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.19: Inference II: Traditional Statistical Tests</span></a>
   </div>
 </li>
@@ -209,37 +241,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit2/SLR.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/SLR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.24: Simple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit2/MLR.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/MLR.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">9.26: Multiple Linear Regression</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit2/CategoricalInteraction.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/CategoricalInteraction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.1: Categorical Predictors &amp; Interaction Terms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit2/AssessingModels.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/AssessingModels.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.3: Assessment &amp; Assumptions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit2/Problems.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/Problems.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.8: Problems that can arise</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit2/ModelSelection.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit2/ModelSelection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.10: Model Selection</span></a>
   </div>
 </li>
@@ -256,13 +288,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit3/Logistic Regression/IntrotoGLMs.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit3/Logistic Regression/IntrotoGLMs.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.24: Introduction to Generalized Linear Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./materials/Unit3/Logistic Regression/LogisticEstimation.html" class="sidebar-item-text sidebar-link">
+  <a href="../materials/Unit3/Logistic Regression/LogisticEstimation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">10.29: Logistic Regression Estimation &amp; Interpretation</span></a>
   </div>
 </li>
@@ -272,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reflections.html" class="sidebar-item-text sidebar-link">
+  <a href="../reflections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics Reflections</span></a>
   </div>
 </li>
@@ -287,25 +319,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homework/HW1.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homework/HW2.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homework/HW3.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homework/HW4.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW4.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Homework 4</span></a>
   </div>
 </li>
@@ -313,13 +345,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exam/Midterm.html" class="sidebar-item-text sidebar-link">
+  <a href="../exam/Midterm.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm</span></a>
   </div>
 </li>
@@ -333,18 +365,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
+  <li><a href="#code-book" id="toc-code-book" class="nav-link" data-scroll-target="#code-book">Code book</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW4.html">Homework 4</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">IDS 702: Data Modeling and Representation</h1>
-<p class="subtitle lead">Duke University <br> Fall 2024</p>
+<h1 class="title">Homework 4</h1>
 </div>
 
 
@@ -361,128 +393,284 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the IDS 702 course site!</p>
-<section id="course-overview" class="level2">
-<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
-<p><strong>Meeting times</strong>: Tuesdays and Thursdays 3:05-4:20 PM, Gross Hall 330</p>
-<p><a>Instructor</a> <br> Andrea Lane, PhD <br> andrea.lane@duke.edu <br> Gross Hall 223 <br> Office hours: Thurs 4:30-5:30 PM <br> <br> <a>Teaching Assistants</a> <br> Revanth Ganga <br> revanthchowdary.ganga@duke.edu <br> Office hours: Weds 12-1pm, Gross Hall 230N <br> <br> Rakeen Rouf <br> rakeen.rouf@duke.edu <br> Office hours: Mon 3:30-4:30, Gross Hall 230N <br> <br> Jiayi Zhou <br> jiayi.zhou@duke.edu <br> Office hours: Tues 12-1pm, Gross Hall 230N <br> <br></p>
+<p><strong>Deadline</strong>: Sunday, November 10, 11:59 PM</p>
+<p><strong>Instructions</strong>: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.</p>
+<p><a href="_IDS702HW4Template.qmd"><em>Click here to download the template</em></a> <em>(right click and choose “save link as”)</em></p>
+<p>&nbsp;</p>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>The exercise is based on the <a href="https://www.kaggle.com/ionaskel/nba-games-stats-from-2014-to-2018/">NBA Team Game Stats dataset found here</a>. You can read more about the dataset under the description section of the link.</p>
+<p>You want to understand which factors are related to Charlotte Hornet wins.</p>
 </section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<p>Individual lecture topics are subject to change. The midterm date will not change.</p>
+<section id="code-book" class="level2">
+<h2 class="anchored" data-anchor-id="code-book">Code book</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 28%">
-<col style="width: 33%">
-<col style="width: 26%">
+<col style="width: 51%">
+<col style="width: 48%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Week of</th>
-<th>Tuesday content</th>
-<th>Thursday content</th>
-<th>Assignment due Sunday</th>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Aug 26</td>
-<td>Study Design</td>
-<td>Intro Probability</td>
-<td></td>
+<td style="text-align: left;">Team</td>
+<td style="text-align: left;">Abbreviation for the name of the team</td>
 </tr>
 <tr class="even">
-<td>Sept 2</td>
-<td>Random variables &amp;<br>
-Distributions</td>
-<td>Sampling Distributions &amp;<br>
-Central Limit Theorem</td>
-<td>Statistics Reflection 1</td>
+<td style="text-align: left;">Game</td>
+<td style="text-align: left;">Game index for the season. Each team plays 82 games per season</td>
 </tr>
 <tr class="odd">
-<td>Sept 9</td>
-<td>Estimation</td>
-<td>Confidence Intervals/Bootstrap</td>
-<td>Homework 1</td>
+<td style="text-align: left;">Date</td>
+<td style="text-align: left;">Date of the game</td>
 </tr>
 <tr class="even">
-<td>Sept 16</td>
-<td>Inference I</td>
-<td>Inference II</td>
-<td>Statistics Reflection 2</td>
+<td style="text-align: left;">Home</td>
+<td style="text-align: left;">Home or away game?</td>
 </tr>
 <tr class="odd">
-<td>Sept 23</td>
-<td>Intro to Regression</td>
-<td>Multiple Linear Regression</td>
-<td>Homework 2</td>
+<td style="text-align: left;">Opponent</td>
+<td style="text-align: left;">Abbreviation for the name of the opposing team</td>
 </tr>
 <tr class="even">
-<td>Sept 30</td>
-<td>Categorical Predictors,<br>
-Interaction terms</td>
-<td>Assessing Assumptions</td>
-<td>Statistics Reflection 3</td>
+<td style="text-align: left;">WinorLoss</td>
+<td style="text-align: left;">Did the team win? W = win, L = loss</td>
 </tr>
 <tr class="odd">
-<td>Oct 7</td>
-<td>Influential points &amp;<br>
-Multicollinearity</td>
-<td>Model Selection</td>
-<td>Homework 3</td>
+<td style="text-align: left;">Win</td>
+<td style="text-align: left;">Binary re-coding of WinorLoss. 1 = win, 0 = loss</td>
 </tr>
 <tr class="even">
-<td>Oct 14</td>
-<td>Fall break - no class</td>
-<td>Exam review</td>
-<td></td>
+<td style="text-align: left;">TeamPoints</td>
+<td style="text-align: left;">Number of total points scored in the game</td>
 </tr>
 <tr class="odd">
-<td>Oct 21</td>
-<td>Midterm Exam</td>
-<td>Intro to GLMs</td>
-<td></td>
+<td style="text-align: left;">OpponentPoints</td>
+<td style="text-align: left;">Number of total points scored by the opposing team in the game</td>
 </tr>
 <tr class="even">
-<td>Oct 28</td>
-<td>Logistic Regression</td>
-<td>Assessing Logistic Models</td>
-<td>Statistics Reflection 4</td>
+<td style="text-align: left;">FieldGoals</td>
+<td style="text-align: left;">Number of field goals made in the game (also includes 3 point shots but not free throws)</td>
 </tr>
 <tr class="odd">
-<td>Nov 4</td>
-<td>Multinomial regression</td>
-<td>Ordinal regression</td>
-<td>Homework 4</td>
+<td style="text-align: left;">FieldGoalsAttempted</td>
+<td style="text-align: left;">Number of field goals attempted in the game (also includes 3 point shots but not free throws)</td>
 </tr>
 <tr class="even">
-<td>Nov 11</td>
-<td>Poisson regression</td>
-<td>Survival Analysis</td>
-<td>Project proposals</td>
+<td style="text-align: left;">FieldGoals.</td>
+<td style="text-align: left;">FieldGoals/FieldGoalsAttempted</td>
 </tr>
 <tr class="odd">
-<td>Nov 18</td>
-<td>Missing Data</td>
-<td>Missing Data</td>
-<td>Homework 5</td>
+<td style="text-align: left;">X3PointShots</td>
+<td style="text-align: left;">Number of 3 point shots made in the game</td>
 </tr>
 <tr class="even">
-<td>Nov 25</td>
-<td>Project work day</td>
-<td></td>
-<td></td>
+<td style="text-align: left;">X3PointShotsAttempted</td>
+<td style="text-align: left;">Number of 3 point shots attempted in the game</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td>Dec 15 5PM<br>
-Final projects due</td>
+<td style="text-align: left;">X3PointShots.</td>
+<td style="text-align: left;">X3PointShots/X3PointShotsAttempted</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FreeThrows</td>
+<td style="text-align: left;">Number of free throws made in the game</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FreeThrowsAttempted</td>
+<td style="text-align: left;">Number of free throws attempted in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FreeThrows.</td>
+<td style="text-align: left;">FreeThrows/FreeThrowsAttempted</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">OffRebounds</td>
+<td style="text-align: left;">Number of offensive rebounds grabbed in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TotalRebounds</td>
+<td style="text-align: left;">Total number of rebounds grabbed in the game (includes OffRebounds)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Assists</td>
+<td style="text-align: left;">Total number of assists (passes leading to a made field goal) in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Steals</td>
+<td style="text-align: left;">Total number of steals (balls stolen from the opposing team while the opposing team has possession) in the game</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Blocks</td>
+<td style="text-align: left;">Total number of blocks (direct prevention of a made field goal after the ball has been shot by an opposing player) in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Turnovers</td>
+<td style="text-align: left;">Total number of times the ball was lost back to the opposing team while the team had possession.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">TotalFouls</td>
+<td style="text-align: left;">Total number of fouls committed on players on the opposing team</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.FieldGoals</td>
+<td style="text-align: left;">Number of field goals made by the opposing team in the game (also includes 3 point shots but not free throws)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.FieldGoalsAttempted</td>
+<td style="text-align: left;">Number of field goals attempted by the opposing team in the game (also includes 3 point shots but not free throws)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.FieldGoals.</td>
+<td style="text-align: left;">Opp.FieldGoals/Opp.FieldGoalsAttempted</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.X3PointShots</td>
+<td style="text-align: left;">Number of 3 point shots made by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.X3PointShotsAttempted</td>
+<td style="text-align: left;">Number of 3 point shots attempted by the opposing team in the game</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.X3PointShots.</td>
+<td style="text-align: left;">Opp.X3PointShots/Opp.X3PointShotsAttempted</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.FreeThrows</td>
+<td style="text-align: left;">Number of free throws made by the opposing team in the game</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.FreeThrowsAttempted</td>
+<td style="text-align: left;">Number of free throws attempted by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.FreeThrows.</td>
+<td style="text-align: left;">Opp.FreeThrows/Opp.FreeThrowsAttempted</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.OffRebounds</td>
+<td style="text-align: left;">Number of offensive rebounds grabbed by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.TotalRebounds</td>
+<td style="text-align: left;">Total number of rebounds grabbed by the opposing team in the game (includes Opp.OffRebounds)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.Assists</td>
+<td style="text-align: left;">Total number of assists (passes leading to a made field goal) by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.Steals</td>
+<td style="text-align: left;">Total number of steals (balls stolen from the team while the team has possession) by the opposing team in the game</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.Blocks</td>
+<td style="text-align: left;">Total number of blocks (direct prevention of a made field goal after the ball has been shot by a player on the team) by the opposing team in the game</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Opp.Turnovers</td>
+<td style="text-align: left;">Total number of times the ball was won back from the opposing team while the opposing team had possession.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Opp.TotalFouls</td>
+<td style="text-align: left;">Total number of fouls committed by players on the opposing team</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<ol type="1">
+<li>First, do some data cleaning:</li>
+</ol>
+<ul>
+<li><p>Create a subset that contains only the Charlotte Hornets data. You will use this subset for all remaining exercises. The Charlotte Hornets are denoted by Team=“CHO”</p></li>
+<li><p>Create a factor variable for <code>Home</code></p></li>
+<li><p>Recode the <code>WINorLOSS</code> variable to be 1=Win and 0=Loss and name the variable <code>Win</code>. While this isn’t always necessary, some R functions prefer binary (non-character) variables. (Note: do not overwrite the original variable). Perform a quality control check to be sure you created the variable correctly. Then, make <code>Win</code> a factor variable with appropriate labels.</p></li>
+<li><p>Run the code below (provided in the template) to appropriately format the <code>Date</code> variable from a character variable to a date.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>nba_cho <span class="ot">&lt;-</span> nba_cho <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Date_clean =</span> <span class="fu">as.Date</span>(Date, <span class="st">"%Y-%m-%d"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Next, generate some descriptive statistics. Complete the table with the count and percentage OR the mean and standard deviation of each variable, as appropriate, for wins and losses. (Note that the FieldGoals. variable has a period)</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 24%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Wins (N= __ )</th>
+<th>Losses (N= __)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Home games - N (%)</td>
+<td>92 (60)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Team Points - mean (SD)</td>
+<td>109 (11.4)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Field Goal Percentage - mean (SD)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Assists - mean (SD)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Steals - mean (SD)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Blocks - mean (SD)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Opponent Points - mean (SD)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Total Rebounds - mean (SD)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Turnovers - mean (SD)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li>Just by looking at the code book, identify at least two pairs of variables that may be problematic if they are both included in a model (this does not need to be limited to the variables listed in question 1).</li>
+<li>Fit a logistic regression model for Win using Home, TeamPoints, FieldGoals. (with a period!), Assists, Steals, Blocks, TotalRebounds, and Turnovers as predictors. Present the output of the fitted model using the <code>modelsummary</code> function to show the exponentiated coefficient estimates.</li>
+<li>What do you notice about the odds ratio estimate for the field goal percentage variable? Why is this the case? Create a new variable to make an appropriate adjustment, then refit the model and provide the output with the <code>modelsummary</code> function.</li>
+<li>Write an interpretation for the statistically significant coefficients in terms of the odds of the Charlotte Hornets team winning an NBA game.</li>
+<li>Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Show the confusion matrix and the ROC curve and give the AUC.</li>
+<li>Using the change in deviance test, test whether including opponent statistics (opponent equivalents of the predictors you included in exercise 4) in the model at the same time would improve the model.</li>
+<li>What do you conclude from this analysis? In other words, if the coach of the Charlotte Hornets approached you, what would you tell him about the factors that are associated with wins?</li>
+</ol>
 
 
 </section>
@@ -594,6 +782,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

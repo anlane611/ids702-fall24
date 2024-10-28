@@ -2702,5 +2702,49 @@
       "Unit 3: Generalized Linear Models",
       "10.24: Introduction to Generalized Linear Models"
     ]
+  },
+  {
+    "objectID": "homework/HW4.html",
+    "href": "homework/HW4.html",
+    "title": "Homework 4",
+    "section": "",
+    "text": "Deadline: Sunday, November 10, 11:59 PM\nInstructions: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.\nClick here to download the template (right click and choose “save link as”)",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
+  },
+  {
+    "objectID": "homework/HW4.html#data",
+    "href": "homework/HW4.html#data",
+    "title": "Homework 4",
+    "section": "Data",
+    "text": "Data\nThe exercise is based on the NBA Team Game Stats dataset found here. You can read more about the dataset under the description section of the link.\nYou want to understand which factors are related to Charlotte Hornet wins.",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
+  },
+  {
+    "objectID": "homework/HW4.html#code-book",
+    "href": "homework/HW4.html#code-book",
+    "title": "Homework 4",
+    "section": "Code book",
+    "text": "Code book\n\n\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nTeam\nAbbreviation for the name of the team\n\n\nGame\nGame index for the season. Each team plays 82 games per season\n\n\nDate\nDate of the game\n\n\nHome\nHome or away game?\n\n\nOpponent\nAbbreviation for the name of the opposing team\n\n\nWinorLoss\nDid the team win? W = win, L = loss\n\n\nWin\nBinary re-coding of WinorLoss. 1 = win, 0 = loss\n\n\nTeamPoints\nNumber of total points scored in the game\n\n\nOpponentPoints\nNumber of total points scored by the opposing team in the game\n\n\nFieldGoals\nNumber of field goals made in the game (also includes 3 point shots but not free throws)\n\n\nFieldGoalsAttempted\nNumber of field goals attempted in the game (also includes 3 point shots but not free throws)\n\n\nFieldGoals.\nFieldGoals/FieldGoalsAttempted\n\n\nX3PointShots\nNumber of 3 point shots made in the game\n\n\nX3PointShotsAttempted\nNumber of 3 point shots attempted in the game\n\n\nX3PointShots.\nX3PointShots/X3PointShotsAttempted\n\n\nFreeThrows\nNumber of free throws made in the game\n\n\nFreeThrowsAttempted\nNumber of free throws attempted in the game\n\n\nFreeThrows.\nFreeThrows/FreeThrowsAttempted\n\n\nOffRebounds\nNumber of offensive rebounds grabbed in the game\n\n\nTotalRebounds\nTotal number of rebounds grabbed in the game (includes OffRebounds)\n\n\nAssists\nTotal number of assists (passes leading to a made field goal) in the game\n\n\nSteals\nTotal number of steals (balls stolen from the opposing team while the opposing team has possession) in the game\n\n\nBlocks\nTotal number of blocks (direct prevention of a made field goal after the ball has been shot by an opposing player) in the game\n\n\nTurnovers\nTotal number of times the ball was lost back to the opposing team while the team had possession.\n\n\nTotalFouls\nTotal number of fouls committed on players on the opposing team\n\n\nOpp.FieldGoals\nNumber of field goals made by the opposing team in the game (also includes 3 point shots but not free throws)\n\n\nOpp.FieldGoalsAttempted\nNumber of field goals attempted by the opposing team in the game (also includes 3 point shots but not free throws)\n\n\nOpp.FieldGoals.\nOpp.FieldGoals/Opp.FieldGoalsAttempted\n\n\nOpp.X3PointShots\nNumber of 3 point shots made by the opposing team in the game\n\n\nOpp.X3PointShotsAttempted\nNumber of 3 point shots attempted by the opposing team in the game\n\n\nOpp.X3PointShots.\nOpp.X3PointShots/Opp.X3PointShotsAttempted\n\n\nOpp.FreeThrows\nNumber of free throws made by the opposing team in the game\n\n\nOpp.FreeThrowsAttempted\nNumber of free throws attempted by the opposing team in the game\n\n\nOpp.FreeThrows.\nOpp.FreeThrows/Opp.FreeThrowsAttempted\n\n\nOpp.OffRebounds\nNumber of offensive rebounds grabbed by the opposing team in the game\n\n\nOpp.TotalRebounds\nTotal number of rebounds grabbed by the opposing team in the game (includes Opp.OffRebounds)\n\n\nOpp.Assists\nTotal number of assists (passes leading to a made field goal) by the opposing team in the game\n\n\nOpp.Steals\nTotal number of steals (balls stolen from the team while the team has possession) by the opposing team in the game\n\n\nOpp.Blocks\nTotal number of blocks (direct prevention of a made field goal after the ball has been shot by a player on the team) by the opposing team in the game\n\n\nOpp.Turnovers\nTotal number of times the ball was won back from the opposing team while the opposing team had possession.\n\n\nOpp.TotalFouls\nTotal number of fouls committed by players on the opposing team",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
+  },
+  {
+    "objectID": "homework/HW4.html#exercises",
+    "href": "homework/HW4.html#exercises",
+    "title": "Homework 4",
+    "section": "Exercises",
+    "text": "Exercises\n\nFirst, do some data cleaning:\n\n\nCreate a subset that contains only the Charlotte Hornets data. You will use this subset for all remaining exercises. The Charlotte Hornets are denoted by Team=“CHO”\nCreate a factor variable for Home\nRecode the WINorLOSS variable to be 1=Win and 0=Loss and name the variable Win. While this isn’t always necessary, some R functions prefer binary (non-character) variables. (Note: do not overwrite the original variable). Perform a quality control check to be sure you created the variable correctly. Then, make Win a factor variable with appropriate labels.\nRun the code below (provided in the template) to appropriately format the Date variable from a character variable to a date.\n\n\nnba_cho &lt;- nba_cho |&gt;\n  mutate(Date_clean = as.Date(Date, \"%Y-%m-%d\"))\n\n\nNext, generate some descriptive statistics. Complete the table with the count and percentage OR the mean and standard deviation of each variable, as appropriate, for wins and losses. (Note that the FieldGoals. variable has a period)\n\n\n\n\n\n\n\n\n\nVariable\nWins (N= __ )\nLosses (N= __)\n\n\n\n\nHome games - N (%)\n92 (60)\n\n\n\nTeam Points - mean (SD)\n109 (11.4)\n\n\n\nField Goal Percentage - mean (SD)\n\n\n\n\nAssists - mean (SD)\n\n\n\n\nSteals - mean (SD)\n\n\n\n\nBlocks - mean (SD)\n\n\n\n\nOpponent Points - mean (SD)\n\n\n\n\nTotal Rebounds - mean (SD)\n\n\n\n\nTurnovers - mean (SD)\n\n\n\n\n\n\nJust by looking at the code book, identify at least two pairs of variables that may be problematic if they are both included in a model (this does not need to be limited to the variables listed in question 1).\nFit a logistic regression model for Win using Home, TeamPoints, FieldGoals. (with a period!), Assists, Steals, Blocks, TotalRebounds, and Turnovers as predictors. Present the output of the fitted model using the modelsummary function to show the exponentiated coefficient estimates.\nWhat do you notice about the odds ratio estimate for the field goal percentage variable? Why is this the case? Create a new variable to make an appropriate adjustment, then refit the model and provide the output with the modelsummary function.\nWrite an interpretation for the statistically significant coefficients in terms of the odds of the Charlotte Hornets team winning an NBA game.\nUsing 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Show the confusion matrix and the ROC curve and give the AUC.\nUsing the change in deviance test, test whether including opponent statistics (opponent equivalents of the predictors you included in exercise 4) in the model at the same time would improve the model.\nWhat do you conclude from this analysis? In other words, if the coach of the Charlotte Hornets approached you, what would you tell him about the factors that are associated with wins?",
+    "crumbs": [
+      "Homework",
+      "Homework 4"
+    ]
   }
 ]

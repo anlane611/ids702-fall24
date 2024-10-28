@@ -1,0 +1,93 @@
+---
+title: "IDS 702 HW 4"
+author: "Your Name Here"
+format: pdf
+---
+
+**Instructions**: Use this template to complete your assignment. When you click "Render," you should get a PDF document that contains both your answers and code. You must show your work/justify your answers to receive credit. Submit your rendered PDF file on Gradescope. **Remember to render frequently**, as this will help you to catch errors in your code before the last minute.
+
+**Add your name in the Author section in the header**
+
+## Load data
+
+```{r}
+library(tidyverse)
+library(modelsummary)
+
+nba <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/nba_games_stats.csv")
+```
+
+## Exercise 1
+
+```{r}
+## create subset
+nba_cho <- 
+  
+## create factor variable for Home
+  
+## create new Win variable (include quality control check)
+  
+## format date variable
+nba_cho <- nba_cho |>
+  mutate(Date_clean = as.Date(Date, "%Y-%m-%d"))
+```
+
+## Exercise 2
+
+```{r}
+## code to fill in the table
+```
+
+| Variable                          | Wins (N= 153) | Losses (N= \_\_) |
+|-----------------------------------|---------------|------------------|
+| Home games  - N (%)               | 92 (60)       |                  |
+| Team Points - mean (SD)           | 109 (11.4)    |                  |
+| Field Goal Percentage - mean (SD) |               |                  |
+| Assists - mean (SD)               |               |                  |
+| Steals - mean (SD)                |               |                  |
+| Blocks - mean (SD)                |               |                  |
+| Opponent Points - mean (SD)       |               |                  |
+| Total Rebounds - mean (SD)        |               |                  |
+| Turnovers - mean (SD)             |               |                  |
+
+## Exercise 3
+
+## Exercise 4
+
+```{r}
+## model here
+nba_mod1 <-
+  
+modelsummary(nba_mod1,
+             fmt = fmt_significant(2),
+             shape = term ~ model + statistic,
+             statistic = c("std.error","conf.int","p.value"),
+             exponentiate = TRUE,
+             gof_map=NA)
+```
+
+## Exercise 5
+
+```{r}
+
+```
+
+## Exercise 6
+
+```{r}
+
+```
+
+## Exercise 7
+
+```{r}
+
+```
+
+## Exercise 8
+
+```{r}
+
+```
+
+## Exercise 9

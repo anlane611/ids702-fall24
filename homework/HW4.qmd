@@ -1,0 +1,107 @@
+---
+title: "Homework 4"
+format:
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+---
+
+**Deadline**: Sunday, November 10, 11:59 PM
+
+**Instructions**: Use the provided Quarto template to complete your assignment. Submit the PDF rendered by your Quarto document on Gradescope. You must show your work/justify your answers to receive credit.
+
+[*Click here to download the template*](_IDS702HW4Template.qmd) *(right click and choose "save link as")*
+
+ 
+
+## Data
+
+The exercise is based on the [NBA Team Game Stats dataset found here](https://www.kaggle.com/ionaskel/nba-games-stats-from-2014-to-2018/). You can read more about the dataset under the description section of the link.
+
+You want to understand which factors are related to Charlotte Hornet wins.
+
+## Code book
+
+| Variable | Description |
+|:------------------------------------|:----------------------------------|
+| Team | Abbreviation for the name of the team |
+| Game | Game index for the season. Each team plays 82 games per season |
+| Date | Date of the game |
+| Home | Home or away game? |
+| Opponent | Abbreviation for the name of the opposing team |
+| WinorLoss | Did the team win? W = win, L = loss |
+| Win | Binary re-coding of WinorLoss. 1 = win, 0 = loss |
+| TeamPoints | Number of total points scored in the game |
+| OpponentPoints | Number of total points scored by the opposing team in the game |
+| FieldGoals | Number of field goals made in the game (also includes 3 point shots but not free throws) |
+| FieldGoalsAttempted | Number of field goals attempted in the game (also includes 3 point shots but not free throws) |
+| FieldGoals. | FieldGoals/FieldGoalsAttempted |
+| X3PointShots | Number of 3 point shots made in the game |
+| X3PointShotsAttempted | Number of 3 point shots attempted in the game |
+| X3PointShots. | X3PointShots/X3PointShotsAttempted |
+| FreeThrows | Number of free throws made in the game |
+| FreeThrowsAttempted | Number of free throws attempted in the game |
+| FreeThrows. | FreeThrows/FreeThrowsAttempted |
+| OffRebounds | Number of offensive rebounds grabbed in the game |
+| TotalRebounds | Total number of rebounds grabbed in the game (includes OffRebounds) |
+| Assists | Total number of assists (passes leading to a made field goal) in the game |
+| Steals | Total number of steals (balls stolen from the opposing team while the opposing team has possession) in the game |
+| Blocks | Total number of blocks (direct prevention of a made field goal after the ball has been shot by an opposing player) in the game |
+| Turnovers | Total number of times the ball was lost back to the opposing team while the team had possession. |
+| TotalFouls | Total number of fouls committed on players on the opposing team |
+| Opp.FieldGoals | Number of field goals made by the opposing team in the game (also includes 3 point shots but not free throws) |
+| Opp.FieldGoalsAttempted | Number of field goals attempted by the opposing team in the game (also includes 3 point shots but not free throws) |
+| Opp.FieldGoals. | Opp.FieldGoals/Opp.FieldGoalsAttempted |
+| Opp.X3PointShots | Number of 3 point shots made by the opposing team in the game |
+| Opp.X3PointShotsAttempted | Number of 3 point shots attempted by the opposing team in the game |
+| Opp.X3PointShots. | Opp.X3PointShots/Opp.X3PointShotsAttempted |
+| Opp.FreeThrows | Number of free throws made by the opposing team in the game |
+| Opp.FreeThrowsAttempted | Number of free throws attempted by the opposing team in the game |
+| Opp.FreeThrows. | Opp.FreeThrows/Opp.FreeThrowsAttempted |
+| Opp.OffRebounds | Number of offensive rebounds grabbed by the opposing team in the game |
+| Opp.TotalRebounds | Total number of rebounds grabbed by the opposing team in the game (includes Opp.OffRebounds) |
+| Opp.Assists | Total number of assists (passes leading to a made field goal) by the opposing team in the game |
+| Opp.Steals | Total number of steals (balls stolen from the team while the team has possession) by the opposing team in the game |
+| Opp.Blocks | Total number of blocks (direct prevention of a made field goal after the ball has been shot by a player on the team) by the opposing team in the game |
+| Opp.Turnovers | Total number of times the ball was won back from the opposing team while the opposing team had possession. |
+| Opp.TotalFouls | Total number of fouls committed by players on the opposing team |
+
+## Exercises
+
+1.  First, do some data cleaning:
+
+-   Create a subset that contains only the Charlotte Hornets data. You will use this subset for all remaining exercises. The Charlotte Hornets are denoted by Team="CHO"
+
+-   Create a factor variable for `Home`
+
+-   Recode the `WINorLOSS` variable to be 1=Win and 0=Loss and name the variable `Win`. While this isn't always necessary, some R functions prefer binary (non-character) variables. (Note: do not overwrite the original variable). Perform a quality control check to be sure you created the variable correctly. Then, make `Win` a factor variable with appropriate labels.
+
+-   Run the code below (provided in the template) to appropriately format the `Date` variable from a character variable to a date.
+
+```{r, eval=FALSE}
+nba_cho <- nba_cho |>
+  mutate(Date_clean = as.Date(Date, "%Y-%m-%d"))
+```
+
+2.  Next, generate some descriptive statistics. Complete the table with the count and percentage OR the mean and standard deviation of each variable, as appropriate, for wins and losses. (Note that the FieldGoals. variable has a period)
+
+| Variable                          | Wins (N= \_\_ ) | Losses (N= \_\_) |
+|-----------------------------------|-----------------|------------------|
+| Home games  - N (%)               | 92 (60)         |                  |
+| Team Points - mean (SD)           | 109 (11.4)      |                  |
+| Field Goal Percentage - mean (SD) |                 |                  |
+| Assists - mean (SD)               |                 |                  |
+| Steals - mean (SD)                |                 |                  |
+| Blocks - mean (SD)                |                 |                  |
+| Opponent Points - mean (SD)       |                 |                  |
+| Total Rebounds - mean (SD)        |                 |                  |
+| Turnovers - mean (SD)             |                 |                  |
+
+3.  Just by looking at the code book, identify at least two pairs of variables that may be problematic if they are both included in a model (this does not need to be limited to the variables listed in question 1).
+4.  Fit a logistic regression model for Win using Home, TeamPoints, FieldGoals. (with a period!), Assists, Steals, Blocks, TotalRebounds, and Turnovers as predictors. Present the output of the fitted model using the `modelsummary` function to show the exponentiated coefficient estimates.
+5.  What do you notice about the odds ratio estimate for the field goal percentage variable? Why is this the case? Create a new variable to make an appropriate adjustment, then refit the model and provide the output with the `modelsummary` function.
+6.  Write an interpretation for the statistically significant coefficients in terms of the odds of the Charlotte Hornets team winning an NBA game.
+7.  Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Show the confusion matrix and the ROC curve and give the AUC.
+8.  Using the change in deviance test, test whether including opponent statistics (opponent equivalents of the predictors you included in exercise 4) in the model at the same time would improve the model.
+9.  What do you conclude from this analysis? In other words, if the coach of the Charlotte Hornets approached you, what would you tell him about the factors that are associated with wins?
