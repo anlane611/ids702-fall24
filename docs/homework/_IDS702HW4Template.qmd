@@ -10,9 +10,11 @@ format: pdf
 
 ## Load data
 
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 library(modelsummary)
+library(caret)
+library(pROC)
 
 nba <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/nba_games_stats.csv")
 ```
@@ -40,7 +42,7 @@ nba_cho <- nba_cho |>
 
 | Variable                          | Wins (N= 153) | Losses (N= \_\_) |
 |-----------------------------------|---------------|------------------|
-| Home games  - N (%)               | 92 (60)       |                  |
+| Home games - N (%)                | 92 (60)       |                  |
 | Team Points - mean (SD)           | 109 (11.4)    |                  |
 | Field Goal Percentage - mean (SD) |               |                  |
 | Assists - mean (SD)               |               |                  |
@@ -73,10 +75,6 @@ modelsummary(nba_mod1,
 ```
 
 ## Exercise 6
-
-```{r}
-
-```
 
 ## Exercise 7
 

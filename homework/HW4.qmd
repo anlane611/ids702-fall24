@@ -69,7 +69,7 @@ You want to understand which factors are related to Charlotte Hornet wins.
 
 ## Exercises
 
-1.  First, do some data cleaning:
+1.  (5 points) First, do some data cleaning:
 
 -   Create a subset that contains only the Charlotte Hornets data. You will use this subset for all remaining exercises. The Charlotte Hornets are denoted by Team="CHO"
 
@@ -84,7 +84,7 @@ nba_cho <- nba_cho |>
   mutate(Date_clean = as.Date(Date, "%Y-%m-%d"))
 ```
 
-2.  Next, generate some descriptive statistics. Complete the table with the count and percentage OR the mean and standard deviation of each variable, as appropriate, for wins and losses. (Note that the FieldGoals. variable has a period)
+2.  (6 points) Next, generate some descriptive statistics. Complete the table with the count and percentage OR the mean and standard deviation of each variable, as appropriate, for wins and losses. (Note that the FieldGoals. variable has a period)
 
 | Variable                          | Wins (N= \_\_ ) | Losses (N= \_\_) |
 |-----------------------------------|-----------------|------------------|
@@ -98,10 +98,28 @@ nba_cho <- nba_cho |>
 | Total Rebounds - mean (SD)        |                 |                  |
 | Turnovers - mean (SD)             |                 |                  |
 
-3.  Just by looking at the code book, identify at least two pairs of variables that may be problematic if they are both included in a model (this does not need to be limited to the variables listed in question 1).
-4.  Fit a logistic regression model for Win using Home, TeamPoints, FieldGoals. (with a period!), Assists, Steals, Blocks, TotalRebounds, and Turnovers as predictors. Present the output of the fitted model using the `modelsummary` function to show the exponentiated coefficient estimates.
-5.  What do you notice about the odds ratio estimate for the field goal percentage variable? Why is this the case? Create a new variable to make an appropriate adjustment, then refit the model and provide the output with the `modelsummary` function.
-6.  Write an interpretation for the statistically significant coefficients in terms of the odds of the Charlotte Hornets team winning an NBA game.
-7.  Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Show the confusion matrix and the ROC curve and give the AUC.
-8.  Using the change in deviance test, test whether including opponent statistics (opponent equivalents of the predictors you included in exercise 4) in the model at the same time would improve the model.
-9.  What do you conclude from this analysis? In other words, if the coach of the Charlotte Hornets approached you, what would you tell him about the factors that are associated with wins?
+3.  (4 points) Just by looking at the code book, identify at least two pairs of variables that may be problematic if they are both included in a model (this does not need to be limited to the variables listed in question 1).
+
+4.  (5 points) Fit a logistic regression model for Win using Home, TeamPoints, FieldGoals. (with a period!), Assists, Steals, Blocks, TotalRebounds, and Turnovers as predictors. Present the output of the fitted model using the `modelsummary` function to show the exponentiated coefficient estimates.
+
+5.  (8 points) What do you notice about the odds ratio estimate for the field goal percentage variable? Why is this the case? Create a new variable to make an appropriate adjustment, then refit the model and provide the output with the `modelsummary` function.
+
+6.  (10 points) Write an interpretation for the statistically significant coefficients in terms of the odds of the Charlotte Hornets team winning an NBA game.
+
+7.  (10 points) Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Show the confusion matrix and the ROC curve and give the AUC.
+
+8.  (6 points) Using the change in deviance test, test whether including opponent statistics (opponent equivalents of the predictors you included in exercise 4) in the model at the same time would improve the model.
+
+9.  (5 points) What do you conclude from this analysis? In other words, if the coach of the Charlotte Hornets approached you, what would you tell him about the factors that are associated with wins?
+
+## Bonus
+
+3 points
+
+You likely saw a warning message for one of the fitted models in the above exercises. Diagnose the reason for this error, both statistically and in the context of the problem. Determine which **single** predictor variable can be removed from the model to eliminate the error.
+
+## Grading
+
+Formatting: 3 points
+
+Total (without bonus): 62 points

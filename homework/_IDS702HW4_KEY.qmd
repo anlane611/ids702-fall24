@@ -1,0 +1,157 @@
+---
+title: "IDS 702 HW 4 - KEY"
+author: "Your Name Here"
+format: pdf
+---
+
+**Instructions**: Use this template to complete your assignment. When you click "Render," you should get a PDF document that contains both your answers and code. You must show your work/justify your answers to receive credit. Submit your rendered PDF file on Gradescope. **Remember to render frequently**, as this will help you to catch errors in your code before the last minute.
+
+**Add your name in the Author section in the header**
+
+## Load data
+
+```{r, message=FALSE}
+library(tidyverse)
+library(modelsummary)
+library(caret)
+library(pROC)
+
+nba <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/nba_games_stats.csv")
+```
+
+## Exercise 1
+
+```{r}
+## create subset
+nba_cho <- nba |> filter(Team=="CHO")
+  
+## create factor variable for Home
+nba_cho$Home <- factor(nba_cho$Home)
+  
+## create new Win variable (include quality control check)
+nba_cho$Win <- ifelse(nba_cho$WINorLOSS=="W",1,0)
+nba_cho$Win <- factor(nba_cho$Win, 
+                      levels = c(0,1),
+                      labels = c("Loss","Win"))
+table(nba_cho$WINorLOSS, nba_cho$Win)
+  
+## format date variable
+nba_cho <- nba_cho |>
+  mutate(Date_clean = as.Date(Date, "%Y-%m-%d"))
+```
+
+## Exercise 2
+
+```{r}
+## code to fill in the table
+nba_cho |> count(Win)
+
+nba_cho |> 
+  group_by(Win) |> 
+  count(Home) |> 
+  mutate(perc=n/sum(n)*100)
+
+nba_cho |>
+  group_by(Win) |>
+  summarise(mean(TeamPoints), sd(TeamPoints),
+            mean(FieldGoals.), sd(FieldGoals.),
+            mean(Assists), sd(Assists),
+            mean(Steals), sd(Steals),
+            mean(Blocks), sd(Blocks),
+            mean(OpponentPoints), sd(OpponentPoints),
+            mean(TotalRebounds), sd(TotalRebounds),
+            mean(Turnovers), sd(Turnovers))
+```
+
+| Variable                          | Wins (N= 153) | Losses (N= \_\_) |
+|-----------------------------------|---------------|------------------|
+| Home games  - N (%)               | 92 (60)       |                  |
+| Team Points - mean (SD)           | 109 (11.4)    |                  |
+| Field Goal Percentage - mean (SD) |               |                  |
+| Assists - mean (SD)               |               |                  |
+| Steals - mean (SD)                |               |                  |
+| Blocks - mean (SD)                |               |                  |
+| Opponent Points - mean (SD)       |               |                  |
+| Total Rebounds - mean (SD)        |               |                  |
+| Turnovers - mean (SD)             |               |                  |
+
+## Exercise 3
+
+Similar statistics likely to be highly correlated which could lead to issues with multicollinearity. E.g., Opp.X3PointShots, Opp.X3PointShotsAttempted, Opp.X3PointShots.
+
+## Exercise 4
+
+```{r}
+## model here
+nba_mod1 <- glm(Win ~ Home+TeamPoints+FieldGoals.+
+                  Assists+Steals+Blocks+TotalRebounds+Turnovers,
+                data=nba_cho, family="binomial")
+  
+modelsummary(nba_mod1,
+             fmt = fmt_significant(2),
+             shape = term ~ model + statistic,
+             statistic = c("std.error","conf.int","p.value"),
+             exponentiate = TRUE,
+             gof_map=NA)
+```
+
+## Exercise 5
+
+The OR is extremely high for FieldGoals. because the variable is a proportion, so 1 unit increase is not appropriate. We can multiply the variable by 100 to be a percentage
+
+```{r}
+nba_cho <- nba_cho |>
+  mutate(FieldGoalsPerc = FieldGoals.*100)
+
+nba_mod2 <- glm(Win ~ Home+TeamPoints+FieldGoalsPerc+
+                  Assists+Steals+Blocks+TotalRebounds+Turnovers,
+                data=nba_cho, family="binomial")
+  
+modelsummary(nba_mod2,
+             fmt = fmt_significant(2),
+             shape = term ~ model + statistic,
+             statistic = c("std.error","conf.int","p.value"),
+             exponentiate = TRUE,
+             gof_map=NA)
+```
+
+## Exercise 6
+
+The odds of winning are 2.46 times higher for home games compared to away games. The relationship between playing at home and winning is statistically significant (p\<0.01, 95% CI: \[1.28,4.82\])
+
+For each additional field goal percent increase, the odds of winning increase by 1.49, which is statistically significant (p\<0.01, 95% CI: \[1.32,1.7\])
+
+etc for steals, total rebounds, and turnovers
+
+## Exercise 7
+
+```{r}
+nba_cho_fitted <- factor(ifelse(fitted(nba_mod2)>0.5,1,0),levels=c(0,1),labels=c("Loss","Win"))
+confusionMatrix(table(nba_cho_fitted,nba_cho$Win), positive = "Win", mode="everything")
+
+roc(nba_cho$Win, fitted(nba_mod2), print.thres=0.5, print.auc=T,
+    legacy.axes=T,plot=T)
+```
+
+## Exercise 8
+
+```{r}
+nba_mod_reduced <- nba_mod2
+
+nba_cho <- nba_cho |>
+  mutate(Opp.FieldGoalsPerc = Opp.FieldGoals.*100)
+
+nba_mod_full <- glm(Win ~ Home+TeamPoints+FieldGoalsPerc+
+                  Assists+Steals+Blocks+TotalRebounds+Turnovers+
+                    OpponentPoints+Opp.FieldGoalsPerc+Opp.Assists+
+                    Opp.Steals+Opp.Blocks+Opp.TotalRebounds+Opp.Turnovers,
+                data=nba_cho, family="binomial")
+
+anova(nba_mod_reduced, nba_mod_full, test="Chisq")
+```
+
+## Exercise 9
+
+## Bonus
+
+A team always wins when TeamPoints\>OpponentPoints, so there is perfect separation. Removing OpponentPoints eliminates the error.

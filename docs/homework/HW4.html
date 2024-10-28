@@ -368,6 +368,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
   <li><a href="#code-book" id="toc-code-book" class="nav-link" data-scroll-target="#code-book">Code book</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#bonus" id="toc-bonus" class="nav-link" data-scroll-target="#bonus">Bonus</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul>
 </nav>
     </div>
@@ -586,7 +588,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
 <ol type="1">
-<li>First, do some data cleaning:</li>
+<li>(5 points) First, do some data cleaning:</li>
 </ol>
 <ul>
 <li><p>Create a subset that contains only the Charlotte Hornets data. You will use this subset for all remaining exercises. The Charlotte Hornets are denoted by Team=“CHO”</p></li>
@@ -599,7 +601,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Date_clean =</span> <span class="fu">as.Date</span>(Date, <span class="st">"%Y-%m-%d"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="1">
-<li>Next, generate some descriptive statistics. Complete the table with the count and percentage OR the mean and standard deviation of each variable, as appropriate, for wins and losses. (Note that the FieldGoals. variable has a period)</li>
+<li>(6 points) Next, generate some descriptive statistics. Complete the table with the count and percentage OR the mean and standard deviation of each variable, as appropriate, for wins and losses. (Note that the FieldGoals. variable has a period)</li>
 </ol>
 <table class="caption-top table">
 <colgroup>
@@ -663,14 +665,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <ol start="3" type="1">
-<li>Just by looking at the code book, identify at least two pairs of variables that may be problematic if they are both included in a model (this does not need to be limited to the variables listed in question 1).</li>
-<li>Fit a logistic regression model for Win using Home, TeamPoints, FieldGoals. (with a period!), Assists, Steals, Blocks, TotalRebounds, and Turnovers as predictors. Present the output of the fitted model using the <code>modelsummary</code> function to show the exponentiated coefficient estimates.</li>
-<li>What do you notice about the odds ratio estimate for the field goal percentage variable? Why is this the case? Create a new variable to make an appropriate adjustment, then refit the model and provide the output with the <code>modelsummary</code> function.</li>
-<li>Write an interpretation for the statistically significant coefficients in terms of the odds of the Charlotte Hornets team winning an NBA game.</li>
-<li>Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Show the confusion matrix and the ROC curve and give the AUC.</li>
-<li>Using the change in deviance test, test whether including opponent statistics (opponent equivalents of the predictors you included in exercise 4) in the model at the same time would improve the model.</li>
-<li>What do you conclude from this analysis? In other words, if the coach of the Charlotte Hornets approached you, what would you tell him about the factors that are associated with wins?</li>
+<li><p>(4 points) Just by looking at the code book, identify at least two pairs of variables that may be problematic if they are both included in a model (this does not need to be limited to the variables listed in question 1).</p></li>
+<li><p>(5 points) Fit a logistic regression model for Win using Home, TeamPoints, FieldGoals. (with a period!), Assists, Steals, Blocks, TotalRebounds, and Turnovers as predictors. Present the output of the fitted model using the <code>modelsummary</code> function to show the exponentiated coefficient estimates.</p></li>
+<li><p>(8 points) What do you notice about the odds ratio estimate for the field goal percentage variable? Why is this the case? Create a new variable to make an appropriate adjustment, then refit the model and provide the output with the <code>modelsummary</code> function.</p></li>
+<li><p>(10 points) Write an interpretation for the statistically significant coefficients in terms of the odds of the Charlotte Hornets team winning an NBA game.</p></li>
+<li><p>(10 points) Using 0.5 as your cutoff for predicting wins or losses (1 vs 0) from the predicted probabilities, what is the accuracy of this model? Show the confusion matrix and the ROC curve and give the AUC.</p></li>
+<li><p>(6 points) Using the change in deviance test, test whether including opponent statistics (opponent equivalents of the predictors you included in exercise 4) in the model at the same time would improve the model.</p></li>
+<li><p>(5 points) What do you conclude from this analysis? In other words, if the coach of the Charlotte Hornets approached you, what would you tell him about the factors that are associated with wins?</p></li>
 </ol>
+</section>
+<section id="bonus" class="level2">
+<h2 class="anchored" data-anchor-id="bonus">Bonus</h2>
+<p>3 points</p>
+<p>You likely saw a warning message for one of the fitted models in the above exercises. Diagnose the reason for this error, both statistically and in the context of the problem. Determine which <strong>single</strong> predictor variable can be removed from the model to eliminate the error.</p>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<p>Formatting: 3 points</p>
+<p>Total (without bonus): 62 points</p>
 
 
 </section>
