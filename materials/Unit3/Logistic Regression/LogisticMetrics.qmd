@@ -1,0 +1,36 @@
+---
+title: "10.31: Logistic Regression Assessment"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   Statistics Reflection 4: Sunday, Nov 3 11:59 PM
+-   HW 4: Sunday, Nov 10 11:59 PM
+
+**Reminder**: Class on Tuesday will be optional in observance of Election Day. We will not cover new material, but I will be available for questions.
+
+## Learning Objectives
+
+-   Identify which metrics from linear regression can be extended to logistic regression and why
+
+-   Assess a logistic regression model with a confusion matrix
+
+-   Explain what an ROC curve shows and generate one in R
+
+## Class Prep
+
+ISLR doesn't explicitly cover metrics for logistic regression, but section 4.4.2 describes some of the same concepts (confusion matrix, sensitivity and specificity, ROC curve). Start on page 148. We will discuss these concepts with an example in class.
+
+## 

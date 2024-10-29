@@ -39,6 +39,7 @@ website:
             contents:
             - href: materials/Unit3/Logistic Regression/IntrotoGLMs.qmd
             - href: materials/Unit3/Logistic Regression/LogisticEstimation.qmd
+            - href: materials/Unit3/Logistic Regression/LogisticMetrics.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections
@@ -54,6 +55,10 @@ website:
        - section:
          href: exam/Midterm.qmd
          text: Midterm
+       - section: Project
+         contents: 
+         - href: project/proposal.qmd
+         - href: project/reportandpres.qmd
          
 
 

@@ -26,3 +26,21 @@ format: html
 [List of Topics](MidtermTopics.pdf)
 
 [Formula sheet and practice questions](FormulasAndPractice.pdf)
+
+## Test Corrections
+
+**Due Tuesday, November 5, 11:59 PM**
+
+You have the opportunity to complete test corrections to earn back 50% of the missed points on the exam. Test corrections allow you to look at the questions you got wrong, review the relevant course materials, and explain why the correct answer is appropriate.
+
+For each incorrect question for which you would like to earn back 50% of the points, you must answer the following:
+
+1.  Question number (including the question part for short answer questions)
+2.  Which concept is this question testing? Give a specific lecture title (e.g., probability distributions, two-sample t-test, central limit theorem)
+3.  Where in the course materials was this concept covered? Be specific (e.g., "the Bayes Theorem Example in the Intro to Probability slides")
+4.  What is the correct answer? Explain why this answer is correct.
+5.  Why is your answer incorrect?
+
+You will submit your corrections as one document, and this document **must include a scanned copy of your original exam**. Corrections submitted without the original exam will not be graded. You can type your corrections, save it as a PDF, then scan your exam (you can do this with your phone!), and combine the two PDFs into one file. Then, update the single file to Gradescope.
+
+[You should use this template for your corrections](_IDS702MidtermCorrections.qmd). Once you upload the template in R Studio, be sure to click "Visual" for visual editor mode.

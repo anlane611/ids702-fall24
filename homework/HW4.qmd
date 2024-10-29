@@ -17,7 +17,7 @@ engine: knitr
 
 ## Data
 
-The exercise is based on the [NBA Team Game Stats dataset found here](https://www.kaggle.com/ionaskel/nba-games-stats-from-2014-to-2018/). You can read more about the dataset under the description section of the link.
+The exercise is based on the [NBA Team Game Stats dataset found here](https://www.kaggle.com/ionaskel/nba-games-stats-from-2014-to-2018/). You can read more about the dataset under the description section of the link. If you are unfamiliar with basketball terminology, you can see what the variable names mean by [watching this video](https://www.youtube.com/watch?v=YXtjf27ZmOE&list=PLJpZjOUHSwugLdIh0ZW3xBoGwhCdyjohb).
 
 You want to understand which factors are related to Charlotte Hornet wins.
 
@@ -116,7 +116,7 @@ nba_cho <- nba_cho |>
 
 3 points
 
-You likely saw a warning message for one of the fitted models in the above exercises. Diagnose the reason for this error, both statistically and in the context of the problem. Determine which **single** predictor variable can be removed from the model to eliminate the error.
+You likely saw a warning message for one of the fitted models in the above exercises. Diagnose the reason for this warning, both statistically and in the context of the problem. Determine which **single** predictor variable can be removed from the model to eliminate the warning.
 
 ## Grading
 

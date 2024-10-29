@@ -2483,7 +2483,7 @@
     "href": "exam/Midterm.html",
     "title": "Midterm Materials",
     "section": "",
-    "text": "Date and time: October 22, 3:05-4:20 PM\nGeneral Information:\n\nThe midterm will cover all of Unit 1 and the first two weeks of Unit 2. Topics covered on 10/8 and 10/10 will not be on the midterm. A more detailed list of topics is provided below.\nThe midterm will have a combination of multiple choice questions and short answer questions\nYou will be provided with a formula sheet for reference. The formula sheet that you will have is given with the practice questions.\nYou will not be able to use any additional materials (e.g., notes, electronic devices)\nA review session will be held on Oct 17 during class to go over the practice questions\nYou will not have to answer any questions about R syntax (i.e., writing code). You will be expected to interpret R output. Examples of this are given in the practice questions.\nIf you have been approved for testing accommodations, please reach out to me and/or the testing center to make arrangements as soon as possible (if you have not done so already). These arrangements cannot be made at the last minute; the testing center has to approve the reservations and fills up quickly.\n\n \nList of Topics\nFormula sheet and practice questions",
+    "text": "Date and time: October 22, 3:05-4:20 PM\nGeneral Information:\nList of Topics\nFormula sheet and practice questions",
     "crumbs": [
       "Midterm"
     ]
@@ -2719,7 +2719,7 @@
     "href": "homework/HW4.html#data",
     "title": "Homework 4",
     "section": "Data",
-    "text": "Data\nThe exercise is based on the NBA Team Game Stats dataset found here. You can read more about the dataset under the description section of the link.\nYou want to understand which factors are related to Charlotte Hornet wins.",
+    "text": "Data\nThe exercise is based on the NBA Team Game Stats dataset found here. You can read more about the dataset under the description section of the link. If you are unfamiliar with basketball terminology, you can see what the variable names mean by watching this video.\nYou want to understand which factors are related to Charlotte Hornet wins.",
     "crumbs": [
       "Homework",
       "Homework 4"
@@ -2752,7 +2752,7 @@
     "href": "homework/HW4.html#bonus",
     "title": "Homework 4",
     "section": "Bonus",
-    "text": "Bonus\n3 points\nYou likely saw a warning message for one of the fitted models in the above exercises. Diagnose the reason for this error, both statistically and in the context of the problem. Determine which single predictor variable can be removed from the model to eliminate the error.",
+    "text": "Bonus\n3 points\nYou likely saw a warning message for one of the fitted models in the above exercises. Diagnose the reason for this warning, both statistically and in the context of the problem. Determine which single predictor variable can be removed from the model to eliminate the warning.",
     "crumbs": [
       "Homework",
       "Homework 4"
@@ -2767,6 +2767,142 @@
     "crumbs": [
       "Homework",
       "Homework 4"
+    ]
+  },
+  {
+    "objectID": "exam/Midterm.html#test-corrections",
+    "href": "exam/Midterm.html#test-corrections",
+    "title": "Midterm Materials",
+    "section": "Test Corrections",
+    "text": "Test Corrections\nDue Tuesday, November 5, 11:59 PM\nYou have the opportunity to complete test corrections to earn back 50% of the missed points on the exam. Test corrections allow you to look at the questions you got wrong, review the relevant course materials, and explain why the correct answer is appropriate.\nFor each incorrect question for which you would like to earn back 50% of the points, you must answer the following:\n\nQuestion number (including the question part for short answer questions)\nWhich concept is this question testing? Give a specific lecture title (e.g., probability distributions, two-sample t-test, central limit theorem)\nWhere in the course materials was this concept covered? Be specific (e.g., “the Bayes Theorem Example in the Intro to Probability slides”)\nWhat is the correct answer? Explain why this answer is correct.\nWhy is your answer incorrect?\n\nYou will submit your corrections as one document, and this document must include a scanned copy of your original exam. Corrections submitted without the original exam will not be graded. You can type your corrections, save it as a PDF, then scan your exam (you can do this with your phone!), and combine the two PDFs into one file. Then, update the single file to Gradescope.\nYou should use this template for your corrections. Once you upload the template in R Studio, be sure to click “Visual” for visual editor mode.",
+    "crumbs": [
+      "Midterm"
+    ]
+  },
+  {
+    "objectID": "project/reportandpres.html",
+    "href": "project/reportandpres.html",
+    "title": "Final Report and Presentation",
+    "section": "",
+    "text": "Now that you have selected and explored a dataset, it is time to carry out your analysis and present your results! You will present your results that address your research questions in two ways: a team report and an individual “elevator pitch” presentation.",
+    "crumbs": [
+      "Project",
+      "Final Report and Presentation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticEstimation.html#class-materials",
+    "href": "materials/Unit3/Logistic Regression/LogisticEstimation.html#class-materials",
+    "title": "10.29: Logistic Regression Estimation & Interpretation",
+    "section": "Class Materials",
+    "text": "Class Materials\nGroups\nExercise (qmd)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.29: Logistic Regression Estimation & Interpretation"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticMetrics.html",
+    "href": "materials/Unit3/Logistic Regression/LogisticMetrics.html",
+    "title": "10.31: Logistic Regression Assessment",
+    "section": "",
+    "text": "Statistics Reflection 4: Sunday, Nov 3 11:59 PM\nHW 4: Sunday, Nov 10 11:59 PM\n\nReminder: Class on Tuesday will be optional in observance of Election Day. We will not cover new material, but I will be available for questions.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.31: Logistic Regression Assessment"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticMetrics.html#upcoming-deadlines",
+    "href": "materials/Unit3/Logistic Regression/LogisticMetrics.html#upcoming-deadlines",
+    "title": "10.31: Logistic Regression Assessment",
+    "section": "",
+    "text": "Statistics Reflection 4: Sunday, Nov 3 11:59 PM\nHW 4: Sunday, Nov 10 11:59 PM\n\nReminder: Class on Tuesday will be optional in observance of Election Day. We will not cover new material, but I will be available for questions.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.31: Logistic Regression Assessment"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticMetrics.html#learning-objectives",
+    "href": "materials/Unit3/Logistic Regression/LogisticMetrics.html#learning-objectives",
+    "title": "10.31: Logistic Regression Assessment",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nIdentify which metrics from linear regression can be extended to logistic regression and why\nAssess a logistic regression model with a confusion matrix\nExplain what an ROC curve shows and generate one in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.31: Logistic Regression Assessment"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticMetrics.html#class-prep",
+    "href": "materials/Unit3/Logistic Regression/LogisticMetrics.html#class-prep",
+    "title": "10.31: Logistic Regression Assessment",
+    "section": "Class Prep",
+    "text": "Class Prep\nISLR doesn’t explicitly cover metrics for logistic regression, but section 4.4.2 describes some of the same concepts (confusion matrix, sensitivity and specificity, ROC curve). Start on page 148. We will discuss these concepts with an example in class.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.31: Logistic Regression Assessment"
+    ]
+  },
+  {
+    "objectID": "project/proposal.html",
+    "href": "project/proposal.html",
+    "title": "Proposal",
+    "section": "",
+    "text": "The purpose of the team project is to provide an opportunity to complete a data analysis project from start to finish. This includes:\n\nSelecting data\nWriting research questions\nPerforming exploratory data analysis\nDeveloping appropriate statistical models\nCommunicating results through a written report and presentation\nWorking with a team",
+    "crumbs": [
+      "Project",
+      "Proposal"
+    ]
+  },
+  {
+    "objectID": "project/proposal.html#purpose",
+    "href": "project/proposal.html#purpose",
+    "title": "Proposal",
+    "section": "",
+    "text": "The purpose of the team project is to provide an opportunity to complete a data analysis project from start to finish. This includes:\n\nSelecting data\nWriting research questions\nPerforming exploratory data analysis\nDeveloping appropriate statistical models\nCommunicating results through a written report and presentation\nWorking with a team",
+    "crumbs": [
+      "Project",
+      "Proposal"
+    ]
+  },
+  {
+    "objectID": "project/proposal.html#teams",
+    "href": "project/proposal.html#teams",
+    "title": "Proposal",
+    "section": "Teams",
+    "text": "Teams\nSee this sheet for your team assignment. You are responsible for dividing the work equitably among team members. Every team member is required to contribute to each portion of the project. Learn from each other and, most importantly, be kind. You will receive individual grades for the project that incorporate feedback from fellow team members.",
+    "crumbs": [
+      "Project",
+      "Proposal"
+    ]
+  },
+  {
+    "objectID": "project/proposal.html#data",
+    "href": "project/proposal.html#data",
+    "title": "Proposal",
+    "section": "Data",
+    "text": "Data\nYour first step is to select the dataset that you are most interested in analyzing. Below is a list of datasets or sources that you can consider using to find a dataset. You are not required to use these.\nYour dataset must have at least 500 observations, 10 variables, and a mix of numeric and categorical variables. You may not use a dataset that we have used in class.\n\nR Data Sources for Regression Analysis\nFiveThirtyEight data\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nPew Research\nWorld Inequality Database\n\nYou are welcome to specify a subset of a particular dataset. Be sure to look at the data to understand its scope.",
+    "crumbs": [
+      "Project",
+      "Proposal"
+    ]
+  },
+  {
+    "objectID": "project/proposal.html#proposal",
+    "href": "project/proposal.html#proposal",
+    "title": "Proposal",
+    "section": "Proposal",
+    "text": "Proposal\nUse this template for your proposal\nYour proposal should list the following:\n\nTeam member names\n2 or 3 datasets of interest (list in order of preference with 1 being the top choice). For each dataset, provide:\n\n\nThe source of the data, when and how it was originally collected, and a brief description of the observations (i.e., what does each row represent?). This information is likely found on the website where you found the data, so be sure to cite your source\nTWO research questions you are interested in exploring for each dataset. Explicitly state the outcome variables in the dataset that you will use to answer each question. You are required to use two different types of outcome variables for your research questions. For example, one research question may use a continuous outcome variable while the other uses an ordinal outcome variable. Variable types may include: continuous, binary, ordinal, nominal, time-to-event. The research questions must be related to inference, not prediction (though you will be able to assess predictions in your final report). Consult this helpful guide for writing a good research question and this blog post about the distinction between inference and prediction. Additionally, you will be required to incorporate at least one interaction term into one of your models, so you might consider incorporating this into your research question.\na glimpse() of each dataset to show the variables\nBrief exploratory data analysis. The EDA must not exceed 2 pages (1 for each research question) and should include:\n\nOne plot for each of your outcome variables by themselves. Be sure to use appropriate axis labels\nexploratory plots for your primary relationship of interest (dependent variable and primary independent variable, if applicable). Whether you have one primary independent variable of interest or multiple will depend on your research question. Be sure to use appropriate axis labels\n\n\n\nThe proposal includes a team charter. Discuss the provided questions with your group and include your agreed-upon answers.\n\nUse github to share code among group members. As a group, plan the tables and figures you want to generate, and split them up among the group members. Then you can consolidate your code to generate the report.\nSubmit one proposal per group. One person will submit and select the other group members in the Gradescope submission. After you submit, I will provide feedback to help you decide which dataset to choose for your project report.",
+    "crumbs": [
+      "Project",
+      "Proposal"
     ]
   }
 ]

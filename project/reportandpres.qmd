@@ -1,0 +1,72 @@
+---
+title: "Final Report and Presentation"
+subtitle: "Due: Sunday, December 15 5:00 PM"
+---
+
+# Purpose
+
+Now that you have selected and explored a dataset, it is time to carry out your analysis and present your results! You will present your results that address your research questions in two ways: a team report and an individual "elevator pitch" presentation.
+
+# Final Report (completed as a group)
+
+Your report will be an 8-10 page self-contained document describing your analysis. It should be written as a professional document that can be understood by someone with limited statistics background (e.g., a client). **You are also required to submit a single QMD file that includes your code for the report and analysis.** The report should be organized as follows:
+
+-   **Abstract**: A few sentences describing the purpose of the analysis, the data, and key results
+
+-   **Introduction**: Provide more background on the data and research questions. Be sure to cite the data and background information appropriately (APA style is fine). Why are these questions worth exploring?
+
+-   **Methods**: Describe the process you used to conduct analysis. This includes EDA and any relevant data cleaning information (e.g., did you exclude missing values? If so, how many? Did you collapse categories for any variables?). Then describe the models you fit, and how you planned to assess the model, including influential points, multicollinearity, and diagnostics. The organization of this section may depend on your particular dataset/analysis, but you may want to break it into subsections such as "Data," "Models," and "Model assessment." Note that you **do not** present any results in this section. This section reflects your statistical analysis plan. For example, you will state how you went about EDA but you will not present findings of the EDA. **You are required to use at least one interaction term in one of your models**.
+
+-   **Results**: Here you should present results for all aspects of the analysis. The structure of this section should mirror the structure of the methods section. For example, you can start with a few key EDA results (e.g., a table of descriptive statistics), then present model results, then address assessment. This is the section where you will primarily refer to tables and figures. You should have at least 1 figure for each research question that illustrates a key result of the analysis (not a diagnostic plot).
+
+-   **Conclusion**: Describe the key takeaways from your analysis, limitations, and future work that can be done to advance knowledge in this area.
+
+A few things to keep in mind:
+
+-   You should never refer to actual variable names in the text, tables, or figures. For example, if a variable for height is called "ht\_\_cm," you should always say "height," and the first time you mention it you should state that it is measured in cm. In plots and tables, it should say "height (cm)"
+
+-   The report should be produced in Quarto and rendered to PDF. All tables and figures should use appropriate labels.
+
+-   Someone should be able to read the abstract and look at the tables and figures and have a pretty good idea of 1) the goals of your analysis, and 2) the key results.
+
+-   I recommend using colorblind-friendly color palettes in your figures. It can be even better to differentiate with line types or symbols instead of relying on color.
+
+-   You can have an appendix if tables or figures are too large to fit into the main text. For example, if you have several predictors such that a model summary table takes up an entire page or more, you may want to put a table of model results in the appendix.
+
+#### Optional: If you would like me to provide some feedback on your report, you can submit a draft by Thursday, December 5.
+
+### Submission
+
+Submit one report and one qmd file per group. **One person will submit and select the other group members in the Gradescope submission**. Be sure to assign pages in Gradescope when you submit.
+
+### Example
+
+Refer to [this paper](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783715) that presents a statistical analysis on low birth weight infants who receive blood transfusions. In particular, notice the distinction between the methods and results section. Notice how the methods section describes how the analysis was carried out without reporting any results.
+
+The length of the sections of this paper will likely differ from your report. I would expect your introduction and conclusion sections to be shorter, but your methods and results to be longer (if for no other reason than you have two research questions to present).
+
+# Elevator Pitch Presentations (completed individually)
+
+You will submit an **individual** recorded "elevator pitch" presentation of your analysis. This will be a 2-3 minute presentation video in which you explain the goal and results of your project to a non-technical audience. Imagine that you encounter a stakeholder relevant to your project but without a data science background in an elevator. You have 2-3 minutes to explain to this person what you found in your analysis.
+
+-   You will create one slide to show during your presentation. Each student must have a unique slide.
+
+-   You will focus on **one** of the research questions you addressed in your project report.
+
+-   The presentation should be focused on the motivation and results of your analysis rather than data cleaning or technical details of the model. Prioritize creating a clear plot/visual that communicates your message.
+
+-   Focus on storytelling. Why is it important/interesting to answer these research questions? What did you find that is compelling?
+
+-   You can use any program you'd like to create your slide (powerpoint, keynote, Quarto, etc.)
+
+-   I am happy to review your slide and offer feedback, but you must send it to me \>3 days before the presentation deadline.
+
+### Submission
+
+Submit one presentation recording on Gradescope. The deadline is the same as the deadline for the report.
+
+# Group Evaluation
+
+You will complete a peer evaluation for your group members. This evaluation will be **non-anonymous** to offer constructive feedback to your group members. You will also be able to communicate feedback directly to me. **If you have concerns related to your project group before the deadline, feel free to contact me to discuss the concerns.**
+
+## 
