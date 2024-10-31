@@ -33,4 +33,8 @@ filters:
 
 ISLR doesn't explicitly cover metrics for logistic regression, but section 4.4.2 describes some of the same concepts (confusion matrix, sensitivity and specificity, ROC curve). Start on page 148. We will discuss these concepts with an example in class.
 
-## 
+## Class Materials
+
+[Notes (qmd)](_LogisticAssessment.qmd)
+
+Activity: ISLR Logistic Regression lab (4.7.1 and 4.7.2), and add the ROC curve

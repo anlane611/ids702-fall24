@@ -18,7 +18,7 @@ heart <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/main/hea
 1.  Provide summary statistics (N and %) for the outcome variable (`target`)
 
     ```{r}
-
+    heart |> count(target) |> mutate(perc=(n/sum(n))*100)
     ```
 
 <!-- -->
@@ -32,7 +32,7 @@ heart <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/main/hea
 3.  Use the code below to fit a logistic regression model regressing heart disease status on the predictors listed in #3.
 
 ```{r}
-heart_mod1 <- glm(target ~ VARS-HERE,
+heart_mod1 <- glm(factor(target) ~ age + factor(sex) + factor(cp) + chol,
                   data=heart,
                   family="binomial")
 
