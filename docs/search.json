@@ -2904,5 +2904,17 @@
       "Project",
       "Proposal"
     ]
+  },
+  {
+    "objectID": "materials/Unit3/Logistic Regression/LogisticMetrics.html#class-materials",
+    "href": "materials/Unit3/Logistic Regression/LogisticMetrics.html#class-materials",
+    "title": "10.31: Logistic Regression Assessment",
+    "section": "Class Materials",
+    "text": "Class Materials\nNotes (qmd)\nActivity: ISLR Logistic Regression lab (4.7.1 and 4.7.2), and add the ROC curve",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "10.31: Logistic Regression Assessment"
+    ]
   }
 ]

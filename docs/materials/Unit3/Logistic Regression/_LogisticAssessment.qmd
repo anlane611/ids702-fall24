@@ -1,0 +1,115 @@
+---
+title: "Logistic Regression Assessment"
+output: html
+---
+
+## Linear Regression vs. Logistic Regression
+
+With a partner or small group, discuss the following questions:
+
+1.  What is the distinction between how we estimate coefficients in linear vs. logistic regression?
+2.  Look back at the formulas for $R^2$ and $VIF$. Based on your answer to question 1, would these metrics extend to logistic regression?
+3.  Which assumption(s) of linear regression extend(s) to logistic regression?
+
+## Residual Plots
+
+```{r, message=FALSE}
+library(tidyverse)
+library(caret)
+library(pROC)
+
+pumpkins <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/pumpkin.csv")
+
+pumpkins <- pumpkins |>
+  mutate(Class_fac = factor(ifelse(Class=="Çerçevelik",1,0),
+                            levels=c(0,1),
+                            labels=c("Ürgüp Sivrisi","Çerçevelik")))
+
+pumpmod <- glm(Class_fac ~ Major_Axis_Length+Solidity,
+               data=pumpkins,
+               family="binomial")
+
+plot(pumpmod)
+```
+
+## Deviance
+
+**Deviance** is a measure based on the **likelihood** that can be used to assess overall model fit or compare models
+
+$$
+D=-2ln(\hat{L})
+$$
+
+Would higher or lower values be better?
+
+ 
+
+We can perform a hypothesis test to compare deviance, similar to what we did with nested F tests:
+
+Let's compare the model we just fit to a model that also contains `Area` and `Perimeter`
+
+Null hypothesis:
+
+Alternative hypothesis:
+
+```{r}
+pumpmod_reduced <- pumpmod
+pumpmod_full <- glm(factor(Class) ~ Area + Perimeter +
+                                    Major_Axis_Length + Solidity,
+                    data=pumpkins,
+                    family="binomial")
+
+anova(pumpmod_reduced, pumpmod_full, test="Chisq")
+```
+
+We can also use deviance to get a sense of overall model fit. What would the null model be in this case?
+
+## Assessing the model with predicted values
+
+We can use predicted values to assess the logistic model in different ways. What are the predicted values in this case?
+
+Consider the linear model vs the logistic model:
+
+Linear: $Y = \beta_0+\beta_1x+\epsilon$
+
+Logistic: $\log(\frac{p}{1-p})=\beta_0+\beta_1x$
+
+```{r}
+head(predict(pumpmod))
+
+head(predict(pumpmod, type="response"))
+
+range(predict(pumpmod))
+
+range(predict(pumpmod, type="response"))
+```
+
+A **confusion matrix** allows us to compare our **observed outcome** to the **predicted outcome** based on the probabilities.
+
+![](confusionmatrix.png){width="462"}
+
+Note that to do this, we need to set a probability cutoff to classify the observations. Let's set the cutoff at 0.5. We can generate a confusion matrix with the `caret` package (already loaded above).
+
+The `confusionMatrix` function requires a **table** of observed vs. predicted classes and specification of which value constitutes the "positive" classification.
+
+```{r}
+pumpmod_preds <- ifelse(predict(pumpmod, type="response")>0.5,1,0)
+pumpmod_preds_fac <- factor(pumpmod_preds,
+                            levels=c(0,1),
+                            labels=c("Ürgüp Sivrisi", "Çerçevelik"))
+confusionMatrix(table(pumpmod_preds_fac, pumpkins$Class_fac),
+                positive="Çerçevelik",
+                mode="everything")
+```
+
+We can also visualize the model performance with a **Receiver Operator Characteristics Curve (ROC curve).** This curve compares sensitivity and specificity. We can generate one with the `pROC` package (loaded above).
+
+The **Area Under the Curve (AUC)** is another measure of model performance based on the ROC curve.
+
+```{r}
+roc(pumpkins$Class_fac, predict(pumpmod, type="response"), 
+    print.thres=0.5, 
+    print.auc=T,
+    legacy.axes=T,
+    plot=T)
+```
