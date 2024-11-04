@@ -1,0 +1,47 @@
+---
+title: "11.7: Multinomial Regression"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   HW 4: Sunday, Nov 10 11:59 PM
+-   Project Proposal: Sunday, Nov 17 11:59 PM
+
+**Reminder**: Class on Tuesday Nov 5 will be optional in observance of Election Day. We will not cover new material, but I will be available for questions.
+
+## Learning Objectives
+
+-   Identify when to use a multinomial logistic regression model
+
+-   Interpret a multinomial logistic regression model
+
+-   Generate a multinomial logistic regression model in R
+
+## Class Prep
+
+Watch this video:
+
+[Multinomial Regression](https://duke.zoom.us/rec/share/-YWlI2whGCpSudjtMgRcyephtW1Csa3GLtDx2vOxsfsDftw32Rjj4glH9zZxiok3.k4YQKllKvKFN5G6B?startTime=1696877429000)
+
+If you would like to run the code along with the lecture, you can load the data using the following:
+
+```{r}
+library(foreign) #install the package in the console! The package contains the function `read.dta` that is used to access the data
+ml <- read.dta("https://stats.idre.ucla.edu/stat/data/hsbdemo.dta")
+```
+
+Slides: [Multinomial Regression](IDS702_multinomial.pdf)
+
+ISLR briefly covers multinomial regression in section 4.3.5

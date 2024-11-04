@@ -2843,7 +2843,7 @@
     "href": "materials/Unit3/Logistic Regression/LogisticMetrics.html#class-prep",
     "title": "10.31: Logistic Regression Assessment",
     "section": "Class Prep",
-    "text": "Class Prep\nISLR doesn’t explicitly cover metrics for logistic regression, but section 4.4.2 describes some of the same concepts (confusion matrix, sensitivity and specificity, ROC curve). Start on page 148. We will discuss these concepts with an example in class.",
+    "text": "Class Prep\nISLR doesn’t explicitly cover metrics for logistic regression, but section 4.4.2 describes some of the same concepts (confusion matrix, sensitivity and specificity, ROC curve). Start on page 148. We will discuss these concepts with an example in class.\nRecordings for your reference:\nLogistic Regression Diagnostics\nAssessing Logistic Models with Predictions\nSlides: Diagnostics; Diagnostics with Predictions",
     "crumbs": [
       "Course Materials",
       "Unit 3: Generalized Linear Models",
@@ -2915,6 +2915,54 @@
       "Course Materials",
       "Unit 3: Generalized Linear Models",
       "10.31: Logistic Regression Assessment"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Multinomial.html",
+    "href": "materials/Unit3/Multinomial.html",
+    "title": "11.7: Multinomial Regression",
+    "section": "",
+    "text": "HW 4: Sunday, Nov 10 11:59 PM\nProject Proposal: Sunday, Nov 17 11:59 PM\n\nReminder: Class on Tuesday Nov 5 will be optional in observance of Election Day. We will not cover new material, but I will be available for questions.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.7: Multinomial Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Multinomial.html#upcoming-deadlines",
+    "href": "materials/Unit3/Multinomial.html#upcoming-deadlines",
+    "title": "11.7: Multinomial Regression",
+    "section": "",
+    "text": "HW 4: Sunday, Nov 10 11:59 PM\nProject Proposal: Sunday, Nov 17 11:59 PM\n\nReminder: Class on Tuesday Nov 5 will be optional in observance of Election Day. We will not cover new material, but I will be available for questions.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.7: Multinomial Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Multinomial.html#learning-objectives",
+    "href": "materials/Unit3/Multinomial.html#learning-objectives",
+    "title": "11.7: Multinomial Regression",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nIdentify when to use a multinomial logistic regression model\nInterpret a multinomial logistic regression model\nGenerate a multinomial logistic regression model in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.7: Multinomial Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Multinomial.html#class-prep",
+    "href": "materials/Unit3/Multinomial.html#class-prep",
+    "title": "11.7: Multinomial Regression",
+    "section": "Class Prep",
+    "text": "Class Prep\nWatch this video:\nMultinomial Regression\nIf you would like to run the code along with the lecture, you can load the data using the following:\n\nlibrary(foreign) #install the package in the console! The package contains the function `read.dta` that is used to access the data\nml &lt;- read.dta(\"https://stats.idre.ucla.edu/stat/data/hsbdemo.dta\")\n\nSlides: Multinomial Regression\nISLR briefly covers multinomial regression in section 4.3.5",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.7: Multinomial Regression"
     ]
   }
 ]
