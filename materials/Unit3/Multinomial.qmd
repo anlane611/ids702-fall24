@@ -45,3 +45,9 @@ ml <- read.dta("https://stats.idre.ucla.edu/stat/data/hsbdemo.dta")
 Slides: [Multinomial Regression](IDS702_multinomial.pdf)
 
 ISLR briefly covers multinomial regression in section 4.3.5
+
+## Class materials
+
+[Notes](_Multinomial.qmd)
+
+[Wooclap](https://app.wooclap.com/JDIUUK?from=event-page)
