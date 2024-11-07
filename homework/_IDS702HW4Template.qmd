@@ -2,6 +2,9 @@
 title: "IDS 702 HW 4"
 author: "Your Name Here"
 format: pdf
+header-includes:
+      - \usepackage{float}
+      - \floatplacement{table}{H}
 ---
 
 **Instructions**: Use this template to complete your assignment. When you click "Render," you should get a PDF document that contains both your answers and code. You must show your work/justify your answers to receive credit. Submit your rendered PDF file on Gradescope. **Remember to render frequently**, as this will help you to catch errors in your code before the last minute.
