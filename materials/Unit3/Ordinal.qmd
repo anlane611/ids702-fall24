@@ -1,0 +1,42 @@
+---
+title: "11.12: Ordinal Regression"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   Project Proposal: Sunday, Nov 17 11:59 PM
+-   HW 5: Sunday, Nov 24 11:59 PM
+
+## Learning Objectives
+
+-   Identify when to use an ordinal regression model
+
+-   Interpret an ordinal regression model
+
+-   Generate an ordinal regression model in R
+
+## Class Prep
+
+Watch the three videos about ordinal regression. Dr. Väisänan does a great job of explaining ordinal regression, though the code is in Stata. Focus on the concepts and we will cover the R code for ordinal regression in class.
+
+Note: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.
+
+[Part 1: Introduction to Ordinal Regression](https://www.youtube.com/watch?v=rPcMcW25PPA&t=1s)
+
+[Part 2: Multiple Ordinal Regression](https://www.youtube.com/watch?v=aiQcFCFtT5k)
+
+[Part 3: Proportional Odds Assumption](https://www.youtube.com/watch?v=iPDwMrw2D30)
+
+ISLR does not cover ordinal regression.

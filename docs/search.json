@@ -2976,5 +2976,53 @@
       "Unit 3: Generalized Linear Models",
       "11.7: Multinomial Regression"
     ]
+  },
+  {
+    "objectID": "materials/Unit3/Ordinal.html",
+    "href": "materials/Unit3/Ordinal.html",
+    "title": "11.12: Ordinal Regression",
+    "section": "",
+    "text": "Project Proposal: Sunday, Nov 17 11:59 PM\nHW 5: Sunday, Nov 24 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.12: Ordinal Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Ordinal.html#upcoming-deadlines",
+    "href": "materials/Unit3/Ordinal.html#upcoming-deadlines",
+    "title": "11.12: Ordinal Regression",
+    "section": "",
+    "text": "Project Proposal: Sunday, Nov 17 11:59 PM\nHW 5: Sunday, Nov 24 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.12: Ordinal Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Ordinal.html#learning-objectives",
+    "href": "materials/Unit3/Ordinal.html#learning-objectives",
+    "title": "11.12: Ordinal Regression",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nIdentify when to use an ordinal regression model\nInterpret an ordinal regression model\nGenerate an ordinal regression model in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.12: Ordinal Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Ordinal.html#class-prep",
+    "href": "materials/Unit3/Ordinal.html#class-prep",
+    "title": "11.12: Ordinal Regression",
+    "section": "Class Prep",
+    "text": "Class Prep\nWatch the three videos about ordinal regression. Dr. Väisänan does a great job of explaining ordinal regression, though the code is in Stata. Focus on the concepts and we will cover the R code for ordinal regression in class.\nNote: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.\nPart 1: Introduction to Ordinal Regression\nPart 2: Multiple Ordinal Regression\nPart 3: Proportional Odds Assumption\nISLR does not cover ordinal regression.",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.12: Ordinal Regression"
+    ]
   }
 ]

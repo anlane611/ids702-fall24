@@ -41,6 +41,7 @@ website:
             - href: materials/Unit3/Logistic Regression/LogisticEstimation.qmd
             - href: materials/Unit3/Logistic Regression/LogisticMetrics.qmd
             - href: materials/Unit3/Multinomial.qmd
+            - href: materials/Unit3/Ordinal.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections
