@@ -1,0 +1,48 @@
+---
+title: "IDS 702 HW 5"
+author: "Your Name Here"
+format: pdf
+header-includes:
+      - \usepackage{float}
+      - \floatplacement{table}{H}
+execute:
+  echo: false
+---
+
+**Instructions**: Use this template to complete your assignment. For this assignment, all code will be hidden in your rendered document. Therefore, you are required to submit both your qmd (this file) AND the rendered PDF. **Remember to render frequently**, as this will help you to catch errors in your code before the last minute.
+
+**Add your name in the Author section in the header**
+
+\newpage
+
+## Part 1: Data Science Team Report
+
+```{r, message=FALSE}
+library(tidyverse)
+library(MASS)
+library(caret)
+library(nnet)
+## you may need to add the relevant packages here
+
+airline <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/airline.csv")
+```
+
+### Data Overview
+
+### Analysis Plan
+
+### Model Results
+
+### Model Assessment
+
+\newpage
+
+## Part 2: Executive Summary
+
+### Introduction
+
+### Methods
+
+### Results
+
+### Conclusion

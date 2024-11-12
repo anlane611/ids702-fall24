@@ -1,0 +1,87 @@
+---
+title: "Homework 5"
+format:
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+---
+
+**Deadline**: Sunday, November 24, 11:59 PM
+
+**Instructions**: Use the provided Quarto template to complete your assignment. For this assignment, you will be generating a professional report; therefore, ALL CODE MUST BE HIDDEN. This is the default setting in the template. Because all code will be hidden, you are required to submit BOTH the QMD and the rendered PDF.
+
+[*Click here to download the template*](_IDS702HW5Template.qmd) *(right click and choose "save link as")*
+
+ 
+
+## Data
+
+This assignment uses a modified version of [the airline customer satisfaction dataset found here](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction).
+
+## Code book
+
+| Variable | Description |
+|:------------------------------------|:----------------------------------|
+| Age | Passenger age |
+| Gender | Passenger gender |
+| Type.of.Travel | Purpose of the passenger's flight (personal, business) |
+| Class | Travel class in the plane (business, eco, eco plus) |
+| Customer.Type | Loyal or disloyal customer |
+| Flight.Distance | Flight distance |
+| Inflight.wifi.service | Satisfaction level of inflight wifi service (0: Not applicable; 1-5 where 5 is completely satisfied) |
+| Ease.of.Online.booking | Satisfaction level of online booking |
+| Inflight.service | Satisfaction level of inflight service |
+| Online.boarding | Satisfaction level of online boarding |
+| Inflight.entertainment | Satisfaction level of inflight entertainment |
+| Food.and.drink | Satisfaction level of food and drink |
+| Seat.comfort | Satisfaction level of seat comfort |
+| On.board.service | Satisfaction level of On-board service |
+| Leg.room.service | Satisfaction level of leg room |
+| Departure.Arrival.time.convenient | Satisfaction level of departure/arrival time convenience |
+| Baggage.handling | Satisfaction level of baggage handling |
+| Gate.location | Satisfaction level of gate location |
+| Cleanliness | Satisfaction level of cleanliness |
+| Checkin.service | Satisfaction level of check-in service |
+| Departure.Delay.in.Minutes | Departure delay in minutes |
+| Arrival.Delay.in.Minutes | Arrival delay in minutes |
+| Satisfaction | Airline satisfaction level (satisfied, neutral, dissatisfied) |
+
+## Description (Read all information carefully!)
+
+An airline called LaneAir is seeking a data scientist consultant to better understand drivers of customer satisfaction. The airline distributed a survey to customers who have flown with LaneAir in the last six months. Customers rated their overall satisfaction as dissatisfied, neutral, or satisfied. Then they rated their satisfaction with various aspects of the flight. The airline also has information on the passengers' flight details, including flight distance and departure delay. LaneAir would like to know which services are worth investing in to improve customer satisfaction. However, they would like the data science consultant to keep in mind that some services are more difficult to improve than others. LaneAir is considering the following investments, ranked from **most difficult** to **least difficult** to implement:
+
+-   Newer, larger seats to improve seat comfort and leg room. This will reduce the number of seats per plane, which is LaneAir's last choice
+-   Newer plane models that improve reliability to minimize delays
+-   Hire more flight attendants or other staff to improve services including inflight service, cleanliness, or onboarding.
+-   Technology investment to improve wifi and entertainment service
+-   Marketing or promotion initiatives to improve customer loyalty or appeal to different customer types (e.g., different age demographic, business/personal travelers)
+
+Generate an analysis report that addresses this question. This will be a professional-style report, meaning you should write in paragraph structure and hide all code. "Raw" output from code should not be shown; rather, output should be professionally formatted (e.g., a `modelsummary` table is professional, while the default `summary(model)` output is "raw" output).
+
+You will complete this assignment in two parts. The first part of the assignment will be a 4-5 page report that is suitable for **other data scientists.** This section should present technical details of your model that someone with a data science background can understand. This report must include the following, though you may wish to provide additional details relevant to the analysis:
+
+-   Data overview: You should present details of the data relevant to a data science team, including basic descriptive statistics and missing data.
+-   Analysis plan: Present the type of model you used for the analysis. Which type of generalized linear model is best suited for this problem? What is the link function? What are the predictors (or general categories of predictors)? How will you evaluate your model? Note that no model results should be included in this section.
+-   Model results: Present a professionally-formatted table of model results including odds ratios, confidence intervals, and p-values (e.g., using `modelsummary` or `knitr`). Interpret the results that you think are most compelling. This should be in paragraph structure; do not simply list bullet points with repeated interpretations of every coefficient estimate.
+-   Model assessment: The model you should use for this analysis relies on a key assumption that is unique to this model. Using a different, more "precise" model, compare predictions using the predictors `Gender` and `Customer type`. Present the confusion matrix for your model and include 3 metrics that you think are meaningful in this case. Show the confusion matrix for the more precise model and compare the accuracy. What do you conclude about the model assumptions and performance based on your assessment?
+
+Next, you will create a 2-page executive summary report **for the client.** This report should be understood by LaneAir executives with very little background in statistics. This report should include the following:
+
+-   Introduction: Provide an overview of the dataset and the goals of the analysis. Keep in mind that the LaneAir team is familiar with the questions on the survey, but not the results. So you should include, for example, the number of respondents and basic summary statistics to show the team the distribution of customers in the different satisfaction categories.
+
+-   Methods: Explain the model you used to analyze the data without getting into technical details. Why did you decide to use that model for this dataset and how does it answer the airline's question?
+
+-   Results: What are the key results of the analysis as they relate to the airline's question? Present at least one figure that effectively communicates a key takeaway of the analysis. Be sure to include appropriate labels for your figure.
+
+-   Conclusion: Keeping in mind LaneAir's cost considerations outlined above, what are your recommendations to improve customer satisfaction that balance impact with cost? Do you have any recommendations that the airline has not considered? Finally, are there any study limitations that the client should be aware of? For example, could certain customers be more likely to respond to the survey than others?
+
+## Grading
+
+Part 1: 30 points
+
+Part 2: 20 points
+
+Formatting: 10 points (includes hiding code, report structure, page limits, properly formatted tables and figures)
+
+Total: 60 points

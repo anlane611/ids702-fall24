@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Two Sample T-test Fact Sheet – IDS 702</title>
+<title>Homework 5 – IDS 702</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -101,35 +67,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -143,9 +80,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      IDS 702
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW5.html">Homework 5</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -392,7 +327,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../homework/HW5.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/HW5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Homework 5</span></a>
   </div>
 </li>
@@ -439,14 +374,23 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="TTestFactSheet.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data" id="toc-data" class="nav-link active" data-scroll-target="#data">Data</a></li>
+  <li><a href="#code-book" id="toc-code-book" class="nav-link" data-scroll-target="#code-book">Code book</a></li>
+  <li><a href="#description-read-all-information-carefully" id="toc-description-read-all-information-carefully" class="nav-link" data-scroll-target="#description-read-all-information-carefully">Description (Read all information carefully!)</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../homework/HW1.html">Homework</a></li><li class="breadcrumb-item"><a href="../homework/HW5.html">Homework 5</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Two Sample T-test Fact Sheet</h1>
+<h1 class="title">Homework 5</h1>
 </div>
 
 
@@ -463,59 +407,158 @@ window.Quarto = {
 </header>
 
 
-<p><strong>When it’s useful</strong>: Interested in comparing the mean of two groups (numeric outcome, binary explanatory variable)</p>
-<p><strong>Parametric or nonparametric</strong>: Parametric</p>
-<p><strong>Assumptions</strong>:</p>
-<ol type="1">
-<li><p>Simple random sample</p></li>
-<li><p>Observations are independent within and between the groups</p></li>
-<li><p>Normally distributed population OR sufficient sample in each group with no extreme outliers (&gt;30)</p></li>
-</ol>
-<p><strong>Hypotheses</strong>:</p>
-<p><span class="math inline">\(H_0: \mu_1=\mu_2\)</span> (i.e., the mean of the numeric variable is equal for the two groups)</p>
-<p><span class="math inline">\(H_A: \mu_1 \neq \mu_2\)</span> (i.e., the means are not equal)<br>
-</p>
-<p><strong>Test Statistic:</strong> <span class="math inline">\(T= \frac{\bar{x}_1 - \bar{x}_2}{SE}\)</span> , where SE can either be the pooled standard error or the Welch’s standard error</p>
-<p><strong>Unique Information:</strong> There are two variations of the two-sample t-test, distinguished by the standard error estimate in the denominator of the test statistic. The pooled version assumes that the two groups have approximately the same variance, while the Welch’s standard error estimate does not make this assumption. The Welch’s estimate is more conservative, while the pooled version is more powerful.&nbsp;</p>
-<p><strong>Relevant R function(s):</strong> <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/t.test">t.test</a></p>
-<div style="page-break-after: always;"></div>
-<p><strong>Example</strong>:&nbsp;Does the mean number of bids differ for new vs used Mariokart games sold on Ebay?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openintro)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"mariokart"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#mariokart |&gt; count(cond) 59 new, 84 used</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mariokart, <span class="fu">aes</span>(<span class="at">x=</span>n_bids))<span class="sc">+</span><span class="fu">geom_histogram</span>()<span class="sc">+</span><span class="fu">facet_wrap</span>(<span class="sc">~</span>cond)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="TTestFactSheet_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>The assumptions for the t-test are met.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(mariokart<span class="sc">$</span>n_bids<span class="sc">~</span> mariokart<span class="sc">$</span>cond)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Welch Two Sample t-test
+<p><strong>Deadline</strong>: Sunday, November 24, 11:59 PM</p>
+<p><strong>Instructions</strong>: Use the provided Quarto template to complete your assignment. For this assignment, you will be generating a professional report; therefore, ALL CODE MUST BE HIDDEN. This is the default setting in the template. Because all code will be hidden, you are required to submit BOTH the QMD and the rendered PDF.</p>
+<p><a href="_IDS702HW5Template.qmd"><em>Click here to download the template</em></a> <em>(right click and choose “save link as”)</em></p>
+<p>&nbsp;</p>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>This assignment uses a modified version of <a href="https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction">the airline customer satisfaction dataset found here</a>.</p>
+</section>
+<section id="code-book" class="level2">
+<h2 class="anchored" data-anchor-id="code-book">Code book</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Age</td>
+<td style="text-align: left;">Passenger age</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gender</td>
+<td style="text-align: left;">Passenger gender</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Type.of.Travel</td>
+<td style="text-align: left;">Purpose of the passenger’s flight (personal, business)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Class</td>
+<td style="text-align: left;">Travel class in the plane (business, eco, eco plus)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Customer.Type</td>
+<td style="text-align: left;">Loyal or disloyal customer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Flight.Distance</td>
+<td style="text-align: left;">Flight distance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Inflight.wifi.service</td>
+<td style="text-align: left;">Satisfaction level of inflight wifi service (0: Not applicable; 1-5 where 5 is completely satisfied)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ease.of.Online.booking</td>
+<td style="text-align: left;">Satisfaction level of online booking</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Inflight.service</td>
+<td style="text-align: left;">Satisfaction level of inflight service</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Online.boarding</td>
+<td style="text-align: left;">Satisfaction level of online boarding</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Inflight.entertainment</td>
+<td style="text-align: left;">Satisfaction level of inflight entertainment</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Food.and.drink</td>
+<td style="text-align: left;">Satisfaction level of food and drink</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Seat.comfort</td>
+<td style="text-align: left;">Satisfaction level of seat comfort</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">On.board.service</td>
+<td style="text-align: left;">Satisfaction level of On-board service</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Leg.room.service</td>
+<td style="text-align: left;">Satisfaction level of leg room</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Departure.Arrival.time.convenient</td>
+<td style="text-align: left;">Satisfaction level of departure/arrival time convenience</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Baggage.handling</td>
+<td style="text-align: left;">Satisfaction level of baggage handling</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Gate.location</td>
+<td style="text-align: left;">Satisfaction level of gate location</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cleanliness</td>
+<td style="text-align: left;">Satisfaction level of cleanliness</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Checkin.service</td>
+<td style="text-align: left;">Satisfaction level of check-in service</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Departure.Delay.in.Minutes</td>
+<td style="text-align: left;">Departure delay in minutes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arrival.Delay.in.Minutes</td>
+<td style="text-align: left;">Arrival delay in minutes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Satisfaction</td>
+<td style="text-align: left;">Airline satisfaction level (satisfied, neutral, dissatisfied)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="description-read-all-information-carefully" class="level2">
+<h2 class="anchored" data-anchor-id="description-read-all-information-carefully">Description (Read all information carefully!)</h2>
+<p>An airline called LaneAir is seeking a data scientist consultant to better understand drivers of customer satisfaction. The airline distributed a survey to customers who have flown with LaneAir in the last six months. Customers rated their overall satisfaction as dissatisfied, neutral, or satisfied. Then they rated their satisfaction with various aspects of the flight. The airline also has information on the passengers’ flight details, including flight distance and departure delay. LaneAir would like to know which services are worth investing in to improve customer satisfaction. However, they would like the data science consultant to keep in mind that some services are more difficult to improve than others. LaneAir is considering the following investments, ranked from <strong>most difficult</strong> to <strong>least difficult</strong> to implement:</p>
+<ul>
+<li>Newer, larger seats to improve seat comfort and leg room. This will reduce the number of seats per plane, which is LaneAir’s last choice</li>
+<li>Newer plane models that improve reliability to minimize delays</li>
+<li>Hire more flight attendants or other staff to improve services including inflight service, cleanliness, or onboarding.</li>
+<li>Technology investment to improve wifi and entertainment service</li>
+<li>Marketing or promotion initiatives to improve customer loyalty or appeal to different customer types (e.g., different age demographic, business/personal travelers)</li>
+</ul>
+<p>Generate an analysis report that addresses this question. This will be a professional-style report, meaning you should write in paragraph structure and hide all code. “Raw” output from code should not be shown; rather, output should be professionally formatted (e.g., a <code>modelsummary</code> table is professional, while the default <code>summary(model)</code> output is “raw” output).</p>
+<p>You will complete this assignment in two parts. The first part of the assignment will be a 4-5 page report that is suitable for <strong>other data scientists.</strong> This section should present technical details of your model that someone with a data science background can understand. This report must include the following, though you may wish to provide additional details relevant to the analysis:</p>
+<ul>
+<li>Data overview: You should present details of the data relevant to a data science team, including basic descriptive statistics and missing data.</li>
+<li>Analysis plan: Present the type of model you used for the analysis. Which type of generalized linear model is best suited for this problem? What is the link function? What are the predictors (or general categories of predictors)? How will you evaluate your model? Note that no model results should be included in this section.</li>
+<li>Model results: Present a professionally-formatted table of model results including odds ratios, confidence intervals, and p-values (e.g., using <code>modelsummary</code> or <code>knitr</code>). Interpret the results that you think are most compelling. This should be in paragraph structure; do not simply list bullet points with repeated interpretations of every coefficient estimate.</li>
+<li>Model assessment: The model you should use for this analysis relies on a key assumption that is unique to this model. Using a different, more “precise” model, compare predictions using the predictors <code>Gender</code> and <code>Customer type</code>. Present the confusion matrix for your model and include 3 metrics that you think are meaningful in this case. Show the confusion matrix for the more precise model and compare the accuracy. What do you conclude about the model assumptions and performance based on your assessment?</li>
+</ul>
+<p>Next, you will create a 2-page executive summary report <strong>for the client.</strong> This report should be understood by LaneAir executives with very little background in statistics. This report should include the following:</p>
+<ul>
+<li><p>Introduction: Provide an overview of the dataset and the goals of the analysis. Keep in mind that the LaneAir team is familiar with the questions on the survey, but not the results. So you should include, for example, the number of respondents and basic summary statistics to show the team the distribution of customers in the different satisfaction categories.</p></li>
+<li><p>Methods: Explain the model you used to analyze the data without getting into technical details. Why did you decide to use that model for this dataset and how does it answer the airline’s question?</p></li>
+<li><p>Results: What are the key results of the analysis as they relate to the airline’s question? Present at least one figure that effectively communicates a key takeaway of the analysis. Be sure to include appropriate labels for your figure.</p></li>
+<li><p>Conclusion: Keeping in mind LaneAir’s cost considerations outlined above, what are your recommendations to improve customer satisfaction that balance impact with cost? Do you have any recommendations that the airline has not considered? Finally, are there any study limitations that the client should be aware of? For example, could certain customers be more likely to respond to the survey than others?</p></li>
+</ul>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<p>Part 1: 30 points</p>
+<p>Part 2: 20 points</p>
+<p>Formatting: 10 points (includes hiding code, report structure, page limits, properly formatted tables and figures)</p>
+<p>Total: 60 points</p>
 
-data:  mariokart$n_bids by mariokart$cond
-t = 0.87826, df = 112.62, p-value = 0.3817
-alternative hypothesis: true difference in means between group new and group used is not equal to 0
-95 percent confidence interval:
- -1.131715  2.933975
-sample estimates:
- mean in group new mean in group used 
-          14.06780           13.16667 </code></pre>
-</div>
-</div>
-<p>P=0.38, so we fail to reject the null hypothesis. We cannot conclude that the mean number of bids differs for new vs used games.</p>
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -624,6 +667,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         if (link.dataset.originalHref !== undefined) {
           link.href = link.dataset.originalHref;
         }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
       }
     }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

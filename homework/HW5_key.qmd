@@ -1,0 +1,121 @@
+---
+title: "Homework 5"
+date: "Due: Sunday, Nov 24, 11:59 PM"
+output: pdf_document
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(tufte)
+library(knitr)
+library(MASS)
+library(caret)
+library(nnet)
+
+airline <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/airline_survey.csv")
+```
+
+The exercise is based on the airline customer satisfaction dataset found here: <https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction>.
+
+## Code book
+
+| Variable | Description |
+|:------------------------------------|:----------------------------------|
+| Age | Passenger age |
+| Gender | Passenger gender |
+| Type.of.Travel | Purpose of the passenger's flight (personal, business) |
+| Class | Travel class in the plane (business, eco, eco plus) |
+| Customer.Type | Loyal or disloyal customer |
+| Flight.Distance | Flight distance |
+| Inflight.wifi.service | Satisfaction level of inflight wifi service (0: Not applicable; 1-5 where 5 is completely satisfied) |
+| Ease.of.Online.booking | Satisfaction level of online booking |
+| Inflight.service | Satisfaction level of inflight service |
+| Online.boarding | Satisfaction level of online boarding |
+| Inflight.entertainment | Satisfaction level of inflight entertainment |
+| Food.and.drink | Satisfaction level of food and drink |
+| Seat.comfort | Satisfaction level of seat comfort |
+| On.board.service | Satisfaction level of On-board service |
+| Leg.room.service | Satisfaction level of leg room |
+| Departure.Arrival.time.convenient | Satisfaction level of departure/arrival time convenience |
+| Baggage.handling | Satisfaction level of baggage handling |
+| Gate.location | Satisfaction level of gate location |
+| Cleanliness | Satisfaction level of cleanliness |
+| Checkin.service | Satisfaction level of check-in service |
+| Departure.Delay.in.Minutes | Departure delay in minutes |
+| Arrival.Delay.in.Minutes | Arrival delay in minutes |
+| Satisfaction | Airline satisfaction level (satisfied, neutral, dissatisfied) |
+
+An airline called LaneAir is seeking a data scientist consultant to better understand drivers of customer satisfaction. The airline distributed a survey to customers who have flown with LaneAir in the last six months. Customers rated their overall satisfaction as dissatisfied, neutral, or satisfied. Then they rated their satisfaction with various aspects of the flight. The airline also has information on the passengers' flight details, including flight distance and departure delay. LaneAir would like to know which services are worth investing in to improve customer satisfaction. However, they would like the data science consultant to keep in mind that some services are more difficult to improve than others. LaneAir is considering the following investments, ranked from **most difficult** to **least difficult** to implement:
+
+-   Newer, larger seats to improve seat comfort and leg room. This will reduce the number of seats per plane, which is LaneAir's last choice
+-   Newer plane models that improve reliability to minimize delays
+-   Hire more flight attendants or other staff to improve services including inflight service, cleanliness, or onboarding.
+-   Technology investment to improve wifi and entertainment service
+-   Marketing or promotion initiatives to improve customer loyalty or appeal to different customer types (e.g., different age demographic, business/personal travelers)
+
+You will complete this assignment in two parts. The first part of the assignment will be a 3-4 page report that is suitable for **other data scientists.** Here, you will present details of your model to justify the conclusions you presented to the client. This section should present technical details that someone with a data science background can understand. This report must include the following, though you may wish to provide additional details relevant to the analysis:
+
+-   Data overview and analysis plan: You should present details of the data that were not included in part 1, for example an appropriate distributional assumption for the outcome variable. Then, present the type of model you used for the analysis. Which type of generalized linear model is best suited for this problem? What is the link function?
+-   Model results: Present a table of model results including odds ratios, confidence intervals, and p-values. Interpret the results that you think are most compelling.
+-   Model assessment: Present the confusion matrix and explain your conclusion for the model's predictive accuracy. Additionally, the model you should use for this analysis relies on a key assumption that is unique to this model. Using a different, more "precise" model, compare predictions using the predictors `Gender` and `Customer type`. Show the confusion matrix for the more precise model and compare the accuracy.
+-   Conclusion: What do you conclude about the validity of this analysis?
+
+Next, you will create a 2-page report **for the client.** This report should be understood by LaneAir executives with very little understanding of statistics. This report should include the following:
+
+-   Introduction: Provide an overview of the dataset and the goals of the analysis. Keep in mind that the LaneAir team is familiar with the questions on the survey, but not the results. So you should include, for example, basic summary statistics to show the team the distribution of customers in the different satisfaction categories.
+-   Methods: Explain the model you used to analyze the data without getting into technical details. Why did you decide to use that model for this dataset and how does it answer the airline's question?
+-   Results: What are the key results of the analysis as they relate to the airline's question? Present at least one figure that effectively communicates a key takeaway of the analysis.
+-   Conclusion: Keeping in mind LaneAir's cost considerations outlined above, what are your recommendations for how they can balance impact with cost? Do you have any recommendations that the airline has not considered? Finally, are there any limitations that the client should be aware of? For example, could certain customers be more likely to respond to the survey than others?
+
+\newpage
+
+## Key
+
+```{r}
+air.sub <- airline[,-1]
+air.sub$Satisfaction <- factor(air.sub$Satisfaction)
+
+airmod <- polr(Satisfaction~.,data = air.sub,Hess=TRUE)
+summary(airmod)
+pvals <- pnorm(-abs(summary(airmod)$coef[,"t value"]))*2
+
+cbind(OR=exp(summary(airmod)$coefficients[,1]),exp(confint(airmod)),pvals)
+```
+
+Students should use the ordinal regression model for this problem. Students can make different arguments based on the proposed investments from the airline. Looking at the t-statistics, the biggest drivers of customer satisfaction are type of travel, type of customer, online boarding, online booking, wifi service, and inflight service. A marketing/promotion initiative to gain more loyal customers strikes a balance between client preference and model output. But students may have different answers that are reasonable. Some students may exclude variables because the airline cannot intervene (e.g., gate location). Model selection is not necessary here, particularly with the large sample size.
+
+Students should check the **proportional odds assumption** by comparing predictions from the proportional odds model and the multinomial logistic model. They should create a new dataset that includes different values for `gender` and `customer type`, holding all other variables to a single value. Exact implementation may vary here.
+
+```{r}
+confusionMatrix(predict(airmod),air.sub$Satisfaction)
+multmod <- multinom(Satisfaction~.,data=air.sub)
+
+newdata <- data.frame(Gender=c("Female","Male","Male","Female"),
+                      Customer.Type=c("Loyal Customer","Loyal Customer","disloyal Customer","disloyal Customer"),
+                      Age=mean(air.sub$Age),
+                      Type.of.Travel=c("Personal Travel","Personal Travel","Personal Travel","Personal Travel"),
+                      Class=c("Eco","Eco","Eco","Eco"),
+                      Flight.Distance=mean(air.sub$Flight.Distance),
+                      Inflight.wifi.service=mean(air.sub$Inflight.wifi.service),
+                      Departure.Arrival.time.convenient=mean(air.sub$Departure.Arrival.time.convenient),
+                      Ease.of.Online.booking=mean(air.sub$Ease.of.Online.booking),
+                      Gate.location=mean(air.sub$Gate.location),
+                      Food.and.drink=mean(air.sub$Food.and.drink),
+                      Online.boarding=mean(air.sub$Online.boarding),
+                      Seat.comfort=mean(air.sub$Seat.comfort),
+                      Inflight.entertainment=mean(air.sub$Inflight.entertainment),
+                      On.board.service=mean(air.sub$Inflight.entertainment),
+                      Leg.room.service=mean(air.sub$Leg.room.service),
+                      Baggage.handling=mean(air.sub$Baggage.handling),
+                      Checkin.service=mean(air.sub$Baggage.handling),
+                      Inflight.service=mean(air.sub$Inflight.service),
+                      Cleanliness=mean(air.sub$Cleanliness),
+                      Departure.Delay.in.Minutes=mean(air.sub$Departure.Delay.in.Minutes),
+                      Arrival.Delay.in.Minutes=mean(air.sub$Arrival.Delay.in.Minutes))
+
+predict(airmod,newdata,type="probs")
+predict(multmod,newdata,type="probs")
+confusionMatrix(predict(multmod),air.sub$Satisfaction)
+```
+
+Answers may vary, but it seems we do have evidence that the proportional odds assumption may be violated based on the predicted probabilities. We see a slight improvement in predictive accuracy using the multinomial logistic model over the ordinal model, but probably not enough to sacrifice the better interpretability of the ordinal model. In both models, the sensitivity is pretty low for the dissatisfied and neutral levels.
