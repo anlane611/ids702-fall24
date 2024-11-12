@@ -24,7 +24,7 @@ library(caret)
 library(nnet)
 ## you may need to add the relevant packages here
 
-airline <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/airline.csv")
+airline <- read.csv("https://raw.githubusercontent.com/anlane611/datasets/refs/heads/main/airline_survey.csv")
 ```
 
 ### Data Overview
