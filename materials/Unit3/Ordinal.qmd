@@ -40,3 +40,9 @@ Note: Make sure you are completing the class prep before each class. Quizzes can
 [Part 3: Proportional Odds Assumption](https://www.youtube.com/watch?v=iPDwMrw2D30)
 
 ISLR does not cover ordinal regression.
+
+## Class materials
+
+[Groups](https://docs.google.com/spreadsheets/d/16Eed60rRnipqaPwrCnzAiLTd66RNS5T9N3ohW0Fq4xY/edit?usp=sharing)
+
+[Notes (qmd)](_Ordinal.qmd)

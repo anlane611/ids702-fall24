@@ -1,0 +1,46 @@
+---
+title: "11.14: Poisson Regression"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   Project Proposal: Sunday, Nov 17 11:59 PM
+-   HW 5: Sunday, Nov 24 11:59 PM
+
+## Learning Objectives
+
+-   Identify when to use a poisson regression model
+
+-   Interpret a poisson regression model
+
+-   Generate a poisson regression model in R
+
+## Class Prep
+
+Watch the videos below. You can use the code below to access the data:
+
+```{r}
+pdat <- read.csv("https://stats.idre.ucla.edu/stat/data/poisson_sim.csv")
+```
+
+Note: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.
+
+[Poisson Regression](https://duke.zoom.us/rec/share/94ZjFguSnodSRaFLSKinCvAgIIyfi9GU-ABTYrJJpnKydqEJKAyVlSwMSQLTyYtf.2hZvLM5IANdJH-Kb?startTime=1696956001000)
+
+[Poisson Regression with Rates](https://duke.zoom.us/rec/share/Zdu73AEr4etcbVTXB6dwskChbMSJOxqmmeHdfW1tZ8NjXZueGIGhwcKMhD3TKm79.q3ILJGptZUPhCq2b?startTime=1698158942000)
+
+Slides: [Poisson regression](IDS702_poisson.pdf), [Poisson with rates](IDS702_poissonrates.pdf)
+
+ISLR: 4.6.2
