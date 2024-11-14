@@ -3030,7 +3030,7 @@
     "href": "homework/HW5.html",
     "title": "Homework 5",
     "section": "",
-    "text": "Deadline: Sunday, November 24, 11:59 PM\nInstructions: Use the provided Quarto template to complete your assignment. For this assignment, you will be generating a professional report; therefore, ALL CODE MUST BE HIDDEN. This is the default setting in the template. Because all code will be hidden, you are required to submit BOTH the QMD and the rendered PDF.\nClick here to download the template (right click and choose “save link as”)",
+    "text": "Deadline: Wednesday, Nov 27 11:59 PM (Note: Late penalties will not be enforced for assignments submitted before Sunday, Dec 1 11:59 PM).\nInstructions: Use the provided Quarto template to complete your assignment. For this assignment, you will be generating a professional report; therefore, ALL CODE MUST BE HIDDEN. This is the default setting in the template. Because all code will be hidden, you are required to submit BOTH the QMD and the rendered PDF.\nClick here to download the template (right click and choose “save link as”)",
     "crumbs": [
       "Homework",
       "Homework 5"
@@ -3118,27 +3118,59 @@
     "href": "materials/Unit3/Poisson.html",
     "title": "11.14: Poisson Regression",
     "section": "",
-    "text": "Project Proposal: Sunday, Nov 17 11:59 PM\nHW 5: Sunday, Nov 24 11:59 PM"
+    "text": "Project Proposal: Sunday, Nov 17 11:59 PM\nHW 5: Sunday, Nov 24 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.14: Poisson Regression"
+    ]
   },
   {
     "objectID": "materials/Unit3/Poisson.html#upcoming-deadlines",
     "href": "materials/Unit3/Poisson.html#upcoming-deadlines",
     "title": "11.14: Poisson Regression",
     "section": "",
-    "text": "Project Proposal: Sunday, Nov 17 11:59 PM\nHW 5: Sunday, Nov 24 11:59 PM"
+    "text": "Project Proposal: Sunday, Nov 17 11:59 PM\nHW 5: Sunday, Nov 24 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.14: Poisson Regression"
+    ]
   },
   {
     "objectID": "materials/Unit3/Poisson.html#learning-objectives",
     "href": "materials/Unit3/Poisson.html#learning-objectives",
     "title": "11.14: Poisson Regression",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nIdentify when to use a poisson regression model\nInterpret a poisson regression model\nGenerate a poisson regression model in R"
+    "text": "Learning Objectives\n\nIdentify when to use a poisson regression model\nInterpret a poisson regression model\nGenerate a poisson regression model in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.14: Poisson Regression"
+    ]
   },
   {
     "objectID": "materials/Unit3/Poisson.html#class-prep",
     "href": "materials/Unit3/Poisson.html#class-prep",
     "title": "11.14: Poisson Regression",
     "section": "Class Prep",
-    "text": "Class Prep\nWatch the videos below. You can use the code below to access the data:\n\npdat &lt;- read.csv(\"https://stats.idre.ucla.edu/stat/data/poisson_sim.csv\")\n\nNote: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.\nPoisson Regression\nPoisson Regression with Rates\nSlides: Poisson regression, Poisson with rates\nISLR: 4.6.2"
+    "text": "Class Prep\nWatch the videos below. You can use the code below to access the data:\n\npdat &lt;- read.csv(\"https://stats.idre.ucla.edu/stat/data/poisson_sim.csv\")\n\nNote: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.\nPoisson Regression\nPoisson Regression with Rates\nSlides: Poisson regression, Poisson with rates\nISLR: 4.6.2",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.14: Poisson Regression"
+    ]
+  },
+  {
+    "objectID": "materials/Unit3/Poisson.html#class-materials",
+    "href": "materials/Unit3/Poisson.html#class-materials",
+    "title": "11.14: Poisson Regression",
+    "section": "Class materials",
+    "text": "Class materials\nNotes and exercise (qmd)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 3: Generalized Linear Models",
+      "11.14: Poisson Regression"
+    ]
   }
 ]

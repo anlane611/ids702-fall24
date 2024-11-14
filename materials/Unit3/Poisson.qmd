@@ -44,3 +44,7 @@ Note: Make sure you are completing the class prep before each class. Quizzes can
 Slides: [Poisson regression](IDS702_poisson.pdf), [Poisson with rates](IDS702_poissonrates.pdf)
 
 ISLR: 4.6.2
+
+## Class materials
+
+[Notes and exercise (qmd)](_Poisson.qmd)
