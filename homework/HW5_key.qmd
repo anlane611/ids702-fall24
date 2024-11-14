@@ -1,7 +1,6 @@
 ---
 title: "Homework 5"
-date: "Due: Sunday, Nov 24, 11:59 PM"
-output: pdf_document
+format: pdf
 ---
 
 ```{r include=FALSE}
@@ -91,13 +90,16 @@ confusionMatrix(predict(airmod),air.sub$Satisfaction)
 multmod <- multinom(Satisfaction~.,data=air.sub)
 
 newdata <- data.frame(Gender=c("Female","Male","Male","Female"),
-                      Customer.Type=c("Loyal Customer","Loyal Customer","disloyal Customer","disloyal Customer"),
+                      Customer.Type=c("Loyal Customer","Loyal Customer",
+                                      "disloyal Customer","disloyal Customer"),
                       Age=mean(air.sub$Age),
-                      Type.of.Travel=c("Personal Travel","Personal Travel","Personal Travel","Personal Travel"),
+                      Type.of.Travel=c("Personal Travel","Personal Travel",
+                                       "Personal Travel","Personal Travel"),
                       Class=c("Eco","Eco","Eco","Eco"),
                       Flight.Distance=mean(air.sub$Flight.Distance),
                       Inflight.wifi.service=mean(air.sub$Inflight.wifi.service),
-                      Departure.Arrival.time.convenient=mean(air.sub$Departure.Arrival.time.convenient),
+                      Departure.Arrival.time.convenient=
+                        mean(air.sub$Departure.Arrival.time.convenient),
                       Ease.of.Online.booking=mean(air.sub$Ease.of.Online.booking),
                       Gate.location=mean(air.sub$Gate.location),
                       Food.and.drink=mean(air.sub$Food.and.drink),

@@ -43,6 +43,9 @@ website:
             - href: materials/Unit3/Multinomial.qmd
             - href: materials/Unit3/Ordinal.qmd
             - href: materials/Unit3/Poisson.qmd
+          - section: "Unit 4: Special Topics"
+            contents:
+            - href: materials/Unit4/Survival.qmd
        - section:
          href: reflections.qmd
          text: Statistics Reflections

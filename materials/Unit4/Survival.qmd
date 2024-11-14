@@ -1,0 +1,47 @@
+---
+title: "11.19: Survival Analysis"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   HW 5: Nov 27 but no late penalties before Dec 1 11:59 PM
+
+## Learning Objectives
+
+-   Give an example of a research question for which survival analysis could be used
+
+-   Describe the purpose of the Kaplan-Meier curve
+
+-   Generate a Kaplan-Meier curve in R
+
+-   Fit a Cox proportional hazards model in R
+
+## Class Prep
+
+Watch the video below. You can use the code below to access the data:
+
+```{r, eval=FALSE}
+library(survival)
+data(cancer, package="survival")
+glimpse(rotterdam)
+```
+
+Note: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.
+
+[Introduction to Survival Analysis](https://duke.zoom.us/rec/share/LHhoDFVxW4jhz9wREpLNKzM3JD_8_kSaXfdXT6uLA8vW1U2_4YK0TF8dlZLiP8-n.D_GCZvEIN2QpG3BJ?startTime=1698375918000)
+
+Slides: [Introduction to Survival Analysis](IDS702_survival1.pdf)
+
+ISLR: Chapter 11

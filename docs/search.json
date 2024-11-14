@@ -3172,5 +3172,53 @@
       "Unit 3: Generalized Linear Models",
       "11.14: Poisson Regression"
     ]
+  },
+  {
+    "objectID": "materials/Unit4/Survival.html",
+    "href": "materials/Unit4/Survival.html",
+    "title": "11.19: Survival Analysis",
+    "section": "",
+    "text": "HW 5: Nov 27 but no late penalties before Dec 1 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.19: Survival Analysis"
+    ]
+  },
+  {
+    "objectID": "materials/Unit4/Survival.html#upcoming-deadlines",
+    "href": "materials/Unit4/Survival.html#upcoming-deadlines",
+    "title": "11.19: Survival Analysis",
+    "section": "",
+    "text": "HW 5: Nov 27 but no late penalties before Dec 1 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.19: Survival Analysis"
+    ]
+  },
+  {
+    "objectID": "materials/Unit4/Survival.html#learning-objectives",
+    "href": "materials/Unit4/Survival.html#learning-objectives",
+    "title": "11.19: Survival Analysis",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nGive an example of a research question for which survival analysis could be used\nDescribe the purpose of the Kaplan-Meier curve\nGenerate a Kaplan-Meier curve in R\nFit a Cox proportional hazards model in R",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.19: Survival Analysis"
+    ]
+  },
+  {
+    "objectID": "materials/Unit4/Survival.html#class-prep",
+    "href": "materials/Unit4/Survival.html#class-prep",
+    "title": "11.19: Survival Analysis",
+    "section": "Class Prep",
+    "text": "Class Prep\nWatch the video below. You can use the code below to access the data:\n\nlibrary(survival)\ndata(cancer, package=\"survival\")\nglimpse(rotterdam)\n\nNote: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.\nIntroduction to Survival Analysis\nSlides: Introduction to Survival Analysis\nISLR: Chapter 11",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.19: Survival Analysis"
+    ]
   }
 ]
