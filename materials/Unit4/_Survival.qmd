@@ -1,0 +1,144 @@
+---
+title: "Survival Analysis"
+output: html
+---
+
+## Introduction
+
+**Time-to-event data** comes up in many different contexts. Some examples include:
+
+-   Healthcare: time to diagnosis, time to treatment, time to death
+
+-   Finance: time to loan default, time to stock hitting certain price
+
+-   General: time to subscription/policy cancellation (customer churn), time to equipment failure
+
+Let's say we have the following data on a dog walking subscription service:
+
+| Premium subscription start date | Premium subscription end date | Customer age at start date | Homeowner at start date |
+|------------------|------------------|------------------|------------------|
+| 2019-10-01 | 2022-06-01 | 42 | Yes |
+| 2018-08-01 | NA | 54 | No |
+| 2020-05-01 | NA | 37 | Yes |
+| 2019-11-01 | 2024-08-01 | 30 | Yes |
+| 2021-05-01 | 2023-06-01 | 24 | No |
+
+We want to understand the relationship between home ownership and service cancellation. With the tools we already have, we could consider the following:
+
+-   Calculate the time the customer has used the subscription and use the number of days as a continuous outcome. Perform a \_\_\_\_\_\_\_\_\_\_\_\_\_ test for home ownership vs. subscription time. **What is a limitation of this approach?**
+
+-   Use the Subscription end date column to create a binary variable indicating whether or not the customer has cancelled. Perform a \_\_\_\_\_\_\_\_\_\_\_\_\_ test to compare home ownership vs. subscription status. **What is a limitation of this approach?**
+
+### Censoring
+
+**Censored observations** are those for which we do not know the end time. We can have left censoring, right censoring, or interval censoring.
+
+Which observations in the data above are censored?
+
+**Non-informative censoring**: We assume that, conditional on covariates, the reason the observation is censored is unrelated to the likelihood of the event of interest.
+
+## Kaplan-Meier Curve
+
+The **Survival Function** is defined as
+
+$$
+S(t)=Pr(T>t)
+$$ Here we are modeling the probability of surviving past time $t$.
+
+Would this be an **increasing function** or a **decreasing function**? In other words, does the probability of surviving past time $t$ increase as $t$ increases or decrease as $t$ increases?
+
+The Kaplan-Meier Survival method estimates the survival function as:
+
+$$
+\hat{S}(t)=\prod_{i:t_i \leq t}\big(1-\frac{d_i}{n_i}\big)
+$$
+
+where
+
+$t_i$ is a time when at least one death/failure/event occurred
+
+$d_i$ is the number of events at that time
+
+$n_i$ is the number at risk at that time
+
+The Kaplan-Meier curve visualizes the estimated survival function by plotting the estimated probability of survival against time $t$.
+
+Let's see what this would look like with the small "data" above:
+
+```{r, message=FALSE}
+library(tidyverse)
+library(survival)
+library(survminer)
+
+sub.dat <- data.frame(
+  startdate = as.Date(c("2019-10-01","2018-08-01","2020-05-01",
+                         "2019-11-01","2021-05-01"), "%Y-%m-%d"),
+  enddate = as.Date(c("2022-06-01",NA,NA,"2024-08-01","2023-06-01"), "%Y-%m-%d"),
+  age = c(42,54,37,30,24),
+  home = c(1,0,1,1,0)
+)
+
+sub.dat <- sub.dat |>
+  mutate(subtime = ifelse(is.na(enddate),
+                          Sys.Date()-startdate,
+                          enddate-startdate),
+         cancelled = ifelse(is.na(enddate),0,1)
+         )
+
+sub.fit.surv <- survfit(Surv(subtime, cancelled) ~ 1, data=sub.dat)
+ggsurvplot(sub.fit.surv, conf.int=FALSE)
+```
+
+We can use the Kaplan-Meier curve to compare two groups:
+
+```{r}
+sub.fit.surv.home <- survfit(Surv(subtime, cancelled) ~ home, data=sub.dat)
+ggsurvplot(sub.fit.surv.home, conf.int=FALSE)
+```
+
+### Colon Cancer Data
+
+```{r}
+data(cancer, package="survival")
+glimpse(colon)
+
+# access the data dictionary with ?colon
+
+colondeath <- colon |>
+  filter(etype==2)
+```
+
+Let's create the Kaplan-Meier Curve to compare survival time for the three treatment groups.
+
+```{r}
+fit.surv.colon <- survfit(Surv(time, status) ~ rx, data=colondeath)
+ggsurvplot(fit.surv.colon)
+```
+
+## Cox Proportional Hazards Model
+
+We can use the log-rank test to compare survival time across groups (see lecture video for more information), but it is often necessary to control for covariates. We can model survival data with the **Cox Proportional Hazards Model**.
+
+The Cox model is given by:
+
+$$
+h(t,X)=h_0(t)exp(\beta_1x_1+...+\beta_px_p)
+$$
+
+This models the **hazard function**. Unlike the survival function, the hazard function describes the instantaneous risk of failure at time $t$, given survival up to time $t$.
+
+```{r}
+coxph(Surv(time, status)~rx, data=colondeath)
+```
+
+-   The hazard of death decreases 3% for Lev-treated patients compared to observed patients, but this is not statistically significant (p=0.8)
+
+-   The hazard of death decreases 32% for Lev+5FU-treated patients compared to observed patients, and this difference is statistically significant (p=0.002)
+
+Let's add other covariates:
+
+```{r}
+coxph(Surv(time, status)~rx+age+sex+node4, data=colondeath)
+```
+
+Controlling for age, sex, and having more than 4 positive lymph nodes, the risk of death decreases 32% for Lev+5FU-treated patients compared to observed patients. This relationship is statistically significant (p=0.001)

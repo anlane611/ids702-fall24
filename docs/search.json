@@ -816,7 +816,7 @@
     "href": "index.html#schedule",
     "title": "IDS 702: Data Modeling and Representation",
     "section": "Schedule",
-    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\n\n\n\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables &\nDistributions\nSampling Distributions &\nCentral Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nConfidence Intervals/Bootstrap\nHomework 1\n\n\nSept 16\nInference I\nInference II\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nMultiple Linear Regression\nHomework 2\n\n\nSept 30\nCategorical Predictors,\nInteraction terms\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &\nMulticollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nElection - class optional work day\nMultinomial regression\nHomework 4\n\n\nNov 11\nOrdinal regression\nPoisson Regression\nProject proposals\n\n\nNov 18\nSurvival Analysis\nMissing Data\nHomework 5\n\n\nNov 25\nProject work day\n\n\n\n\n\n\n\nDec 15 5PM\nFinal projects due"
+    "text": "Schedule\nIndividual lecture topics are subject to change. The midterm date will not change.\n\n\n\n\n\n\n\n\n\nWeek of\nTuesday content\nThursday content\nAssignment due Sunday\n\n\n\n\nAug 26\nStudy Design\nIntro Probability\n\n\n\nSept 2\nRandom variables &\nDistributions\nSampling Distributions &\nCentral Limit Theorem\nStatistics Reflection 1\n\n\nSept 9\nEstimation\nConfidence Intervals/Bootstrap\nHomework 1\n\n\nSept 16\nInference I\nInference II\nStatistics Reflection 2\n\n\nSept 23\nIntro to Regression\nMultiple Linear Regression\nHomework 2\n\n\nSept 30\nCategorical Predictors,\nInteraction terms\nAssessing Assumptions\nStatistics Reflection 3\n\n\nOct 7\nInfluential points &\nMulticollinearity\nModel Selection\nHomework 3\n\n\nOct 14\nFall break - no class\nExam review\n\n\n\nOct 21\nMidterm Exam\nIntro to GLMs\n\n\n\nOct 28\nLogistic Regression\nAssessing Logistic Models\nStatistics Reflection 4\n\n\nNov 4\nElection - class optional work day\nMultinomial regression\nHomework 4\n\n\nNov 11\nOrdinal regression\nPoisson Regression\nProject proposals\n\n\nNov 18\nSurvival Analysis\nMissing Data\n\n\n\nNov 25\nProject work day\n\nHomework 5\n\n\n\n\n\nDec 15 5PM\nFinal projects due"
   },
   {
     "objectID": "materials/Unit1/IntrotoProbability/probability_slides.html#motivation",
@@ -3215,6 +3215,18 @@
     "title": "11.19: Survival Analysis",
     "section": "Class Prep",
     "text": "Class Prep\nWatch the video below. You can use the code below to access the data:\n\nlibrary(survival)\ndata(cancer, package=\"survival\")\nglimpse(rotterdam)\n\nNote: Make sure you are completing the class prep before each class. Quizzes can still be held to check your comprehension of the concepts covered in the videos.\nIntroduction to Survival Analysis\nSlides: Introduction to Survival Analysis\nISLR: Chapter 11",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.19: Survival Analysis"
+    ]
+  },
+  {
+    "objectID": "materials/Unit4/Survival.html#class-materials",
+    "href": "materials/Unit4/Survival.html#class-materials",
+    "title": "11.19: Survival Analysis",
+    "section": "Class materials",
+    "text": "Class materials\nNotes (qmd)",
     "crumbs": [
       "Course Materials",
       "Unit 4: Special Topics",

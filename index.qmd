@@ -20,7 +20,7 @@ Individual lecture topics are subject to change. The midterm date will not chang
 +=========+====================================+================================+=========================+
 | Aug 26  | Study Design                       | Intro Probability              |                         |
 +---------+------------------------------------+--------------------------------+-------------------------+
-| Sept 2  | Random variables &\                | Sampling Distributions & \     | Statistics Reflection 1 |
+| Sept 2  | Random variables &\                | Sampling Distributions &\      | Statistics Reflection 1 |
 |         | Distributions                      | Central Limit Theorem          |                         |
 +---------+------------------------------------+--------------------------------+-------------------------+
 | Sept 9  | Estimation                         | Confidence Intervals/Bootstrap | Homework 1              |
@@ -29,10 +29,10 @@ Individual lecture topics are subject to change. The midterm date will not chang
 +---------+------------------------------------+--------------------------------+-------------------------+
 | Sept 23 | Intro to Regression                | Multiple Linear Regression     | Homework 2              |
 +---------+------------------------------------+--------------------------------+-------------------------+
-| Sept 30 | Categorical Predictors, \          | Assessing Assumptions          | Statistics Reflection 3 |
+| Sept 30 | Categorical Predictors,\           | Assessing Assumptions          | Statistics Reflection 3 |
 |         | Interaction terms                  |                                |                         |
 +---------+------------------------------------+--------------------------------+-------------------------+
-| Oct 7   | Influential points & \             | Model Selection                | Homework 3              |
+| Oct 7   | Influential points &\              | Model Selection                | Homework 3              |
 |         | Multicollinearity                  |                                |                         |
 +---------+------------------------------------+--------------------------------+-------------------------+
 | Oct 14  | Fall break - no class              | Exam review                    |                         |
@@ -45,10 +45,10 @@ Individual lecture topics are subject to change. The midterm date will not chang
 +---------+------------------------------------+--------------------------------+-------------------------+
 | Nov 11  | Ordinal regression                 | Poisson Regression             | Project proposals       |
 +---------+------------------------------------+--------------------------------+-------------------------+
-| Nov 18  | Survival Analysis                  | Missing Data                   | Homework 5              |
+| Nov 18  | Survival Analysis                  | Missing Data                   |                         |
 +---------+------------------------------------+--------------------------------+-------------------------+
-| Nov 25  | Project work day                   |                                |                         |
+| Nov 25  | Project work day                   |                                | Homework 5              |
 +---------+------------------------------------+--------------------------------+-------------------------+
-|         |                                    |                                | Dec 15 5PM \            |
+|         |                                    |                                | Dec 15 5PM\             |
 |         |                                    |                                | Final projects due      |
 +---------+------------------------------------+--------------------------------+-------------------------+

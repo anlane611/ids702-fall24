@@ -45,3 +45,7 @@ Note: Make sure you are completing the class prep before each class. Quizzes can
 Slides: [Introduction to Survival Analysis](IDS702_survival1.pdf)
 
 ISLR: Chapter 11
+
+## Class materials
+
+[Notes (qmd)](_Survival.qmd)
