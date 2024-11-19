@@ -1,0 +1,31 @@
+---
+title: "11.21: Missing Data"
+format: 
+  html:
+    link-external-newwindow: true
+    link-external-icon: true
+engine: knitr
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+---
+
+## Upcoming deadlines
+
+-   HW 5: Nov 27 but no late penalties before Dec 1 11:59 PM
+
+## Learning Objectives
+
+-   Identify the first steps to take when you encounter missing data
+
+-   Identify 5 approaches for missing data imputation and the pros and cons of each
+
+## Class Prep
+
+[Read the first part of this page](https://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/mi.html) up to "Methods to handle missingness"
+
+## 

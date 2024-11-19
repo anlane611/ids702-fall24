@@ -3232,5 +3232,53 @@
       "Unit 4: Special Topics",
       "11.19: Survival Analysis"
     ]
+  },
+  {
+    "objectID": "materials/Unit4/MissingData.html",
+    "href": "materials/Unit4/MissingData.html",
+    "title": "11.21: Missing Data",
+    "section": "",
+    "text": "HW 5: Nov 27 but no late penalties before Dec 1 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.21: Missing Data"
+    ]
+  },
+  {
+    "objectID": "materials/Unit4/MissingData.html#upcoming-deadlines",
+    "href": "materials/Unit4/MissingData.html#upcoming-deadlines",
+    "title": "11.21: Missing Data",
+    "section": "",
+    "text": "HW 5: Nov 27 but no late penalties before Dec 1 11:59 PM",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.21: Missing Data"
+    ]
+  },
+  {
+    "objectID": "materials/Unit4/MissingData.html#learning-objectives",
+    "href": "materials/Unit4/MissingData.html#learning-objectives",
+    "title": "11.21: Missing Data",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nIdentify the first steps to take when you encounter missing data\nIdentify 5 approaches for missing data imputation and the pros and cons of each",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.21: Missing Data"
+    ]
+  },
+  {
+    "objectID": "materials/Unit4/MissingData.html#class-prep",
+    "href": "materials/Unit4/MissingData.html#class-prep",
+    "title": "11.21: Missing Data",
+    "section": "Class Prep",
+    "text": "Class Prep\nRead the first part of this page up to “Methods to handle missingness”",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.21: Missing Data"
+    ]
   }
 ]
