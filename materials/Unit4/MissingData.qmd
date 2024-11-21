@@ -28,4 +28,10 @@ filters:
 
 [Read the first part of this page](https://dept.stat.lsa.umich.edu/~jerrick/courses/stat701/notes/mi.html) up to "Methods to handle missingness"
 
+## Class materials
+
+[Slides](missingdata_slides-speaker.html)
+
+[Code (qmd)](_MissingData.qmd)
+
 ## 

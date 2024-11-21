@@ -3280,5 +3280,115 @@
       "Unit 4: Special Topics",
       "11.21: Missing Data"
     ]
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#dos-and-donts",
+    "href": "materials/Unit4/missingdata_slides.html#dos-and-donts",
+    "title": "Missing Data Imputation",
+    "section": "Dos and Don’ts",
+    "text": "Dos and Don’ts\nDo:\n\nRecognize that there is missingness\nInvestigate why if possible\nAddress in a suitable way\n\nDon’t\n\nEliminate without investigating\nAddress without understanding how and potential consequences"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#probability-terminology",
+    "href": "materials/Unit4/missingdata_slides.html#probability-terminology",
+    "title": "Missing Data Imputation",
+    "section": "Probability terminology",
+    "text": "Probability terminology\n\nEvent: a potential outcome\nProbability is a measure of how likely it is that an event occurs\nThe sum of the probabilities of all events in a sample space is 1\n\\(0 \\leq Pr(A) \\leq 1\\)"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#probability-definitions",
+    "href": "materials/Unit4/missingdata_slides.html#probability-definitions",
+    "title": "Missing Data Imputation",
+    "section": "Probability definitions",
+    "text": "Probability definitions\n\nThe complement of event \\(A\\) is denoted \\(A^c\\) and it indicates that event \\(A\\) does not occur. \\(Pr(A) = 1-Pr(A^c)\\)\nThe occurrence of two events \\(A\\) and \\(B\\) at the same time is denoted by \\(A \\cap B\\) and \\(Pr(A\\cap B)\\) is known as the joint probability of \\(A\\) and \\(B\\)\nThe event that either \\(A\\) or \\(B\\) or both occur is denoted by \\(A \\cup B\\). \\(Pr(A\\cup B) = Pr(A) + Pr(B) - Pr(A \\cap B)\\)\nMutually exclusive events: \\(Pr(A\\cap B)=0\\)\nConditional probability: \\(Pr(A|B)=\\frac{Pr(A\\cap B)}{Pr(B)}\\)"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#independent-events",
+    "href": "materials/Unit4/missingdata_slides.html#independent-events",
+    "title": "Missing Data Imputation",
+    "section": "Independent Events",
+    "text": "Independent Events\nIf knowing about the occurrence of event \\(A\\) does not give information about the probability of event \\(B\\), then events \\(A\\) and \\(B\\) are independent.\n \nMathematically: \\(Pr(A\\cap B) = Pr(A)Pr(B)\\)\n \nand \\(Pr(A|B)=Pr(A)\\)"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#bayes-theorem",
+    "href": "materials/Unit4/missingdata_slides.html#bayes-theorem",
+    "title": "Missing Data Imputation",
+    "section": "Bayes Theorem",
+    "text": "Bayes Theorem\n \nBayes Theorem allows us to invert conditional probabilities. We can use it to update a belief based on prior knowledge.\n \n\\(Pr(B|A) = \\frac{Pr(A|B)Pr(B)}{Pr(A)}\\)"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#bayes-theorem-example",
+    "href": "materials/Unit4/missingdata_slides.html#bayes-theorem-example",
+    "title": "Missing Data Imputation",
+    "section": "Bayes Theorem Example",
+    "text": "Bayes Theorem Example\nYou have 3 coins. 2 of them are fair and one is rigged so that it always lands on heads. You choose a coin at random and flip it; it lands on heads. Is the coin you chose likely to be fair or rigged?\n\n\\(Pr(F)=2/3\\), \\(Pr(F^c)=1/3\\)\n\\(Pr(H|F)=1/2\\), \\(Pr(H|F^c)=1\\)\n\\(Pr(F|H)=\\frac{Pr(H|F)Pr(F)}{Pr(H)}\\)\nWe can break down the denominator: \\(Pr(H)=Pr(H|F)Pr(F)+Pr(H|F^c)Pr(F^c)\\)\nSo then we have: \\(Pr(F|H)=\\frac{(1/2)(2/3)}{(1/2)(2/3)+1(1/3)}\\)\n\\(Pr(F|H)=1/2\\)"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#missing-data-imputation",
+    "href": "materials/Unit4/missingdata_slides.html#missing-data-imputation",
+    "title": "Missing Data Imputation",
+    "section": "Missing Data Imputation",
+    "text": "Missing Data Imputation\nDefinition: Replacing missing values with values that can be used in analysis\nMany analysis methods/packages automatically deal with missing data in some way. Make sure you understand how the missing data are handled!"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#complete-case-analysis",
+    "href": "materials/Unit4/missingdata_slides.html#complete-case-analysis",
+    "title": "Missing Data Imputation",
+    "section": "Complete Case Analysis",
+    "text": "Complete Case Analysis\n\nOnly use observations without any missing data in the relevant variables\nR automatically does this"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#meanmedianmode-imputation",
+    "href": "materials/Unit4/missingdata_slides.html#meanmedianmode-imputation",
+    "title": "Missing Data Imputation",
+    "section": "Mean/Median/Mode Imputation",
+    "text": "Mean/Median/Mode Imputation\n\nReplace the missing value with the mean/median for continuous variables or the mode for categorical variables\nPro: Easy to implement\nCon: Can bias the results"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#cold-deck-imputation",
+    "href": "materials/Unit4/missingdata_slides.html#cold-deck-imputation",
+    "title": "Missing Data Imputation",
+    "section": "Cold Deck Imputation",
+    "text": "Cold Deck Imputation\n\nReplace the missing value with a value from an external source (e.g., population size for a certain year)\nPros: Can be confident in accuracy\nCons: Often difficult to find a suitable external source"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#hot-deck-imputation",
+    "href": "materials/Unit4/missingdata_slides.html#hot-deck-imputation",
+    "title": "Missing Data Imputation",
+    "section": "Hot Deck Imputation",
+    "text": "Hot Deck Imputation\n\nReplace the missing value with the value from a similar observation\nPros: Does not rely on model fitting, only plausible values can be imputed\nCons: Can be difficult to select “similar” observations"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#regression-imputation",
+    "href": "materials/Unit4/missingdata_slides.html#regression-imputation",
+    "title": "Missing Data Imputation",
+    "section": "Regression Imputation",
+    "text": "Regression Imputation\n\nBuild a model for the variable with missingness based on observed predictors\nReplace the missing value with the predicted value from the model\nPros: Uses the relationships in the data, relatively easy to implement, suitable for continuous or categorical data\nCons: Relies on model assumptions, may not perform well for rare categories"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#deterministic-vs-stochastic-regression-imputation",
+    "href": "materials/Unit4/missingdata_slides.html#deterministic-vs-stochastic-regression-imputation",
+    "title": "Missing Data Imputation",
+    "section": "Deterministic vs Stochastic Regression Imputation",
+    "text": "Deterministic vs Stochastic Regression Imputation\n\nDeterministic: Take the predicted value as is\nStochastic: Add an element of randomness to the predicted value to preserve variability and reduce bias"
+  },
+  {
+    "objectID": "materials/Unit4/missingdata_slides.html#multiple-imputation",
+    "href": "materials/Unit4/missingdata_slides.html#multiple-imputation",
+    "title": "Missing Data Imputation",
+    "section": "Multiple Imputation",
+    "text": "Multiple Imputation\n\nCreate copies of the full dataset that contains missing values\nPerform imputation on each of the copied datasets\nAnalyze each of the copies individually\nCombine the analysis results"
+  },
+  {
+    "objectID": "materials/Unit4/MissingData.html#class-materials",
+    "href": "materials/Unit4/MissingData.html#class-materials",
+    "title": "11.21: Missing Data",
+    "section": "Class materials",
+    "text": "Class materials\nSlides\nCode (qmd)",
+    "crumbs": [
+      "Course Materials",
+      "Unit 4: Special Topics",
+      "11.21: Missing Data"
+    ]
   }
 ]

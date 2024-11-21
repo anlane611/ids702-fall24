@@ -1,0 +1,91 @@
+---
+title: "Missing Data Imputation"
+format: 
+  revealjs:
+    incremental: true
+    multiplex: true
+webr: 
+  show-startup-message: false
+  show-header-message: false
+  home-dir: '/home/r-user/'
+  packages: ['ggplot2', 'dplyr']
+filters:
+  - webr
+execute:
+  freeze: auto
+---
+
+## Dos and Don'ts
+
+**Do**:
+
+-   Recognize that there is missingness
+
+-   Investigate why if possible
+
+-   Address in a suitable way
+
+**Don't**
+
+-   Eliminate without investigating
+
+-   Address without understanding how and potential consequences
+
+## Missing Data Imputation
+
+Definition: Replacing missing values with values that can be used in analysis
+
+Many analysis methods/packages automatically deal with missing data in some way. Make sure you understand how the missing data are handled!
+
+## Complete Case Analysis
+
+-   Only use observations without any missing data in the relevant variables
+
+-   R automatically does this
+
+## Mean/Median/Mode Imputation
+
+-   Replace the missing value with the mean/median for continuous variables or the mode for categorical variables
+
+-   Pro: Easy to implement
+
+-   Con: Can bias the results
+
+## Cold Deck Imputation
+
+-   Replace the missing value with a value from an **external** source (e.g., population size for a certain year)
+
+-   Pros: Can be confident in accuracy
+
+-   Cons: Often difficult to find a suitable external source
+
+## Hot Deck Imputation
+
+-   Replace the missing value with the value from a similar observation
+
+-   Pros: Does not rely on model fitting, only plausible values can be imputed
+
+-   Cons: Can be difficult to select "similar" observations
+
+## Regression Imputation
+
+-   Build a model for the variable with missingness based on observed predictors
+
+-   Replace the missing value with the predicted value from the model
+
+-   Pros: Uses the relationships in the data, relatively easy to implement, suitable for continuous or categorical data
+
+-   Cons: Relies on model assumptions, may not perform well for rare categories
+
+## Deterministic vs Stochastic Regression Imputation
+
+-   Deterministic: Take the predicted value as is
+
+-   Stochastic: Add an element of randomness to the predicted value to preserve variability and reduce bias
+
+## Multiple Imputation
+
+1.  Create copies of the full dataset that contains missing values
+2.  Perform imputation on each of the copied datasets
+3.  Analyze each of the copies individually
+4.  Combine the analysis results
