@@ -22,7 +22,7 @@ This assignment uses a modified version of [the airline customer satisfaction da
 ## Code book
 
 | Variable | Description |
-|:------------------------------------|:----------------------------------|
+|:---|:---|
 | Age | Passenger age |
 | Gender | Passenger gender |
 | Type.of.Travel | Purpose of the passenger's flight (personal, business) |
