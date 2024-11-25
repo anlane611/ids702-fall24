@@ -39,11 +39,10 @@ A few things to keep in mind:
 
 Submit one report and one qmd file per group. **One person will submit and select the other group members in the Gradescope submission**. Be sure to assign pages in Gradescope when you submit.
 
-### Example
+### Examples
 
-Refer to [this paper](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783715) that presents a statistical analysis on low birth weight infants who receive blood transfusions. In particular, notice the distinction between the methods and results section. Notice how the methods section describes how the analysis was carried out without reporting any results.
-
-The length of the sections of this paper will likely differ from your report. I would expect your introduction and conclusion sections to be shorter, but your methods and results to be longer (if for no other reason than you have two research questions to present).
+1.  Refer to [this paper](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2783715) that presents a statistical analysis on low birth weight infants who receive blood transfusions. In particular, notice the distinction between the methods and results section. Notice how the methods section describes how the analysis was carried out without reporting any results. The length of the sections of this paper will likely differ from your report. I would expect your introduction and conclusion sections to be shorter, but your methods and results to be longer (if for no other reason than you have two research questions to present).
+2.  Refer to [this group's report from 2023](ExampleReport_Factors-Associated-With-Mental-Health-in-Europe.pdf), which the group has kindly agreed to share.
 
 # Elevator Pitch Presentations (completed individually)
 
